@@ -4,6 +4,7 @@ export const servicesHomeEn = {
   servicesIntro:
     "We bring web, mobile and SEO together under one roof for your brand's digital journey. From corporate websites to e-commerce and from mobile apps to search engine optimization, we define scope upfront, manage the process transparently and focus on measurable business outcomes. From design and development to launch and post-launch support — we're with you end to end.",
   servicesCta: "Let's plan together",
+  servicesCtaNote: "Free initial consultation · Response within 24h",
   servicesSubtitle: "End-to-end digital solutions tailored to your goals.",
   servicesSliderPrev: "Previous service",
   servicesSliderNext: "Next service",
@@ -32,4 +33,10 @@ export const servicesHomeEn = {
   servicesApiDesc:
     "Secure backends, RESTful APIs and scalable server architecture.",
   servicesApiTag: "Backend - API",
+  servicesStats: [
+    { num: "6", label: "Service Categories" },
+    { num: "20+", label: "Completed Projects" },
+    { num: "6+", label: "Years of Experience" },
+    { num: "100%", label: "Client Satisfaction" },
+  ],
 } as const;

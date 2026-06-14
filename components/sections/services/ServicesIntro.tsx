@@ -1,4 +1,4 @@
-import { ArrowRight, Layers } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/shadcn";
@@ -10,44 +10,70 @@ interface ServicesIntroProps {
 export async function ServicesIntro({ className }: ServicesIntroProps) {
   const t = await getTranslations("home");
 
+  const bullets = [
+    "Tek muhatap, baştan sona şeffaf süreç",
+    "Tasarım + geliştirme + yayın tek pakette",
+    "Yayın sonrası teknik destek dahil",
+  ];
+
   return (
     <div className={`w-full min-w-0 ${className ?? ""}`}>
-      <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
-        <div className="min-w-0 flex-1">
-          <div className="inline-flex items-center gap-3 rounded-full border border-brand-accent/20 bg-white/80 px-3 py-2 pr-5 shadow-sm ring-1 ring-brand-accent/10 backdrop-blur-sm">
-            <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-accent text-brand-accent-foreground shadow-sm">
-              <Layers className="size-4" strokeWidth={2} aria-hidden />
-            </span>
-            <span className="font-(family-name:--font-heading) text-sm font-semibold tracking-wide text-[#0A0A0F]">
-              {t("servicesTitle")}
+      <span className="inline-flex items-center gap-2 rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
+        {t("servicesTitle")}
+      </span>
+
+      <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
+        <h2
+          id="services-section-title"
+          className="font-(family-name:--font-heading) text-5xl font-bold leading-[1.04] tracking-tight text-[#0A0A0F] md:text-6xl lg:text-[4rem]"
+        >
+          {t("servicesHeadline")}
+        </h2>
+
+        <div className="flex flex-col gap-6">
+          <p className="text-lg font-semibold leading-snug text-brand-accent">
+            {t("servicesSubtitle")}
+          </p>
+
+          <p className="text-[0.9375rem] leading-[1.9] text-foreground/60">
+            {t("servicesIntro")}
+          </p>
+
+          <ul className="flex flex-col gap-2.5">
+            {bullets.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-2.5 text-sm text-foreground/70"
+              >
+                <CheckCircle2
+                  className="mt-0.5 size-4 shrink-0 text-brand-accent"
+                  strokeWidth={2}
+                  aria-hidden
+                />
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div className="h-px w-full bg-border/50" />
+
+          <div className="flex flex-wrap items-center gap-4">
+            <Button
+              size="lg"
+              className="h-12 gap-2 rounded-full bg-[#0A0A0F] px-8 text-base text-white hover:bg-[#0A0A0F]/85"
+              asChild
+            >
+              <Link href="/iletisim">
+                {t("servicesCta")}
+                <ArrowRight className="size-4" />
+              </Link>
+            </Button>
+            <span className="text-sm text-muted-foreground">
+              {t("servicesCtaNote")}
             </span>
           </div>
-          <h2
-            id="services-section-title"
-            className="mt-6 w-full font-(family-name:--font-heading) text-3xl font-bold leading-[1.12] tracking-tight md:text-4xl lg:text-[2.75rem]"
-          >
-            {t("servicesHeadline")}
-          </h2>
         </div>
-
-        <Button
-          size="lg"
-          className="h-11 shrink-0 gap-2 self-start rounded-full bg-[#0A0A0F] px-8 text-base text-white hover:bg-[#0A0A0F]/90 lg:mt-10"
-          asChild
-        >
-          <Link href="/iletisim">
-            {t("servicesCta")}
-            <ArrowRight className="size-4" />
-          </Link>
-        </Button>
       </div>
-
-      <p className="mt-4 w-full max-w-none font-(family-name:--font-heading) text-lg font-semibold leading-snug text-brand-accent md:text-xl">
-        {t("servicesSubtitle")}
-      </p>
-      <p className="mt-5 w-full max-w-none text-base leading-[1.8] text-foreground/65 md:text-lg">
-        {t("servicesIntro")}
-      </p>
     </div>
   );
 }

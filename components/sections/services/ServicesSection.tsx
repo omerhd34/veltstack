@@ -9,12 +9,12 @@ interface ServicesSectionProps {
 export function ServicesSection({ className }: ServicesSectionProps) {
   return (
     <section
-      className={`bg-[#F4F8F5] py-24 md:py-28 ${className ?? ""}`}
+      className={`relative overflow-hidden bg-[#F4F8F5] py-24 md:py-32 ${className ?? ""}`}
       aria-labelledby="services-section-title"
     >
       <SiteContainer className="relative">
         <ServicesIntro />
-        <ServicesSlider className="mt-14 md:mt-16" />
+        <ServicesSlider className="mt-8 md:mt-10" />
       </SiteContainer>
     </section>
   );
