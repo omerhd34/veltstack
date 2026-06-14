@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { LuArrowRight } from "react-icons/lu";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/shadcn";
@@ -75,7 +75,7 @@ export function NavbarServicesMegaMenuPanel() {
           >
             <Link href="/iletisim" onClick={() => setServicesMenuOpen(false)}>
               {tHome("servicesCta")}
-              <ArrowRight className="size-4" />
+              <LuArrowRight className="size-4" />
             </Link>
           </Button>
         </div>

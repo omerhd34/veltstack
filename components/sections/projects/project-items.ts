@@ -1,5 +1,10 @@
-import type { LucideIcon } from "lucide-react"
-import { Brain, LineChart, ShoppingCart, TreePine } from "lucide-react"
+import type { IconType } from "react-icons"
+import {
+  LuBrain,
+  LuChartLine,
+  LuShoppingCart,
+  LuTreePine,
+} from "react-icons/lu"
 
 export const projectSlugs = [
   "iqfinansai",
@@ -23,7 +28,7 @@ export interface ProjectItemConfig {
   titleKey: string
   descKey: string
   tagKey: string
-  icon: LucideIcon
+  icon: IconType
 }
 
 export const projectItems: ProjectItemConfig[] = [
@@ -33,7 +38,7 @@ export const projectItems: ProjectItemConfig[] = [
     titleKey: "projectIqfinansTitle",
     descKey: "projectIqfinansDesc",
     tagKey: "projectIqfinansTag",
-    icon: LineChart,
+    icon: LuChartLine,
   },
   {
     slug: "yazici-ticaret",
@@ -41,7 +46,7 @@ export const projectItems: ProjectItemConfig[] = [
     titleKey: "projectYaziciTitle",
     descKey: "projectYaziciDesc",
     tagKey: "projectYaziciTag",
-    icon: ShoppingCart,
+    icon: LuShoppingCart,
   },
   {
     slug: "fablessi",
@@ -49,7 +54,7 @@ export const projectItems: ProjectItemConfig[] = [
     titleKey: "projectFablessiTitle",
     descKey: "projectFablessiDesc",
     tagKey: "projectFablessiTag",
-    icon: TreePine,
+    icon: LuTreePine,
   },
   {
     slug: "uzman-klinik-psikolog",
@@ -57,7 +62,7 @@ export const projectItems: ProjectItemConfig[] = [
     titleKey: "projectUzmanPsikologTitle",
     descKey: "projectUzmanPsikologDesc",
     tagKey: "projectUzmanPsikologTag",
-    icon: Brain,
+    icon: LuBrain,
   },
 ]
 

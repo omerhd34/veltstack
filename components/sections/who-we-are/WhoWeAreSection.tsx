@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { LuArrowRight } from "react-icons/lu";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
@@ -99,7 +99,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
             >
               <Link href="/hakkimda">
                 {t("whoWeAreCta")}
-                <ArrowRight className="size-4" />
+                <LuArrowRight className="size-4" />
               </Link>
             </Button>
           </div>

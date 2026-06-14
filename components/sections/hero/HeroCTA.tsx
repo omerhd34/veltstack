@@ -1,4 +1,4 @@
-import { Compass, Rocket } from "lucide-react"
+import { LuCompass, LuRocket } from "react-icons/lu"
 import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/shadcn"
 
@@ -15,7 +15,7 @@ export function HeroCTA({ primary, secondary, className }: HeroCTAProps) {
     <div className={`flex flex-wrap gap-4 ${className ?? ""}`}>
       <Button size="lg" className={buttonClass} asChild>
         <Link href="/iletisim">
-          <Rocket className="size-5" aria-hidden />
+          <LuRocket className="size-5" aria-hidden />
           {primary}
         </Link>
       </Button>
@@ -26,7 +26,7 @@ export function HeroCTA({ primary, secondary, className }: HeroCTAProps) {
         asChild
       >
         <Link href="/hizmetler">
-          <Compass className="size-5" aria-hidden />
+          <LuCompass className="size-5" aria-hidden />
           {secondary}
         </Link>
       </Button>

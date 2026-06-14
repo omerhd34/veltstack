@@ -1,22 +1,22 @@
-import type { LucideIcon } from "lucide-react";
+import type { IconType } from "react-icons";
 import {
-  ClipboardList,
-  Code2,
-  LayoutTemplate,
-  Palette,
-  Rocket,
-  Search,
-  Server,
-  ShieldCheck,
-} from "lucide-react";
+  LuClipboardList,
+  LuCodeXml,
+  LuLayoutTemplate,
+  LuPalette,
+  LuRocket,
+  LuSearch,
+  LuServer,
+  LuShieldCheck,
+} from "react-icons/lu";
 
-export const processStepIcons: LucideIcon[] = [
-  Search,
-  ClipboardList,
-  Palette,
-  LayoutTemplate,
-  Code2,
-  Server,
-  ShieldCheck,
-  Rocket,
+export const processStepIcons: IconType[] = [
+  LuSearch,
+  LuClipboardList,
+  LuPalette,
+  LuLayoutTemplate,
+  LuCodeXml,
+  LuServer,
+  LuShieldCheck,
+  LuRocket,
 ];

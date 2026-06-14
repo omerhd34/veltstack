@@ -1,8 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { LucideIcon } from "lucide-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import type { IconType } from "react-icons";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { cn } from "@/lib/utils";
 import { WhyMeCard } from "./WhyMeCard";
 import { whyMeItems } from "./why-me-items";
@@ -59,7 +59,7 @@ export function WhyMeCarousel({
 
   const iconMap = Object.fromEntries(
     whyMeItems.map((item) => [item.titleKey, item.icon]),
-  ) as Record<string, LucideIcon>;
+  ) as Record<string, IconType>;
 
   const measure = useCallback(() => {
     const viewport = viewportRef.current;
@@ -125,7 +125,7 @@ export function WhyMeCarousel({
           aria-label={labels.prev}
           className="flex size-11 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-sm transition-all hover:border-brand-accent/50 hover:bg-card"
         >
-          <ChevronLeft className="size-5" />
+          <LuChevronLeft className="size-5" />
         </button>
         <button
           type="button"
@@ -133,7 +133,7 @@ export function WhyMeCarousel({
           aria-label={labels.next}
           className="flex size-11 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-sm transition-all hover:border-brand-accent/50 hover:bg-card"
         >
-          <ChevronRight className="size-5" />
+          <LuChevronRight className="size-5" />
         </button>
       </div>
 

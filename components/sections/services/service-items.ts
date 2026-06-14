@@ -1,19 +1,19 @@
-import type { LucideIcon } from "lucide-react"
+import type { IconType } from "react-icons";
 import {
-  Briefcase,
-  Code2,
-  Globe,
-  Search,
-  ShoppingCart,
-  Smartphone,
-} from "lucide-react"
+  LuBriefcase,
+  LuCodeXml,
+  LuGlobe,
+  LuSearch,
+  LuShoppingCart,
+  LuSmartphone,
+} from "react-icons/lu";
 
 export interface ServiceItemConfig {
-  href: string
-  titleKey: string
-  descKey: string
-  tagKey: string
-  icon: LucideIcon
+  href: string;
+  titleKey: string;
+  descKey: string;
+  tagKey: string;
+  icon: IconType;
 }
 
 export const serviceItems: ServiceItemConfig[] = [
@@ -22,41 +22,41 @@ export const serviceItems: ServiceItemConfig[] = [
     titleKey: "servicesCorporateTitle",
     descKey: "servicesCorporateDesc",
     tagKey: "servicesCorporateTag",
-    icon: Globe,
+    icon: LuGlobe,
   },
   {
     href: "/hizmetler/e-ticaret",
     titleKey: "servicesEcommerceTitle",
     descKey: "servicesEcommerceDesc",
     tagKey: "servicesEcommerceTag",
-    icon: ShoppingCart,
+    icon: LuShoppingCart,
   },
   {
     href: "/hizmetler/mobil-uygulama",
     titleKey: "servicesMobileTitle",
     descKey: "servicesMobileDesc",
     tagKey: "servicesMobileTag",
-    icon: Smartphone,
+    icon: LuSmartphone,
   },
   {
     href: "/hizmetler/seo-hizmetleri",
     titleKey: "servicesSeoTitle",
     descKey: "servicesSeoDesc",
     tagKey: "servicesSeoTag",
-    icon: Search,
+    icon: LuSearch,
   },
   {
     href: "/hizmetler/portfolyo-sitesi",
     titleKey: "servicesPortfolioTitle",
     descKey: "servicesPortfolioDesc",
     tagKey: "servicesPortfolioTag",
-    icon: Briefcase,
+    icon: LuBriefcase,
   },
   {
     href: "/hizmetler/api-gelistirme",
     titleKey: "servicesApiTitle",
     descKey: "servicesApiDesc",
     tagKey: "servicesApiTag",
-    icon: Code2,
+    icon: LuCodeXml,
   },
-]
+];

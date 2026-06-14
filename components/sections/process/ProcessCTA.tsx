@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react"
+import { LuArrowRight } from "react-icons/lu"
 import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/shadcn"
 
@@ -11,7 +11,7 @@ export function ProcessCTA({ label }: ProcessCTAProps) {
     <Button size="lg" className="rounded-full px-8" asChild>
       <Link href="/iletisim">
         {label}
-        <ArrowRight className="size-4" />
+        <LuArrowRight className="size-4" />
       </Link>
     </Button>
   )

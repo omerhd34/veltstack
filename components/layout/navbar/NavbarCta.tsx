@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { LuArrowRight } from "react-icons/lu";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
@@ -23,7 +23,7 @@ export function NavbarCta({ className, onNavigate }: NavbarCtaProps) {
       )}
     >
       {tNav("cta")}
-      <ArrowRight className="size-3.5 opacity-80" />
+      <LuArrowRight className="size-3.5 opacity-80" />
     </Link>
   );
 }

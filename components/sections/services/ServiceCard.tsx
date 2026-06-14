@@ -1,5 +1,5 @@
-import type { LucideIcon } from "lucide-react";
-import { ArrowRight } from "lucide-react";
+import type { IconType } from "react-icons";
+import { LuArrowRight } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/shadcn";
 import { TechStackIcons } from "@/components/sections/projects/TechStackIcons";
@@ -11,7 +11,7 @@ interface ServiceCardProps {
   tag?: string;
   techStack?: string[];
   href: string;
-  icon: LucideIcon;
+  icon: IconType;
   compact?: boolean;
   numbered?: boolean;
   index?: number;
@@ -135,7 +135,7 @@ export function ServiceCard({
               aria-hidden
               className="flex size-8 items-center justify-center rounded-full bg-brand-accent/0 text-brand-accent transition-all duration-300 group-hover:bg-brand-accent/10"
             >
-              <ArrowRight className="size-4 translate-x-0 transition-transform group-hover:translate-x-0.5" />
+              <LuArrowRight className="size-4 translate-x-0 transition-transform group-hover:translate-x-0.5" />
             </span>
           ) : null}
         </div>

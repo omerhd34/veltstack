@@ -1,11 +1,11 @@
-import type { LucideIcon } from "lucide-react";
+import type { IconType } from "react-icons";
 import { cn } from "@/lib/utils";
 
 interface ProcessStepProps {
   title: string;
   description: string;
   step: number;
-  icon: LucideIcon;
+  icon: IconType;
   variant?: "light" | "dark";
 }
 

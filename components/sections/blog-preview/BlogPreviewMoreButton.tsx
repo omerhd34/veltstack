@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react"
+import { LuArrowRight } from "react-icons/lu"
 import { Link } from "@/i18n/navigation"
 import { buttonVariants } from "@/components/ui/shadcn/button"
 import { cn } from "@/lib/utils"
@@ -17,7 +17,7 @@ export function BlogPreviewMoreButton({ label }: BlogPreviewMoreButtonProps) {
       )}
     >
       {label}
-      <ArrowRight className="size-4" />
+      <LuArrowRight className="size-4" />
     </Link>
   )
 }

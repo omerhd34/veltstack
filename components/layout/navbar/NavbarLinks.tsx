@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import { LuChevronDown } from "react-icons/lu"
 import { useTranslations } from "next-intl"
 import { Link, usePathname } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
@@ -85,7 +85,7 @@ export function NavbarLinks({
             aria-expanded={servicesOpen}
           >
             {tNav("services")}
-            <ChevronDown
+            <LuChevronDown
               className={cn(
                 "size-4 text-foreground/70 transition-transform duration-200",
                 servicesOpen && "rotate-180"
@@ -129,7 +129,7 @@ export function NavbarLinks({
             aria-expanded={projectsOpen}
           >
             {tNav("projects")}
-            <ChevronDown
+            <LuChevronDown
               className={cn(
                 "size-4 text-foreground/70 transition-transform duration-200",
                 projectsOpen && "rotate-180"

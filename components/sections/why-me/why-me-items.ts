@@ -1,41 +1,48 @@
-import type { LucideIcon } from "lucide-react";
-import { Eye, LifeBuoy, Palette, Target, UserRound, Zap } from "lucide-react";
+import type { IconType } from "react-icons";
+import {
+  LuEye,
+  LuLifeBuoy,
+  LuPalette,
+  LuTarget,
+  LuUserRound,
+  LuZap,
+} from "react-icons/lu";
 
 export interface WhyMeItemConfig {
   titleKey: string;
   descKey: string;
-  icon: LucideIcon;
+  icon: IconType;
 }
 
 export const whyMeItems: WhyMeItemConfig[] = [
   {
     titleKey: "whyMeSingleTitle",
     descKey: "whyMeSingleDesc",
-    icon: UserRound,
+    icon: LuUserRound,
   },
   {
     titleKey: "whyMeFastTitle",
     descKey: "whyMeFastDesc",
-    icon: Zap,
+    icon: LuZap,
   },
   {
     titleKey: "whyMeSupportTitle",
     descKey: "whyMeSupportDesc",
-    icon: LifeBuoy,
+    icon: LuLifeBuoy,
   },
   {
     titleKey: "whyMeTransparentTitle",
     descKey: "whyMeTransparentDesc",
-    icon: Eye,
+    icon: LuEye,
   },
   {
     titleKey: "whyMeMeasurableTitle",
     descKey: "whyMeMeasurableDesc",
-    icon: Target,
+    icon: LuTarget,
   },
   {
     titleKey: "whyMeUxTitle",
     descKey: "whyMeUxDesc",
-    icon: Palette,
+    icon: LuPalette,
   },
 ];

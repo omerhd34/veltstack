@@ -2,15 +2,15 @@
 
 import { useState } from "react"
 import {
-  BarChart3,
-  BookOpen,
-  Briefcase,
-  ChevronUp,
-  ExternalLink,
-  Eye,
-  Rocket,
-  Users,
-} from "lucide-react"
+  LuBookOpen,
+  LuBriefcase,
+  LuChartBar,
+  LuChevronUp,
+  LuExternalLink,
+  LuEye,
+  LuRocket,
+  LuUsers,
+} from "react-icons/lu"
 import type { ProjectSlug } from "@/components/sections/projects/project-items"
 import { projectTechStacks } from "@/components/sections/projects/project-detail-config"
 import { TechStackIcons } from "@/components/sections/projects/TechStackIcons"
@@ -92,9 +92,9 @@ export function ProjectDetailCard({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-emerald-950 transition-colors hover:bg-emerald-400"
             >
-              <Eye className="size-4" aria-hidden />
+              <LuEye className="size-4" aria-hidden />
               {labels.demo}
-              <ExternalLink className="size-3.5 opacity-80" aria-hidden />
+              <LuExternalLink className="size-3.5 opacity-80" aria-hidden />
             </a>
           ) : null}
 
@@ -105,7 +105,7 @@ export function ProjectDetailCard({
             aria-expanded={expanded}
           >
             {expanded ? labels.showLess : labels.showMore}
-            <ChevronUp
+            <LuChevronUp
               className={cn(
                 "size-4 transition-transform duration-200",
                 !expanded && "rotate-180"
@@ -121,7 +121,7 @@ export function ProjectDetailCard({
           <div className="grid gap-8 md:grid-cols-2">
             <section>
               <h3 className="flex items-center gap-2 text-sm font-semibold text-emerald-300">
-                <BookOpen className="size-4 text-blue-400" aria-hidden />
+                <LuBookOpen className="size-4 text-blue-400" aria-hidden />
                 {labels.detailsTitle}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-emerald-50/70">
@@ -131,7 +131,7 @@ export function ProjectDetailCard({
 
             <section>
               <h3 className="flex items-center gap-2 text-sm font-semibold text-emerald-300">
-                <Rocket className="size-4 text-brand-accent" aria-hidden />
+                <LuRocket className="size-4 text-brand-accent" aria-hidden />
                 {labels.featuresTitle}
               </h3>
               <ul className="mt-3 space-y-2">
@@ -153,7 +153,7 @@ export function ProjectDetailCard({
 
           <div className="grid gap-6 border-t border-emerald-900/40 pt-8 md:grid-cols-2">
             <div className="flex items-center gap-3">
-              <Users className="size-4 text-violet-400" aria-hidden />
+              <LuUsers className="size-4 text-violet-400" aria-hidden />
               <div>
                 <p className="text-xs font-medium text-emerald-400/80">
                   {labels.teamTitle}
@@ -162,7 +162,7 @@ export function ProjectDetailCard({
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Briefcase className="size-4 text-blue-400" aria-hidden />
+              <LuBriefcase className="size-4 text-blue-400" aria-hidden />
               <div>
                 <p className="text-xs font-medium text-emerald-400/80">
                   {labels.roleTitle}
@@ -176,7 +176,7 @@ export function ProjectDetailCard({
 
           <section>
             <h3 className="flex items-center gap-2 text-sm font-semibold text-emerald-300">
-              <BarChart3 className="size-4 text-emerald-400" aria-hidden />
+              <LuChartBar className="size-4 text-emerald-400" aria-hidden />
               {labels.metricsTitle}
             </h3>
             <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

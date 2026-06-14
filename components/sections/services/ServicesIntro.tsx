@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { LuArrowRight, LuCircleCheck } from "react-icons/lu";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/shadcn";
@@ -45,7 +45,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
                 key={item}
                 className="flex items-start gap-2.5 text-sm text-foreground/70"
               >
-                <CheckCircle2
+                <LuCircleCheck
                   className="mt-0.5 size-4 shrink-0 text-brand-accent"
                   strokeWidth={2}
                   aria-hidden
@@ -65,7 +65,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
             >
               <Link href="/iletisim">
                 {t("servicesCta")}
-                <ArrowRight className="size-4" />
+                <LuArrowRight className="size-4" />
               </Link>
             </Button>
             <span className="text-sm text-muted-foreground">

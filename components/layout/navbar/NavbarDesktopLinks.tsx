@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronDown } from "lucide-react"
+import { LuChevronDown } from "react-icons/lu"
 import { useEffect } from "react"
 import { useTranslations } from "next-intl"
 import { Link, usePathname } from "@/i18n/navigation"
@@ -79,7 +79,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
           <span className={navItemLabelClass(servicesActive)}>
             {tNav("services")}
           </span>
-          <ChevronDown
+          <LuChevronDown
             className={cn(
               "size-3.5 shrink-0 text-foreground/60 transition-transform duration-300 ease-out",
               servicesMenuOpen && "rotate-180"
@@ -104,7 +104,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
           <span className={navItemLabelClass(projectsActive)}>
             {tNav("projects")}
           </span>
-          <ChevronDown
+          <LuChevronDown
             className={cn(
               "size-3.5 shrink-0 text-foreground/60 transition-transform duration-300 ease-out",
               projectsMenuOpen && "rotate-180"

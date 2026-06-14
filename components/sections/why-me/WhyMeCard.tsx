@@ -1,9 +1,9 @@
-import type { LucideIcon } from "lucide-react";
+import type { IconType } from "react-icons";
 
 interface WhyMeCardProps {
   title: string;
   description: string;
-  icon: LucideIcon;
+  icon: IconType;
   index: number;
 }
 

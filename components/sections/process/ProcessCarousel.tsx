@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { cn } from "@/lib/utils";
 import { ProcessStep } from "./ProcessStep";
 import { processStepIcons } from "./process-step-icons";
@@ -119,7 +119,7 @@ export function ProcessCarousel({
           aria-label={labels.prev}
           className="flex size-11 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-sm transition-all hover:border-brand-accent/50 hover:bg-card"
         >
-          <ChevronLeft className="size-5" />
+          <LuChevronLeft className="size-5" />
         </button>
         <button
           type="button"
@@ -127,7 +127,7 @@ export function ProcessCarousel({
           aria-label={labels.next}
           className="flex size-11 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-sm transition-all hover:border-brand-accent/50 hover:bg-card"
         >
-          <ChevronRight className="size-5" />
+          <LuChevronRight className="size-5" />
         </button>
       </div>
 

@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowRight } from "lucide-react";
+import { LuArrowRight } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/shadcn";
 import { SiteContainer } from "@/components/layout/SiteContainer";
@@ -46,7 +46,7 @@ export async function CTASection({ className }: CTASectionProps) {
             >
               <Link href="/iletisim">
                 {t("ctaButton")}
-                <ArrowRight className="size-4" />
+                <LuArrowRight className="size-4" />
               </Link>
             </Button>
             <Link

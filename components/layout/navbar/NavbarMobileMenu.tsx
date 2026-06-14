@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { X } from "lucide-react";
+import { LuX } from "react-icons/lu";
 import { useUiStore } from "@/store/uiSlice";
 import { Button } from "@/components/ui/shadcn";
 import { cn } from "@/lib/utils";
@@ -61,7 +61,7 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
             onClick={closeMenu}
             aria-label="Menüyü kapat"
           >
-            <X className="size-5" />
+            <LuX className="size-5" />
           </Button>
         </div>
         <div className="flex-1 overflow-y-auto px-3 py-5 sm:px-4">

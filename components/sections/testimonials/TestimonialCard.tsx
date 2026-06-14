@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { LuStar } from "react-icons/lu";
 
 interface TestimonialCardProps {
   clientName: string;
@@ -36,7 +36,7 @@ export function TestimonialCard({
 
       <div className="flex items-center gap-1 mb-6">
         {Array.from({ length: rating }).map((_, starIndex) => (
-          <Star
+          <LuStar
             key={starIndex}
             aria-hidden
             className="size-4 fill-brand-accent text-brand-accent"

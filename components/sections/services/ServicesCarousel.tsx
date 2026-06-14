@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { cn } from "@/lib/utils";
 import { ServiceCard } from "./ServiceCard";
 import { serviceItems } from "./service-items";
@@ -123,7 +123,7 @@ export function ServicesCarousel({
             disabled={dotCount <= 1}
             className="flex size-10 items-center justify-center rounded-full text-foreground transition-all hover:bg-brand-accent/10 hover:text-brand-accent disabled:pointer-events-none disabled:opacity-40"
           >
-            <ChevronLeft className="size-5" />
+            <LuChevronLeft className="size-5" />
           </button>
           <button
             type="button"
@@ -132,7 +132,7 @@ export function ServicesCarousel({
             disabled={dotCount <= 1}
             className="flex size-10 items-center justify-center rounded-full text-foreground transition-all hover:bg-brand-accent/10 hover:text-brand-accent disabled:pointer-events-none disabled:opacity-40"
           >
-            <ChevronRight className="size-5" />
+            <LuChevronRight className="size-5" />
           </button>
         </div>
       </div>

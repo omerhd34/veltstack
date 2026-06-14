@@ -1,7 +1,7 @@
 "use client"
 
 import { useCallback, useEffect, useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu"
 import { cn } from "@/lib/utils"
 import { TestimonialCard } from "./TestimonialCard"
 
@@ -65,7 +65,7 @@ export function TestimonialCarousel({
         aria-label="Önceki yorum"
         className="absolute top-1/2 left-0 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/90 shadow-sm transition-colors hover:bg-muted md:-left-5"
       >
-        <ChevronLeft className="size-5" />
+        <LuChevronLeft className="size-5" />
       </button>
       <button
         type="button"
@@ -73,7 +73,7 @@ export function TestimonialCarousel({
         aria-label="Sonraki yorum"
         className="absolute top-1/2 right-0 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/90 shadow-sm transition-colors hover:bg-muted md:-right-5"
       >
-        <ChevronRight className="size-5" />
+        <LuChevronRight className="size-5" />
       </button>
 
       <div className="mt-8 flex flex-wrap items-center justify-center gap-2">

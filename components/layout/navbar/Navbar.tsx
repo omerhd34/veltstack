@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Menu } from "lucide-react"
+import { LuMenu } from "react-icons/lu"
 import { Link } from "@/i18n/navigation"
 import { useUiStore } from "@/store/uiSlice"
 import { Button } from "@/components/ui/shadcn"
@@ -72,7 +72,7 @@ export function Navbar({ className }: NavbarProps) {
             aria-label={mobileMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
             aria-expanded={mobileMenuOpen}
           >
-            <Menu />
+            <LuMenu />
           </Button>
         </div>
       </SiteContainer>

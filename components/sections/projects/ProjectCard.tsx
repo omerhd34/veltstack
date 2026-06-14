@@ -1,5 +1,5 @@
-import type { LucideIcon } from "lucide-react"
-import { ArrowRight } from "lucide-react"
+import type { IconType } from "react-icons"
+import { LuArrowRight } from "react-icons/lu"
 import Image from "next/image"
 import { Link } from "@/i18n/navigation"
 import { Badge } from "@/components/ui/shadcn"
@@ -11,7 +11,7 @@ interface ProjectCardProps {
   description: string
   href: string
   imageUrl?: string
-  icon?: LucideIcon
+  icon?: IconType
   coverGradient?: string
   tag?: string
   techStack?: string[]
@@ -111,7 +111,7 @@ export function ProjectCard({
       ) : null}
       <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand-accent opacity-0 transition-all duration-300 group-hover:opacity-100">
         {viewLabel}
-        <ArrowRight className="size-3.5" />
+        <LuArrowRight className="size-3.5" />
       </span>
     </div>
   )

@@ -1,13 +1,13 @@
 import {
-  ClipboardList,
-  Code2,
-  LayoutTemplate,
-  Palette,
-  Rocket,
-  Search,
-  Server,
-  ShieldCheck,
-} from "lucide-react"
+  LuClipboardList,
+  LuCodeXml,
+  LuLayoutTemplate,
+  LuPalette,
+  LuRocket,
+  LuSearch,
+  LuServer,
+  LuShieldCheck,
+} from "react-icons/lu"
 import { getTranslations } from "next-intl/server"
 import { ProcessStep } from "./ProcessStep"
 
@@ -22,14 +22,14 @@ interface ProcessTimelineProps {
 }
 
 const stepIcons = [
-  Search,
-  ClipboardList,
-  Palette,
-  LayoutTemplate,
-  Code2,
-  Server,
-  ShieldCheck,
-  Rocket,
+  LuSearch,
+  LuClipboardList,
+  LuPalette,
+  LuLayoutTemplate,
+  LuCodeXml,
+  LuServer,
+  LuShieldCheck,
+  LuRocket,
 ] as const
 
 export async function ProcessTimeline({

@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { LuArrowRight } from "react-icons/lu";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/shadcn";
@@ -39,7 +39,7 @@ export async function ProjectsIntro({ className }: ProjectsIntroProps) {
       >
         <Link href="/projeler">
           {t("projectsCta")}
-          <ArrowRight className="size-4" />
+          <LuArrowRight className="size-4" />
         </Link>
       </Button>
     </div>
