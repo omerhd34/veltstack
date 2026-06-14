@@ -48,6 +48,11 @@ export const projectTechStacks: Record<ProjectSlug, string[]> = {
 
 export const projectDemoUrls: Partial<Record<ProjectSlug, string>> = {};
 
+export const projectImageUrls: Partial<Record<ProjectSlug, string>> = {
+  iqfinansai: "/IQfinansAI.png",
+  "yazici-ticaret": "/YazıcıTicaret.png",
+};
+
 export const projectCoverGradients: Record<ProjectSlug, string> = {
   iqfinansai: "from-[#0a2e1f] via-[#145c3a] to-[#1a7a4a]",
   "yazici-ticaret": "from-[#1a2f4f] via-[#2a4a72] to-[#3a6090]",
