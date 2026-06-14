@@ -75,23 +75,29 @@ export function NavbarLinks({
         </li>
 
         <li>
-          <button
-            type="button"
-            onClick={() => setServicesOpen((open) => !open)}
-            className={cn(
-              navItemClass(servicesActive || servicesOpen, "mobile"),
-              "justify-between"
-            )}
-            aria-expanded={servicesOpen}
-          >
-            {tNav("services")}
-            <LuChevronDown
-              className={cn(
-                "size-4 text-foreground/70 transition-transform duration-200",
-                servicesOpen && "rotate-180"
-              )}
-            />
-          </button>
+          <div className="flex items-center gap-1">
+            <Link
+              href="/hizmetler"
+              onClick={onNavigate}
+              className={cn(navItemClass(servicesActive, "mobile"), "flex-1")}
+            >
+              {tNav("services")}
+            </Link>
+            <button
+              type="button"
+              onClick={() => setServicesOpen((open) => !open)}
+              className="flex size-11 shrink-0 items-center justify-center rounded-xl text-foreground/70 transition-colors hover:bg-muted/60 hover:text-foreground"
+              aria-expanded={servicesOpen}
+              aria-label={tNav("services")}
+            >
+              <LuChevronDown
+                className={cn(
+                  "size-4 transition-transform duration-200",
+                  servicesOpen && "rotate-180"
+                )}
+              />
+            </button>
+          </div>
           {servicesOpen && (
             <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
               <li>
@@ -119,23 +125,29 @@ export function NavbarLinks({
         </li>
 
         <li>
-          <button
-            type="button"
-            onClick={() => setProjectsOpen((open) => !open)}
-            className={cn(
-              navItemClass(projectsActive || projectsOpen, "mobile"),
-              "justify-between"
-            )}
-            aria-expanded={projectsOpen}
-          >
-            {tNav("projects")}
-            <LuChevronDown
-              className={cn(
-                "size-4 text-foreground/70 transition-transform duration-200",
-                projectsOpen && "rotate-180"
-              )}
-            />
-          </button>
+          <div className="flex items-center gap-1">
+            <Link
+              href="/projeler"
+              onClick={onNavigate}
+              className={cn(navItemClass(projectsActive, "mobile"), "flex-1")}
+            >
+              {tNav("projects")}
+            </Link>
+            <button
+              type="button"
+              onClick={() => setProjectsOpen((open) => !open)}
+              className="flex size-11 shrink-0 items-center justify-center rounded-xl text-foreground/70 transition-colors hover:bg-muted/60 hover:text-foreground"
+              aria-expanded={projectsOpen}
+              aria-label={tNav("projects")}
+            >
+              <LuChevronDown
+                className={cn(
+                  "size-4 transition-transform duration-200",
+                  projectsOpen && "rotate-180"
+                )}
+              />
+            </button>
+          </div>
           {projectsOpen && (
             <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
               <li>
