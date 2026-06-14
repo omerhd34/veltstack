@@ -1,0 +1,146 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      Role     @default(ADMIN)
+  createdAt DateTime @default(now())
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+}
+
+model Service {
+  id             String    @id @default(cuid())
+  slug           String    @unique
+  title_tr       String
+  title_en       String
+  description_tr String
+  description_en String
+  content_tr     String    @db.LongText
+  content_en     String    @db.LongText
+  iconName       String
+  displayOrder   Int
+  deliveryTime   String?
+  features       Json
+  faqItems       Json
+  metaTitle_tr   String?
+  metaTitle_en   String?
+  metaDesc_tr    String?
+  metaDesc_en    String?
+  projects       Project[]
+}
+
+model Technology {
+  id       String       @id @default(cuid())
+  name     String
+  iconName String
+  category TechCategory
+  projects Project[]
+}
+
+enum TechCategory {
+  FRONTEND
+  BACKEND
+  MOBILE
+  DATABASE
+  DEVOPS
+}
+
+model Project {
+  id             String          @id @default(cuid())
+  slug           String          @unique
+  title_tr       String
+  title_en       String
+  description_tr String
+  description_en String
+  content_tr     String          @db.LongText
+  content_en     String          @db.LongText
+  imageUrl       String
+  images         Json
+  liveUrl        String?
+  githubUrl      String?
+  isFeatured     Boolean         @default(false)
+  category       ProjectCategory
+  clientName     String?
+  duration       String?
+  result         String?
+  technologies   Technology[]
+  service        Service?        @relation(fields: [serviceId], references: [id])
+  serviceId      String?
+  createdAt      DateTime        @default(now())
+}
+
+enum ProjectCategory {
+  CORPORATE
+  ECOMMERCE
+  MOBILE
+  PORTFOLIO
+  SEO
+  OTHER
+}
+
+model Post {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  title_tr     String
+  title_en     String
+  excerpt_tr   String
+  excerpt_en   String
+  content_tr   String   @db.LongText
+  content_en   String   @db.LongText
+  imageUrl     String?
+  category     String
+  tags         Json
+  isPublished  Boolean  @default(false)
+  metaTitle_tr String?
+  metaTitle_en String?
+  metaDesc_tr  String?
+  metaDesc_en  String?
+  readingTime  Int?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Testimonial {
+  id          String          @id @default(cuid())
+  clientName  String
+  companyName String
+  logoUrl     String?
+  feedback_tr String
+  feedback_en String
+  rating      Int
+  category    ProjectCategory
+  isApproved  Boolean         @default(false)
+  createdAt   DateTime        @default(now())
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String
+  service   String?
+  budget    String?
+  content   String   @db.Text
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model SiteConfig {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String @db.Text
+}
