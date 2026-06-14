@@ -7,4 +7,7 @@ export const whoWeAreHomeEn = {
   whoWeAreDescriptionSecondary:
     "For brands that need enterprise-grade reliability, we offer a transparent, predictable and outcome-focused development approach.",
   whoWeAreCta: "Learn more",
-} as const
+  whoWeAreStat1Label: "Years of Experience",
+  whoWeAreStat2Label: "Completed Projects",
+  whoWeAreStat3Label: "Client Satisfaction",
+} as const;

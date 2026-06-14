@@ -7,4 +7,7 @@ export const whoWeAreHomeTr = {
   whoWeAreDescriptionSecondary:
     "Kurumsal ölçekte güvenilir bir ortak arayan markalar için şeffaf, öngörülebilir ve sonuç odaklı bir geliştirme yaklaşımı sunuyoruz.",
   whoWeAreCta: "Daha fazla",
+  whoWeAreStat1Label: "Yıl Deneyim",
+  whoWeAreStat2Label: "Tamamlanan Proje",
+  whoWeAreStat3Label: "Müşteri Memnuniyeti",
 } as const;
