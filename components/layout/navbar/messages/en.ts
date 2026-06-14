@@ -1,0 +1,21 @@
+export const navEn = {
+  "home": "Home",
+  "services": "Services",
+  "servicesAll": "All Services",
+  "serviceCorporate": "Corporate Website",
+  "serviceEcommerce": "E-Commerce",
+  "serviceMobile": "Mobile App",
+  "serviceSeo": "SEO Services",
+  "servicePortfolio": "Portfolio Website",
+  "serviceApi": "API Development",
+  "projectsAll": "All Projects",
+  "projectIqfinans": "IQfinansAI",
+  "projectYazici": "Yazici Trade",
+  "projectFablessi": "Fablessi",
+  "projectUzmanPsikolog": "Clinical Psychologist",
+  "projects": "Projects",
+  "blog": "Blog",
+  "about": "About",
+  "contact": "Contact",
+  "cta": "Let's Talk"
+} as const
