@@ -1,51 +1,51 @@
-# Her degisen dosyayi ayri commit eder
+# Her değişen dosyayı ayrı commit eder (Türkçe mesajlar)
 Set-Location $PSScriptRoot\..
 
 function Get-CommitMessage {
     param([string]$Status, [string]$Path)
 
-    if ($Status -eq "D") { return "refactor: remove $Path" }
+    if ($Status -eq "D") { return "$Path kaldırıldı" }
 
     $name = Split-Path $Path -Leaf
-    $dir = Split-Path $Path -Parent
 
     switch -Wildcard ($Path) {
-        ".gitignore" { return "chore: update .gitignore" }
-        "AGENTS.md" { return "docs: update AGENTS.md" }
-        "package.json" { return "chore: rename project to veltstack" }
-        "package-lock.json" { return "chore: update package-lock.json" }
-        "next.config.ts" { return "config: update Next.js configuration" }
-        "middleware.ts" { return "feat: add i18n middleware" }
-        "i18n.ts" { return "feat: add i18n configuration" }
-        "components.json" { return "chore: add shadcn components config" }
-        "prisma/schema.prisma" { return "feat: add Prisma database schema" }
-        "prisma/seed.ts" { return "feat: add database seed script" }
-        "app/globals.css" { return "style: update global styles" }
-        "app/layout.tsx" { return "feat: update root layout with Veltstack metadata" }
-        "app/manifest.ts" { return "feat: add web app manifest" }
-        "app/opengraph-image.tsx" { return "feat: add Open Graph image generator" }
-        "app/robots.ts" { return "feat: add robots.txt generator" }
-        "app/sitemap.ts" { return "feat: add sitemap generator" }
-        "app/[locale]/layout.tsx" { return "feat: add locale layout" }
-        "app/[locale]/page.tsx" { return "feat: add localized home page" }
-        "messages/*" { return "feat(i18n): add global messages - $name" }
-        "i18n/*" { return "feat(i18n): add $name" }
-        "lib/*" { return "feat: add lib/$name" }
-        "hooks/*" { return "feat: add hook $name" }
-        "store/*" { return "feat: add store/$name" }
-        "types/*" { return "feat: add type definition $name" }
-        "public/*" { return "assets: add $Path" }
-        "app/api/*" { return "feat(api): add $Path" }
-        "app/admin/*" { return "feat(admin): add $Path" }
-        "app/[locale]/*" { return "feat(pages): add $Path" }
-        "components/seo/*" { return "feat(seo): add $name" }
-        "components/ui/*" { return "feat(ui): add $name" }
-        "components/admin/*" { return "feat(admin): add $Path" }
-        "components/layout/*" { return "feat(layout): add $Path" }
-        "components/pages/*" { return "feat(pages): add $Path" }
-        "components/sections/*" { return "feat(sections): add $Path" }
-        "components/*" { return "feat: add component $Path" }
-        default { return "feat: add $Path" }
+        ".gitignore" { return ".gitignore güncellendi" }
+        "AGENTS.md" { return "AGENTS.md güncellendi" }
+        "package.json" { return "Proje adı veltstack olarak değiştirildi" }
+        "package-lock.json" { return "package-lock.json güncellendi" }
+        "next.config.ts" { return "Next.js yapılandırması güncellendi" }
+        "middleware.ts" { return "i18n middleware eklendi" }
+        "i18n.ts" { return "i18n yapılandırması eklendi" }
+        "components.json" { return "Shadcn bileşen yapılandırması eklendi" }
+        "prisma/schema.prisma" { return "Prisma veritabanı şeması eklendi" }
+        "prisma/seed.ts" { return "Veritabanı seed scripti eklendi" }
+        "app/globals.css" { return "Global stiller güncellendi" }
+        "app/layout.tsx" { return "Kök layout Veltstack meta verileriyle güncellendi" }
+        "app/manifest.ts" { return "Web app manifest eklendi" }
+        "app/opengraph-image.tsx" { return "Open Graph görsel oluşturucu eklendi" }
+        "app/robots.ts" { return "robots.txt oluşturucu eklendi" }
+        "app/sitemap.ts" { return "Sitemap oluşturucu eklendi" }
+        "app/[locale]/layout.tsx" { return "app/[locale]/layout.tsx eklendi" }
+        "app/[locale]/page.tsx" { return "app/[locale]/page.tsx eklendi" }
+        "messages/*" { return "Global mesajlar $name eklendi" }
+        "i18n/*" { return "$name eklendi" }
+        "lib/*" { return "lib/$name eklendi" }
+        "hooks/*" { return "$name hook eklendi" }
+        "store/*" { return "store/$name eklendi" }
+        "types/*" { return "$name tip tanımı eklendi" }
+        "public/*" { return "$Path eklendi" }
+        "app/api/*" { return "$Path eklendi" }
+        "app/admin/*" { return "$Path eklendi" }
+        "app/[locale]/*" { return "$Path eklendi" }
+        "components/seo/*" { return "$name eklendi" }
+        "components/ui/*" { return "$name eklendi" }
+        "components/admin/*" { return "$Path eklendi" }
+        "components/layout/*" { return "$Path eklendi" }
+        "components/pages/*" { return "$Path eklendi" }
+        "components/sections/*" { return "$Path eklendi" }
+        "components/*" { return "$Path eklendi" }
+        "scripts/*" { return "$Path eklendi" }
+        default { return "$Path eklendi" }
     }
 }
 
@@ -79,4 +79,4 @@ foreach ($item in $files) {
     }
 }
 
-Write-Host "`nDone! $total commits created."
+Write-Host "`nTamamlandı! $total commit oluşturuldu."
