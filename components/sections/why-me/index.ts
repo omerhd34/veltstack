@@ -1,0 +1,7 @@
+export { WhyMeSection } from "./WhyMeSection"
+export { WhyMeIntro } from "./WhyMeIntro"
+export { WhyMeCard } from "./WhyMeCard"
+export { WhyMeGrid } from "./WhyMeGrid"
+export { WhyMeSlider } from "./WhyMeSlider"
+export { WhyMeCarousel } from "./WhyMeCarousel"
+export { whyMeItems } from "./why-me-items"
