@@ -5,9 +5,9 @@ export const projectsHomeTr = {
   projectsTitleAccent: "projeler.",
   projectsHeadline: "Gerçek iş hedeflerine hizmet eden projeler.",
   projectsSubtitle:
-    "FinTech'ten e-ticarete, her projede ölçülebilir iş sonuçlarına odaklanıyoruz.",
+    "Finansal Teknoloji'den e-ticarete, her projede ölçülebilir iş sonuçlarına odaklanıyoruz.",
   projectsIntro:
-    "FinTech'ten e-ticarete ve kurumsal kataloga — geliştirdiğimiz her proje, iş hedeflerini merkeze alan aynı disiplinle ilerler. Tasarım ve geliştirmeyi tek çizgide birleştirir, kullanıcı deneyimini performans ve ölçülebilir sonuçlarla dengeleriz.",
+    "Finansal Teknoloji'den e-ticarete ve kurumsal kataloga — geliştirdiğimiz her proje, iş hedeflerini merkeze alan aynı disiplinle ilerler. Tasarım ve geliştirmeyi tek çizgide birleştirir, kullanıcı deneyimini performans ve ölçülebilir sonuçlarla dengeleriz.",
   projectsCta: "Tüm projeleri incele",
   projectsViewLabel: "İncele",
   projectsSliderPrev: "Önceki proje",
@@ -16,7 +16,7 @@ export const projectsHomeTr = {
   projectIqfinansTitle: "IQfinansAI",
   projectIqfinansDesc:
     "Yapay zekâ destekli finansal analiz, görselleştirme ve raporlama sunan platform. Karmaşık verileri anlaşılır panellere dönüştürür, yatırım kararlarını hızlandırır ve ölçülebilir içgörüler üretir.",
-  projectIqfinansTag: "FinTech - AI",
+  projectIqfinansTag: "Finansal Teknoloji - AI",
   projectYaziciTitle: "Yazıcı Ticaret — Profilo & LG",
   projectYaziciDesc:
     "Beyaz eşya ve elektronik kategorilerinde uçtan uca e-ticaret deneyimi. Ürün keşfinden ödeme ve sipariş takibine kadar dönüşüm odaklı bir satış altyapısı kurduk.",
