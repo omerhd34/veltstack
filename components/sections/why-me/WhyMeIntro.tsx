@@ -8,21 +8,24 @@ export async function WhyMeIntro({ className }: WhyMeIntroProps) {
   const t = await getTranslations("home");
 
   return (
-    <div className={`w-full ${className ?? ""}`}>
-      <p className="font-(family-name:--font-heading) text-sm font-semibold uppercase tracking-[0.2em] text-brand-accent">
+    <div className={`w-full max-w-6xl ${className ?? ""}`}>
+      <span className="inline-block rounded-full border border-brand-accent/40 bg-brand-accent/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
         {t("whyMeBadge")}
-      </p>
+      </span>
+
       <h2
         id="why-me-section-title"
-        className="mt-5 w-full max-w-3xl text-balance font-(family-name:--font-heading) text-3xl font-bold leading-[1.1] tracking-tight md:text-4xl lg:text-[2.75rem]"
+        className="mt-7 font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-[3rem]"
       >
         {t("whyMeTitleLead")}{" "}
         <span className="text-brand-accent">{t("whyMeTitleAccent")}</span>
       </h2>
-      <p className="mt-5 w-full text-pretty font-(family-name:--font-heading) text-xl font-semibold leading-[1.35] tracking-tight text-brand-accent md:text-2xl">
+
+      <p className="mt-5 text-xl font-semibold leading-snug text-brand-accent/90 md:text-2xl">
         {t("whyMeSubtitle")}
       </p>
-      <p className="mt-6 w-full text-pretty text-base leading-[1.85] text-foreground/72 md:text-lg md:leading-[1.9]">
+
+      <p className="mt-5 text-base leading-[1.85] text-white/55 md:text-lg">
         {t("whyMeIntro")}
       </p>
     </div>
