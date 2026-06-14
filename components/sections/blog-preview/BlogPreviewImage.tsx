@@ -1,13 +1,13 @@
-import Image from "next/image"
+import Image from "next/image";
 
 interface BlogPreviewImageProps {
-  src: string
-  alt: string
+  src: string;
+  alt: string;
 }
 
 export function BlogPreviewImage({ src, alt }: BlogPreviewImageProps) {
   return (
-    <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+    <div className="relative aspect-16/10 overflow-hidden bg-muted">
       <Image
         src={src}
         alt={alt}
@@ -16,5 +16,5 @@ export function BlogPreviewImage({ src, alt }: BlogPreviewImageProps) {
         sizes="(max-width: 768px) 100vw, 33vw"
       />
     </div>
-  )
+  );
 }

@@ -37,16 +37,27 @@ export async function BlogPreviewSection({
   ];
 
   return (
-    <section className={`py-24 ${className ?? ""}`}>
+    <section className={`bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}>
       <SiteContainer>
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-(family-name:--font-heading) text-3xl font-bold md:text-4xl">
-            {t("blogTitle")}
-          </h2>
-          <p className="mt-3 text-muted-foreground">{t("blogSubtitle")}</p>
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-xl">
+            <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
+              Blog
+            </span>
+            <h2 className="mt-6 font-(family-name:--font-heading) text-4xl font-bold tracking-tight text-[#0A0A0F] md:text-5xl">
+              {t("blogTitle")}
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              {t("blogSubtitle")}
+            </p>
+          </div>
+          <div className="hidden md:block">
+            <BlogPreviewMoreButton label={t("blogMoreButton")} />
+          </div>
         </div>
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {posts.map((post, index) => (
             <BlogPreviewCard
               key={post.href}
               title={post.title}
@@ -54,10 +65,12 @@ export async function BlogPreviewSection({
               href={post.href}
               image={post.image}
               readingTimeLabel={t("readingTime", { minutes: post.readingTime })}
+              featured={index === 0}
             />
           ))}
         </div>
-        <div className="flex justify-center">
+
+        <div className="mt-8 flex justify-center md:hidden">
           <BlogPreviewMoreButton label={t("blogMoreButton")} />
         </div>
       </SiteContainer>
