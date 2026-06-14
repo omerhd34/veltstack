@@ -9,21 +9,31 @@ interface ProcessSectionProps {
 export function ProcessSection({ className }: ProcessSectionProps) {
   return (
     <section
-      className={`relative overflow-hidden bg-[#071510] py-24 text-white md:py-28 ${className ?? ""}`}
+      className={`relative overflow-hidden bg-[#071510] py-24 text-white md:py-32 ${className ?? ""}`}
       aria-labelledby="process-section-title"
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-linear-to-r from-transparent via-emerald-500/25 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-emerald-500/30 to-transparent"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-32 top-1/3 size-96 rounded-full bg-emerald-600/[0.07] blur-3xl"
+        className="pointer-events-none absolute -right-40 top-1/4 size-[600px] rounded-full bg-emerald-600/5 blur-[80px]"
       />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-40 bottom-1/4 size-[500px] rounded-full bg-emerald-800/6 blur-[80px]"
+      />
+
       <SiteContainer className="relative">
         <ProcessIntro />
-        <ProcessTimeline className="mt-12 md:mt-14" variant="dark" />
+        <ProcessTimeline className="mt-14 md:mt-16" variant="dark" />
       </SiteContainer>
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-emerald-500/30 to-transparent"
+      />
     </section>
   );
 }

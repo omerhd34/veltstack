@@ -11,27 +11,39 @@ export async function ProcessIntro({ className }: ProcessIntroProps) {
 
   return (
     <div className={`mx-auto w-full max-w-3xl text-center ${className ?? ""}`}>
-      <div className="inline-flex items-center gap-3 font-mono text-sm font-semibold tracking-widest text-emerald-400/80">
-        <span>01</span>
-        <span className="h-px w-10 bg-emerald-600/60" aria-hidden />
-        <span>{lastStep}</span>
-        <span className="ml-2 font-(family-name:--font-heading) text-xs uppercase tracking-[0.2em] text-emerald-300/70">
-          {t("processBadge")}
-        </span>
-      </div>
+      <span className="inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-400">
+        {t("processBadge")}
+      </span>
+
       <h2
         id="process-section-title"
-        className="mt-6 w-full text-balance font-(family-name:--font-heading) text-3xl font-bold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-[3.25rem]"
+        className="mt-8 font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-[3rem]"
       >
         {t("processTitleLead")}{" "}
         <span className="text-emerald-400">{t("processTitleAccent")}</span>
       </h2>
-      <p className="mt-5 w-full text-pretty font-(family-name:--font-heading) text-xl font-semibold leading-[1.35] tracking-tight text-emerald-300/90 md:text-2xl">
+
+      <p className="mt-5 text-xl font-semibold leading-snug text-emerald-300/80 md:text-2xl">
         {t("processSubtitle")}
       </p>
-      <p className="mt-6 w-full text-pretty text-base leading-[1.85] text-emerald-50/65 md:text-lg md:leading-[1.9]">
+
+      <p className="mt-5 text-base leading-[1.9] text-emerald-50/55 md:text-lg">
         {t("processIntro")}
       </p>
+
+      <div className="mt-10 flex items-center justify-center gap-3">
+        <span className="font-mono text-sm font-bold text-emerald-400/60">
+          01
+        </span>
+        <div className="h-px flex-1 max-w-[120px] bg-emerald-800/60" />
+        <span className="rounded-full border border-emerald-700/40 bg-emerald-900/50 px-3 py-1 font-mono text-xs text-emerald-400/70">
+          {lastStep} adım
+        </span>
+        <div className="h-px flex-1 max-w-[120px] bg-emerald-800/60" />
+        <span className="font-mono text-sm font-bold text-emerald-400/60">
+          {lastStep}
+        </span>
+      </div>
     </div>
   );
 }
