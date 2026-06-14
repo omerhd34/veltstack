@@ -1,0 +1,5 @@
+export { Footer } from "./Footer"
+export { FooterLogo } from "./FooterLogo"
+export { FooterLinks } from "./FooterLinks"
+export { FooterSocial } from "./FooterSocial"
+export { FooterCopyright } from "./FooterCopyright"
