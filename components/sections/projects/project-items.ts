@@ -10,6 +10,7 @@ export const projectSlugs = [
 
 export const homepageProjectSlugs = [
   "iqfinansai",
+  "uzman-klinik-psikolog",
   "yazici-ticaret",
   "fablessi",
 ] as const

@@ -15,11 +15,9 @@ export async function ProjectsGrid({ className }: ProjectsGridProps) {
 
   return (
     <div className={`grid gap-5 md:grid-cols-2 ${className ?? ""}`}>
-      {homepageProjectItems.map((project, index) => (
+      {homepageProjectItems.map((project) => (
         <ProjectCard
           key={project.href}
-          featured={index === 0}
-          className={index === 0 ? "md:col-span-2" : undefined}
           href={project.href}
           title={t(project.titleKey)}
           description={t(project.descKey)}

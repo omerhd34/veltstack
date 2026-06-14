@@ -12,25 +12,29 @@ export async function ProjectsIntro({ className }: ProjectsIntroProps) {
 
   return (
     <div className={`w-full lg:sticky lg:top-28 ${className ?? ""}`}>
-      <p className="font-(family-name:--font-heading) text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+      <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
         {t("projectsBadge")}
-      </p>
+      </span>
+
       <h2
         id="projects-section-title"
-        className="mt-4 w-full text-balance font-(family-name:--font-heading) text-3xl font-bold leading-[1.1] tracking-tight md:text-4xl"
+        className="mt-7 font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight text-[#0A0A0F] md:text-5xl"
       >
         {t("projectsTitleLead")}{" "}
         <span className="text-brand-accent">{t("projectsTitleAccent")}</span>
       </h2>
-      <p className="mt-4 font-(family-name:--font-heading) text-lg font-semibold leading-snug text-brand-accent">
+
+      <p className="mt-5 text-lg font-semibold leading-snug text-brand-accent">
         {t("projectsSubtitle")}
       </p>
-      <p className="mt-4 w-full text-pretty text-base leading-[1.8] text-foreground/65 md:text-[0.9375rem] md:leading-[1.85]">
+
+      <p className="mt-4 text-[0.9375rem] leading-[1.85] text-foreground/62">
         {t("projectsIntro")}
       </p>
+
       <Button
         size="lg"
-        className="mt-8 h-11 gap-2 rounded-full bg-[#0A0A0F] px-8 text-base text-white hover:bg-[#0A0A0F]/90"
+        className="mt-8 h-12 gap-2 rounded-full bg-[#0A0A0F] px-8 text-base text-white hover:bg-[#0A0A0F]/85"
         asChild
       >
         <Link href="/projeler">
