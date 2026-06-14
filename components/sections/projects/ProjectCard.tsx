@@ -1,23 +1,23 @@
-import type { IconType } from "react-icons"
-import { LuArrowRight } from "react-icons/lu"
-import Image from "next/image"
-import { Link } from "@/i18n/navigation"
-import { Badge } from "@/components/ui/shadcn"
-import { TechStackIcons } from "@/components/sections/projects/TechStackIcons"
-import { cn } from "@/lib/utils"
+import type { IconType } from "react-icons";
+import { LuArrowRight } from "react-icons/lu";
+import Image from "next/image";
+import { Link } from "@/i18n/navigation";
+import { Badge } from "@/components/ui/shadcn";
+import { TechStackIcons } from "@/components/sections/projects/TechStackIcons";
+import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
-  title: string
-  description: string
-  href: string
-  imageUrl?: string
-  icon?: IconType
-  coverGradient?: string
-  tag?: string
-  techStack?: string[]
-  featured?: boolean
-  viewLabel?: string
-  className?: string
+  title: string;
+  description: string;
+  href: string;
+  imageUrl?: string;
+  icon?: IconType;
+  coverGradient?: string;
+  tag?: string;
+  techStack?: string[];
+  featured?: boolean;
+  viewLabel?: string;
+  className?: string;
 }
 
 export function ProjectCard({
@@ -37,7 +37,9 @@ export function ProjectCard({
     <div
       className={cn(
         "relative overflow-hidden bg-muted",
-        featured ? "aspect-2/1 md:aspect-auto md:min-h-full md:w-[45%]" : "aspect-5/3",
+        featured
+          ? "aspect-2/1 md:aspect-auto md:min-h-full md:w-[45%]"
+          : "aspect-5/3",
         !imageUrl && cn("bg-linear-to-br", coverGradient),
       )}
     >
@@ -58,7 +60,11 @@ export function ProjectCard({
           alt={title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes={featured ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
+          sizes={
+            featured
+              ? "(max-width: 768px) 100vw, 50vw"
+              : "(max-width: 768px) 100vw, 33vw"
+          }
         />
       ) : Icon ? (
         <div className="flex h-full min-h-36 items-center justify-center">
@@ -78,7 +84,7 @@ export function ProjectCard({
         </Badge>
       ) : null}
     </div>
-  )
+  );
 
   const body = (
     <div
@@ -104,17 +110,14 @@ export function ProjectCard({
         {description}
       </p>
       {techStack && techStack.length > 0 ? (
-        <TechStackIcons
-          names={techStack.slice(0, featured ? 6 : 4)}
-          className="mt-4"
-        />
+        <TechStackIcons names={techStack} className="mt-4" />
       ) : null}
       <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand-accent opacity-0 transition-all duration-300 group-hover:opacity-100">
         {viewLabel}
         <LuArrowRight className="size-3.5" />
       </span>
     </div>
-  )
+  );
 
   return (
     <Link
@@ -128,5 +131,5 @@ export function ProjectCard({
       {cover}
       {body}
     </Link>
-  )
+  );
 }
