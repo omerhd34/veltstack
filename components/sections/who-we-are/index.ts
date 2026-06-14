@@ -1,0 +1,1 @@
+export { WhoWeAreSection } from "./WhoWeAreSection"
