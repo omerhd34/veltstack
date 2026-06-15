@@ -4,13 +4,10 @@ interface NavbarLogoProps {
 
 export function NavbarLogo({ className }: NavbarLogoProps) {
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className ?? ""}`}>
-      <span
-        className="size-2 shrink-0 rounded-full bg-brand-accent shadow-[0_0_10px_rgb(58_107_82/0.45)]"
-        aria-hidden
-      />
-      <span className="font-(family-name:--font-heading) text-[1.05rem] font-bold tracking-tight sm:text-lg">
-        Veltstack
+    <span className={`inline-flex items-center ${className ?? ""}`}>
+      <span className="font-(family-name:--font-heading) text-[1.25rem] font-extrabold tracking-[-0.04em] sm:text-[1.4rem]">
+        Velt
+        <span className="text-brand-accent">stack</span>
       </span>
     </span>
   );
