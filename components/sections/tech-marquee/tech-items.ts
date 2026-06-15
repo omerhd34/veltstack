@@ -33,6 +33,7 @@ import {
   SiVercel,
 } from "react-icons/si";
 import { TbBrandReactNative, TbApi } from "react-icons/tb";
+import { ZustandIcon } from "./ZustandIcon";
 
 export interface TechItem {
   name: string;
@@ -49,6 +50,7 @@ export const techItems: TechItem[] = [
   { name: "Next.js", icon: SiNextdotjs },
   { name: "React", icon: SiReact },
   { name: "Redux", icon: SiRedux },
+  { name: "Zustand", icon: ZustandIcon },
   { name: "shadcn/ui", icon: SiShadcnui },
   { name: "React Native", icon: TbBrandReactNative },
   { name: "Flutter", icon: SiFlutter },

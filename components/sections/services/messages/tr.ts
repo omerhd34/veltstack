@@ -4,7 +4,7 @@ export const servicesHomeTr = {
   servicesIntro:
     "Markanızın dijital yolculuğunda web, mobil ve SEO'yu tek çatı altında ele alıyoruz. Kurumsal web sitesinden e-ticarete, mobil uygulamadan arama motoru optimizasyonuna kadar her projede kapsamı baştan netleştiriyor, süreci şeffaf yönetiyor ve ölçülebilir iş sonuçlarına odaklanıyoruz. Tasarımdan geliştirmeye, yayına almadan yayın sonrası desteğe kadar uçtan uca yanınızdayız.",
   servicesCta: "Birlikte planlayalım",
-  servicesCtaNote: "Ücretsiz ön görüşme · 24s içinde yanıt",
+  servicesCtaNote: "Ücretsiz ön görüşme - 24s içinde yanıt",
   servicesSubtitle: "İhtiyacınıza özel, uçtan uca dijital çözümler.",
   servicesSliderPrev: "Önceki hizmet",
   servicesSliderNext: "Sonraki hizmet",
@@ -37,6 +37,6 @@ export const servicesHomeTr = {
     { num: "6", label: "Hizmet Kategorisi" },
     { num: "20+", label: "Tamamlanan Proje" },
     { num: "6+", label: "Yıl Deneyim" },
-    { num: "100%", label: "Müşteri Memnuniyeti" },
+    { num: "98%", label: "Müşteri Memnuniyeti" },
   ],
 } as const;

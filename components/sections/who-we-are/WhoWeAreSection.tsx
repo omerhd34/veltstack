@@ -14,7 +14,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
   const stats = [
     { value: "6+", label: t("whoWeAreStat1Label") },
     { value: "20+", label: t("whoWeAreStat2Label") },
-    { value: "100%", label: t("whoWeAreStat3Label") },
+    { value: "98%", label: t("whoWeAreStat3Label") },
   ];
 
   return (
