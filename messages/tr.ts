@@ -12,6 +12,8 @@ import { blogPreviewHomeTr } from "@/components/sections/blog-preview/messages/t
 import { ctaHomeTr } from "@/components/sections/cta/messages/tr";
 import { clientLogosHomeTr } from "@/components/sections/client-logos/messages/tr";
 import { projectDetailsTr } from "@/components/pages/project-detail/messages/tr";
+import { serviceDetailsTr } from "@/components/pages/service-detail/messages/tr";
+import { servicesPageTr } from "@/components/pages/services/messages/tr";
 import { pagesTr } from "@/app/[locale]/messages/pages/tr";
 import { contactTr } from "@/app/[locale]/iletisim/messages/tr";
 import { aboutTr } from "@/app/[locale]/hakkimda/messages/tr";
@@ -34,6 +36,8 @@ const messages = {
   },
   pages: pagesTr,
   projectDetails: projectDetailsTr,
+  serviceDetails: serviceDetailsTr,
+  servicesPage: servicesPageTr,
   contact: contactTr,
   about: aboutTr,
 } as const;

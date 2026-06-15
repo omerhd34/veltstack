@@ -1,5 +1,19 @@
-import { setRequestLocale } from "next-intl/server";
+import type { Metadata } from "next";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
+import {
+  ServiceDetailView,
+  getServiceStaticSlugs,
+  isServiceSlug,
+} from "@/components/pages/service-detail";
+import {
+  BreadcrumbSchema,
+  FAQSchema,
+  ServiceSchema,
+} from "@/components/seo";
+import { getPathname } from "@/i18n/navigation";
+import { SITE_URL } from "@/lib/constants";
+import type { Locale } from "@/i18n/routing";
 
 interface ServiceDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -7,22 +21,71 @@ interface ServiceDetailPageProps {
 
 export const revalidate = 86400;
 
+export function generateStaticParams() {
+  return getServiceStaticSlugs().map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: ServiceDetailPageProps): Promise<Metadata> {
+  const { locale, slug } = await params;
+
+  if (!isServiceSlug(slug)) return {};
+
+  const t = await getTranslations({ locale, namespace: "serviceDetails" });
+  const canonical = `${SITE_URL}${getPathname({
+    locale: locale as Locale,
+    href: `/hizmetler/${slug}`,
+  })}`;
+
+  return {
+    title: t(`${slug}.metaTitle`),
+    description: t(`${slug}.metaDesc`),
+    alternates: { canonical },
+    openGraph: {
+      title: t(`${slug}.metaTitle`),
+      description: t(`${slug}.metaDesc`),
+      type: "website",
+      locale: locale === "tr" ? "tr_TR" : "en_US",
+    },
+  };
+}
+
 export default async function ServiceDetailPage({
   params,
 }: ServiceDetailPageProps) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
-  if (!slug) notFound();
+  if (!isServiceSlug(slug)) notFound();
+
+  const t = await getTranslations("serviceDetails");
+  const faq = t.raw(`${slug}.faq`) as { question: string; answer: string }[];
+  const serviceUrl = `${SITE_URL}${getPathname({
+    locale: locale as Locale,
+    href: `/hizmetler/${slug}`,
+  })}`;
+  const servicesUrl = `${SITE_URL}${getPathname({
+    locale: locale as Locale,
+    href: "/hizmetler",
+  })}`;
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-24">
-      <h1 className="font-(family-name:--font-heading) text-4xl font-bold capitalize">
-        {slug.replace(/-/g, " ")}
-      </h1>
-      <p className="mt-4 text-muted-foreground">
-        Hizmet detay sayfası — Veltstack
-      </p>
-    </div>
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: t("breadcrumbHome"), url: SITE_URL },
+          { name: t("breadcrumbServices"), url: servicesUrl },
+          { name: t(`${slug}.heroTitle`), url: serviceUrl },
+        ]}
+      />
+      <ServiceSchema
+        name={t(`${slug}.heroTitle`)}
+        description={t(`${slug}.heroSubtitle`)}
+        url={serviceUrl}
+      />
+      <FAQSchema items={faq} />
+      <ServiceDetailView slug={slug} />
+    </>
   );
 }
