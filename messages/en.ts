@@ -14,6 +14,7 @@ import { clientLogosHomeEn } from "@/components/sections/client-logos/messages/e
 import { projectDetailsEn } from "@/components/pages/project-detail/messages/en"
 import { serviceDetailsEn } from "@/components/pages/service-detail/messages/en"
 import { servicesPageEn } from "@/components/pages/services/messages/en"
+import { projectsPageEn } from "@/components/pages/projects/messages/en"
 import { pagesEn } from "@/app/[locale]/messages/pages/en"
 import { contactEn } from "@/app/[locale]/iletisim/messages/en"
 import { aboutEn } from "@/app/[locale]/hakkimda/messages/en"
@@ -38,6 +39,7 @@ const messages = {
   projectDetails: projectDetailsEn,
   serviceDetails: serviceDetailsEn,
   servicesPage: servicesPageEn,
+  projectsPage: projectsPageEn,
   contact: contactEn,
   about: aboutEn,
 } as const

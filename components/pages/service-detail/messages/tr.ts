@@ -293,7 +293,7 @@ export const serviceDetailsTr = {
       {
         title: "Proje Vitrini",
         description:
-          "Case study formatında proje detayları, görseller ve sonuç metrikleri.",
+          "Proje detayları, görseller ve sonuç metrikleriyle kapsamlı inceleme.",
       },
       {
         title: "Hızlı Kurulum",

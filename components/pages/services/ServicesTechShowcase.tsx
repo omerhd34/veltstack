@@ -25,7 +25,7 @@ export function ServicesTechShowcase({
   return (
     <div
       className={cn(
-        "flex w-full flex-col items-stretch gap-6 overflow-x-auto scrollbar-none sm:overflow-visible sm:flex-row sm:items-start sm:justify-center sm:gap-8",
+        "flex w-full min-w-0 max-w-full flex-col items-stretch gap-6 lg:flex-row lg:items-start lg:justify-center lg:gap-8",
         className,
       )}
     >
@@ -35,11 +35,11 @@ export function ServicesTechShowcase({
         <>
           <div
             aria-hidden
-            className="hidden w-px shrink-0 self-stretch bg-linear-to-b from-transparent via-emerald-600/40 to-transparent sm:block"
+            className="hidden w-px shrink-0 self-stretch bg-linear-to-b from-transparent via-emerald-600/40 to-transparent lg:block"
           />
           <div
             aria-hidden
-            className="h-px w-full bg-linear-to-r from-transparent via-emerald-600/35 to-transparent sm:hidden"
+            className="h-px w-full bg-linear-to-r from-transparent via-emerald-600/35 to-transparent lg:hidden"
           />
           <ServicesTechGroup label={secondaryLabel} names={secondary} />
         </>

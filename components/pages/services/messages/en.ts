@@ -6,7 +6,7 @@ export const servicesPageEn = {
   heroSubtitle:
     "Every project type comes in three tiers: Basic, Standard and Pro. Scope, delivery and revisions are defined upfront — large projects scale without limits.",
   heroSubtitleSecondary:
-    "Browse the packages below and switch between website, app, SEO and API tabs to find the scope that fits your project.",
+    "Browse the packages below and switch between website, app, SEO, API and maintenance tabs to find the scope that fits your project.",
   heroImageAlt: "Digital development workspace",
   scrollLabel: "View packages",
   ctaTitle: "Need help choosing a package?",
@@ -16,8 +16,8 @@ export const servicesPageEn = {
   ctaNote: "Response within 24h",
   stats: [
     { value: "3", label: "Package Tiers" },
-    { value: "4", label: "Service Types" },
-    { value: "Unlimited", label: "Page Capacity" },
+    { value: "5", label: "Service Types" },
+    { value: "∞", label: "Page Capacity" },
     { value: "98%", label: "Satisfaction" },
   ],
   ...servicesPackagesEn,

@@ -14,6 +14,7 @@ import { clientLogosHomeTr } from "@/components/sections/client-logos/messages/t
 import { projectDetailsTr } from "@/components/pages/project-detail/messages/tr";
 import { serviceDetailsTr } from "@/components/pages/service-detail/messages/tr";
 import { servicesPageTr } from "@/components/pages/services/messages/tr";
+import { projectsPageTr } from "@/components/pages/projects/messages/tr";
 import { pagesTr } from "@/app/[locale]/messages/pages/tr";
 import { contactTr } from "@/app/[locale]/iletisim/messages/tr";
 import { aboutTr } from "@/app/[locale]/hakkimda/messages/tr";
@@ -38,6 +39,7 @@ const messages = {
   projectDetails: projectDetailsTr,
   serviceDetails: serviceDetailsTr,
   servicesPage: servicesPageTr,
+  projectsPage: projectsPageTr,
   contact: contactTr,
   about: aboutTr,
 } as const;

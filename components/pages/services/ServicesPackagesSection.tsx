@@ -18,6 +18,10 @@ export async function ServicesPackagesSection({
     app: t.raw("appPackages") as Record<string, PackageCardData>,
     seo: t.raw("seoPackages") as Record<string, PackageCardData>,
     api: t.raw("apiPackages") as Record<string, PackageCardData>,
+    maintenance: t.raw("maintenancePackages") as Record<
+      string,
+      PackageCardData
+    >,
   };
 
   const tabs: { id: PackageCategory; label: string }[] = [
@@ -25,6 +29,7 @@ export async function ServicesPackagesSection({
     { id: "app", label: t("tabApp") },
     { id: "seo", label: t("tabSeo") },
     { id: "api", label: t("tabApi") },
+    { id: "maintenance", label: t("tabMaintenance") },
   ];
 
   return (
@@ -41,7 +46,7 @@ export async function ServicesPackagesSection({
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgb(58_107_82/0.08),transparent)]"
       />
 
-      <SiteContainer className="relative px-4 sm:px-6">
+      <SiteContainer className="relative min-w-0 px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-brand-accent md:text-4xl lg:text-[2.75rem] lg:leading-tight">
             {t("packagesTitle")}
@@ -59,11 +64,13 @@ export async function ServicesPackagesSection({
             tierStandart: t("tierStandart"),
             tierPro: t("tierPro"),
             statDelivery: t("statDelivery"),
+            statDeliveryUnit: t("statDeliveryUnit"),
             statRevision: t("statRevision"),
             statPages: t("statPages"),
             statScreens: t("statScreens"),
             statKeywords: t("statKeywords"),
             statEndpoints: t("statEndpoints"),
+            statProjects: t("statProjects"),
             getQuote: t("getQuote"),
             techPrimaryLabel: t("techPrimaryLabel"),
             techSecondaryLabel: t("techSecondaryLabel"),
@@ -88,6 +95,11 @@ export async function ServicesPackagesSection({
               title: t("apiIntroTitle"),
               p1: t("apiIntroP1"),
               p2: t("apiIntroP2"),
+            },
+            maintenance: {
+              title: t("maintenanceIntroTitle"),
+              p1: t("maintenanceIntroP1"),
+              p2: t("maintenanceIntroP2"),
             },
           }}
           packages={packages}

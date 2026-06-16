@@ -11,6 +11,9 @@ export const projectTechStacks: Record<ProjectSlug, string[]> = {
     "MySQL",
     "Redux",
     "REST API",
+    "Railway",
+    "Shopier",
+    "CollectAPI",
   ],
   "yazici-ticaret": [
     "JavaScript",
@@ -46,7 +49,12 @@ export const projectTechStacks: Record<ProjectSlug, string[]> = {
   ],
 };
 
-export const projectDemoUrls: Partial<Record<ProjectSlug, string>> = {};
+export const projectDemoUrls: Record<ProjectSlug, string> = {
+  iqfinansai: "https://www.iqfinansai.com/",
+  "yazici-ticaret": "https://yazici.gen.tr/",
+  fablessi: "https://www.fablessi.com/",
+  "uzman-klinik-psikolog": "https://www.nisademir.com/",
+};
 
 export const projectImageUrls: Partial<Record<ProjectSlug, string>> = {
   iqfinansai: "/IQfinansAI.png",

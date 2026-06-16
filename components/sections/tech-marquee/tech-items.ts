@@ -5,6 +5,7 @@ import {
   SiBootstrap,
   SiCpanel,
   SiCss,
+  SiDocker,
   SiExpress,
   SiExpo,
   SiFigma,
@@ -14,8 +15,13 @@ import {
   SiGoogleanalytics,
   SiGoogle,
   SiGoogleplay,
+  SiGoogletagmanager,
   SiHtml5,
   SiJavascript,
+  SiJson,
+  SiKubernetes,
+  SiPagespeedinsights,
+  SiSemrush,
   SiMongodb,
   SiMysql,
   SiNextdotjs,
@@ -23,16 +29,19 @@ import {
   SiPostgresql,
   SiPostman,
   SiPrisma,
+  SiRedis,
   SiRailway,
   SiReact,
   SiRedux,
   SiRender,
   SiShadcnui,
+  SiSwagger,
   SiTailwindcss,
   SiTypescript,
   SiVercel,
 } from "react-icons/si";
-import { TbBrandReactNative, TbApi } from "react-icons/tb";
+import { TbBrandReactNative, TbApi, TbCloudComputing } from "react-icons/tb";
+import { ShopierIcon } from "./ShopierIcon";
 import { ZustandIcon } from "./ZustandIcon";
 
 export interface TechItem {
@@ -51,7 +60,7 @@ export const techItems: TechItem[] = [
   { name: "React", icon: SiReact },
   { name: "Redux", icon: SiRedux },
   { name: "Zustand", icon: ZustandIcon },
-  { name: "shadcn/ui", icon: SiShadcnui },
+  { name: "Shadcn", icon: SiShadcnui },
   { name: "React Native", icon: TbBrandReactNative },
   { name: "Flutter", icon: SiFlutter },
   { name: "Expo", icon: SiExpo },
@@ -65,14 +74,26 @@ export const techItems: TechItem[] = [
   { name: "PostgreSQL", icon: SiPostgresql },
   { name: "Vercel", icon: SiVercel },
   { name: "Railway", icon: SiRailway },
+  { name: "Shopier", icon: ShopierIcon },
+  { name: "CollectAPI", icon: TbCloudComputing },
   { name: "Render", icon: SiRender },
   { name: "cPanel", icon: SiCpanel },
   { name: "Figma", icon: SiFigma },
   { name: "Git", icon: SiGit },
   { name: "GitHub", icon: SiGithub },
   { name: "Postman", icon: SiPostman },
+  { name: "Redis", icon: SiRedis },
+  { name: "Docker", icon: SiDocker },
+  { name: "Kubernetes", icon: SiKubernetes },
+  { name: "Swagger / OpenAPI", icon: SiSwagger },
   { name: "Google Search", icon: SiGoogle },
   { name: "Google Analytics", icon: SiGoogleanalytics },
+  { name: "PageSpeed Insights", icon: SiPagespeedinsights },
+  { name: "Google Tag Manager", icon: SiGoogletagmanager },
+  { name: "Semrush", icon: SiSemrush },
+  { name: "JSON-LD", icon: SiJson },
   { name: "App Store", icon: SiAppstore },
   { name: "Google Play", icon: SiGoogleplay },
 ];
+
+export const techItemCount = techItems.length;

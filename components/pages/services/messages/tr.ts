@@ -6,7 +6,7 @@ export const servicesPageTr = {
   heroSubtitle:
     "Her proje tipi üç kademede sunulur: Temel, Standart ve Pro. Kapsam, teslim süresi ve revizyon sayısı baştan netleştirilir — büyük projeler sınırsız ölçeklenebilir.",
   heroSubtitleSecondary:
-    "Paketleri inceleyin; web sitesi, uygulama, SEO ve API sekmeleri arasında geçiş yaparak size en uygun kapsamı belirleyin.",
+    "Paketleri inceleyin; web sitesi, uygulama, SEO, API ve bakım sekmeleri arasında geçiş yaparak size en uygun kapsamı belirleyin.",
   heroImageAlt: "Dijital geliştirme çalışma ortamı",
   scrollLabel: "Paketleri incele",
   ctaTitle: "Paket seçiminde yardım mı lazım?",
@@ -16,8 +16,8 @@ export const servicesPageTr = {
   ctaNote: "24 saat içinde dönüş",
   stats: [
     { value: "3", label: "Paket Seviyesi" },
-    { value: "4", label: "Hizmet Tipi" },
-    { value: "Sınırsız", label: "Sayfa Kapasitesi" },
+    { value: "5", label: "Hizmet Tipi" },
+    { value: "∞", label: "Sayfa Kapasitesi" },
     { value: "98%", label: "Memnuniyet" },
   ],
   ...servicesPackagesTr,

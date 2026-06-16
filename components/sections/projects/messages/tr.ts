@@ -13,7 +13,7 @@ export const projectsHomeTr = {
   projectsSliderPrev: "Önceki proje",
   projectsSliderNext: "Sonraki proje",
   projectsSliderDot: "Proje",
-  projectIqfinansTitle: "IQfinansAI",
+  projectIqfinansTitle: "IQfinansAI — Yapay Zekâ Finans Platformu",
   projectIqfinansDesc:
     "Yapay zekâ destekli finansal analiz, görselleştirme ve raporlama sunan platform. Karmaşık verileri anlaşılır panellere dönüştürür, yatırım kararlarını hızlandırır ve ölçülebilir içgörüler üretir.",
   projectIqfinansTag: "Finansal Teknoloji - AI",

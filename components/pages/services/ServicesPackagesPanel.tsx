@@ -9,10 +9,7 @@ import {
 import { ServicesCategoryTabs } from "./ServicesCategoryTabs";
 import { ServicesPackagesIntro } from "./ServicesPackagesIntro";
 import { ServicesTechShowcase } from "./ServicesTechShowcase";
-import {
-  ServicePackageCard,
-  type PackageCardData,
-} from "./ServicePackageCard";
+import { ServicePackageCard, type PackageCardData } from "./ServicePackageCard";
 
 interface PackagesIntro {
   title: string;
@@ -26,11 +23,13 @@ interface PackagesPanelLabels {
   tierStandart: string;
   tierPro: string;
   statDelivery: string;
+  statDeliveryUnit: string;
   statRevision: string;
   statPages: string;
   statScreens: string;
   statKeywords: string;
   statEndpoints: string;
+  statProjects: string;
   getQuote: string;
   techPrimaryLabel: string;
   techSecondaryLabel: string;
@@ -41,6 +40,7 @@ interface CategoryPackages {
   app: Record<string, PackageCardData>;
   seo: Record<string, PackageCardData>;
   api: Record<string, PackageCardData>;
+  maintenance: Record<string, PackageCardData>;
 }
 
 interface CategoryIntros {
@@ -48,6 +48,7 @@ interface CategoryIntros {
   app: PackagesIntro;
   seo: PackagesIntro;
   api: PackagesIntro;
+  maintenance: PackagesIntro;
 }
 
 interface ServicesPackagesPanelProps {
@@ -62,6 +63,7 @@ const scopeLabelKey: Record<PackageCategory, keyof PackagesPanelLabels> = {
   app: "statScreens",
   seo: "statKeywords",
   api: "statEndpoints",
+  maintenance: "statProjects",
 };
 
 export function ServicesPackagesPanel({
@@ -83,18 +85,19 @@ export function ServicesPackagesPanel({
     tierStandart: labels.tierStandart,
     tierPro: labels.tierPro,
     statDelivery: labels.statDelivery,
+    statDeliveryUnit: labels.statDeliveryUnit,
     statRevision: labels.statRevision,
     statScope: labels[scopeKey] as string,
     getQuote: labels.getQuote,
   };
 
   return (
-    <div className={className}>
+    <div className={`min-w-0 ${className ?? ""}`}>
       <ServicesCategoryTabs
         tabs={labels.tabs}
         active={category}
         onChange={setCategory}
-        className="mx-auto max-w-4xl"
+        className="mx-auto w-fit max-w-full"
       />
 
       <ServicesPackagesIntro

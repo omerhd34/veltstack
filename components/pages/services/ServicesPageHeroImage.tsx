@@ -2,11 +2,13 @@ import Image from "next/image";
 
 interface ServicesPageHeroImageProps {
   alt: string;
+  src?: string;
   className?: string;
 }
 
 export function ServicesPageHeroImage({
   alt,
+  src = "/images/services/hero.png",
   className,
 }: ServicesPageHeroImageProps) {
   return (
@@ -25,7 +27,7 @@ export function ServicesPageHeroImage({
           className="pointer-events-none absolute inset-0 z-10 ring-1 ring-inset ring-emerald-400/15"
         />
         <Image
-          src="/images/services/hero.jpg"
+          src={src}
           alt={alt}
           fill
           priority

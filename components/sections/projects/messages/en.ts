@@ -13,7 +13,7 @@ export const projectsHomeEn = {
   projectsSliderPrev: "Previous project",
   projectsSliderNext: "Next project",
   projectsSliderDot: "Project",
-  projectIqfinansTitle: "IQfinansAI",
+  projectIqfinansTitle: "IQfinansAI — AI Finance Analytics Platform",
   projectIqfinansDesc:
     "An AI-powered platform for financial analysis, visualization and reporting. It turns complex data into clear dashboards, speeds up investment decisions and delivers measurable insights.",
   projectIqfinansTag: "FinTech - AI",

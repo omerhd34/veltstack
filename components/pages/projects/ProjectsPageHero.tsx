@@ -1,8 +1,8 @@
 import { LuChevronDown } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
-import { ServicesPageHeroImage } from "./ServicesPageHeroImage";
+import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
 
-interface ServicesPageHeroProps {
+interface ProjectsPageHeroProps {
   badge: string;
   title: string;
   subtitle: string;
@@ -13,7 +13,7 @@ interface ServicesPageHeroProps {
   className?: string;
 }
 
-export function ServicesPageHero({
+export function ProjectsPageHero({
   badge,
   title,
   subtitle,
@@ -22,7 +22,7 @@ export function ServicesPageHero({
   scrollLabel,
   stats,
   className,
-}: ServicesPageHeroProps) {
+}: ProjectsPageHeroProps) {
   return (
     <section
       className={`relative flex min-h-[calc(100svh-4rem)] flex-col overflow-hidden bg-[#050f0c] text-white ${className ?? ""}`}
@@ -42,7 +42,7 @@ export function ServicesPageHero({
 
       <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col px-4 py-8 sm:px-6 sm:py-10">
         <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
-          <div className="min-w-0">
+          <div className="min-w-0 max-w-2xl lg:max-w-none">
             <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/8 px-4 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-emerald-300/90">
               {badge}
             </span>
@@ -83,7 +83,7 @@ export function ServicesPageHero({
           </div>
 
           <a
-            href="#services-packages"
+            href="#projects-showcase"
             className="mt-6 flex flex-col items-center gap-1.5 text-emerald-300/50 transition-colors hover:text-emerald-300/80 sm:mt-8"
           >
             <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em]">

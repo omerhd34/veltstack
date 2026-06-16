@@ -7,11 +7,17 @@ import { Link } from "@/i18n/navigation";
 import type { PackageTier } from "./packages-config";
 import { cn } from "@/lib/utils";
 
+export interface PackageFeatureGroup {
+  label: string;
+  items: string[];
+}
+
 export interface PackageTierData {
   deliveryDays: string;
   revisions: string;
   scope: string;
-  features: string[];
+  features?: string[];
+  featureGroups?: PackageFeatureGroup[];
 }
 
 export interface PackageCardData {
@@ -25,6 +31,7 @@ interface PackageCardLabels {
   tierStandart: string;
   tierPro: string;
   statDelivery: string;
+  statDeliveryUnit: string;
   statRevision: string;
   statScope: string;
   getQuote: string;
@@ -106,41 +113,72 @@ export function ServicePackageCard({
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-2 border-b border-emerald-900/35 px-4 py-5">
+      <div className="grid grid-cols-3 gap-1.5 border-b border-emerald-900/35 px-3 py-5 sm:gap-2 sm:px-4">
         {[
-          { label: labels.statDelivery, value: tier.deliveryDays },
+          {
+            label: labels.statDelivery,
+            value: `${tier.deliveryDays} ${labels.statDeliveryUnit}`,
+          },
           { label: labels.statRevision, value: tier.revisions },
           { label: labels.statScope, value: tier.scope },
         ].map((stat) => (
           <div
             key={stat.label}
-            className="rounded-xl border border-emerald-900/40 bg-[#071510]/60 px-2 py-3 text-center"
+            className="min-w-0 rounded-xl border border-emerald-900/40 bg-[#071510]/60 px-1.5 py-3 text-center sm:px-2"
           >
-            <p className="text-[0.6rem] font-bold uppercase tracking-wider text-emerald-400/55">
+            <p className="text-[0.55rem] font-bold uppercase tracking-wider text-emerald-400/55 sm:text-[0.6rem]">
               {stat.label}
             </p>
-            <p className="mt-1.5 font-(family-name:--font-heading) text-lg font-bold text-white">
+            <p className="mt-1.5 wrap-break-word font-(family-name:--font-heading) text-base font-bold text-white sm:text-lg">
               {stat.value}
             </p>
           </div>
         ))}
       </div>
 
-      <ul className="relative flex flex-1 flex-col gap-2.5 px-5 py-5">
-        {tier.features.map((feature) => (
-          <li
-            key={`${activeTier}-${feature}`}
-            className="flex items-start gap-2.5 text-[0.8125rem] leading-snug text-emerald-50/80"
-          >
-            <LuCircleCheck
-              className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
-              strokeWidth={2.5}
-              aria-hidden
-            />
-            {feature}
-          </li>
-        ))}
-      </ul>
+      <div className="relative flex flex-1 flex-col gap-4 px-5 py-5">
+        {tier.featureGroups?.length
+          ? tier.featureGroups.map((group) => (
+              <div key={`${activeTier}-${group.label}`}>
+                <p className="mb-2 text-[0.6rem] font-bold uppercase tracking-[0.14em] text-emerald-400/50">
+                  {group.label}
+                </p>
+                <ul className="flex flex-col gap-2.5">
+                  {group.items.map((feature) => (
+                    <li
+                      key={`${activeTier}-${group.label}-${feature}`}
+                      className="flex items-start gap-2.5 text-[0.8125rem] leading-snug text-emerald-50/80"
+                    >
+                      <LuCircleCheck
+                        className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
+                        strokeWidth={2.5}
+                        aria-hidden
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          : null}
+        {!tier.featureGroups?.length && tier.features ? (
+          <ul className="flex flex-col gap-2.5">
+            {tier.features.map((feature) => (
+              <li
+                key={`${activeTier}-${feature}`}
+                className="flex items-start gap-2.5 text-[0.8125rem] leading-snug text-emerald-50/80"
+              >
+                <LuCircleCheck
+                  className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
+                  strokeWidth={2.5}
+                  aria-hidden
+                />
+                {feature}
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
 
       <div className="p-5 pt-0">
         <Link

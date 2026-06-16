@@ -77,7 +77,7 @@ export function ServicesCategoryTabs({
     >
       <div
         ref={containerRef}
-        className="relative overflow-x-auto rounded-[calc(1.75rem-1px)] bg-[#071510]/95 p-1.5 backdrop-blur-md [-ms-overflow-style:none] scrollbar-none sm:overflow-visible [&::-webkit-scrollbar]:hidden"
+        className="relative overflow-x-auto rounded-[calc(1.75rem-1px)] bg-[#071510]/95 p-1.5 backdrop-blur-md [-ms-overflow-style:none] scrollbar-none lg:overflow-visible [&::-webkit-scrollbar]:hidden"
         role="tablist"
       >
         <span
@@ -94,7 +94,7 @@ export function ServicesCategoryTabs({
           }}
         />
 
-        <div className="relative flex min-w-max items-center gap-1 sm:min-w-0 sm:justify-center">
+        <div className="relative flex min-w-max items-center gap-1">
           {tabs.map((tab) => {
             const Icon = categoryTabIcons[tab.id];
             const isActive = active === tab.id;

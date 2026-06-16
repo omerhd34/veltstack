@@ -4,14 +4,23 @@ import {
   LuCodeXml,
   LuContact,
   LuGlobe,
+  LuLifeBuoy,
+  LuMonitorSmartphone,
   LuSearch,
   LuServer,
+  LuShieldCheck,
   LuShoppingCart,
   LuSmartphone,
   LuTrendingUp,
 } from "react-icons/lu";
 
-export const packageCategories = ["web", "app", "seo", "api"] as const;
+export const packageCategories = [
+  "web",
+  "app",
+  "seo",
+  "api",
+  "maintenance",
+] as const;
 export type PackageCategory = (typeof packageCategories)[number];
 
 export const categoryTabIcons: Record<PackageCategory, IconType> = {
@@ -19,15 +28,22 @@ export const categoryTabIcons: Record<PackageCategory, IconType> = {
   app: LuSmartphone,
   seo: LuSearch,
   api: LuCodeXml,
+  maintenance: LuLifeBuoy,
 };
 
 export const webPackageSlugs = ["portfolio", "corporate", "ecommerce"] as const;
 export const seoPackageSlugs = ["audit", "growth", "enterprise"] as const;
 export const apiPackageSlugs = ["starter", "scale", "enterprise"] as const;
+export const maintenancePackageSlugs = [
+  "webApp",
+  "backendCloud",
+  "enterpriseSLA",
+] as const;
 
 export type WebPackageSlug = (typeof webPackageSlugs)[number];
 export type SeoPackageSlug = (typeof seoPackageSlugs)[number];
 export type ApiPackageSlug = (typeof apiPackageSlugs)[number];
+export type MaintenancePackageSlug = (typeof maintenancePackageSlugs)[number];
 
 export type PackageTier = "temel" | "standart" | "pro";
 
@@ -55,15 +71,21 @@ export const apiPackageIcons: Record<ApiPackageSlug, IconType> = {
   enterprise: LuServer,
 };
 
-export const categoryPackageSlugs: Record<
-  PackageCategory,
-  readonly string[]
-> = {
-  web: webPackageSlugs,
-  app: webPackageSlugs,
-  seo: seoPackageSlugs,
-  api: apiPackageSlugs,
-};
+export const maintenancePackageIcons: Record<MaintenancePackageSlug, IconType> =
+  {
+    webApp: LuMonitorSmartphone,
+    backendCloud: LuServer,
+    enterpriseSLA: LuShieldCheck,
+  };
+
+export const categoryPackageSlugs: Record<PackageCategory, readonly string[]> =
+  {
+    web: webPackageSlugs,
+    app: webPackageSlugs,
+    seo: seoPackageSlugs,
+    api: apiPackageSlugs,
+    maintenance: maintenancePackageSlugs,
+  };
 
 export const webPackageTechStack = [
   "HTML",
@@ -74,7 +96,7 @@ export const webPackageTechStack = [
   "Redux",
   "Zustand",
   "Tailwind CSS",
-  "shadcn/ui",
+  "Shadcn",
   "Bootstrap",
   "Next.js",
   "Node.js",
@@ -100,11 +122,13 @@ export const categoryPrimaryTechStack: Record<
     "Next.js",
     "TypeScript",
     "Tailwind CSS",
-    "shadcn/ui",
+    "Shadcn",
     "Node.js",
     "REST API",
     "MySQL",
     "Vercel",
+    "Google Analytics",
+    "Google Search",
   ],
   app: [
     "React Native",
@@ -118,19 +142,27 @@ export const categoryPrimaryTechStack: Record<
   seo: [
     "Google Search",
     "Google Analytics",
+    "PageSpeed Insights",
+    "Google Tag Manager",
+    "Next.js",
+    "HTML",
+  ],
+  api: ["Node.js", "Express.js", "TypeScript", "REST API", "Prisma", "Postman"],
+  maintenance: [
+    "React",
     "Next.js",
     "TypeScript",
-    "HTML",
-    "Vercel",
-  ],
-  api: [
+    "Tailwind CSS",
+    "Shadcn",
     "Node.js",
     "REST API",
-    "TypeScript",
-    "Prisma",
     "MySQL",
-    "Express.js",
     "Vercel",
+    "Google Analytics",
+    "Google Search",
+    "React Native",
+    "Flutter",
+    "Expo",
   ],
 };
 
@@ -152,10 +184,16 @@ export const appPackageTechStack = [
 ] as const;
 
 export const seoPackageTechStack = [
-  "Next.js",
   "Google Search",
   "Google Analytics",
+  "PageSpeed Insights",
+  "Google Tag Manager",
+  "Next.js",
   "HTML",
+  "Semrush",
+  "JSON-LD",
+  "CSS",
+  "Git",
   "TypeScript",
   "Vercel",
 ] as const;
@@ -163,15 +201,53 @@ export const seoPackageTechStack = [
 export const apiPackageTechStack = [
   "Node.js",
   "Express.js",
-  "REST API",
   "TypeScript",
+  "REST API",
   "Prisma",
+  "Postman",
+  "MySQL",
   "PostgreSQL",
+  "MongoDB",
+  "Redis",
+  "Swagger / OpenAPI",
+  "Docker",
+  "Kubernetes",
+] as const;
+
+export const maintenancePackageTechStack = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Redux",
+  "Zustand",
+  "Tailwind CSS",
+  "Shadcn",
+  "Bootstrap",
+  "Next.js",
+  "React Native",
+  "Flutter",
+  "Expo",
+  "Node.js",
+  "Express.js",
+  "REST API",
+  "Prisma",
   "MySQL",
   "MongoDB",
+  "PostgreSQL",
   "Postman",
-  "Railway",
+  "cPanel",
   "Vercel",
+  "Google Analytics",
+  "Google Search",
+  "App Store",
+  "Google Play",
+  "Docker",
+  "Kubernetes",
+  "Git",
+  "GitHub",
+  "Redis",
 ] as const;
 
 export const categoryTechStack: Record<PackageCategory, readonly string[]> = {
@@ -179,6 +255,7 @@ export const categoryTechStack: Record<PackageCategory, readonly string[]> = {
   app: appPackageTechStack,
   seo: seoPackageTechStack,
   api: apiPackageTechStack,
+  maintenance: maintenancePackageTechStack,
 };
 
 export function getCategorySecondaryTechStack(
@@ -196,4 +273,5 @@ export const categoryIcons: Record<
   app: appPackageIcons,
   seo: seoPackageIcons,
   api: apiPackageIcons,
+  maintenance: maintenancePackageIcons,
 };

@@ -29,7 +29,7 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-100 lg:hidden",
+        "fixed inset-0 z-100 overflow-hidden lg:hidden",
         mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none",
         className,
       )}

@@ -13,7 +13,12 @@ export function ServicesTechGroup({
   className,
 }: ServicesTechGroupProps) {
   return (
-    <div className={cn("flex shrink-0 flex-col items-center gap-3", className)}>
+    <div
+      className={cn(
+        "flex w-full min-w-0 flex-col items-center gap-3",
+        className,
+      )}
+    >
       <p className="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-emerald-400/50">
         {label}
       </p>
@@ -21,8 +26,7 @@ export function ServicesTechGroup({
         names={names}
         size="md"
         variant="dark"
-        wrap={false}
-        className="justify-center gap-1.5"
+        className="w-full justify-center gap-1.5"
       />
     </div>
   );
