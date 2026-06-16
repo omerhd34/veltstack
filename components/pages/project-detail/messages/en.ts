@@ -98,13 +98,13 @@ export const projectDetailsEn = {
     heroBadge: "E-Commerce · B2C",
     heroTitle: "Yazici Ticaret",
     heroSubtitle:
-      "End-to-end e-commerce for Profilo white goods and electronics. Nationwide shipping & installation, installment options and secure iyzico checkout.",
+      "End-to-end e-commerce for Profilo and LG white goods and electronics. Nationwide shipping & installation, installment options and secure iyzico checkout.",
     summary:
       "End-to-end e-commerce for white goods, built-in appliances and electronics.",
     challengeText:
       "Physical store traffic was limited while customers expected a wide product range, secure online payment, installment options and order tracking. The existing digital channel couldn't meet these expectations — category discovery was weak, campaign management was manual and order flows were fragmented. In high-ticket categories like white goods and electronics, trust and operational transparency are critical factors that directly affect conversion rates.",
     solutionText:
-      "We built an end-to-end B2C e-commerce platform for Profilo white goods and electronics. Category mega menus and featured product showcases simplify discovery, while iyzico integration delivers secure checkout with Troy, Mastercard and Visa installment support. Order tracking, campaign and discount modules, customer accounts and an admin panel centralize operations. Nationwide shipping and installation plus a product request form integrate post-sale support into the digital flow.",
+      "We built an end-to-end B2C e-commerce platform for Profilo and LG white goods and electronics. Category mega menus and featured product showcases simplify discovery, while iyzico integration delivers secure checkout with Troy, Mastercard and Visa installment support. Order tracking, campaign and discount modules, customer accounts and an admin panel centralize operations. Nationwide shipping and installation plus a product request form integrate post-sale support into the digital flow.",
     details:
       "The platform was built with Next.js, React and Node.js; MongoDB powers order, product and campaign management. iyzico payment infrastructure, dynamic pricing, an FAQ module and SEO-focused SSR strengthen search visibility. The admin panel handles product, category and discount management; Vercel deployment delivers fast page loads and structured data support. A trust-focused checkout experience suited to high-value product categories and a mobile-first responsive design were delivered end to end.",
     features: [
@@ -142,7 +142,7 @@ export const projectDetailsEn = {
     metrics: [
       { value: "11 weeks", label: "Development Time" },
       { value: "iyzico", label: "Payment Stack" },
-      { value: "Profilo", label: "Brand" },
+      { value: "Profilo & LG", label: "Brand" },
       { value: "B2C", label: "Model" },
     ],
   },

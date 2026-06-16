@@ -98,13 +98,13 @@ export const projectDetailsTr = {
     heroBadge: "E-Ticaret · B2C",
     heroTitle: "Yazıcı Ticaret",
     heroSubtitle:
-      "Profilo beyaz eşya ve elektronik ürünleri için uçtan uca e-ticaret. Tüm Türkiye'ye nakliye-montaj, taksit seçenekleri ve iyzico ile güvenli ödeme.",
+      "Profilo ve LG beyaz eşya ve elektronik ürünleri için uçtan uca e-ticaret. Tüm Türkiye'ye nakliye-montaj, taksit seçenekleri ve iyzico ile güvenli ödeme.",
     summary:
       "Beyaz eşya, ankastre ve elektronik kategorilerinde uçtan uca e-ticaret deneyimi.",
     challengeText:
       "Fiziksel mağaza trafiği sınırlı kalırken müşteriler geniş ürün yelpazesi, güvenli online ödeme, taksit seçenekleri ve sipariş takibi bekliyordu. Mevcut dijital kanal bu beklentileri karşılayamıyor; kategori keşfi zayıf, kampanya yönetimi manuel ve sipariş süreçleri parçalı ilerliyordu. Beyaz eşya ve elektronik gibi yüksek tutarlı kategorilerde güven ve operasyonel şeffaflık, dönüşüm oranını doğrudan etkileyen kritik faktörlerdi.",
     solutionText:
-      "Profilo beyaz eşya ve elektronik ürünleri için uçtan uca bir B2C e-ticaret platformu geliştirdik. Kategori mega menüleri ve öne çıkan ürün vitrinleri keşfi kolaylaştırırken; iyzico entegrasyonu Troy, Mastercard ve Visa ile taksitli, güvenli checkout sunuyor. Sipariş takibi, kampanya-indirim modülleri, müşteri hesabı ve admin paneli operasyonu tek merkezden yönetilebilir hale getiriyor. Tüm Türkiye'ye nakliye-montaj hizmeti ve ürün talep formu ile satış sonrası destek de dijital akışa entegre edildi.",
+      "Profilo ve LG beyaz eşya ve elektronik ürünleri için uçtan uca bir B2C e-ticaret platformu geliştirdik. Kategori mega menüleri ve öne çıkan ürün vitrinleri keşfi kolaylaştırırken; iyzico entegrasyonu Troy, Mastercard ve Visa ile taksitli, güvenli checkout sunuyor. Sipariş takibi, kampanya-indirim modülleri, müşteri hesabı ve admin paneli operasyonu tek merkezden yönetilebilir hale getiriyor. Tüm Türkiye'ye nakliye-montaj hizmeti ve ürün talep formu ile satış sonrası destek de dijital akışa entegre edildi.",
     details:
       "Platform Next.js, React ve Node.js ile geliştirildi; MongoDB veritabanı üzerinde sipariş, ürün ve kampanya yönetimi sağlandı. iyzico ödeme altyapısı, dinamik fiyatlandırma, SSS modülü ve SEO odaklı SSR yapısı arama görünürlüğünü güçlendiriyor. Admin paneli üzerinden ürün, kategori ve indirim yönetimi yapılabiliyor; Vercel deploy ile hızlı sayfa yüklemeleri ve yapılandırılmış veri desteği sunuluyor. Yüksek tutarlı ürün kategorilerine uygun güven odaklı checkout deneyimi ve mobil-first responsive tasarım tamamlandı.",
     features: [
@@ -142,7 +142,7 @@ export const projectDetailsTr = {
     metrics: [
       { value: "11 hafta", label: "Geliştirme Süresi" },
       { value: "iyzico", label: "Ödeme Altyapısı" },
-      { value: "Profilo", label: "Marka" },
+      { value: "Profilo ve LG", label: "Marka" },
       { value: "B2C", label: "Model" },
     ],
   },
