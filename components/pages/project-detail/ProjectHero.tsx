@@ -2,7 +2,6 @@ import type { IconType } from "react-icons";
 import { LuExternalLink } from "react-icons/lu";
 import Image from "next/image";
 import { SiteContainer } from "@/components/layout/SiteContainer";
-import { TechStackIcons } from "@/components/sections/projects/TechStackIcons";
 import { cn } from "@/lib/utils";
 
 interface ProjectHeroProps {
@@ -12,7 +11,6 @@ interface ProjectHeroProps {
   metrics: { value: string; label: string }[];
   demoUrl?: string;
   demoLabel: string;
-  techStack: string[];
   imageUrl?: string;
   coverGradient: string;
   icon: IconType;
@@ -26,7 +24,6 @@ export function ProjectHero({
   metrics,
   demoUrl,
   demoLabel,
-  techStack,
   imageUrl,
   coverGradient,
   icon: Icon,
@@ -66,8 +63,6 @@ export function ProjectHero({
             <p className="mt-5 max-w-xl text-sm leading-[1.85] text-emerald-50/75 sm:text-base lg:text-lg">
               {subtitle}
             </p>
-
-            <TechStackIcons names={techStack} variant="dark" className="mt-6" />
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {metrics.map((metric) => (

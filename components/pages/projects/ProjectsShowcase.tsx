@@ -3,7 +3,6 @@ import { SiteContainer } from "@/components/layout/SiteContainer";
 import {
   projectCoverGradients,
   projectImageUrls,
-  projectTechStacks,
 } from "@/components/sections/projects/project-detail-config";
 import { projectItems } from "@/components/sections/projects/project-items";
 import { ProjectShowcaseCard } from "./ProjectShowcaseCard";
@@ -55,7 +54,6 @@ export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
             icon={featured.icon}
             imageUrl={projectImageUrls[featured.slug]}
             coverGradient={projectCoverGradients[featured.slug]}
-            techStack={projectTechStacks[featured.slug]}
             viewLabel={tPage("viewLabel")}
             featuredLabel={tPage("featuredLabel")}
             featured
@@ -73,7 +71,6 @@ export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
                 icon={project.icon}
                 imageUrl={projectImageUrls[project.slug]}
                 coverGradient={projectCoverGradients[project.slug]}
-                techStack={projectTechStacks[project.slug]}
                 viewLabel={tPage("viewLabel")}
               />
             ))}

@@ -1,18 +1,13 @@
-import { setRequestLocale, getTranslations } from "next-intl/server"
+import { setRequestLocale } from "next-intl/server";
+import { AboutPageView } from "@/components/pages/about";
 
 interface AboutPageProps {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: string }>;
 }
 
 export default async function AboutPage({ params }: AboutPageProps) {
-  const { locale } = await params
-  setRequestLocale(locale)
-  const t = await getTranslations("about")
+  const { locale } = await params;
+  setRequestLocale(locale);
 
-  return (
-    <div className="mx-auto max-w-7xl px-4 py-24">
-      <h1 className="font-(family-name:--font-heading) text-4xl font-bold">{t("title")}</h1>
-      <p className="mt-4 text-muted-foreground">{t("subtitle")}</p>
-    </div>
-  )
+  return <AboutPageView />;
 }

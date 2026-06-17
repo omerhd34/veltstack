@@ -4,7 +4,6 @@ import { ProjectCard } from "@/components/sections/projects/ProjectCard";
 import {
   projectCoverGradients,
   projectImageUrls,
-  projectTechStacks,
 } from "@/components/sections/projects/project-detail-config";
 import { projectItems } from "@/components/sections/projects/project-items";
 import type { ProjectSlug } from "@/components/sections/projects/project-items";
@@ -52,7 +51,6 @@ export async function ServiceProjects({
               icon={project.icon}
               imageUrl={projectImageUrls[project.slug]}
               coverGradient={projectCoverGradients[project.slug]}
-              techStack={projectTechStacks[project.slug]}
               viewLabel={tHome("projectsViewLabel")}
             />
           ))}

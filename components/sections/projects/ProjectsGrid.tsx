@@ -3,7 +3,6 @@ import { ProjectCard } from "./ProjectCard";
 import {
   projectCoverGradients,
   projectImageUrls,
-  projectTechStacks,
 } from "./project-detail-config";
 import { homepageProjectItems } from "./project-items";
 
@@ -26,7 +25,6 @@ export async function ProjectsGrid({ className }: ProjectsGridProps) {
           icon={project.icon}
           imageUrl={projectImageUrls[project.slug]}
           coverGradient={projectCoverGradients[project.slug]}
-          techStack={projectTechStacks[project.slug]}
           viewLabel={t("projectsViewLabel")}
         />
       ))}

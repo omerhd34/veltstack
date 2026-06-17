@@ -9,13 +9,9 @@ import {
   LuEye,
   LuRocket,
 } from "react-icons/lu";
-import type { ProjectSlug } from "@/components/sections/projects/project-items";
-import { projectTechStacks } from "@/components/sections/projects/project-detail-config";
-import { TechStackIcons } from "@/components/sections/projects/TechStackIcons";
 import { cn } from "@/lib/utils";
 
 export interface ProjectDetailCardProps {
-  slug: ProjectSlug;
   title: string;
   summary: string;
   details: string;
@@ -35,7 +31,6 @@ export interface ProjectDetailCardProps {
 }
 
 export function ProjectDetailCard({
-  slug,
   title,
   summary,
   details,
@@ -47,7 +42,6 @@ export function ProjectDetailCard({
   className,
 }: ProjectDetailCardProps) {
   const [expanded, setExpanded] = useState(defaultExpanded);
-  const techNames = projectTechStacks[slug];
 
   return (
     <article
@@ -66,8 +60,6 @@ export function ProjectDetailCard({
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-emerald-50/75 md:text-base">
           {summary}
         </p>
-
-        <TechStackIcons names={techNames} variant="dark" className="mt-5" />
 
         <div className="mt-6 flex flex-wrap items-center gap-4">
           {demoUrl ? (

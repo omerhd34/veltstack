@@ -2,7 +2,6 @@ import type { IconType } from "react-icons";
 import { LuArrowRight } from "react-icons/lu";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { TechStackIcons } from "@/components/sections/projects/TechStackIcons";
 import { cn } from "@/lib/utils";
 
 interface ProjectShowcaseCardProps {
@@ -14,7 +13,6 @@ interface ProjectShowcaseCardProps {
   icon: IconType;
   imageUrl?: string;
   coverGradient: string;
-  techStack: string[];
   viewLabel: string;
   featuredLabel?: string;
   featured?: boolean;
@@ -30,7 +28,6 @@ export function ProjectShowcaseCard({
   icon: Icon,
   imageUrl,
   coverGradient,
-  techStack,
   viewLabel,
   featuredLabel,
   featured = false,
@@ -137,8 +134,6 @@ export function ProjectShowcaseCard({
         >
           {description}
         </p>
-
-        <TechStackIcons names={techStack} className="mt-5" />
 
         <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
           {viewLabel}

@@ -67,6 +67,7 @@ export function TechStackIcons({
       >
         {icons.map((tech) => {
           const Icon = tech!.icon;
+          const label = tech!.tooltip ?? tech!.name;
           return (
             <Tooltip key={tech!.name}>
               <TooltipTrigger asChild>
@@ -76,7 +77,7 @@ export function TechStackIcons({
                     boxClass,
                     variantClass,
                   )}
-                  aria-label={tech!.name}
+                  aria-label={label}
                 >
                   <Icon
                     className={cn(getIconClass(tech!.name), "block shrink-0")}
@@ -85,7 +86,7 @@ export function TechStackIcons({
                 </span>
               </TooltipTrigger>
               <TooltipContent side="top" className={tooltipClass}>
-                {tech!.name}
+                {label}
               </TooltipContent>
             </Tooltip>
           );

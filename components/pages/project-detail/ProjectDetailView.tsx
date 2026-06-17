@@ -8,7 +8,6 @@ import {
   projectCoverGradients,
   projectDemoUrls,
   projectImageUrls,
-  projectTechStacks,
 } from "@/components/sections/projects/project-detail-config";
 import { ServiceCTA } from "@/components/pages/service-detail/ServiceCTA";
 import { projectRelatedServices } from "./project-detail-config";
@@ -47,7 +46,6 @@ export async function ProjectDetailView({
   if (variant === "card") {
     return (
       <ProjectDetailCard
-        slug={slug}
         title={t(`${slug}.heroTitle`)}
         summary={t(`${slug}.summary`)}
         details={t(`${slug}.details`)}
@@ -77,7 +75,6 @@ export async function ProjectDetailView({
         metrics={metrics}
         demoUrl={projectDemoUrls[slug]}
         demoLabel={t("demo")}
-        techStack={projectTechStacks[slug]}
         imageUrl={projectImageUrls[slug]}
         coverGradient={projectCoverGradients[slug]}
         icon={project.icon}

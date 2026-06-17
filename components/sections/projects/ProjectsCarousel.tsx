@@ -12,7 +12,6 @@ export interface ProjectSlideItem {
   href: string;
   title: string;
   description: string;
-  techStack: string[];
   index: number;
 }
 
@@ -167,7 +166,6 @@ export function ProjectsCarousel({
                   href={item.href}
                   title={item.title}
                   description={item.description}
-                  techStack={item.techStack}
                   icon={Icon}
                 />
               </div>

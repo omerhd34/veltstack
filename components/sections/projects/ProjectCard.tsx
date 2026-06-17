@@ -3,7 +3,6 @@ import { LuArrowRight } from "react-icons/lu";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/shadcn";
-import { TechStackIcons } from "@/components/sections/projects/TechStackIcons";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
@@ -14,7 +13,6 @@ interface ProjectCardProps {
   icon?: IconType;
   coverGradient?: string;
   tag?: string;
-  techStack?: string[];
   featured?: boolean;
   viewLabel?: string;
   className?: string;
@@ -28,7 +26,6 @@ export function ProjectCard({
   icon: Icon,
   coverGradient = "from-brand-accent/80 to-brand-accent",
   tag,
-  techStack,
   featured = false,
   viewLabel = "View",
   className,
@@ -109,9 +106,6 @@ export function ProjectCard({
       >
         {description}
       </p>
-      {techStack && techStack.length > 0 ? (
-        <TechStackIcons names={techStack} className="mt-4" />
-      ) : null}
       <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand-accent opacity-0 transition-all duration-300 group-hover:opacity-100">
         {viewLabel}
         <LuArrowRight className="size-3.5" />

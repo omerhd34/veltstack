@@ -1,6 +1,7 @@
 import type { IconType } from "react-icons";
 import {
   SiAndroidstudio,
+  SiAngular,
   SiAppstore,
   SiBootstrap,
   SiCpanel,
@@ -34,33 +35,52 @@ import {
   SiReact,
   SiRedux,
   SiRender,
+  SiSass,
   SiShadcnui,
+  SiSqlite,
   SiSwagger,
   SiTailwindcss,
   SiTypescript,
   SiVercel,
+  SiVuedotjs,
 } from "react-icons/si";
-import { TbBrandReactNative, TbApi, TbCloudComputing } from "react-icons/tb";
+import { DiMsqlServer } from "react-icons/di";
+import {
+  TbBrandReactNative,
+  TbApi,
+  TbCloudComputing,
+  TbComponents,
+} from "react-icons/tb";
 import { ShopierIcon } from "./ShopierIcon";
 import { ZustandIcon } from "./ZustandIcon";
 
 export interface TechItem {
   name: string;
   icon: IconType;
+  tooltip?: string;
 }
 
 export const techItems: TechItem[] = [
   { name: "HTML", icon: SiHtml5 },
   { name: "CSS", icon: SiCss },
+  { name: "Sass & SCSS", icon: SiSass },
   { name: "TypeScript", icon: SiTypescript },
   { name: "JavaScript", icon: SiJavascript },
   { name: "Tailwind CSS", icon: SiTailwindcss },
   { name: "Bootstrap", icon: SiBootstrap },
   { name: "Next.js", icon: SiNextdotjs },
   { name: "React", icon: SiReact },
+  { name: "Angular", icon: SiAngular },
+  { name: "Vue", icon: SiVuedotjs },
   { name: "Redux", icon: SiRedux },
+  { name: "Redux Toolkit", icon: SiRedux },
   { name: "Zustand", icon: ZustandIcon },
   { name: "Shadcn", icon: SiShadcnui },
+  {
+    name: "UI",
+    icon: TbComponents,
+    tooltip: "UI(Shadcn, Material, ...)",
+  },
   { name: "React Native", icon: TbBrandReactNative },
   { name: "Flutter", icon: SiFlutter },
   { name: "Expo", icon: SiExpo },
@@ -72,6 +92,8 @@ export const techItems: TechItem[] = [
   { name: "MySQL", icon: SiMysql },
   { name: "MongoDB", icon: SiMongodb },
   { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "MSSQL", icon: DiMsqlServer },
+  { name: "SQLite", icon: SiSqlite },
   { name: "Vercel", icon: SiVercel },
   { name: "Railway", icon: SiRailway },
   { name: "Shopier", icon: ShopierIcon },

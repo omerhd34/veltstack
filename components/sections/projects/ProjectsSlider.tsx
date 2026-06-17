@@ -1,5 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import { projectTechStacks } from "./project-detail-config";
 import { ProjectsCarousel } from "./ProjectsCarousel";
 import { homepageProjectItems } from "./project-items";
 
@@ -15,7 +14,6 @@ export async function ProjectsSlider({ className }: ProjectsSliderProps) {
     href: project.href,
     title: t(project.titleKey),
     description: t(project.descKey),
-    techStack: projectTechStacks[project.slug],
     index: index + 1,
   }));
 

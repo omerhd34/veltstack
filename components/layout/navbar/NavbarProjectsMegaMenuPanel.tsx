@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/shadcn"
 import { SiteContainer } from "@/components/layout/SiteContainer"
 import { ServiceCard } from "@/components/sections/services/ServiceCard"
 import { projectItems } from "@/components/sections/projects/project-items"
-import { projectTechStacks } from "@/components/sections/projects/project-detail-config"
 import { useUiStore } from "@/store/uiSlice"
 
 export function NavbarProjectsMegaMenuPanel() {
@@ -18,7 +17,6 @@ export function NavbarProjectsMegaMenuPanel() {
     href: project.href,
     title: tHome(project.titleKey),
     description: tHome(project.descKey),
-    techStack: projectTechStacks[project.slug],
     icon: project.icon,
   }))
 
