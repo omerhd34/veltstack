@@ -1,20 +1,11 @@
 import type { IconType } from "react-icons";
-import {
-  LuBriefcase,
-  LuCodeXml,
-  LuGlobe,
-  LuSearch,
-  LuShoppingCart,
-  LuSmartphone,
-} from "react-icons/lu";
+import { LuGlobe, LuLifeBuoy, LuSearch, LuSmartphone } from "react-icons/lu";
 
 export const serviceSlugs = [
-  "kurumsal-web-sitesi",
-  "e-ticaret",
-  "mobil-uygulama",
+  "web-sitesi",
+  "uygulama",
   "seo-hizmetleri",
-  "portfolyo-sitesi",
-  "api-gelistirme",
+  "bakim-ve-destek",
 ] as const;
 
 export type ServiceSlug = (typeof serviceSlugs)[number];
@@ -30,27 +21,19 @@ export interface ServiceItemConfig {
 
 export const serviceItems: ServiceItemConfig[] = [
   {
-    slug: "kurumsal-web-sitesi",
-    href: "/hizmetler/kurumsal-web-sitesi",
-    titleKey: "servicesCorporateTitle",
-    descKey: "servicesCorporateDesc",
-    tagKey: "servicesCorporateTag",
+    slug: "web-sitesi",
+    href: "/hizmetler/web-sitesi",
+    titleKey: "servicesWebTitle",
+    descKey: "servicesWebDesc",
+    tagKey: "servicesWebTag",
     icon: LuGlobe,
   },
   {
-    slug: "e-ticaret",
-    href: "/hizmetler/e-ticaret",
-    titleKey: "servicesEcommerceTitle",
-    descKey: "servicesEcommerceDesc",
-    tagKey: "servicesEcommerceTag",
-    icon: LuShoppingCart,
-  },
-  {
-    slug: "mobil-uygulama",
-    href: "/hizmetler/mobil-uygulama",
-    titleKey: "servicesMobileTitle",
-    descKey: "servicesMobileDesc",
-    tagKey: "servicesMobileTag",
+    slug: "uygulama",
+    href: "/hizmetler/uygulama",
+    titleKey: "servicesAppTitle",
+    descKey: "servicesAppDesc",
+    tagKey: "servicesAppTag",
     icon: LuSmartphone,
   },
   {
@@ -62,20 +45,12 @@ export const serviceItems: ServiceItemConfig[] = [
     icon: LuSearch,
   },
   {
-    slug: "portfolyo-sitesi",
-    href: "/hizmetler/portfolyo-sitesi",
-    titleKey: "servicesPortfolioTitle",
-    descKey: "servicesPortfolioDesc",
-    tagKey: "servicesPortfolioTag",
-    icon: LuBriefcase,
-  },
-  {
-    slug: "api-gelistirme",
-    href: "/hizmetler/api-gelistirme",
-    titleKey: "servicesApiTitle",
-    descKey: "servicesApiDesc",
-    tagKey: "servicesApiTag",
-    icon: LuCodeXml,
+    slug: "bakim-ve-destek",
+    href: "/hizmetler/bakim-ve-destek",
+    titleKey: "servicesMaintenanceTitle",
+    descKey: "servicesMaintenanceDesc",
+    tagKey: "servicesMaintenanceTag",
+    icon: LuLifeBuoy,
   },
 ];
 

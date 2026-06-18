@@ -15,7 +15,7 @@ export const servicesPageTr = {
   ctaButton: "Görüşme Planla",
   ctaNote: "24 saat içinde dönüş",
   stats: [
-    { value: "3", label: "Paket Seviyesi" },
+    { value: "5-120", label: "Teslim Süresi (Gün)" },
     { value: "5", label: "Hizmet Tipi" },
     { value: "∞", label: "Sayfa Kapasitesi" },
     { value: "98%", label: "Memnuniyet" },

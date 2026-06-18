@@ -15,7 +15,7 @@ export const servicesPageEn = {
   ctaButton: "Schedule a Call",
   ctaNote: "Response within 24h",
   stats: [
-    { value: "3", label: "Package Tiers" },
+    { value: "5-120", label: "Delivery Days" },
     { value: "5", label: "Service Types" },
     { value: "∞", label: "Page Capacity" },
     { value: "98%", label: "Satisfaction" },

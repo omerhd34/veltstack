@@ -17,7 +17,6 @@ export async function ServicesPackagesSection({
     web: t.raw("webPackages") as Record<string, PackageCardData>,
     app: t.raw("appPackages") as Record<string, PackageCardData>,
     seo: t.raw("seoPackages") as Record<string, PackageCardData>,
-    api: t.raw("apiPackages") as Record<string, PackageCardData>,
     maintenance: t.raw("maintenancePackages") as Record<
       string,
       PackageCardData
@@ -28,7 +27,6 @@ export async function ServicesPackagesSection({
     { id: "web", label: t("tabWeb") },
     { id: "app", label: t("tabApp") },
     { id: "seo", label: t("tabSeo") },
-    { id: "api", label: t("tabApi") },
     { id: "maintenance", label: t("tabMaintenance") },
   ];
 
@@ -65,7 +63,6 @@ export async function ServicesPackagesSection({
             statPages: t("statPages"),
             statScreens: t("statScreens"),
             statKeywords: t("statKeywords"),
-            statEndpoints: t("statEndpoints"),
             statProjects: t("statProjects"),
             getQuote: t("getQuote"),
           }}
@@ -84,11 +81,6 @@ export async function ServicesPackagesSection({
               title: t("seoIntroTitle"),
               p1: t("seoIntroP1"),
               p2: t("seoIntroP2"),
-            },
-            api: {
-              title: t("apiIntroTitle"),
-              p1: t("apiIntroP1"),
-              p2: t("apiIntroP2"),
             },
             maintenance: {
               title: t("maintenanceIntroTitle"),

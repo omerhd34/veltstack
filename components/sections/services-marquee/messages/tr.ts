@@ -6,7 +6,6 @@ export const servicesMarqueeHomeTr = {
     "E-Ticaret",
     "SEO Hizmetleri",
     "Portfolyo Sitesi",
-    "API Geliştirme",
     "Bakım ve Destek"
   ]
 } as const

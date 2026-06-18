@@ -20,25 +20,25 @@ export const serviceDetailsTr = {
   deliveryLabel: "Teslim Süresi",
   breadcrumbHome: "Ana Sayfa",
   breadcrumbServices: "Hizmetler",
-  "kurumsal-web-sitesi": {
-    metaTitle: "Kurumsal Web Sitesi Yapımı | Veltstack",
+  "web-sitesi": {
+    metaTitle: "Web Sitesi Geliştirme | Veltstack",
     metaDesc:
-      "Hızlı, SEO uyumlu ve güven veren kurumsal web siteleri. Next.js ile modern, ölçeklenebilir kurumsal web deneyimi.",
-    heroBadge: "Kurumsal Web",
-    heroTitle: "Kurumsal Web Sitesi Yapımı",
+      "Kurumsal web sitesi, e-ticaret ve portfolyo projelerinde uçtan uca web geliştirme. Next.js ile hızlı, SEO uyumlu ve ölçeklenebilir çözümler.",
+    heroBadge: "Web Geliştirme",
+    heroTitle: "Web Sitesi Geliştirme",
     heroSubtitle:
-      "Markanızı güvenle temsil eden, hızlı ve SEO odaklı kurumsal web siteleri geliştiriyorum.",
-    deliveryTime: "2–4 hafta",
+      "Kurumsal siteden e-ticarete, portfolyodan landing page'e kadar her web projesini uçtan uca geliştiriyorum.",
+    deliveryTime: "1–8 hafta",
     features: [
-      {
-        title: "Kurumsal Kimlik Uyumu",
-        description:
-          "Logo, renk paleti ve tipografi markanızla tutarlı; ziyaretçiye ilk saniyede güven veren bir arayüz.",
-      },
       {
         title: "SEO Altyapısı",
         description:
           "Sunucu tarafı render, meta etiketleri, sitemap ve yapılandırılmış veri ile arama motorlarına hazır yapı.",
+      },
+      {
+        title: "E-Ticaret ve Ödeme",
+        description:
+          "Ürün kataloğu, güvenli ödeme entegrasyonu, sepet ve sipariş yönetimi.",
       },
       {
         title: "Hızlı Performans",
@@ -46,9 +46,9 @@ export const serviceDetailsTr = {
           "Next.js ve optimize edilmiş görsellerle yüksek Lighthouse skorları ve düşük yükleme süreleri.",
       },
       {
-        title: "İçerik Yönetimi",
+        title: "Responsive Tasarım",
         description:
-          "Blog, hizmet sayfaları ve duyurular için kolay güncellenebilir içerik alanları.",
+          "Tüm ekran boyutlarında kusursuz görünen, dokunmatik uyumlu mobil deneyim.",
       },
       {
         title: "Çok Dilli Destek",
@@ -63,14 +63,9 @@ export const serviceDetailsTr = {
     ],
     faq: [
       {
-        question: "Kurumsal web sitesi ne kadar sürede teslim edilir?",
+        question: "Web sitesi ne kadar sürede teslim edilir?",
         answer:
-          "Kapsama bağlı olarak ortalama 2–4 hafta. Keşif görüşmesinden sonra net bir takvim paylaşırım.",
-      },
-      {
-        question: "İçerikleri ben mi hazırlayacağım?",
-        answer:
-          "Metin ve görselleri siz sağlayabilirsiniz; isterseniz yapılandırma ve SEO uyumlu yerleşim desteği veririm.",
+          "Kapsama bağlı olarak basit siteler 1–2, kurumsal ve e-ticaret projeleri 4–8 hafta sürer. Keşif görüşmesinden sonra net takvim paylaşırım.",
       },
       {
         question: "Hosting ve domain dahil mi?",
@@ -82,77 +77,18 @@ export const serviceDetailsTr = {
         answer:
           "Evet. Mevcut içeriklerinizi koruyarak modern altyapıya geçiş veya sıfırdan yenileme yapabilirim.",
       },
-    ],
-  },
-  "e-ticaret": {
-    metaTitle: "E-Ticaret Sitesi Kurma | Veltstack",
-    metaDesc:
-      "Dönüşüm odaklı e-ticaret siteleri. Ödeme entegrasyonu, ürün yönetimi ve SEO ile satışa hazır altyapı.",
-    heroBadge: "E-Ticaret",
-    heroTitle: "E-Ticaret Sitesi Kurma",
-    heroSubtitle:
-      "Ürün kataloğundan ödeme akışına kadar uçtan uca, güvenli ve ölçeklenebilir e-ticaret çözümleri.",
-    deliveryTime: "4–8 hafta",
-    features: [
-      {
-        title: "Ürün ve Kategori Yönetimi",
-        description:
-          "Kolay güncellenebilir ürün kartları, filtreleme ve kategori yapısı ile yönetilebilir katalog.",
-      },
-      {
-        title: "Ödeme Entegrasyonu",
-        description:
-          "Güvenli ödeme altyapısı, sipariş onayı ve müşteri bildirim akışları.",
-      },
-      {
-        title: "Sepet ve Checkout",
-        description:
-          "Düşük terk oranı hedefleyen, mobil uyumlu sepet ve ödeme deneyimi.",
-      },
-      {
-        title: "Admin Paneli",
-        description:
-          "Sipariş takibi, stok güncelleme ve müşteri yönetimi için yönetim arayüzü.",
-      },
-      {
-        title: "SEO ve Dönüşüm",
-        description:
-          "Ürün sayfaları için optimize meta yapısı, hızlı yükleme ve dönüşüm odaklı tasarım.",
-      },
-      {
-        title: "Analitik Kurulumu",
-        description:
-          "Satış hunisi ve kampanya performansını izlemek için analitik entegrasyonu.",
-      },
-    ],
-    faq: [
-      {
-        question: "Hangi ödeme yöntemlerini destekliyorsunuz?",
-        answer:
-          "Proje ihtiyacına göre yaygın ödeme sağlayıcılarıyla entegrasyon yapılır; detayları keşif görüşmesinde netleştiririz.",
-      },
-      {
-        question: "E-ticaret sitesi maliyeti neye göre belirlenir?",
-        answer:
-          "Ürün sayısı, özel modüller, entegrasyonlar ve tasarım kapsamına göre teklif hazırlanır.",
-      },
       {
         question: "Mobil alışveriş deneyimi optimize edilir mi?",
         answer:
           "Evet. Tüm akışlar mobil öncelikli tasarlanır; sepet ve ödeme adımları dokunmatik kullanıma uygun olur.",
       },
-      {
-        question: "Mevcut ürün verilerimi aktarabilir misiniz?",
-        answer:
-          "CSV veya mevcut platformdan veri aktarımı mümkünse plana dahil edilir; teknik uygunluk önceden değerlendirilir.",
-      },
     ],
   },
-  "mobil-uygulama": {
+  "uygulama": {
     metaTitle: "Mobil Uygulama Geliştirme | Veltstack",
     metaDesc:
       "iOS ve Android için React Native ve Expo ile performanslı mobil uygulama geliştirme hizmeti.",
-    heroBadge: "Mobil Uygulama",
+    heroBadge: "Uygulama Geliştirme",
     heroTitle: "Mobil Uygulama Geliştirme",
     heroSubtitle:
       "Tek kod tabanıyla iOS ve Android'de çalışan, kullanıcı dostu ve ölçeklenebilir mobil uygulamalar.",
@@ -276,127 +212,67 @@ export const serviceDetailsTr = {
       },
     ],
   },
-  "portfolyo-sitesi": {
-    metaTitle: "Portfolyo Sitesi Yapımı | Veltstack",
+  "bakim-ve-destek": {
+    metaTitle: "Web Sitesi Bakım ve Destek | Veltstack",
     metaDesc:
-      "Yetkinliklerinizi ve projelerinizi öne çıkaran, etkileyici portfolyo web siteleri.",
-    heroBadge: "Portfolyo",
-    heroTitle: "Portfolyo Sitesi Yapımı",
+      "Web sitesi, mobil uygulama ve backend altyapınız için düzenli bakım, güncelleme ve teknik destek hizmeti.",
+    heroBadge: "Bakım & Destek",
+    heroTitle: "Sürekli Bakım & Destek",
     heroSubtitle:
-      "İşinizi ve yetkinliklerinizi etkileyici biçimde sunan, kişisel markanızı güçlendiren portfolyo siteleri.",
-    deliveryTime: "1–3 hafta",
+      "Yayına aldıktan sonra da yanınızdayım. Güncelleme, yedekleme, güvenlik ve teknik destek tek çatı altında.",
+    deliveryTime: "Sürekli / aylık",
     features: [
       {
-        title: "Kişisel Marka Tasarımı",
-        description: "Sizi yansıtan özgün görsel dil ve güçlü ilk izlenim.",
-      },
-      {
-        title: "Proje Vitrini",
+        title: "Güncellemeler ve Yamalar",
         description:
-          "Proje detayları, görseller ve sonuç metrikleriyle kapsamlı inceleme.",
+          "Bağımlılık, framework ve güvenlik yamalarının düzenli olarak uygulanması.",
       },
       {
-        title: "Hızlı Kurulum",
-        description: "Kısa teslim süreleriyle hızlıca yayına alınabilir yapı.",
-      },
-      {
-        title: "İletişim Entegrasyonu",
+        title: "Yedekleme ve Güvenlik",
         description:
-          "Tek tıkla ulaşılabilir iletişim formu ve sosyal medya bağlantıları.",
+          "Düzenli veri yedeklemeleri, güvenlik taramaları ve erişim denetimi.",
       },
       {
-        title: "SEO Hazır",
+        title: "Performans İzleme",
         description:
-          "Kişisel aramalarda görünürlük için optimize edilmiş meta ve yapı.",
+          "Uptime takibi, sayfa hızı izleme ve yavaşlama anında müdahale.",
       },
       {
-        title: "Kolay Güncelleme",
+        title: "Teknik Destek",
         description:
-          "Yeni proje eklemek ve içerik güncellemek için sade yönetim.",
+          "Sorun bildirme, hata giderme ve küçük geliştirmeler için öncelikli destek.",
+      },
+      {
+        title: "İçerik Güncellemeleri",
+        description:
+          "Metin, görsel ve sayfa güncellemelerini hızlıca uygulamak için hazır kapasite.",
+      },
+      {
+        title: "Raporlama",
+        description:
+          "Yapılan işler, sistem durumu ve öneriler için aylık durum raporu.",
       },
     ],
     faq: [
       {
-        question: "Portfolyo sitesi ne kadar sürede hazır olur?",
+        question: "Bakım paketi neleri kapsar?",
         answer:
-          "İçerik hazırlığına bağlı olarak 1–3 hafta içinde teslim edilir.",
+          "Güncelleme, yedekleme, güvenlik taraması, teknik destek ve küçük içerik değişikliklerini kapsar. Detaylar kapsama göre paket seçilirken netleştirilir.",
       },
       {
-        question: "Projelerimi nasıl ekleyeceğim?",
+        question: "Acil durumda ne kadar sürede müdahale edilir?",
         answer:
-          "Basit bir yapı kurulur; yeni proje eklemek için teknik destek veya kısa rehber sağlanır.",
+          "Pro paketinde 24 saat SLA garantisi mevcuttur. Temel ve standart paketlerde iş günü içinde yanıt verilir.",
       },
       {
-        question: "Özel domain kullanabilir miyim?",
+        question: "Mevcut sitem veya uygulamam için bakım hizmeti alabilir miyim?",
         answer:
-          "Evet. Kendi domaininizi bağlamanız için deploy ve DNS yönlendirme desteği verilir.",
+          "Evet. Önce kısa bir teknik inceleme yapılır, ardından ihtiyaca uygun bakım planı başlatılır.",
       },
       {
-        question: "CV dosyamı da ekleyebilir miyim?",
-        answer: "Evet. PDF indirme butonu veya online CV bölümü eklenebilir.",
-      },
-    ],
-  },
-  "api-gelistirme": {
-    metaTitle: "API Geliştirme | Veltstack",
-    metaDesc:
-      "Güvenli RESTful API, backend mimarisi ve ölçeklenebilir sunucu geliştirme hizmetleri.",
-    heroBadge: "Backend & API",
-    heroTitle: "API Geliştirme",
-    heroSubtitle:
-      "Mobil ve web uygulamalarınızı besleyen güvenli, dokümante ve ölçeklenebilir backend altyapıları.",
-    deliveryTime: "3–6 hafta",
-    features: [
-      {
-        title: "RESTful API Tasarımı",
-        description:
-          "Tutarlı endpoint yapısı, versiyonlama ve anlaşılır API sözleşmeleri.",
-      },
-      {
-        title: "Kimlik Doğrulama",
-        description: "JWT, oturum yönetimi ve rol tabanlı erişim kontrolü.",
-      },
-      {
-        title: "Veritabanı Mimarisi",
-        description:
-          "Prisma ORM ile ilişkisel veri modeli, migration ve sorgu optimizasyonu.",
-      },
-      {
-        title: "Dokümantasyon",
-        description:
-          "Postman koleksiyonu ve endpoint açıklamaları ile entegrasyon kolaylığı.",
-      },
-      {
-        title: "Güvenlik",
-        description:
-          "Rate limiting, input validasyonu ve güvenli hata yönetimi.",
-      },
-      {
-        title: "Deploy ve İzleme",
-        description:
-          "Railway veya Vercel üzerinde production deploy ve log takibi.",
-      },
-    ],
-    faq: [
-      {
-        question: "Hangi teknolojilerle API geliştiriyorsunuz?",
+        question: "Aylık sözleşme mi, yıllık mı?",
         answer:
-          "Node.js, Express.js, Prisma ve PostgreSQL/MySQL kombinasyonunu tercih ediyorum.",
-      },
-      {
-        question: "Mevcut API'mi refactor edebilir misiniz?",
-        answer:
-          "Evet. Kod incelemesi sonrası performans, güvenlik ve bakım kolaylığı odaklı iyileştirmeler yapılır.",
-      },
-      {
-        question: "Üçüncü parti entegrasyonlar dahil mi?",
-        answer:
-          "Ödeme, e-posta, SMS ve harici servis entegrasyonları proje kapsamına göre planlanır.",
-      },
-      {
-        question: "API dokümantasyonu sağlanıyor mu?",
-        answer:
-          "Evet. Tüm endpoint'ler için Postman koleksiyonu ve kullanım örnekleri teslim edilir.",
+          "Her iki seçenek de mevcuttur. Yıllık tercihte indirimli fiyatlandırma uygulanır.",
       },
     ],
   },

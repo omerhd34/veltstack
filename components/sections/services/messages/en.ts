@@ -2,39 +2,31 @@ export const servicesHomeEn = {
   servicesTitle: "Services",
   servicesHeadline: "Digital services built for measurable results",
   servicesIntro:
-    "We bring web, mobile and SEO together under one roof for your brand's digital journey. From corporate websites to e-commerce and from mobile apps to search engine optimization, we define scope upfront, manage the process transparently and focus on measurable business outcomes. From design and development to launch and post-launch support — we're with you end to end.",
+    "We bring web, app, SEO and post-launch support under one roof for your brand's digital journey. We define scope upfront, manage the process transparently and focus on measurable business outcomes. From design and development to launch and ongoing maintenance — we're with you end to end.",
   servicesCta: "Let's plan together",
   servicesCtaNote: "Free initial consultation - Response within 24h",
   servicesSubtitle: "End-to-end digital solutions tailored to your goals.",
   servicesSliderPrev: "Previous service",
   servicesSliderNext: "Next service",
   servicesSliderDot: "Service",
-  servicesCorporateTitle: "Corporate Website",
-  servicesCorporateDesc:
-    "A fast, trustworthy corporate web experience that reflects your brand.",
-  servicesCorporateTag: "Web - Corporate",
-  servicesEcommerceTitle: "E-Commerce",
-  servicesEcommerceDesc:
-    "Conversion-focused storefronts, payment integration and sales infrastructure in one place.",
-  servicesEcommerceTag: "E-Commerce - B2C",
-  servicesMobileTitle: "Mobile App",
-  servicesMobileDesc:
+  servicesWebTitle: "Website Development",
+  servicesWebDesc:
+    "End-to-end web development for corporate, e-commerce and portfolio projects.",
+  servicesWebTag: "Web - Development",
+  servicesAppTitle: "App Development",
+  servicesAppDesc:
     "High-performance, user-friendly mobile apps for iOS and Android.",
-  servicesMobileTag: "iOS - Android",
+  servicesAppTag: "iOS - Android",
   servicesSeoTitle: "SEO Services",
   servicesSeoDesc:
     "Sustainable organic growth through technical foundations and content strategy.",
   servicesSeoTag: "SEO - Organic",
-  servicesPortfolioTitle: "Portfolio Website",
-  servicesPortfolioDesc:
-    "Striking portfolio sites that showcase your work and expertise.",
-  servicesPortfolioTag: "Portfolio - Freelance",
-  servicesApiTitle: "API Development",
-  servicesApiDesc:
-    "Secure backends, RESTful APIs and scalable server architecture.",
-  servicesApiTag: "Backend - API",
+  servicesMaintenanceTitle: "Ongoing Maintenance & Support",
+  servicesMaintenanceDesc:
+    "Keep your digital assets always ready with updates, backups and technical support.",
+  servicesMaintenanceTag: "Maintenance - Support",
   servicesStats: [
-    { num: "6", label: "Service Categories" },
+    { num: "4", label: "Service Categories" },
     { num: "20+", label: "Completed Projects" },
     { num: "6+", label: "Years of Experience" },
     { num: "98%", label: "Client Satisfaction" },

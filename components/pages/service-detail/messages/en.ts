@@ -19,25 +19,25 @@ export const serviceDetailsEn = {
   deliveryLabel: "Delivery Time",
   breadcrumbHome: "Home",
   breadcrumbServices: "Services",
-  "kurumsal-web-sitesi": {
-    metaTitle: "Corporate Website Development | Veltstack",
+  "web-sitesi": {
+    metaTitle: "Website Development | Veltstack",
     metaDesc:
-      "Fast, SEO-friendly corporate websites. Modern, scalable corporate web experiences with Next.js.",
-    heroBadge: "Corporate Web",
-    heroTitle: "Corporate Website Development",
+      "End-to-end web development for corporate, e-commerce and portfolio projects. Fast, SEO-friendly and scalable solutions with Next.js.",
+    heroBadge: "Web Development",
+    heroTitle: "Website Development",
     heroSubtitle:
-      "I build fast, SEO-focused corporate websites that represent your brand with confidence.",
-    deliveryTime: "2–4 weeks",
+      "I build every kind of web project end to end — from corporate sites and e-commerce to portfolios and landing pages.",
+    deliveryTime: "1–8 weeks",
     features: [
-      {
-        title: "Brand Alignment",
-        description:
-          "Logo, color palette and typography stay consistent with your brand for instant trust.",
-      },
       {
         title: "SEO Foundation",
         description:
           "Server-side rendering, meta tags, sitemap and structured data ready for search engines.",
+      },
+      {
+        title: "E-Commerce & Payments",
+        description:
+          "Product catalog, secure payment integration, cart and order management.",
       },
       {
         title: "High Performance",
@@ -45,9 +45,9 @@ export const serviceDetailsEn = {
           "Strong Lighthouse scores and fast load times with Next.js and optimized assets.",
       },
       {
-        title: "Content Management",
+        title: "Responsive Design",
         description:
-          "Easily updatable areas for blog posts, service pages and announcements.",
+          "Pixel-perfect experience on every screen size with touch-friendly mobile layouts.",
       },
       {
         title: "Multilingual Support",
@@ -62,14 +62,9 @@ export const serviceDetailsEn = {
     ],
     faq: [
       {
-        question: "How long does a corporate website take?",
+        question: "How long does a website take?",
         answer:
-          "Typically 2–4 weeks depending on scope. I share a clear timeline after the discovery call.",
-      },
-      {
-        question: "Do I provide the content?",
-        answer:
-          "You can supply copy and visuals; I can also help with structure and SEO-friendly placement.",
+          "Simple sites take 1–2 weeks; corporate and e-commerce projects typically take 4–8 weeks. I share a clear timeline after the discovery call.",
       },
       {
         question: "Is hosting and domain included?",
@@ -81,77 +76,18 @@ export const serviceDetailsEn = {
         answer:
           "Yes. I can migrate to modern infrastructure while keeping your content or rebuild from scratch.",
       },
-    ],
-  },
-  "e-ticaret": {
-    metaTitle: "Ecommerce Website Development | Veltstack",
-    metaDesc:
-      "Conversion-focused ecommerce sites with payment integration, product management and SEO.",
-    heroBadge: "Ecommerce",
-    heroTitle: "Ecommerce Website Development",
-    heroSubtitle:
-      "End-to-end ecommerce solutions from product catalog to secure checkout.",
-    deliveryTime: "4–8 weeks",
-    features: [
-      {
-        title: "Product & Category Management",
-        description:
-          "Manageable catalog with easy-to-update product cards, filters and categories.",
-      },
-      {
-        title: "Payment Integration",
-        description:
-          "Secure payment infrastructure, order confirmation and customer notifications.",
-      },
-      {
-        title: "Cart & Checkout",
-        description:
-          "Mobile-friendly cart and checkout designed to reduce abandonment.",
-      },
-      {
-        title: "Admin Panel",
-        description:
-          "Dashboard for order tracking, stock updates and customer management.",
-      },
-      {
-        title: "SEO & Conversion",
-        description:
-          "Optimized product pages, fast loading and conversion-focused design.",
-      },
-      {
-        title: "Analytics Setup",
-        description:
-          "Analytics integration to track sales funnel and campaign performance.",
-      },
-    ],
-    faq: [
-      {
-        question: "Which payment methods do you support?",
-        answer:
-          "I integrate common payment providers based on project needs; details are clarified in discovery.",
-      },
-      {
-        question: "How is ecommerce pricing determined?",
-        answer:
-          "Quotes depend on product count, custom modules, integrations and design scope.",
-      },
       {
         question: "Is mobile shopping optimized?",
         answer:
           "Yes. All flows are mobile-first with touch-friendly cart and checkout steps.",
       },
-      {
-        question: "Can you migrate my existing product data?",
-        answer:
-          "CSV or platform migration is included when technically feasible; assessed upfront.",
-      },
     ],
   },
-  "mobil-uygulama": {
+  "uygulama": {
     metaTitle: "Mobile App Development | Veltstack",
     metaDesc:
       "High-performance mobile apps for iOS and Android with React Native and Expo.",
-    heroBadge: "Mobile App",
+    heroBadge: "App Development",
     heroTitle: "Mobile App Development",
     heroSubtitle:
       "User-friendly, scalable mobile apps that run on iOS and Android from a single codebase.",
@@ -274,127 +210,67 @@ export const serviceDetailsEn = {
       },
     ],
   },
-  "portfolyo-sitesi": {
-    metaTitle: "Portfolio Website Development | Veltstack",
+  "bakim-ve-destek": {
+    metaTitle: "Website Maintenance & Support | Veltstack",
     metaDesc:
-      "Impressive portfolio websites that showcase your skills and projects.",
-    heroBadge: "Portfolio",
-    heroTitle: "Portfolio Website Development",
+      "Regular maintenance, updates and technical support for your website, mobile app and backend infrastructure.",
+    heroBadge: "Maintenance & Support",
+    heroTitle: "Ongoing Maintenance & Support",
     heroSubtitle:
-      "Portfolio sites that present your work and expertise in a compelling way.",
-    deliveryTime: "1–3 weeks",
+      "I stay by your side after launch. Updates, backups, security and technical support all under one roof.",
+    deliveryTime: "Ongoing / monthly",
     features: [
       {
-        title: "Personal Brand Design",
+        title: "Updates & Patches",
         description:
-          "Distinct visual language that reflects you and creates a strong first impression.",
+          "Regular application of dependency, framework and security updates.",
       },
       {
-        title: "Project Showcase",
+        title: "Backups & Security",
         description:
-          "Case study format with project details, visuals and outcome metrics.",
+          "Scheduled data backups, security scans and access control reviews.",
       },
       {
-        title: "Fast Setup",
+        title: "Performance Monitoring",
         description:
-          "Quick delivery so you can go live without long waiting periods.",
+          "Uptime tracking, page speed monitoring and rapid response to slowdowns.",
       },
       {
-        title: "Contact Integration",
-        description: "One-click contact form and social media links.",
+        title: "Technical Support",
+        description:
+          "Priority support for issue reporting, bug fixes and small improvements.",
       },
       {
-        title: "SEO Ready",
+        title: "Content Updates",
         description:
-          "Optimized meta and structure for personal search visibility.",
+          "Ready capacity to quickly apply text, image and page content changes.",
       },
       {
-        title: "Easy Updates",
+        title: "Reporting",
         description:
-          "Simple structure to add new projects and refresh content.",
+          "Monthly status report covering completed work, system health and recommendations.",
       },
     ],
     faq: [
       {
-        question: "How long does a portfolio site take?",
-        answer: "Typically 1–3 weeks depending on content readiness.",
-      },
-      {
-        question: "How do I add new projects?",
+        question: "What does a maintenance plan cover?",
         answer:
-          "A simple structure is set up with technical support or a short guide for adding projects.",
+          "Updates, backups, security scans, technical support and small content changes. Details are clarified when selecting a package tier.",
       },
       {
-        question: "Can I use my own domain?",
+        question: "How fast is the response in an emergency?",
         answer:
-          "Yes. I provide deploy and DNS guidance to connect your custom domain.",
+          "The Pro tier includes a 24-hour SLA guarantee. Basic and Standard tiers receive a same-business-day response.",
       },
       {
-        question: "Can I include my CV?",
-        answer: "Yes. A PDF download button or online CV section can be added.",
-      },
-    ],
-  },
-  "api-gelistirme": {
-    metaTitle: "API Development | Veltstack",
-    metaDesc:
-      "Secure RESTful APIs, backend architecture and scalable server development.",
-    heroBadge: "Backend & API",
-    heroTitle: "API Development",
-    heroSubtitle:
-      "Secure, documented and scalable backend infrastructure for your web and mobile apps.",
-    deliveryTime: "3–6 weeks",
-    features: [
-      {
-        title: "RESTful API Design",
-        description:
-          "Consistent endpoints, versioning and clear API contracts.",
-      },
-      {
-        title: "Authentication",
-        description: "JWT, session management and role-based access control.",
-      },
-      {
-        title: "Database Architecture",
-        description:
-          "Relational data models with Prisma ORM, migrations and query optimization.",
-      },
-      {
-        title: "Documentation",
-        description:
-          "Postman collections and endpoint descriptions for easy integration.",
-      },
-      {
-        title: "Security",
-        description:
-          "Rate limiting, input validation and secure error handling.",
-      },
-      {
-        title: "Deploy & Monitoring",
-        description:
-          "Production deploy on Railway or Vercel with log tracking.",
-      },
-    ],
-    faq: [
-      {
-        question: "What technologies do you use for APIs?",
+        question: "Can I get maintenance for my existing site or app?",
         answer:
-          "I typically use Node.js, Express.js, Prisma and PostgreSQL/MySQL.",
+          "Yes. A short technical review is done first, then a maintenance plan is started based on your needs.",
       },
       {
-        question: "Can you refactor my existing API?",
+        question: "Monthly or annual contract?",
         answer:
-          "Yes. After code review, I improve performance, security and maintainability.",
-      },
-      {
-        question: "Are third-party integrations included?",
-        answer:
-          "Payment, email, SMS and external service integrations are planned per project scope.",
-      },
-      {
-        question: "Is API documentation provided?",
-        answer:
-          "Yes. Postman collections and usage examples are delivered for all endpoints.",
+          "Both options are available. Annual plans come with discounted pricing.",
       },
     ],
   },

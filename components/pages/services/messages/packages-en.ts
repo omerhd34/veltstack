@@ -5,18 +5,16 @@ export const servicesPackagesEn = {
   tabWeb: "Website",
   tabApp: "Application",
   tabSeo: "SEO Services",
-  tabApi: "API Development",
   tabMaintenance: "Ongoing Maintenance & Support",
   tierTemel: "Basic",
   tierStandart: "Standard",
   tierPro: "Pro",
-  statDelivery: "Delivery",
+  statDelivery: "Delivery (days)",
   statDeliveryUnit: "days",
   statRevision: "Revisions",
   statPages: "Pages",
   statScreens: "Screens",
   statKeywords: "Keywords",
-  statEndpoints: "Endpoints",
   statProjects: "Projects",
   scopeUnlimited: "∞",
   getQuote: "Get a Quote",
@@ -32,19 +30,14 @@ export const servicesPackagesEn = {
     "Promotional, corporate and ecommerce apps in three tiers. Source code delivery, store publishing guidance and API integration included in every package.",
   seoIntroTitle: "Sustainable organic growth",
   seoIntroP1:
-    "From technical audits to content strategy, on-page optimization to performance reporting — I grow search visibility systematically.",
+    "From technical audits to monthly optimization, keyword strategy to enterprise-scale SEO management — everything under one roof. Basic, Standard and Pro tiers scale with your goals.",
   seoIntroP2:
-    "Three packages: site audit, monthly SEO (Search Engine Optimization) management and corporate SEO program. Pro includes deep optimization for 100+ pages and continuous monitoring.",
-  apiIntroTitle: "Secure, scalable backend",
-  apiIntroP1:
-    "RESTful API design, authentication, database architecture and documentation under one roof. Production-ready infrastructure with Node.js, Express and Prisma.",
-  apiIntroP2:
-    "Three tiers from basic REST API to corporate backend and scalable architecture. Postman collections, rate limiting and deploy support included in every package.",
+    "Every tier includes audit, optimization and reporting. Start where you are and move up as you grow — no need to switch providers or rebuild strategy from scratch.",
   maintenanceIntroTitle: "Always-on digital assets",
   maintenanceIntroP1:
-    "Launch is only the start — backups, security patches, performance monitoring and emergency response keep your systems running. I provide ongoing maintenance for websites, mobile apps and backend infrastructure.",
+    "Updates, backups, security monitoring and emergency response — ongoing support for your website, mobile app and backend infrastructure all in one place. Basic, Standard and Pro tiers scale with your needs.",
   maintenanceIntroP2:
-    "Three tiers: web & mobile maintenance, backend & server management, and corporate SLA support. Pro includes 24/7 emergency response and unlimited update scope.",
+    "Every tier includes monitoring, backups and technical support. Move up to Pro for 24/7 SLA guarantees, cloud infrastructure management and a dedicated engineer.",
   webPackages: {
     portfolio: {
       title: "Portfolio / Promotional Website",
@@ -52,7 +45,7 @@ export const servicesPackagesEn = {
         "Fast, modern promotional site that highlights your personal brand or business.",
       tiers: {
         temel: {
-          deliveryDays: "7",
+          deliveryDays: "14-21",
           revisions: "2",
           scope: "0-3",
           featureGroups: [
@@ -60,10 +53,10 @@ export const servicesPackagesEn = {
               label: "Development & Design",
               items: [
                 "Mobile-compatible (responsive) development",
-                "Basic UI/UX template adaptation",
                 "Fast loading and performance optimization",
                 "SSL certificate and security setup",
                 "Cross-browser compatibility testing",
+                "Basic UI/UX template adaptation",
               ],
             },
             {
@@ -87,7 +80,7 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "14",
+          deliveryDays: "21-30",
           revisions: "4",
           scope: "0-8",
           featureGroups: [
@@ -129,12 +122,13 @@ export const servicesPackagesEn = {
                 "Vercel publishing support",
                 "Hosting setup guide",
                 "30 days technical support",
+                "User guide training and documentation",
               ],
             },
           ],
         },
         pro: {
-          deliveryDays: "21",
+          deliveryDays: "30-45",
           revisions: "6",
           scope: "∞",
           featureGroups: [
@@ -163,7 +157,7 @@ export const servicesPackagesEn = {
               ],
             },
             {
-              label: "Panel & Content",
+              label: "Content & Panel",
               items: [
                 "Dynamic portfolio management panel (full CMS)",
                 "Blog / article module",
@@ -178,7 +172,7 @@ export const servicesPackagesEn = {
                 "Vercel publishing support",
                 "Hosting and domain setup guide",
                 "45 days technical support",
-                "User manual documentation",
+                "User guide training and documentation",
               ],
             },
           ],
@@ -191,7 +185,7 @@ export const servicesPackagesEn = {
         "Trustworthy, high-performance web solution aligned with your brand identity.",
       tiers: {
         temel: {
-          deliveryDays: "14",
+          deliveryDays: "21-35",
           revisions: "3",
           scope: "0-5",
           featureGroups: [
@@ -202,6 +196,7 @@ export const servicesPackagesEn = {
                 "Fast loading and performance optimization",
                 "SSL certificate and security setup",
                 "Cross-browser compatibility testing",
+                "Basic UI/UX template adaptation",
               ],
             },
             {
@@ -226,7 +221,7 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "21",
+          deliveryDays: "35-50",
           revisions: "5",
           scope: "0-15",
           featureGroups: [
@@ -238,17 +233,6 @@ export const servicesPackagesEn = {
                 "90+ Google PageSpeed score guarantee",
                 "Premium UI components and corporate animations",
                 "Cross-browser compatibility testing",
-              ],
-            },
-            {
-              label: "Content & Panel",
-              items: [
-                "CMS content management panel",
-                "Blog, news and announcement module",
-                "Team / staff profile page",
-                "Services and references section",
-                "Media and press kit page",
-                "Second language support",
               ],
             },
             {
@@ -264,19 +248,30 @@ export const servicesPackagesEn = {
               ],
             },
             {
+              label: "Content & Panel",
+              items: [
+                "CMS content management panel",
+                "Blog, news and announcement module",
+                "Team / staff profile page",
+                "Services and references section",
+                "Media and press kit page",
+                "Second language support",
+              ],
+            },
+            {
               label: "Delivery & Support",
               items: [
                 "Source code delivery",
                 "Vercel publishing support",
                 "Hosting setup guide",
                 "30 days technical support",
-                "Basic panel training and documentation",
+                "User guide training and documentation",
               ],
             },
           ],
         },
         pro: {
-          deliveryDays: "30",
+          deliveryDays: "50-70",
           revisions: "8",
           scope: "∞",
           featureGroups: [
@@ -293,17 +288,6 @@ export const servicesPackagesEn = {
               ],
             },
             {
-              label: "Content & Panel",
-              items: [
-                "Full CMS and blog infrastructure",
-                "Multilingual support",
-                "Career / job posting module and application form",
-                "Event and announcement calendar",
-                "Corporate document download section",
-                "Video gallery and media management",
-              ],
-            },
-            {
               label: "SEO & Analytics",
               items: [
                 "Comprehensive technical SEO optimization",
@@ -312,6 +296,17 @@ export const servicesPackagesEn = {
                 "Google Search Console setup",
                 "Schema markup (Organization, BreadcrumbList, etc.)",
                 "Privacy-compliant cookie policy module (KVKK/GDPR)",
+              ],
+            },
+            {
+              label: "Content & Panel",
+              items: [
+                "Full CMS and blog infrastructure",
+                "Multilingual support",
+                "Career / job posting module and application form",
+                "Event and announcement calendar",
+                "Corporate document download section",
+                "Video gallery and media management",
               ],
             },
             {
@@ -329,6 +324,7 @@ export const servicesPackagesEn = {
                 "Vercel publishing support",
                 "Hosting setup guide",
                 "45 days technical support",
+                "User guide training and documentation",
                 "Comprehensive user manual documentation",
               ],
             },
@@ -342,7 +338,7 @@ export const servicesPackagesEn = {
         "Scalable infrastructure with secure payments, product management and order tracking.",
       tiers: {
         temel: {
-          deliveryDays: "21",
+          deliveryDays: "30-45",
           revisions: "3",
           scope: "0-15",
           featureGroups: [
@@ -353,6 +349,16 @@ export const servicesPackagesEn = {
                 "Fast loading and performance optimization",
                 "SSL certificate and payment security infrastructure",
                 "Cross-browser compatibility testing",
+                "Basic UI/UX template adaptation",
+              ],
+            },
+            {
+              label: "SEO & Integration",
+              items: [
+                "Basic ecommerce SEO configuration",
+                "Sitemap setup",
+                "Contact form and Google Maps integration",
+                "Privacy, Distance Sales Agreement and cookie module (KVKK/GDPR)",
               ],
             },
             {
@@ -367,15 +373,6 @@ export const servicesPackagesEn = {
               ],
             },
             {
-              label: "SEO & Integration",
-              items: [
-                "Basic ecommerce SEO configuration",
-                "Sitemap setup",
-                "Contact form and Google Maps integration",
-                "Privacy, Distance Sales Agreement and cookie module (KVKK/GDPR)",
-              ],
-            },
-            {
               label: "Delivery & Support",
               items: [
                 "Source code delivery",
@@ -387,7 +384,7 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "30",
+          deliveryDays: "45-60",
           revisions: "5",
           scope: "0-30",
           featureGroups: [
@@ -398,18 +395,6 @@ export const servicesPackagesEn = {
                 "90+ Google PageSpeed score guarantee",
                 "Premium ecommerce UI components and filter animations",
                 "Cross-browser compatibility testing",
-              ],
-            },
-            {
-              label: "Store & Payment",
-              items: [
-                "Advanced product, category and tag management",
-                "Multiple payment methods (credit card, bank transfer/EFT)",
-                "Membership, login, password reset and profile pages",
-                "Order tracking and user history panel",
-                "Coupon, discount and campaign management module",
-                "Add to favorites / wishlist",
-                "Product variant support (color, size, dimensions, etc.)",
               ],
             },
             {
@@ -425,19 +410,31 @@ export const servicesPackagesEn = {
               ],
             },
             {
+              label: "Store & Payment",
+              items: [
+                "Advanced product, category and tag management",
+                "Multiple payment methods (credit card, bank transfer/EFT)",
+                "Membership, login, password reset and profile pages",
+                "Order tracking and user history panel",
+                "Coupon, discount and campaign management module",
+                "Add to favorites / wishlist",
+                "Product variant support (color, size, dimensions, etc.)",
+              ],
+            },
+            {
               label: "Delivery & Support",
               items: [
                 "Source code delivery",
                 "Vercel publishing support",
                 "Hosting setup guide",
                 "30 days technical support",
-                "Panel user guide",
+                "User guide training and documentation",
               ],
             },
           ],
         },
         pro: {
-          deliveryDays: "45",
+          deliveryDays: "60-90",
           revisions: "10",
           scope: "∞",
           featureGroups: [
@@ -454,6 +451,17 @@ export const servicesPackagesEn = {
               ],
             },
             {
+              label: "SEO & Analytics",
+              items: [
+                "Comprehensive technical ecommerce SEO optimization",
+                "Google Analytics 4 (GA4) ecommerce conversion reporting",
+                "Google Merchant Center / Shopping integration infrastructure",
+                "Conversion, form and cart tracking",
+                "Advanced Product, Review and Offer schema markup",
+                "Google Search Console setup",
+              ],
+            },
+            {
               label: "Store & Payment",
               items: [
                 "Advanced stock, dynamic variant and price management",
@@ -466,18 +474,7 @@ export const servicesPackagesEn = {
               ],
             },
             {
-              label: "SEO & Analytics",
-              items: [
-                "Comprehensive technical ecommerce SEO optimization",
-                "Google Analytics 4 (GA4) ecommerce conversion reporting",
-                "Google Merchant Center / Shopping integration infrastructure",
-                "Conversion, form and cart tracking",
-                "Advanced Product, Review and Offer schema markup",
-                "Google Search Console setup",
-              ],
-            },
-            {
-              label: "Panel & Content",
+              label: "Content & Panel",
               items: [
                 "Full ecommerce management panel (advanced CMS)",
                 "Multilingual and multi-currency support",
@@ -492,6 +489,7 @@ export const servicesPackagesEn = {
                 "Vercel publishing and server optimization support",
                 "Advanced hosting / server setup guide",
                 "45 days technical support and bug fixes",
+                "User guide training and documentation",
                 "Comprehensive store management and user guide",
               ],
             },
@@ -507,7 +505,7 @@ export const servicesPackagesEn = {
         "Fast promotional app representing your brand on iOS and Android.",
       tiers: {
         temel: {
-          deliveryDays: "21",
+          deliveryDays: "21-30",
           revisions: "2",
           scope: "0-5",
           featureGroups: [
@@ -515,7 +513,7 @@ export const servicesPackagesEn = {
               label: "Development & Design",
               items: [
                 "Cross-platform iOS and Android development",
-                "Mobile-friendly basic UI design",
+                "Basic UI/UX template adaptation",
                 "Information and navigation screens",
                 "Fast loading and performance optimization",
               ],
@@ -539,7 +537,7 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "30",
+          deliveryDays: "30-45",
           revisions: "4",
           scope: "0-10",
           featureGroups: [
@@ -573,12 +571,13 @@ export const servicesPackagesEn = {
                 "Source code delivery",
                 "App Store and Play Store publishing management",
                 "30 days technical support",
+                "User guide training and documentation",
               ],
             },
           ],
         },
         pro: {
-          deliveryDays: "45",
+          deliveryDays: "45-60",
           revisions: "6",
           scope: "∞",
           featureGroups: [
@@ -613,6 +612,7 @@ export const servicesPackagesEn = {
                 "Source code delivery",
                 "Turnkey App Store and Play Store publishing process",
                 "45 days technical support",
+                "User guide training and documentation",
               ],
             },
           ],
@@ -625,7 +625,7 @@ export const servicesPackagesEn = {
         "Reliable corporate mobile platform for employees or customers.",
       tiers: {
         temel: {
-          deliveryDays: "30",
+          deliveryDays: "30-45",
           revisions: "3",
           scope: "0-8",
           featureGroups: [
@@ -635,6 +635,7 @@ export const servicesPackagesEn = {
                 "Corporate-branded iOS / Android interface",
                 "Announcement, news and content screens",
                 "Device compatibility and performance testing",
+                "Basic UI/UX template adaptation",
               ],
             },
             {
@@ -657,7 +658,7 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "45",
+          deliveryDays: "45-60",
           revisions: "5",
           scope: "0-15",
           featureGroups: [
@@ -692,12 +693,13 @@ export const servicesPackagesEn = {
                 "Source code delivery",
                 "App Store and Play Store company account setup and publishing support",
                 "30 days technical support",
+                "User guide training and documentation",
               ],
             },
           ],
         },
         pro: {
-          deliveryDays: "60",
+          deliveryDays: "60-90",
           revisions: "8",
           scope: "∞",
           featureGroups: [
@@ -734,6 +736,7 @@ export const servicesPackagesEn = {
                 "Source code delivery",
                 "App Store (including Enterprise) and Play Store publishing management",
                 "45 days technical support",
+                "User guide training and documentation",
                 "Corporate user manual",
               ],
             },
@@ -747,7 +750,7 @@ export const servicesPackagesEn = {
         "Store-ready ecommerce app with payments, products and order management.",
       tiers: {
         temel: {
-          deliveryDays: "45",
+          deliveryDays: "45-60",
           revisions: "3",
           scope: "0-12",
           featureGroups: [
@@ -757,6 +760,7 @@ export const servicesPackagesEn = {
                 "Ecommerce-focused iOS / Android interface",
                 "Category, product listing and product detail screens",
                 "Fast product image loading optimization",
+                "Basic UI/UX template adaptation",
               ],
             },
             {
@@ -785,7 +789,7 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "60",
+          deliveryDays: "60-90",
           revisions: "5",
           scope: "0-20",
           featureGroups: [
@@ -821,12 +825,13 @@ export const servicesPackagesEn = {
                 "Source code delivery",
                 "Publishing process aligned with store guidelines",
                 "30 days technical support",
+                "User guide training and documentation",
               ],
             },
           ],
         },
         pro: {
-          deliveryDays: "90",
+          deliveryDays: "90-120",
           revisions: "8",
           scope: "∞",
           featureGroups: [
@@ -863,6 +868,7 @@ export const servicesPackagesEn = {
                 "Apple Pay / Google Pay integration readiness",
                 "Turnkey App Store and Play Store publishing process",
                 "45 days technical support",
+                "User guide training and documentation",
               ],
             },
           ],
@@ -871,225 +877,86 @@ export const servicesPackagesEn = {
     },
   },
   seoPackages: {
-    audit: {
-      title: "Technical SEO Audit",
+    seoServices: {
+      title: "Digital Marketing & SEO",
       description:
-        "Starter report with site speed, crawl errors, indexing and structured data analysis.",
+        "Comprehensive search engine optimization and growth strategies — from technical audits to monthly ad campaigns, for individual sites and enterprise platforms alike.",
       tiers: {
         temel: {
-          deliveryDays: "7",
-          revisions: "1",
+          deliveryDays: "10-14",
+          pages: "5",
           scope: "0-25",
           featureGroups: [
             {
-              label: "Audit & Review",
+              label: "Audit & Analysis",
               items: [
-                "Site speed analysis",
-                "Meta tag audit",
+                "Site speed and performance analysis",
+                "Meta tag and heading audit",
                 "Mobile compatibility check",
+                "Crawl error report",
               ],
             },
             {
-              label: "Reporting & Strategy",
-              items: ["Basic crawl error report", "Priority action list"],
-            },
-          ],
-        },
-        standart: {
-          deliveryDays: "14",
-          revisions: "2",
-          scope: "0-75",
-          featureGroups: [
-            {
-              label: "Comprehensive Audit",
+              label: "Optimization & Digital Infrastructure",
               items: [
-                "Comprehensive technical SEO audit",
-                "Core Web Vitals analysis",
-                "Indexing and sitemap check",
-                "Structured data audit",
-              ],
-            },
-            {
-              label: "Reporting & Strategy",
-              items: [
-                "Competitor comparison summary",
-                "Detailed improvement roadmap",
-              ],
-            },
-          ],
-        },
-        pro: {
-          deliveryDays: "21",
-          revisions: "3",
-          scope: "0-150+",
-          featureGroups: [
-            {
-              label: "Advanced Audit",
-              items: [
-                "Comprehensive technical SEO audit",
-                "100+ page deep analysis",
-                "Core Web Vitals and performance",
-                "Schema and structured data",
-                "Log analysis and crawl budget",
-              ],
-            },
-            {
-              label: "Infrastructure & Reporting",
-              items: [
-                "Custom-built, high-speed infrastructure",
-                "Search Console setup",
-                "Implementation-supported fix guide",
-              ],
-            },
-          ],
-        },
-      },
-    },
-    growth: {
-      title: "Monthly SEO Management",
-      description:
-        "Organic traffic growth through continuous optimization, content planning and ranking tracking.",
-      tiers: {
-        temel: {
-          deliveryDays: "30",
-          revisions: "2",
-          scope: "0-10",
-          featureGroups: [
-            {
-              label: "Optimization & Content",
-              items: [
-                "On-page optimization (5 pages)",
-                "Basic content recommendations",
-              ],
-            },
-            {
-              label: "Tracking & Reporting",
-              items: [
-                "10 keyword tracking",
-                "Search Console monitoring",
+                "Search Console & Google Analytics 4 setup",
+                "Google My Business (Maps) optimization",
                 "Monthly performance report",
               ],
             },
           ],
         },
         standart: {
-          deliveryDays: "30",
-          revisions: "4",
-          scope: "0-30",
+          deliveryDays: "21-30",
+          pages: "30",
+          scope: "0-75",
           featureGroups: [
             {
-              label: "Optimization & Strategy",
+              label: "Comprehensive Audit & Strategy",
               items: [
-                "On-page optimization (15 pages)",
-                "Content calendar suggestions",
+                "Comprehensive technical SEO audit",
+                "Core Web Vitals analysis",
+                "Structured data audit",
+                "Competitor comparison analysis",
                 "Backlink opportunity analysis",
               ],
             },
             {
-              label: "Tracking & Reporting",
+              label: "Marketing & Optimization",
               items: [
-                "30 keyword tracking",
-                "Competitor ranking comparison",
-                "Detailed monthly report",
+                "Content calendar suggestions",
+                "Google Ads (Search Network) campaign setup",
+                "Meta (Facebook/Instagram) Pixel integration",
+                "Detailed monthly performance and ad report",
               ],
             },
           ],
         },
         pro: {
-          deliveryDays: "30",
-          revisions: "6",
-          scope: "0-100+",
-          featureGroups: [
-            {
-              label: "Comprehensive Optimization",
-              items: [
-                "Custom-built, high-speed infrastructure",
-                "100+ page on-page optimization",
-                "Content strategy and calendar",
-                "Continuous technical SEO monitoring",
-              ],
-            },
-            {
-              label: "Tracking & Reporting",
-              items: [
-                "100+ keyword tracking",
-                "Analytics and conversion tracking",
-                "Weekly performance report",
-                "Monthly strategy call",
-              ],
-            },
-          ],
-        },
-      },
-    },
-    enterprise: {
-      title: "Corporate SEO Program",
-      description:
-        "End-to-end SEO program and sustained growth for multilingual, large-scale corporate sites.",
-      tiers: {
-        temel: {
-          deliveryDays: "45",
-          revisions: "3",
-          scope: "0-50",
-          featureGroups: [
-            {
-              label: "Strategy & Optimization",
-              items: [
-                "Corporate site SEO audit",
-                "50 page optimization plan",
-                "Multilingual SEO infrastructure",
-              ],
-            },
-            {
-              label: "Training & Reporting",
-              items: [
-                "Corporate reporting template",
-                "Team training documentation",
-              ],
-            },
-          ],
-        },
-        standart: {
-          deliveryDays: "60",
-          revisions: "5",
-          scope: "0-100",
-          featureGroups: [
-            {
-              label: "Advanced Optimization",
-              items: [
-                "100 page SEO optimization",
-                "Corporate content strategy",
-                "Blog and landing page SEO",
-                "Continuous technical SEO maintenance",
-                "Schema and rich snippets",
-              ],
-            },
-            {
-              label: "Tracking & Reporting",
-              items: ["Quarterly growth report"],
-            },
-          ],
-        },
-        pro: {
-          deliveryDays: "90",
-          revisions: "8",
+          deliveryDays: "45-60",
+          pages: "50",
           scope: "∞",
           featureGroups: [
             {
-              label: "End-to-End Optimization",
+              label: "Corporate SEO Program",
               items: [
                 "Unlimited page SEO scope",
                 "Custom-built, high-speed infrastructure",
-                "Corporate SEO roadmap",
-                "Multilingual and multi-domain",
+                "Multilingual and multi-domain support",
+                "Log analysis and crawl budget",
                 "Ecommerce SEO module",
+                "Schema and structured data",
               ],
             },
             {
-              label: "Management & Reporting",
+              label: "Growth & Ad Management",
               items: [
-                "Custom dashboard and reporting",
-                "Monthly strategy and OKR tracking",
+                "100+ keyword tracking",
+                "Comprehensive Google Ads & Meta Ads campaign management",
+                "Advanced conversion and Conversion API setups",
+                "Custom Looker Studio dashboard and reporting",
+                "Weekly performance report",
+                "Monthly strategy call",
                 "Priority technical support",
               ],
             },
@@ -1098,262 +965,23 @@ export const servicesPackagesEn = {
       },
     },
   },
-  apiPackages: {
-    starter: {
-      title: "Basic REST API",
-      description:
-        "Secure, documented REST API development to power your web or mobile app.",
-      tiers: {
-        temel: {
-          deliveryDays: "14",
-          revisions: "2",
-          scope: "0-8",
-          featureGroups: [
-            {
-              label: "Architecture & Database",
-              items: [
-                "RESTful endpoint design",
-                "Basic CRUD operations",
-                "MySQL or PostgreSQL infrastructure",
-              ],
-            },
-            {
-              label: "Security & Delivery",
-              items: ["JWT authentication", "Postman collection delivery"],
-            },
-          ],
-        },
-        standart: {
-          deliveryDays: "21",
-          revisions: "4",
-          scope: "0-20",
-          featureGroups: [
-            {
-              label: "Architecture & Database",
-              items: [
-                "RESTful API architecture",
-                "Prisma ORM integration",
-                "Basic CRUD and advanced queries",
-              ],
-            },
-            {
-              label: "Security & Performance",
-              items: [
-                "JWT and role-based access",
-                "Input validation",
-                "Rate limiting",
-              ],
-            },
-            {
-              label: "Delivery & Documentation",
-              items: ["Comprehensive API documentation"],
-            },
-          ],
-        },
-        pro: {
-          deliveryDays: "30",
-          revisions: "6",
-          scope: "∞",
-          featureGroups: [
-            {
-              label: "Architecture & Infrastructure",
-              items: [
-                "Scalable API architecture",
-                "Custom-built, high-speed infrastructure",
-              ],
-            },
-            {
-              label: "Security & Integration",
-              items: [
-                "Advanced auth and authorization (OAuth, etc.)",
-                "Webhook and third-party service integration",
-              ],
-            },
-            {
-              label: "Operations & Support",
-              items: [
-                "Comprehensive error handling",
-                "Logging and system monitoring",
-                "Production deploy support",
-              ],
-            },
-          ],
-        },
-      },
-    },
-    scale: {
-      title: "Corporate Backend",
-      description:
-        "Secure, scalable backend infrastructure for multi-module corporate applications.",
-      tiers: {
-        temel: {
-          deliveryDays: "21",
-          revisions: "3",
-          scope: "0-15",
-          featureGroups: [
-            {
-              label: "Architecture & Development",
-              items: [
-                "Modular API structure",
-                "Database migration infrastructure",
-                "Admin panel endpoints",
-              ],
-            },
-            {
-              label: "Security & Authorization",
-              items: [
-                "Authentication and session management",
-                "Basic security layer measures",
-              ],
-            },
-          ],
-        },
-        standart: {
-          deliveryDays: "35",
-          revisions: "5",
-          scope: "0-35",
-          featureGroups: [
-            {
-              label: "Architecture & Development",
-              items: [
-                "Corporate API architecture",
-                "File upload (storage) module",
-                "Email / notification service integration",
-              ],
-            },
-            {
-              label: "Security & Performance",
-              items: [
-                "Role and permission (RBAC) management",
-                "Redis cache support for acceleration",
-              ],
-            },
-            {
-              label: "Operations & Deployment",
-              items: ["Staging and production deploy setup"],
-            },
-          ],
-        },
-        pro: {
-          deliveryDays: "45",
-          revisions: "8",
-          scope: "∞",
-          featureGroups: [
-            {
-              label: "Architecture & Infrastructure",
-              items: [
-                "Corporate-scale API architecture",
-                "Custom-built, high-speed infrastructure",
-                "Microservice-ready modular design",
-                "Multi-database support",
-              ],
-            },
-            {
-              label: "Security & Operations",
-              items: [
-                "Advanced security and audit logs",
-                "CI/CD pipeline setup",
-                "Performance testing and bottleneck optimization",
-              ],
-            },
-          ],
-        },
-      },
-    },
-    enterprise: {
-      title: "Scalable API Architecture",
-      description:
-        "Enterprise-level backend, integrations and ongoing support for high-traffic projects.",
-      tiers: {
-        temel: {
-          deliveryDays: "30",
-          revisions: "3",
-          scope: "0-25",
-          featureGroups: [
-            {
-              label: "Architecture & Strategy",
-              items: [
-                "Architecture consulting and infrastructure planning",
-                "API versioning strategy",
-                "Basic scalability infrastructure",
-              ],
-            },
-            {
-              label: "Security & Documentation",
-              items: [
-                "Comprehensive security audit",
-                "Corporate documentation standards",
-              ],
-            },
-          ],
-        },
-        standart: {
-          deliveryDays: "45",
-          revisions: "5",
-          scope: "0-50",
-          featureGroups: [
-            {
-              label: "Architecture & Development",
-              items: [
-                "Enterprise API design",
-                "Event-driven modules",
-                "Queue and asynchronous processing",
-              ],
-            },
-            {
-              label: "Operations & Integration",
-              items: [
-                "Third-party corporate integrations",
-                "System monitoring and alerting",
-                "Disaster recovery plan",
-              ],
-            },
-          ],
-        },
-        pro: {
-          deliveryDays: "60",
-          revisions: "10",
-          scope: "∞",
-          featureGroups: [
-            {
-              label: "Infrastructure & Architecture",
-              items: [
-                "Unlimited endpoint capacity",
-                "Custom-built, high-speed infrastructure",
-                "Microservices or modular monolith approach",
-                "Kubernetes / container architecture readiness",
-              ],
-            },
-            {
-              label: "Operations & Support",
-              items: [
-                "Advanced observability",
-                "Existing API refactor and safe migration",
-                "Developer team onboarding and technical documentation",
-                "SLA-based priority technical support",
-              ],
-            },
-          ],
-        },
-      },
-    },
-  },
   maintenancePackages: {
-    webApp: {
-      title: "Web & Mobile App Maintenance",
+    maintenanceServices: {
+      title: "Maintenance & Support Services",
       description:
-        "Ongoing support to keep your existing websites and mobile apps up to date, stable and fast.",
+        "Comprehensive ongoing support to keep your website, mobile app and backend infrastructure secure, up to date and always running.",
       tiers: {
         temel: {
-          deliveryDays: "30",
+          deliveryDays: "25-35",
           revisions: "2",
-          scope: "0-5",
+          scope: "1",
           featureGroups: [
             {
               label: "Monitoring & Backup",
               items: [
                 "Monthly file and database backups",
                 "Uptime monitoring and outage alerts",
+                "Basic error log monitoring",
                 "Basic content and text updates",
               ],
             },
@@ -1361,15 +989,15 @@ export const servicesPackagesEn = {
               label: "Support & Response",
               items: [
                 "Email technical support channel",
-                "Non-critical bug fixes within 48 hours",
+                "Bug fixes within 48 hours",
               ],
             },
           ],
         },
         standart: {
-          deliveryDays: "30",
+          deliveryDays: "25-35",
           revisions: "5",
-          scope: "0-15",
+          scope: "2-4",
           featureGroups: [
             {
               label: "Maintenance & Updates",
@@ -1377,12 +1005,14 @@ export const servicesPackagesEn = {
                 "Weekly backups and restore testing",
                 "Package, library and module updates",
                 "Monthly content, image and page revisions",
+                "SSL certificate tracking and renewal",
               ],
             },
             {
               label: "Performance & Security",
               items: [
-                "Speed and performance tracking (Core Web Vitals monitoring)",
+                "Core Web Vitals monitoring",
+                "Server resource tracking (CPU, RAM, disk)",
                 "Basic security scans and vulnerability checks",
               ],
             },
@@ -1390,207 +1020,33 @@ export const servicesPackagesEn = {
               label: "Support & SLA",
               items: [
                 "Priority support via WhatsApp and email",
-                "Bug fixes and response guaranteed within 24 hours",
+                "Bug fixes guaranteed within 24 hours",
               ],
             },
           ],
         },
         pro: {
-          deliveryDays: "30",
-          revisions: "10",
-          scope: "∞",
-          featureGroups: [
-            {
-              label: "Proactive Maintenance",
-              items: [
-                "Real-time source code and database backup infrastructure",
-                "Tracking third-party API and service changes",
-                "Unlimited content, product and design update support",
-              ],
-            },
-            {
-              label: "Advanced Security",
-              items: [
-                "In-depth WAF and penetration testing",
-                "SSL certificate tracking, renewal and setup",
-              ],
-            },
-            {
-              label: "Priority Support",
-              items: [
-                "24/7 emergency phone support",
-                "Critical bug response within 4 hours",
-                "Monthly system health and performance report",
-              ],
-            },
-          ],
-        },
-      },
-    },
-    backendCloud: {
-      title: "Backend & Server Management",
-      description:
-        "Expert management to keep your API, backend services and cloud server infrastructure performant and secure.",
-      tiers: {
-        temel: {
-          deliveryDays: "30",
-          revisions: "2",
-          scope: "0-10",
-          featureGroups: [
-            {
-              label: "Server Monitoring",
-              items: [
-                "Server resource usage tracking (CPU, RAM, disk)",
-                "Monthly automated database backups",
-                "Basic error log monitoring",
-              ],
-            },
-            {
-              label: "Security & Support",
-              items: [
-                "Server firewall checks",
-                "Email technical support during business hours",
-              ],
-            },
-          ],
-        },
-        standart: {
-          deliveryDays: "30",
-          revisions: "5",
-          scope: "0-25",
-          featureGroups: [
-            {
-              label: "Infrastructure Management",
-              items: [
-                "Weekly automated backups and data validation tests",
-                "SSL certificates and corporate domain management support",
-                "Docker container status and health checks",
-              ],
-            },
-            {
-              label: "Optimization & Analysis",
-              items: [
-                "Redis / Memcached cache optimization tracking",
-                "Database index cleanup and query performance improvements",
-                "Regular log analysis and potential error detection",
-              ],
-            },
-            {
-              label: "Support & Response",
-              items: [
-                "Infrastructure issue response guaranteed within 12 hours",
-                "Priority support request management panel",
-              ],
-            },
-          ],
-        },
-        pro: {
-          deliveryDays: "30",
-          revisions: "10",
-          scope: "∞",
-          featureGroups: [
-            {
-              label: "Cloud Automation",
-              items: [
-                "CI/CD automation process maintenance and updates",
-                "AWS, Google Cloud or Azure infrastructure optimizations",
-                "Autoscaling system monitoring",
-              ],
-            },
-            {
-              label: "Advanced Security",
-              items: [
-                "Advanced audit log analysis",
-                "DDoS and cyber attack protection system management",
-                "Database replication (master-slave) status checks",
-              ],
-            },
-            {
-              label: "24/7 Operations",
-              items: [
-                "24/7 real-time alerting and monitoring system",
-                "Critical infrastructure outage response within 2 hours",
-                "Monthly server cost reduction and performance report",
-              ],
-            },
-          ],
-        },
-      },
-    },
-    enterpriseSLA: {
-      title: "Corporate SLA & Priority Support",
-      description:
-        "End-to-end management with defined service level guarantees (SLA) for high-traffic, mission-critical corporate systems.",
-      tiers: {
-        temel: {
-          deliveryDays: "30",
-          revisions: "3",
-          scope: "0-20",
-          featureGroups: [
-            {
-              label: "SLA Level",
-              items: [
-                "99% uptime tracking and reporting",
-                "Priority corporate support during business hours",
-                "Official incident response within 8 hours",
-              ],
-            },
-            {
-              label: "Monitoring & Reporting",
-              items: [
-                "Basic observability tool maintenance",
-                "Monthly corporate system status report",
-              ],
-            },
-          ],
-        },
-        standart: {
-          deliveryDays: "30",
-          revisions: "6",
-          scope: "0-50",
-          featureGroups: [
-            {
-              label: "Advanced SLA",
-              items: [
-                "99.9% uptime tracking and continuity guarantee",
-                "24/7 phone, WhatsApp and corporate ticket support",
-                "System crisis response guaranteed within 4 hours",
-              ],
-            },
-            {
-              label: "Crisis Management",
-              items: [
-                "Disaster recovery plan maintenance",
-                "Failover server transition mechanism testing",
-              ],
-            },
-            {
-              label: "Continuous Improvement",
-              items: [
-                "Regular server load and stress test analysis",
-                "Immediate application of critical security patches",
-              ],
-            },
-          ],
-        },
-        pro: {
-          deliveryDays: "30",
+          deliveryDays: "25-35",
           revisions: "12",
           scope: "∞",
           featureGroups: [
             {
-              label: "Enterprise SLA",
+              label: "Proactive & Enterprise Maintenance",
               items: [
-                "99.99% uptime tracking and contractual SLA guarantee",
-                "Critical incident management response within 1 hour",
+                "Real-time source code and database backup infrastructure",
+                "CI/CD process maintenance and updates",
+                "AWS, Google Cloud or Azure infrastructure optimization",
+                "Kubernetes and cluster network management",
+                "Unlimited content and design update support",
               ],
             },
             {
-              label: "Managed Infrastructure",
+              label: "Security & SLA",
               items: [
-                "End-to-end Kubernetes or corporate cluster network management",
-                "Multi-region data replication monitoring",
-                "Unlimited software architecture and infrastructure consulting",
+                "24/7 real-time alerting and monitoring system",
+                "99.99% uptime tracking and SLA guarantee",
+                "Critical incident response within 1 hour",
+                "DDoS and cyber attack protection system management",
               ],
             },
             {
@@ -1598,7 +1054,7 @@ export const servicesPackagesEn = {
               items: [
                 "Dedicated DevOps / backend engineer assigned to the project",
                 "Weekly status review meetings and OKR tracking",
-                "Custom live system monitoring dashboard for your company",
+                "Custom live system monitoring dashboard",
               ],
             },
           ],

@@ -36,6 +36,7 @@ function getGapPx() {
 }
 
 function getPerPage(width: number) {
+  if (width >= 1280) return 4;
   if (width >= 1024) return 3;
   if (width >= 640) return 2;
   return 1;
@@ -49,7 +50,7 @@ export function ServicesCarousel({
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [perPage, setPerPage] = useState(3);
+  const [perPage, setPerPage] = useState(4);
   const [cardWidth, setCardWidth] = useState(0);
   const [gap, setGap] = useState(20);
 

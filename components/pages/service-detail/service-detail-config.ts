@@ -2,7 +2,7 @@ import type { ProjectSlug } from "@/components/sections/projects/project-items";
 import type { ServiceSlug } from "@/components/sections/services/service-items";
 
 export const serviceTechStacks: Record<ServiceSlug, string[]> = {
-  "kurumsal-web-sitesi": [
+  "web-sitesi": [
     "Next.js",
     "React",
     "TypeScript",
@@ -11,16 +11,7 @@ export const serviceTechStacks: Record<ServiceSlug, string[]> = {
     "MySQL",
     "Vercel",
   ],
-  "e-ticaret": [
-    "Next.js",
-    "React",
-    "Node.js",
-    "Prisma",
-    "MySQL",
-    "Tailwind CSS",
-    "Vercel",
-  ],
-  "mobil-uygulama": [
+  uygulama: [
     "React Native",
     "Expo",
     "TypeScript",
@@ -36,30 +27,19 @@ export const serviceTechStacks: Record<ServiceSlug, string[]> = {
     "TypeScript",
     "Vercel",
   ],
-  "portfolyo-sitesi": [
+  "bakim-ve-destek": [
     "Next.js",
-    "React",
-    "Tailwind CSS",
-    "TypeScript",
-    "Figma",
-    "Vercel",
-  ],
-  "api-gelistirme": [
     "Node.js",
-    "Express.js",
-    "REST API",
-    "Prisma",
+    "TypeScript",
+    "Vercel",
+    "GitHub",
     "PostgreSQL",
-    "Railway",
-    "Postman",
   ],
 };
 
 export const serviceRelatedProjects: Record<ServiceSlug, ProjectSlug[]> = {
-  "kurumsal-web-sitesi": ["uzman-klinik-psikolog", "fablessi"],
-  "e-ticaret": ["yazici-ticaret"],
-  "mobil-uygulama": ["iqfinansai"],
+  "web-sitesi": ["uzman-klinik-psikolog", "fablessi", "yazici-ticaret"],
+  uygulama: ["iqfinansai"],
   "seo-hizmetleri": ["uzman-klinik-psikolog", "yazici-ticaret"],
-  "portfolyo-sitesi": ["fablessi", "iqfinansai"],
-  "api-gelistirme": ["iqfinansai", "yazici-ticaret"],
+  "bakim-ve-destek": ["fablessi", "iqfinansai"],
 };

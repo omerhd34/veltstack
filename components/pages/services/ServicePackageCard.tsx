@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import type { IconType } from "react-icons";
 import { LuArrowRight, LuChevronDown, LuCircleCheck } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
@@ -14,7 +13,8 @@ export interface PackageFeatureGroup {
 
 export interface PackageTierData {
   deliveryDays: string;
-  revisions: string;
+  revisions?: string;
+  pages?: string;
   scope: string;
   features?: string[];
   featureGroups?: PackageFeatureGroup[];
@@ -41,6 +41,10 @@ interface ServicePackageCardProps {
   icon: IconType;
   data: PackageCardData;
   labels: PackageCardLabels;
+  activeTier: PackageTier;
+  onTierChange: (tier: PackageTier) => void;
+  openGroups: Set<string>;
+  onToggleGroup: (label: string) => void;
   className?: string;
 }
 
@@ -52,56 +56,22 @@ const tierLabels: Record<PackageTier, keyof PackageCardLabels> = {
   pro: "tierPro",
 };
 
-const compactAccordionQuery = "(max-width: 1023px)";
-
-function getDefaultOpenGroups(
-  groups: PackageFeatureGroup[] | undefined,
-  isCompact: boolean,
-) {
-  if (isCompact || !groups?.length) {
-    return new Set<string>();
-  }
-  return new Set(groups.map((group) => group.label));
-}
-
 export function ServicePackageCard({
   icon: Icon,
   data,
   labels,
+  activeTier,
+  onTierChange,
+  openGroups,
+  onToggleGroup,
   className,
 }: ServicePackageCardProps) {
-  const [activeTier, setActiveTier] = useState<PackageTier>("standart");
   const tier = data.tiers[activeTier];
   const isPro = activeTier === "pro";
-  const [openGroups, setOpenGroups] = useState<Set<string>>(new Set());
-
-  useEffect(() => {
-    const groups = data.tiers[activeTier].featureGroups;
-    const mediaQuery = window.matchMedia(compactAccordionQuery);
-
-    const syncOpenGroups = () => {
-      setOpenGroups(getDefaultOpenGroups(groups, mediaQuery.matches));
-    };
-
-    syncOpenGroups();
-    mediaQuery.addEventListener("change", syncOpenGroups);
-    return () => mediaQuery.removeEventListener("change", syncOpenGroups);
-  }, [activeTier, data.tiers]);
-
-  const toggleGroup = (label: string) => {
-    setOpenGroups((prev) => {
-      const next = new Set(prev);
-      if (next.has(label)) {
-        next.delete(label);
-      } else {
-        next.add(label);
-      }
-      return next;
-    });
-  };
 
   return (
     <article
+      data-package-card
       className={cn(
         "group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-[#0b1812] text-white transition-all duration-500",
         isPro
@@ -137,7 +107,7 @@ export function ServicePackageCard({
             <button
               key={tierKey}
               type="button"
-              onClick={() => setActiveTier(tierKey)}
+              onClick={() => onTierChange(tierKey)}
               className={cn(
                 "flex-1 rounded-lg px-2 py-2 text-center text-xs font-semibold transition-all duration-300",
                 activeTier === tierKey
@@ -155,9 +125,9 @@ export function ServicePackageCard({
         {[
           {
             label: labels.statDelivery,
-            value: `${tier.deliveryDays} ${labels.statDeliveryUnit}`,
+            value: tier.deliveryDays,
           },
-          { label: labels.statRevision, value: tier.revisions },
+          { label: labels.statRevision, value: tier.pages ?? tier.revisions },
           { label: labels.statScope, value: tier.scope },
         ].map((stat) => (
           <div
@@ -176,28 +146,30 @@ export function ServicePackageCard({
 
       <div className="relative flex flex-1 flex-col px-3 py-2 sm:px-4">
         {tier.featureGroups?.length
-          ? tier.featureGroups.map((group) => {
+          ? tier.featureGroups.map((group, groupIndex) => {
               const isOpen = openGroups.has(group.label);
               const panelId = `${activeTier}-${group.label}-panel`;
 
               return (
                 <div
                   key={`${activeTier}-${group.label}`}
-                  className="border-b border-emerald-900/35 last:border-b-0"
+                  data-package-group={groupIndex}
+                  data-package-group-label={group.label}
+                  className="border-b border-emerald-900/35 transition-[min-height] duration-500 ease-in-out last:border-b-0"
                 >
                   <button
                     type="button"
-                    onClick={() => toggleGroup(group.label)}
+                    onClick={() => onToggleGroup(group.label)}
                     aria-expanded={isOpen}
                     aria-controls={panelId}
-                    className="flex w-full items-center justify-between gap-3 px-2 py-3.5 text-left transition-colors hover:text-emerald-100"
+                    className="flex w-full shrink-0 items-center justify-between gap-3 px-2 py-3.5 text-left transition-colors hover:text-emerald-100"
                   >
                     <span className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-emerald-400/50">
                       {group.label}
                     </span>
                     <LuChevronDown
                       className={cn(
-                        "size-3.5 shrink-0 text-emerald-400/40 transition-transform duration-300",
+                        "size-3.5 shrink-0 text-emerald-400/40 transition-transform duration-500 ease-in-out",
                         isOpen && "rotate-180",
                       )}
                       strokeWidth={2.5}
@@ -206,14 +178,15 @@ export function ServicePackageCard({
                   </button>
                   <div
                     id={panelId}
+                    data-package-group-panel
                     className={cn(
-                      "grid transition-[grid-template-rows,opacity] duration-300 ease-in-out",
+                      "grid transition-[grid-template-rows,opacity] duration-500 ease-in-out",
                       isOpen
                         ? "grid-rows-[1fr] opacity-100"
                         : "grid-rows-[0fr] opacity-0",
                     )}
                   >
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden" data-package-group-content>
                       <ul className="flex flex-col gap-2.5 px-2 pb-3.5">
                         {group.items.map((feature) => (
                           <li
@@ -254,7 +227,7 @@ export function ServicePackageCard({
         ) : null}
       </div>
 
-      <div className="p-5 pt-0">
+      <div className="mt-auto p-5 pt-0">
         <Link
           href="/iletisim"
           className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-brand-accent to-emerald-500 text-sm font-semibold text-white transition-all duration-300 hover:brightness-110 hover:shadow-[0_4px_24px_rgb(58_107_82/0.4)]"
