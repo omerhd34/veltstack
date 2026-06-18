@@ -30,7 +30,7 @@ export function ProjectContent({
 }: ProjectContentProps) {
   return (
     <section className={cn("bg-background py-24 md:py-32", className)}>
-      <SiteContainer className="px-4 sm:px-6">
+      <SiteContainer>
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
             <LuCircleCheck className="size-3.5" aria-hidden />

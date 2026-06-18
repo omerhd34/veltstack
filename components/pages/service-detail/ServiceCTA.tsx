@@ -27,7 +27,7 @@ export function ServiceCTA({
         className="pointer-events-none absolute left-1/2 top-0 size-[600px] -translate-x-1/2 rounded-full bg-brand-accent/10 blur-[100px]"
       />
 
-      <SiteContainer className="relative px-4 sm:px-6">
+      <SiteContainer className="relative">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-(family-name:--font-heading) text-3xl font-bold leading-[1.08] tracking-tight text-white md:text-4xl lg:text-5xl">
             {title}

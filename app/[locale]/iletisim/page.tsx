@@ -10,7 +10,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
   const t = await getTranslations("contact");
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-24">
+    <div className="mx-auto max-w-7xl py-24">
       <h1 className="font-(family-name:--font-heading) text-4xl font-bold">
         {t("title")}
       </h1>

@@ -97,7 +97,7 @@ export function ProjectFeatures({
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgb(58_107_82/0.08),transparent)]"
       />
 
-      <SiteContainer className="relative px-4 sm:px-6">
+      <SiteContainer className="relative">
         <div className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-accent/30 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent backdrop-blur-sm">
             <LuCircleCheck className="size-3.5" aria-hidden />

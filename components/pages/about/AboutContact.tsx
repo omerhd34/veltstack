@@ -37,7 +37,7 @@ export function AboutContact({
       className={`scroll-mt-20 bg-[#F8F9FA] py-20 md:py-28 ${className ?? ""}`}
       aria-labelledby="about-contact-title"
     >
-      <SiteContainer className="px-4 sm:px-6">
+      <SiteContainer>
         <div className="mx-auto max-w-2xl text-center">
           <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
             {badge}

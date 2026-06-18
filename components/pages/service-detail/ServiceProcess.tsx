@@ -21,7 +21,7 @@ export function ServiceProcess({
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-emerald-500/30 to-transparent"
       />
 
-      <SiteContainer className="relative px-4 sm:px-6">
+      <SiteContainer className="relative">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight md:text-4xl">
             {title}

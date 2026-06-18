@@ -48,7 +48,7 @@ export function ServiceFeatures({
 }: ServiceFeaturesProps) {
   return (
     <section className={`bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}>
-      <SiteContainer className="px-4 sm:px-6">
+      <SiteContainer>
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:sticky lg:top-32 lg:col-span-4 lg:self-start">
             <span className="inline-flex items-center gap-2 rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">

@@ -49,7 +49,7 @@ export function ProjectHero({
         className="pointer-events-none absolute -left-24 bottom-0 size-[360px] rounded-full bg-emerald-800/6 blur-[100px]"
       />
 
-      <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col px-4 py-8 sm:px-6 sm:py-10 md:py-12">
+      <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col py-8 sm:py-10 md:py-12">
         <div className="grid min-h-0 flex-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div className="min-w-0">
             <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/8 px-4 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-emerald-300/90">

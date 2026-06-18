@@ -127,7 +127,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgb(58_107_82/0.14),transparent)]"
         />
-        <SiteContainer className="relative px-4 sm:px-6">
+        <SiteContainer className="relative">
           {/* Back link */}
           <Link
             href="/blog"
@@ -198,7 +198,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
       </div>
 
       {/* Article body */}
-      <SiteContainer className="px-4 py-16 sm:px-6 md:py-20">
+      <SiteContainer className="py-16 md:py-20">
         <div className="mx-auto max-w-2xl">
           <article
             className="prose prose-neutral max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:mt-10 prose-h2:text-2xl prose-p:leading-[1.9] prose-p:text-foreground/72"
@@ -220,7 +220,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
       {/* Related posts */}
       {relatedPosts.length > 0 && (
         <section className="bg-[#F8F9FA] py-16 md:py-20">
-          <SiteContainer className="px-4 sm:px-6">
+          <SiteContainer>
             <div className="flex items-center gap-4">
               <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
                 {loc === "tr" ? "İlgili Yazılar" : "Related Posts"}

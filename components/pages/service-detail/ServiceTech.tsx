@@ -16,7 +16,7 @@ export function ServiceTech({
 }: ServiceTechProps) {
   return (
     <section className={`bg-background py-24 md:py-32 ${className ?? ""}`}>
-      <SiteContainer className="px-4 sm:px-6">
+      <SiteContainer>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl">
             {title}

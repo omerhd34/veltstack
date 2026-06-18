@@ -30,7 +30,7 @@ export async function ServiceProjects({
 
   return (
     <section className={`bg-[#F4F8F5] py-24 md:py-32 ${className ?? ""}`}>
-      <SiteContainer className="px-4 sm:px-6">
+      <SiteContainer>
         <div className="max-w-2xl">
           <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl">
             {title}

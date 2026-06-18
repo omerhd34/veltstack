@@ -20,7 +20,7 @@ export function ServicesPageCTA({
 }: ServicesPageCTAProps) {
   return (
     <section className={`bg-background py-20 md:py-28 ${className ?? ""}`}>
-      <SiteContainer className="px-4 sm:px-6">
+      <SiteContainer>
         <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-[#0A0A0F] px-8 py-14 text-center md:px-16 md:py-20">
           <div
             aria-hidden

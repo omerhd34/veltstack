@@ -38,7 +38,7 @@ export function ServiceHero({
         className="pointer-events-none absolute -left-40 bottom-0 size-[400px] rounded-full bg-emerald-800/6 blur-[80px]"
       />
 
-      <SiteContainer className="relative px-4 sm:px-6">
+      <SiteContainer className="relative">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
