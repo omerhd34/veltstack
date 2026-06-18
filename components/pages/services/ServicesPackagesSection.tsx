@@ -42,7 +42,7 @@ export async function ServicesPackagesSection({
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-border/60 to-transparent"
       />
 
-      <SiteContainer className="relative min-w-0 px-4 sm:px-6">
+      <SiteContainer className="relative min-w-0">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-brand-accent md:text-4xl lg:text-[2.75rem] lg:leading-tight">
             {t("packagesTitle")}
