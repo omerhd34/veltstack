@@ -1,0 +1,34 @@
+export const blogPageEn = {
+  heroBadge: "Blog",
+  heroTitle: "Insights from the digital world",
+  heroSubtitle:
+    "Practical content on web development, mobile apps, SEO and digital transformation. We share what we learn from real projects.",
+  heroImageAlt: "Veltstack blog — developer workspace",
+  searchPlaceholder: "Search posts...",
+  allCategories: "All",
+  readMore: "Read more",
+  readingTime: "{minutes} min read",
+  noResults: "No posts found matching your search.",
+  noResultsSub: "Try a different keyword or category.",
+  featuredBadge: "Featured",
+  latestBadge: "Latest Posts",
+  categories: [
+    "All",
+    "Web Development",
+    "Mobile",
+    "SEO",
+    "E-Commerce",
+    "Tools & Tips",
+  ],
+  newsletterTitle: "Stay up to date",
+  newsletterSubtitle:
+    "We send practical posts on web development, SEO and digital products straight to your inbox.",
+  newsletterPlaceholder: "Your email address",
+  newsletterButton: "Subscribe",
+  newsletterNote: "No spam. Unsubscribe anytime.",
+  ctaTitle: "Let's bring your project to life together",
+  ctaSubtitle:
+    "In a free consultation we'll discuss your needs and define scope, timeline and tech stack together.",
+  ctaButton: "Get in Touch",
+  ctaNote: "Response within 24 hours",
+} as const;

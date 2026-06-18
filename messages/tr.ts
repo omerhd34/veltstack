@@ -18,6 +18,7 @@ import { projectsPageTr } from "@/components/pages/projects/messages/tr";
 import { pagesTr } from "@/app/[locale]/messages/pages/tr";
 import { contactTr } from "@/app/[locale]/iletisim/messages/tr";
 import { aboutTr } from "@/app/[locale]/hakkimda/messages/tr";
+import { blogPageTr } from "@/components/pages/blog/messages/tr";
 
 const messages = {
   nav: navTr,
@@ -42,6 +43,7 @@ const messages = {
   projectsPage: projectsPageTr,
   contact: contactTr,
   about: aboutTr,
+  blogPage: blogPageTr,
 } as const;
 
 export default messages;
