@@ -233,8 +233,8 @@ export const servicesPackagesTr = {
             {
               label: "Geliştirme & Tasarım",
               items: [
-                "Kurumsal renk paleti ve tipografi uyumlu özel kodlama",
                 "Mobil uyumlu (responsive) geliştirme",
+                "Kurumsal renk paleti ve tipografi uyumlu özel kodlama",
                 "90+ Google PageSpeed Skoru garantisi",
                 "Premium UI bileşenleri ve kurumsal animasyonlar",
                 "Tarayıcılar arası uyumluluk testi",
