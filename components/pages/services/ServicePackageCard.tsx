@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { IconType } from "react-icons";
-import { LuArrowRight, LuCircleCheck } from "react-icons/lu";
+import { LuArrowRight, LuChevronDown, LuCircleCheck } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import type { PackageTier } from "./packages-config";
 import { cn } from "@/lib/utils";
@@ -52,6 +52,18 @@ const tierLabels: Record<PackageTier, keyof PackageCardLabels> = {
   pro: "tierPro",
 };
 
+const compactAccordionQuery = "(max-width: 1023px)";
+
+function getDefaultOpenGroups(
+  groups: PackageFeatureGroup[] | undefined,
+  isCompact: boolean,
+) {
+  if (isCompact || !groups?.length) {
+    return new Set<string>();
+  }
+  return new Set(groups.map((group) => group.label));
+}
+
 export function ServicePackageCard({
   icon: Icon,
   data,
@@ -61,6 +73,32 @@ export function ServicePackageCard({
   const [activeTier, setActiveTier] = useState<PackageTier>("standart");
   const tier = data.tiers[activeTier];
   const isPro = activeTier === "pro";
+  const [openGroups, setOpenGroups] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    const groups = data.tiers[activeTier].featureGroups;
+    const mediaQuery = window.matchMedia(compactAccordionQuery);
+
+    const syncOpenGroups = () => {
+      setOpenGroups(getDefaultOpenGroups(groups, mediaQuery.matches));
+    };
+
+    syncOpenGroups();
+    mediaQuery.addEventListener("change", syncOpenGroups);
+    return () => mediaQuery.removeEventListener("change", syncOpenGroups);
+  }, [activeTier, data.tiers]);
+
+  const toggleGroup = (label: string) => {
+    setOpenGroups((prev) => {
+      const next = new Set(prev);
+      if (next.has(label)) {
+        next.delete(label);
+      } else {
+        next.add(label);
+      }
+      return next;
+    });
+  };
 
   return (
     <article
@@ -136,33 +174,69 @@ export function ServicePackageCard({
         ))}
       </div>
 
-      <div className="relative flex flex-1 flex-col gap-4 px-5 py-5">
+      <div className="relative flex flex-1 flex-col px-3 py-2 sm:px-4">
         {tier.featureGroups?.length
-          ? tier.featureGroups.map((group) => (
-              <div key={`${activeTier}-${group.label}`}>
-                <p className="mb-2 text-[0.6rem] font-bold uppercase tracking-[0.14em] text-emerald-400/50">
-                  {group.label}
-                </p>
-                <ul className="flex flex-col gap-2.5">
-                  {group.items.map((feature) => (
-                    <li
-                      key={`${activeTier}-${group.label}-${feature}`}
-                      className="flex items-start gap-2.5 text-[0.8125rem] leading-snug text-emerald-50/80"
-                    >
-                      <LuCircleCheck
-                        className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
-                        strokeWidth={2.5}
-                        aria-hidden
-                      />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))
+          ? tier.featureGroups.map((group) => {
+              const isOpen = openGroups.has(group.label);
+              const panelId = `${activeTier}-${group.label}-panel`;
+
+              return (
+                <div
+                  key={`${activeTier}-${group.label}`}
+                  className="border-b border-emerald-900/35 last:border-b-0"
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleGroup(group.label)}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    className="flex w-full items-center justify-between gap-3 px-2 py-3.5 text-left transition-colors hover:text-emerald-100"
+                  >
+                    <span className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-emerald-400/50">
+                      {group.label}
+                    </span>
+                    <LuChevronDown
+                      className={cn(
+                        "size-3.5 shrink-0 text-emerald-400/40 transition-transform duration-300",
+                        isOpen && "rotate-180",
+                      )}
+                      strokeWidth={2.5}
+                      aria-hidden
+                    />
+                  </button>
+                  <div
+                    id={panelId}
+                    className={cn(
+                      "grid transition-[grid-template-rows,opacity] duration-300 ease-in-out",
+                      isOpen
+                        ? "grid-rows-[1fr] opacity-100"
+                        : "grid-rows-[0fr] opacity-0",
+                    )}
+                  >
+                    <div className="overflow-hidden">
+                      <ul className="flex flex-col gap-2.5 px-2 pb-3.5">
+                        {group.items.map((feature) => (
+                          <li
+                            key={`${activeTier}-${group.label}-${feature}`}
+                            className="flex items-start gap-2.5 text-[0.8125rem] leading-snug text-emerald-50/80"
+                          >
+                            <LuCircleCheck
+                              className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
+                              strokeWidth={2.5}
+                              aria-hidden
+                            />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              );
+            })
           : null}
         {!tier.featureGroups?.length && tier.features ? (
-          <ul className="flex flex-col gap-2.5">
+          <ul className="flex flex-col gap-2.5 px-2 py-3.5">
             {tier.features.map((feature) => (
               <li
                 key={`${activeTier}-${feature}`}
