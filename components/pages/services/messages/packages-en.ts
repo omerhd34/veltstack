@@ -20,8 +20,6 @@ export const servicesPackagesEn = {
   statProjects: "Projects",
   scopeUnlimited: "∞",
   getQuote: "Get a Quote",
-  techPrimaryLabel: "Most used",
-  techSecondaryLabel: "Used when needed",
   webIntroTitle: "End-to-end web development",
   webIntroP1:
     "From design to deploy, UI to API — I handle the full web stack in one place. Fast, SEO-ready and scalable projects built on a modern React and Next.js foundation.",

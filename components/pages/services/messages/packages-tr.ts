@@ -1,7 +1,7 @@
 export const servicesPackagesTr = {
   packagesTitle: "Hizmetler & Paketler",
   packagesSubtitle:
-    "Beş alanda net paket yapısı — sekmeler arasında geçerek kapsamı karşılaştırın, size uyan seviyeyi kolayca bulun.",
+    "Web, uygulama, SEO, API ve bakım alanlarında hizmet paketlerini inceleyin; sekmeler arasında geçerek kapsamları karşılaştırın ve projenize en uygun seviyeyi kolayca bulun.",
   tabWeb: "Web Sitesi",
   tabApp: "Uygulama",
   tabSeo: "SEO Hizmetleri",
@@ -20,33 +20,31 @@ export const servicesPackagesTr = {
   statProjects: "Proje",
   scopeUnlimited: "∞",
   getQuote: "Teklif Al",
-  techPrimaryLabel: "Daha çok kullanılanlar",
-  techSecondaryLabel: "Gerekirse kullanılacaklar",
-  webIntroTitle: "Uçtan uca web geliştirme",
+  webIntroTitle: "İhtiyacınıza göre web geliştirme",
   webIntroP1:
-    "Tasarımdan deploy'a, arayüzden API'ye kadar tüm süreci tek elden yönetiyorum. React ve Next.js tabanlı modern altyapıyla hızlı, SEO (Arama Motoru Optimizasyonu) uyumlu ve ölçeklenebilir web projeleri teslim ediyorum.",
+    "Tanıtım sitesinden kurumsal portala, e-ticaret mağazasından özel iş akışlarına — ne hedefliyorsanız ona uygun web çözümünü birlikte şekillendiriyoruz. Tasarımdan yayına almaya kadar tüm süreci tek elden yönetiyorum.",
   webIntroP2:
-    "Portföy, kurumsal ve e-ticaret çözümleri Temel, Standart ve Pro paketleriyle sunulur. Pro seviyesinde kurumsal siteler sınırsız sayfa kapasitesiyle büyür; e-ticaret platformları ürün ve kategori sınırı olmadan genişletilebilir.",
-  appIntroTitle: "Uçtan uca mobil geliştirme",
+    "Temel, Standart ve Pro paketleri farklı ölçeklerdeki projelere uyum sağlar. Kapsamı sizin ihtiyaçlarınıza göre netleştirip, büyüdükçe genişleyebilecek bir yapı kuruyorum.",
+  appIntroTitle: "Vizyonunuza uygun mobil uygulama",
   appIntroP1:
-    "React Native ve Flutter ile iOS ve Android uygulamaları geliştiriyorum. Aynı projede Node.js API, kimlik doğrulama ve push bildirim altyapısını kuruyorum.",
+    "Tanıtım uygulamasından kurumsal çözüme, sipariş ve rezervasyon sistemlerinden karmaşık iş süreçlerine — istediğiniz deneyimi tasarlayıp geliştiriyorum. iOS ve Android için tek bir projede ilerliyoruz.",
   appIntroP2:
-    "Tanıtım, kurumsal ve e-ticaret uygulamaları üç paket seviyesinde. Kaynak kod teslimi, mağaza yayın rehberliği ve API entegrasyonu her pakette standart.",
-  seoIntroTitle: "Sürdürülebilir organik büyüme",
+    "Üç paket seviyesiyle farklı bütçe ve kapsamlara hitap ediyorum. Mağaza yayınından entegrasyonlara kadar ihtiyacınız olan her adımda yanınızdayım.",
+  seoIntroTitle: "Arama sonuçlarında görünür olun",
   seoIntroP1:
-    "Teknik denetimden içerik stratejisine, on-page optimizasyondan performans raporlamaya kadar arama motoru görünürlüğünü sistematik olarak artırıyorum.",
+    "Teknik altyapıdan içerik düzenlemeye, site performansından rakip analizine kadar organik görünürlüğü artırmaya yönelik adımları birlikte planlıyoruz. Öncelikleriniz neyse o yönde ilerliyoruz.",
   seoIntroP2:
-    "Site denetimi, aylık SEO (Arama Motoru Optimizasyonu) yönetimi ve kurumsal SEO programı olmak üzere üç paket sunulur. Pro seviyesinde 100+ sayfa derinlemesine optimizasyon ve sürekli izleme dahildir.",
-  apiIntroTitle: "Güvenli ve ölçeklenebilir backend",
+    "Tek seferlik denetimden sürekli yönetime kadar üç paket sunulur. Hedeflerinize göre odak noktalarını belirleyip ölçülebilir sonuçlar için çalışıyoruz.",
+  apiIntroTitle: "Projenize özel backend altyapısı",
   apiIntroP1:
-    "RESTful API tasarımı, kimlik doğrulama, veritabanı mimarisi ve dokümantasyonu tek çatı altında geliştiriyorum. Node.js, Express ve Prisma ile production-ready altyapılar kuruyorum.",
+    "Mobil uygulama, web paneli veya harici sistemlerle konuşan API'ler — iş süreçlerinizin gerektirdiği backend yapısını kuruyorum. Kimlik doğrulama, veri yönetimi ve dokümantasyon dahil.",
   apiIntroP2:
-    "Temel REST API'den kurumsal backend'e, ölçeklenebilir mimariye kadar üç paket seviyesi. Postman koleksiyonu, rate limiting ve deploy desteği tüm paketlerde standart.",
-  maintenanceIntroTitle: "Kesintisiz çalışan dijital varlıklar",
+    "Basit entegrasyonlardan kurumsal ölçekli mimariye kadar üç paket seviyesi mevcuttur. Kapsamı birlikte netleştirip ihtiyacınız olan ölçekte ilerliyoruz.",
+  maintenanceIntroTitle: "Yayın sonrası da yanınızdayım",
   maintenanceIntroP1:
-    "Yayınladıktan sonra bitmeyen iş: yedekleme, güvenlik yamaları, performans izleme ve acil müdahale. Web siteleri, mobil uygulamalar ve backend altyapıları için sürekli bakım sunuyorum.",
+    "Güncelleme, yedekleme, güvenlik takibi ve acil müdahale — siteleriniz, uygulamalarınız ve altyapınızın kesintisiz çalışması için sürekli destek sunuyorum. Mevcut sisteminize uyum sağlayarak ilerliyoruz.",
   maintenanceIntroP2:
-    "Web & mobil bakım, backend & sunucu yönetimi ve kurumsal SLA desteği olmak üzere üç paket seviyesi. Pro planda 7/24 acil müdahale ve sınırsız güncelleme kapsamı dahildir.",
+    "Web, mobil ve sunucu bakımı için üç paket seviyesi sunulur. Destek modelini birlikte belirleyip işinize en uygun kapsamı oluşturuyoruz.",
   webPackages: {
     portfolio: {
       title: "Portföy / Tanıtım Web Sitesi",

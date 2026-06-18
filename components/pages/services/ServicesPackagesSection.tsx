@@ -35,15 +35,11 @@ export async function ServicesPackagesSection({
   return (
     <section
       id="services-packages"
-      className={`relative scroll-mt-20 overflow-hidden bg-[#050f0c] py-20 text-white md:py-28 ${className ?? ""}`}
+      className={`relative scroll-mt-20 overflow-hidden bg-background py-20 md:py-28 ${className ?? ""}`}
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-emerald-500/25 to-transparent"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgb(58_107_82/0.08),transparent)]"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-border/60 to-transparent"
       />
 
       <SiteContainer className="relative min-w-0 px-4 sm:px-6">
@@ -51,7 +47,7 @@ export async function ServicesPackagesSection({
           <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-brand-accent md:text-4xl lg:text-[2.75rem] lg:leading-tight">
             {t("packagesTitle")}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-emerald-50/55 md:text-base">
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
             {t("packagesSubtitle")}
           </p>
         </div>
@@ -72,8 +68,6 @@ export async function ServicesPackagesSection({
             statEndpoints: t("statEndpoints"),
             statProjects: t("statProjects"),
             getQuote: t("getQuote"),
-            techPrimaryLabel: t("techPrimaryLabel"),
-            techSecondaryLabel: t("techSecondaryLabel"),
           }}
           intros={{
             web: {

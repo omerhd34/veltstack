@@ -8,7 +8,6 @@ import {
 } from "./packages-config";
 import { ServicesCategoryTabs } from "./ServicesCategoryTabs";
 import { ServicesPackagesIntro } from "./ServicesPackagesIntro";
-import { ServicesTechShowcase } from "./ServicesTechShowcase";
 import { ServicePackageCard, type PackageCardData } from "./ServicePackageCard";
 
 interface PackagesIntro {
@@ -31,8 +30,6 @@ interface PackagesPanelLabels {
   statEndpoints: string;
   statProjects: string;
   getQuote: string;
-  techPrimaryLabel: string;
-  techSecondaryLabel: string;
 }
 
 interface CategoryPackages {
@@ -105,13 +102,6 @@ export function ServicesPackagesPanel({
         title={intro.title}
         p1={intro.p1}
         p2={intro.p2}
-      />
-
-      <ServicesTechShowcase
-        className="mx-auto mt-10 w-full max-w-7xl px-2"
-        category={category}
-        primaryLabel={labels.techPrimaryLabel}
-        secondaryLabel={labels.techSecondaryLabel}
       />
 
       <div
