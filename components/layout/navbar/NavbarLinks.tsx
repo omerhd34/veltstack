@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { LuChevronDown } from "react-icons/lu"
-import { useTranslations } from "next-intl"
-import { Link, usePathname } from "@/i18n/navigation"
-import { cn } from "@/lib/utils"
-import { navServiceItems, type NavServiceKey } from "./nav-services"
-import { navProjectItems, type NavProjectKey } from "./nav-projects"
-import { navItemClass } from "./nav-link-styles"
+import { useState } from "react";
+import { LuChevronDown } from "react-icons/lu";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
+import { navServiceItems, type NavServiceKey } from "./nav-services";
+import { navProjectItems, type NavProjectKey } from "./nav-projects";
+import { navItemClass } from "./nav-link-styles";
 
 interface NavbarLinksProps {
-  className?: string
-  orientation?: "horizontal" | "vertical"
-  onNavigate?: () => void
+  className?: string;
+  orientation?: "horizontal" | "vertical";
+  onNavigate?: () => void;
 }
 
 export function NavbarLinks({
@@ -20,43 +20,43 @@ export function NavbarLinks({
   orientation = "horizontal",
   onNavigate,
 }: NavbarLinksProps) {
-  const tNav = useTranslations("nav")
-  const pathname = usePathname()
-  const [servicesOpen, setServicesOpen] = useState(false)
-  const [projectsOpen, setProjectsOpen] = useState(false)
+  const tNav = useTranslations("nav");
+  const pathname = usePathname();
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [projectsOpen, setProjectsOpen] = useState(false);
 
   const serviceLabels: Record<NavServiceKey, string> = {
-    serviceCorporate: tNav("serviceCorporate"),
-    serviceEcommerce: tNav("serviceEcommerce"),
-    serviceMobile: tNav("serviceMobile"),
+    serviceWeb: tNav("serviceWeb"),
+    serviceApp: tNav("serviceApp"),
     serviceSeo: tNav("serviceSeo"),
-    servicePortfolio: tNav("servicePortfolio"),
-    serviceApi: tNav("serviceApi"),
-  }
+    serviceMaintenance: tNav("serviceMaintenance"),
+  };
 
   const projectLabels: Record<NavProjectKey, string> = {
     projectIqfinans: tNav("projectIqfinans"),
     projectYazici: tNav("projectYazici"),
     projectFablessi: tNav("projectFablessi"),
     projectUzmanPsikolog: tNav("projectUzmanPsikolog"),
-  }
+  };
 
   const links = [
     { href: "/blog", label: tNav("blog") },
     { href: "/hakkimda", label: tNav("about") },
     { href: "/iletisim", label: tNav("contact") },
-  ]
+  ];
 
-  const isVertical = orientation === "vertical"
+  const isVertical = orientation === "vertical";
 
   const isActive = (href: string) =>
-    pathname === href || pathname.startsWith(`${href}/`)
+    pathname === href || pathname.startsWith(`${href}/`);
 
-  const servicesActive = pathname === "/hizmetler" || pathname.startsWith("/hizmetler/")
-  const projectsActive = pathname === "/projeler" || pathname.startsWith("/projeler/")
+  const servicesActive =
+    pathname === "/hizmetler" || pathname.startsWith("/hizmetler/");
+  const projectsActive =
+    pathname === "/projeler" || pathname.startsWith("/projeler/");
 
   if (!isVertical) {
-    return null
+    return null;
   }
 
   return (
@@ -81,7 +81,7 @@ export function NavbarLinks({
               <LuChevronDown
                 className={cn(
                   "size-4 transition-transform duration-200",
-                  servicesOpen && "rotate-180"
+                  servicesOpen && "rotate-180",
                 )}
               />
             </button>
@@ -92,7 +92,10 @@ export function NavbarLinks({
                 <Link
                   href="/hizmetler"
                   onClick={onNavigate}
-                  className={navItemClass(isActive("/hizmetler"), "mobile-nested")}
+                  className={navItemClass(
+                    isActive("/hizmetler"),
+                    "mobile-nested",
+                  )}
                 >
                   {tNav("servicesAll")}
                 </Link>
@@ -102,7 +105,10 @@ export function NavbarLinks({
                   <Link
                     href={item.href}
                     onClick={onNavigate}
-                    className={navItemClass(isActive(item.href), "mobile-nested")}
+                    className={navItemClass(
+                      isActive(item.href),
+                      "mobile-nested",
+                    )}
                   >
                     {serviceLabels[item.navKey]}
                   </Link>
@@ -131,7 +137,7 @@ export function NavbarLinks({
               <LuChevronDown
                 className={cn(
                   "size-4 transition-transform duration-200",
-                  projectsOpen && "rotate-180"
+                  projectsOpen && "rotate-180",
                 )}
               />
             </button>
@@ -142,7 +148,10 @@ export function NavbarLinks({
                 <Link
                   href="/projeler"
                   onClick={onNavigate}
-                  className={navItemClass(isActive("/projeler"), "mobile-nested")}
+                  className={navItemClass(
+                    isActive("/projeler"),
+                    "mobile-nested",
+                  )}
                 >
                   {tNav("projectsAll")}
                 </Link>
@@ -152,7 +161,10 @@ export function NavbarLinks({
                   <Link
                     href={item.href}
                     onClick={onNavigate}
-                    className={navItemClass(isActive(item.href), "mobile-nested")}
+                    className={navItemClass(
+                      isActive(item.href),
+                      "mobile-nested",
+                    )}
                   >
                     {projectLabels[item.navKey]}
                   </Link>
@@ -175,5 +187,5 @@ export function NavbarLinks({
         ))}
       </ul>
     </nav>
-  )
+  );
 }

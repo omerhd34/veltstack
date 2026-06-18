@@ -13,50 +13,13 @@ export function NavbarServicesMegaMenuPanel() {
   const tHome = useTranslations("home");
   const setServicesMenuOpen = useUiStore((state) => state.setServicesMenuOpen);
 
-  const cards = [
-    {
-      href: serviceItems[0].href,
-      title: tHome("servicesCorporateTitle"),
-      description: tHome("servicesCorporateDesc"),
-      tag: tHome("servicesCorporateTag"),
-      icon: serviceItems[0].icon,
-    },
-    {
-      href: serviceItems[1].href,
-      title: tHome("servicesEcommerceTitle"),
-      description: tHome("servicesEcommerceDesc"),
-      tag: tHome("servicesEcommerceTag"),
-      icon: serviceItems[1].icon,
-    },
-    {
-      href: serviceItems[2].href,
-      title: tHome("servicesMobileTitle"),
-      description: tHome("servicesMobileDesc"),
-      tag: tHome("servicesMobileTag"),
-      icon: serviceItems[2].icon,
-    },
-    {
-      href: serviceItems[3].href,
-      title: tHome("servicesSeoTitle"),
-      description: tHome("servicesSeoDesc"),
-      tag: tHome("servicesSeoTag"),
-      icon: serviceItems[3].icon,
-    },
-    {
-      href: serviceItems[4].href,
-      title: tHome("servicesPortfolioTitle"),
-      description: tHome("servicesPortfolioDesc"),
-      tag: tHome("servicesPortfolioTag"),
-      icon: serviceItems[4].icon,
-    },
-    {
-      href: serviceItems[5].href,
-      title: tHome("servicesApiTitle"),
-      description: tHome("servicesApiDesc"),
-      tag: tHome("servicesApiTag"),
-      icon: serviceItems[5].icon,
-    },
-  ];
+  const cards = serviceItems.map((item) => ({
+    href: item.href,
+    title: tHome(item.titleKey),
+    description: tHome(item.descKey),
+    tag: tHome(item.tagKey),
+    icon: item.icon,
+  }));
 
   return (
     <SiteContainer className="py-10">
@@ -79,7 +42,7 @@ export function NavbarServicesMegaMenuPanel() {
             </Link>
           </Button>
         </div>
-        <div className="grid min-w-0 grid-cols-2 gap-3 xl:grid-cols-3">
+        <div className="grid min-w-0 grid-cols-2 gap-3">
           {cards.map((service) => (
             <div key={service.href} className="mega-menu-card">
               <ServiceCard
