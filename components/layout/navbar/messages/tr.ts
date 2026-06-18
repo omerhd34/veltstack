@@ -1,5 +1,4 @@
 export const navTr = {
-  home: "Ana Sayfa",
   services: "Hizmetler",
   servicesAll: "Tüm Hizmetler",
   serviceCorporate: "Kurumsal Web Sitesi",

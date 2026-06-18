@@ -1,5 +1,4 @@
 export const navEn = {
-  "home": "Home",
   "services": "Services",
   "servicesAll": "All Services",
   "serviceCorporate": "Corporate Website",

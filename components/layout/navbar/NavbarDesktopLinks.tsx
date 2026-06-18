@@ -34,9 +34,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
   ];
 
   const isActive = (href: string) =>
-    href === "/"
-      ? pathname === "/"
-      : pathname === href || pathname.startsWith(`${href}/`);
+    pathname === href || pathname.startsWith(`${href}/`);
 
   const servicesActive =
     servicesMenuOpen ||
@@ -58,10 +56,6 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
       className={cn("items-center gap-0.5 xl:gap-1", className)}
       aria-label="Ana navigasyon"
     >
-      <Link href="/" className={navItemClass(isActive("/"))}>
-        <span className={navItemLabelClass(isActive("/"))}>{tNav("home")}</span>
-      </Link>
-
       <div
         className="relative h-full"
         onMouseEnter={openServicesMenu}

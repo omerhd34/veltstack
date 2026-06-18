@@ -50,9 +50,7 @@ export function NavbarLinks({
   const isVertical = orientation === "vertical"
 
   const isActive = (href: string) =>
-    href === "/"
-      ? pathname === "/"
-      : pathname === href || pathname.startsWith(`${href}/`)
+    pathname === href || pathname.startsWith(`${href}/`)
 
   const servicesActive = pathname === "/hizmetler" || pathname.startsWith("/hizmetler/")
   const projectsActive = pathname === "/projeler" || pathname.startsWith("/projeler/")
@@ -64,16 +62,6 @@ export function NavbarLinks({
   return (
     <nav className={className} aria-label="Ana navigasyon">
       <ul className="flex w-full flex-col gap-1.5">
-        <li>
-          <Link
-            href="/"
-            onClick={onNavigate}
-            className={navItemClass(isActive("/"), "mobile")}
-          >
-            {tNav("home")}
-          </Link>
-        </li>
-
         <li>
           <div className="flex items-center gap-1">
             <Link
