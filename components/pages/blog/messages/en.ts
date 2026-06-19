@@ -8,6 +8,7 @@ export const blogPageEn = {
   allCategories: "All",
   readMore: "Read more",
   readingTime: "{minutes} min read",
+  writtenByLabel: "Written by",
   noResults: "No posts found matching your search.",
   noResultsSub: "Try a different keyword or category.",
   featuredBadge: "Featured",

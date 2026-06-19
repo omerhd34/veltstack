@@ -23,7 +23,7 @@ export function ProcessStep({
       className={cn(
         "group relative flex h-full min-h-56 flex-col overflow-hidden rounded-2xl border p-5 transition-all duration-300 md:p-6",
         isDark
-          ? "border-emerald-800/45 bg-emerald-950/50 backdrop-blur-sm hover:border-emerald-500/40 hover:bg-emerald-900/45 hover:shadow-[0_8px_32px_rgb(0,0,0,0.25)]"
+          ? "border-emerald-700/35 bg-[rgb(8_28_22/0.55)] backdrop-blur-md hover:border-emerald-400/35 hover:bg-[rgb(12_36_28/0.65)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.28)]"
           : "border-border/70 bg-white/90 shadow-sm hover:border-brand-accent/50 hover:shadow-md",
       )}
     >

@@ -1,53 +1,61 @@
 export const contactTr = {
-  heroBadge: "İletişim",
-  heroTitle: "Projenizi birlikte hayata geçirelim",
-  heroSubtitle:
-    "Yeni bir proje, iş birliği ya da teknik danışmanlık için formu doldurun veya doğrudan yazın — genellikle 24 saat içinde dönüş yapıyorum.",
-  heroScrollLabel: "Forma ilerle",
-  heroQuickContacts: [
-    { label: "Telefon", value: "+90 507 849 29 03", href: "tel:+905078492903" },
-    {
-      label: "E-posta",
-      value: "demirome123@gmail.com",
-      href: "mailto:demirome123@gmail.com",
-    },
-    {
-      label: "LinkedIn",
-      value: "Ömer Halis Demir",
-      href: "https://www.linkedin.com/in/%C3%B6mer-halis-demir-7a9b79169",
-    },
-  ],
-
   formBadge: "Mesaj Gönderin",
   formTitle: "Projenizi anlatın",
-  formSubtitle:
-    "Aşağıdaki formu doldurarak ihtiyaçlarınızı paylaşın; kapsam, süre ve fiyat konularında size özel bir değerlendirme sunayım.",
 
   fieldName: "Ad Soyad",
   fieldNamePlaceholder: "Adınız ve soyadınız",
   fieldEmail: "E-posta",
-  fieldEmailPlaceholder: "ornek@domain.com",
+  fieldEmailPlaceholder: "ornek@sirket.com",
   fieldPhone: "Telefon",
-  fieldPhonePlaceholder: "+90 5XX XXX XX XX",
-  fieldPhoneOptional: "isteğe bağlı",
-  fieldSubject: "Konu",
-  fieldSubjectPlaceholder: "Örn. Kurumsal web sitesi yenileme",
+  fieldPhonePlaceholder: "5XX XXX XX XX",
+  fieldPhoneCountryLabel: "Ülke kodu",
+  fieldPhoneOptional: "opsiyonel",
   fieldService: "Hizmet Türü",
-  fieldServicePlaceholder: "Hizmet seçin",
+  fieldServicePlaceholder: "Hizmet seçin.",
+  fieldPackage: "Paket Seçimi",
+  fieldPackagePlaceholder: "Paket seçin.",
+  fieldTier: "Kademe Tipi",
+  fieldTierPlaceholder: "Kademe seçin.",
   fieldBudget: "Bütçe Aralığı",
-  fieldBudgetPlaceholder: "Bütçe seçin",
+  fieldBudgetPlaceholder: "Bütçe seçin.",
   fieldMessage: "Mesajınız",
+  fieldMessageOptional: "opsiyonel",
   fieldMessagePlaceholder:
     "Projenizi, beklentilerinizi ve varsa teknik gereksinimlerinizi anlatın…",
-  fieldRequired: "Zorunlu alan",
 
   serviceOptions: [
-    { value: "kurumsal-web", label: "Kurumsal Web Sitesi" },
-    { value: "e-ticaret", label: "E-Ticaret" },
-    { value: "mobil-uygulama", label: "Mobil Uygulama" },
-    { value: "seo", label: "SEO Optimizasyonu" },
+    { value: "web-sitesi", label: "Web Sitesi Geliştirme" },
+    { value: "uygulama", label: "Uygulama Geliştirme" },
+    { value: "seo-hizmetleri", label: "SEO Hizmetleri" },
+    { value: "bakim-ve-destek", label: "Sürekli Bakım & Destek" },
     { value: "diger", label: "Diğer / Henüz bilmiyorum" },
   ],
+
+  tierOptions: [
+    { value: "temel", label: "Temel" },
+    { value: "standart", label: "Standart" },
+    { value: "pro", label: "Pro" },
+    { value: "belirsiz", label: "Henüz bilmiyorum" },
+  ],
+
+  servicePackages: {
+    "web-sitesi": [
+      { value: "portfolio", label: "Portföy / Tanıtım Web Sitesi" },
+      { value: "corporate", label: "Kurumsal Web Sitesi" },
+      { value: "ecommerce", label: "E-Ticaret Web Sitesi" },
+    ],
+    uygulama: [
+      { value: "portfolio", label: "Tanıtım / Portföy Uygulaması" },
+      { value: "corporate", label: "Kurumsal Mobil Uygulama" },
+      { value: "ecommerce", label: "E-Ticaret Mobil Uygulama" },
+    ],
+    "seo-hizmetleri": [
+      { value: "seoServices", label: "Dijital Pazarlama & SEO" },
+    ],
+    "bakim-ve-destek": [
+      { value: "maintenanceServices", label: "Bakım & Destek Hizmetleri" },
+    ],
+  },
 
   budgetOptions: [
     { value: "0k-15k", label: "0 – 15.000 ₺" },
@@ -59,61 +67,78 @@ export const contactTr = {
     { value: "belirsiz", label: "Henüz bilmiyorum" },
   ],
 
-  submitButton: "Mesajı Gönder",
+  submitButton: "Gönder ve Teklif Al",
   submitting: "Gönderiliyor…",
 
   successTitle: "Mesajınız iletildi!",
   successMessage:
-    "En kısa sürede, genellikle 24 saat içinde size dönüş yapacağım. Teşekkürler!",
+    "En kısa sürede, genellikle 24 saat içinde uzman ekibimiz size özel yol haritasıyla dönüş yapacak. Teşekkürler!",
   successButtonBack: "Yeni mesaj gönder",
 
   errorMessage:
     "Bir hata oluştu. Lütfen tekrar deneyin veya doğrudan e-posta gönderin.",
 
-  infoBadge: "Doğrudan İletişim",
-  infoTitle: "Tercih ettiğiniz kanaldan ulaşın",
+  infoBadge: "İletişim Kanalları",
+  infoTitle: "Tercih ettiğiniz kanaldan ulaşın.",
 
   contactItems: [
     { label: "Telefon", value: "+90 507 849 29 03", href: "tel:+905078492903" },
+    {
+      label: "WhatsApp",
+      href: "https://wa.me/905078492903",
+      value: "+90 507 849 29 03",
+    },
     {
       label: "E-posta",
       value: "demirome123@gmail.com",
       href: "mailto:demirome123@gmail.com",
     },
-    { label: "Konum", value: "İstanbul / Türkiye" },
     {
-      label: "GitHub",
-      value: "github.com/omerhd34",
-      href: "https://github.com/omerhd34",
+      label: "Portfolio Web Sitesi",
+      value: "omerhalisdemir.com.tr",
+      href: "https://www.omerhalisdemir.com.tr/",
     },
     {
       label: "LinkedIn",
       value: "Ömer Halis Demir",
       href: "https://www.linkedin.com/in/%C3%B6mer-halis-demir-7a9b79169",
     },
+    {
+      label: "GitHub",
+      value: "Ömer Halis Demir",
+      href: "https://github.com/omerhd34",
+    },
   ],
 
-  responseTimeBadge: "Yanıt Süresi",
-  responseTimeValue: "~24 saat",
-  responseTimeNote:
-    "Mesajları genellikle aynı gün, en geç 24 saat içinde yanıtlıyorum.",
-
-  processTitle: "Süreç nasıl işliyor?",
-  processSteps: [
+  workflowBadge: "Süreç",
+  workflowTitleLead: "Formdan projeye",
+  workflowTitleAccent: "şeffaf ve planlı bir süreç",
+  workflowSubtitle:
+    "Her adımı önceden planlıyor, süreci şeffaf şekilde yönetiyor ve sizi her aşamada bilgilendiriyoruz.",
+  workflowSteps: [
     {
-      step: "01",
-      title: "Mesaj gönderin",
-      desc: "Formu doldurun ya da doğrudan yazın.",
+      step: "1",
+      title: "Formu Gönderin",
+      desc: "Projeniz hakkında birkaç temel bilgi paylaşmanız yeterli; birkaç dakikada biter.",
+      timing: "1 dakika",
     },
     {
-      step: "02",
-      title: "Ücretsiz görüşme",
-      desc: "Kapsam, süre ve fiyatı birlikte belirleyelim.",
+      step: "2",
+      title: "İhtiyaçları Belirleyelim",
+      desc: "Hedeflerinizi analiz ediyor, kapsamı birlikte netleştiriyor ve en uygun çözümü belirliyoruz.",
+      timing: "24 saat",
     },
     {
-      step: "03",
-      title: "Geliştirmeye başlayalım",
-      desc: "Anlaşma sonrası süreci hızla başlatıyorum.",
+      step: "3",
+      title: "Teklifi Oluşturalım",
+      desc: "Kapsam, maliyet ve teslim planını içeren detaylı teklifinizi hazırlayıp size iletiyoruz.",
+      timing: "1–3 gün",
+    },
+    {
+      step: "4",
+      title: "Geliştirmeye Başlayalım",
+      desc: "Onayınızdan sonra geliştirmeye başlıyor ve süreci düzenli paylaşıyoruz.",
+      timing: "Başlangıç",
     },
   ],
 } as const;

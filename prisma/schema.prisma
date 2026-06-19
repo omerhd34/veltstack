@@ -127,16 +127,18 @@ model Testimonial {
 }
 
 model Message {
-  id        String   @id @default(cuid())
-  name      String
-  email     String
-  phone     String?
-  subject   String
-  service   String?
-  budget    String?
-  content   String   @db.Text
-  isRead    Boolean  @default(false)
-  createdAt DateTime @default(now())
+  id             String   @id @default(cuid())
+  name           String
+  email          String
+  phone          String?
+  subject        String
+  service        String?
+  servicePackage String?
+  serviceTier    String?
+  budget         String?
+  content        String   @db.Text
+  isRead         Boolean  @default(false)
+  createdAt      DateTime @default(now())
 }
 
 model SiteConfig {

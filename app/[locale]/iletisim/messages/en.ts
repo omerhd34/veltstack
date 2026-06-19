@@ -1,53 +1,61 @@
 export const contactEn = {
-  heroBadge: "Contact",
-  heroTitle: "Let's bring your project to life together",
-  heroSubtitle:
-    "Fill in the form or reach out directly for a new project, collaboration, or technical consultation — I usually respond within 24 hours.",
-  heroScrollLabel: "Go to form",
-  heroQuickContacts: [
-    { label: "Phone", value: "+90 507 849 29 03", href: "tel:+905078492903" },
-    {
-      label: "Email",
-      value: "demirome123@gmail.com",
-      href: "mailto:demirome123@gmail.com",
-    },
-    {
-      label: "LinkedIn",
-      value: "Ömer Halis Demir",
-      href: "https://www.linkedin.com/in/%C3%B6mer-halis-demir-7a9b79169",
-    },
-  ],
-
   formBadge: "Send a Message",
-  formTitle: "Tell me about your project",
-  formSubtitle:
-    "Fill in the form below to share your needs — I'll get back to you with a tailored assessment on scope, timeline, and pricing.",
+  formTitle: "Tell us about your project",
 
   fieldName: "Full Name",
   fieldNamePlaceholder: "Your first and last name",
   fieldEmail: "Email",
-  fieldEmailPlaceholder: "example@domain.com",
+  fieldEmailPlaceholder: "example@company.com",
   fieldPhone: "Phone",
-  fieldPhonePlaceholder: "+90 5XX XXX XX XX",
+  fieldPhonePlaceholder: "5XX XXX XX XX",
+  fieldPhoneCountryLabel: "Country code",
   fieldPhoneOptional: "optional",
-  fieldSubject: "Subject",
-  fieldSubjectPlaceholder: "e.g. Corporate website redesign",
   fieldService: "Service Type",
-  fieldServicePlaceholder: "Select a service",
+  fieldServicePlaceholder: "Select a service.",
+  fieldPackage: "Package Selection",
+  fieldPackagePlaceholder: "Select a package.",
+  fieldTier: "Tier",
+  fieldTierPlaceholder: "Select a tier.",
   fieldBudget: "Budget Range",
-  fieldBudgetPlaceholder: "Select a budget",
+  fieldBudgetPlaceholder: "Select a budget.",
   fieldMessage: "Your Message",
+  fieldMessageOptional: "optional",
   fieldMessagePlaceholder:
     "Describe your project, expectations, and any technical requirements…",
-  fieldRequired: "Required field",
 
   serviceOptions: [
-    { value: "kurumsal-web", label: "Corporate Website" },
-    { value: "e-ticaret", label: "E-Commerce" },
-    { value: "mobil-uygulama", label: "Mobile Application" },
-    { value: "seo", label: "SEO Optimization" },
+    { value: "web-sitesi", label: "Web Site Development" },
+    { value: "uygulama", label: "App Development" },
+    { value: "seo-hizmetleri", label: "SEO Services" },
+    { value: "bakim-ve-destek", label: "Ongoing Maintenance & Support" },
     { value: "diger", label: "Other / Not sure yet" },
   ],
+
+  tierOptions: [
+    { value: "temel", label: "Basic" },
+    { value: "standart", label: "Standard" },
+    { value: "pro", label: "Pro" },
+    { value: "belirsiz", label: "Not sure yet" },
+  ],
+
+  servicePackages: {
+    "web-sitesi": [
+      { value: "portfolio", label: "Portfolio / Showcase Website" },
+      { value: "corporate", label: "Corporate Website" },
+      { value: "ecommerce", label: "E-Commerce Website" },
+    ],
+    uygulama: [
+      { value: "portfolio", label: "Showcase / Portfolio App" },
+      { value: "corporate", label: "Corporate Mobile App" },
+      { value: "ecommerce", label: "E-Commerce Mobile App" },
+    ],
+    "seo-hizmetleri": [
+      { value: "seoServices", label: "Digital Marketing & SEO" },
+    ],
+    "bakim-ve-destek": [
+      { value: "maintenanceServices", label: "Maintenance & Support Services" },
+    ],
+  },
 
   budgetOptions: [
     { value: "0k-15k", label: "$0 – $500" },
@@ -59,60 +67,78 @@ export const contactEn = {
     { value: "belirsiz", label: "Not sure yet" },
   ],
 
-  submitButton: "Send Message",
+  submitButton: "Send and Get a Quote",
   submitting: "Sending…",
 
   successTitle: "Your message has been sent!",
   successMessage:
-    "I'll get back to you as soon as possible, usually within 24 hours. Thank you!",
+    "Our expert team will get back to you as soon as possible, usually within 24 hours with a customized roadmap. Thank you!",
   successButtonBack: "Send another message",
 
   errorMessage:
     "Something went wrong. Please try again or send an email directly.",
 
-  infoBadge: "Direct Contact",
-  infoTitle: "Reach out on your preferred channel",
+  infoBadge: "Contact Channels",
+  infoTitle: "Reach out on your preferred channel.",
 
   contactItems: [
     { label: "Phone", value: "+90 507 849 29 03", href: "tel:+905078492903" },
+    {
+      label: "WhatsApp",
+      href: "https://wa.me/905078492903",
+      value: "+90 507 849 29 03",
+    },
     {
       label: "Email",
       value: "demirome123@gmail.com",
       href: "mailto:demirome123@gmail.com",
     },
-    { label: "Location", value: "Istanbul / Turkey" },
     {
-      label: "GitHub",
-      value: "github.com/omerhd34",
-      href: "https://github.com/omerhd34",
+      label: "Portfolio Website",
+      value: "omerhalisdemir.com.tr",
+      href: "https://www.omerhalisdemir.com.tr/",
     },
     {
       label: "LinkedIn",
       value: "Ömer Halis Demir",
       href: "https://www.linkedin.com/in/%C3%B6mer-halis-demir-7a9b79169",
     },
+    {
+      label: "GitHub",
+      value: "Ömer Halis Demir",
+      href: "https://github.com/omerhd34",
+    },
   ],
 
-  responseTimeBadge: "Response Time",
-  responseTimeValue: "~24 hours",
-  responseTimeNote: "I usually reply the same day, within 24 hours at most.",
-
-  processTitle: "How does it work?",
-  processSteps: [
+  workflowBadge: "Our process",
+  workflowTitleLead: "From form to project,",
+  workflowTitleAccent: "four steps are enough.",
+  workflowSubtitle:
+    "From submission to proposal to kickoff — we tell you what happens at each stage upfront.",
+  workflowSteps: [
     {
-      step: "01",
-      title: "Send a message",
-      desc: "Fill in the form or write directly.",
+      step: "1",
+      title: "Fill Out the Form",
+      desc: "Share a few project basics — the form takes just a few minutes.",
+      timing: "1 minute",
     },
     {
-      step: "02",
-      title: "Free consultation",
-      desc: "We'll define scope, timeline, and pricing together.",
+      step: "2",
+      title: "We Review Your Request",
+      desc: "We review your goals, clarify scope together, and confirm the best approach within 24 hours.",
+      timing: "Within 24 hours",
     },
     {
-      step: "03",
-      title: "Start building",
-      desc: "Once agreed, I kick off development quickly.",
+      step: "3",
+      title: "We Prepare Your Proposal",
+      desc: "We prepare and send a detailed proposal covering scope, cost, and delivery timeline.",
+      timing: "2–3 business days",
+    },
+    {
+      step: "4",
+      title: "We Start the Project",
+      desc: "After approval, we start development and keep you updated throughout.",
+      timing: "Immediately",
     },
   ],
 } as const;

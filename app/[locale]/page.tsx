@@ -4,7 +4,6 @@ import { ServicesSection } from "@/components/sections/services"
 import { ServicesMarqueeSection } from "@/components/sections/services-marquee"
 import { WhoWeAreSection } from "@/components/sections/who-we-are"
 import { WhyMeSection } from "@/components/sections/why-me"
-import { ProcessSection } from "@/components/sections/process"
 import { ProjectsSection } from "@/components/sections/projects"
 import { TechMarqueeSection } from "@/components/sections/tech-marquee"
 import { TestimonialsSection } from "@/components/sections/testimonials"
@@ -28,7 +27,6 @@ export default async function HomePage({ params }: HomePageProps) {
       <WhoWeAreSection />
       <ServicesSection />
       <WhyMeSection />
-      <ProcessSection />
       <ProjectsSection />
       <TechMarqueeSection />
       <TestimonialsSection />

@@ -37,7 +37,7 @@ export function BlogNewsletter({
   return (
     <section className="bg-[#F4F8F5] py-20 md:py-24">
       <SiteContainer>
-        <div className="mx-auto max-w-2xl overflow-hidden rounded-3xl border border-brand-accent/20 bg-white shadow-[0_8px_48px_rgb(58_107_82/0.10)] p-8 md:p-12">
+        <div className="relative mx-auto max-w-2xl overflow-hidden rounded-3xl border border-brand-accent/20 bg-white shadow-[0_8px_48px_rgb(58_107_82/0.10)] p-8 md:p-12">
           {/* Decorative blobs */}
           <div
             aria-hidden

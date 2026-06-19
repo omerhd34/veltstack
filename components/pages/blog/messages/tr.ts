@@ -8,6 +8,7 @@ export const blogPageTr = {
   allCategories: "Tümü",
   readMore: "Devamını oku",
   readingTime: "{minutes} dk okuma",
+  writtenByLabel: "Yazan",
   noResults: "Arama kriterlerinize uygun yazı bulunamadı.",
   noResultsSub: "Farklı bir anahtar kelime veya kategori deneyin.",
   featuredBadge: "Öne Çıkan",

@@ -1,7 +1,12 @@
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { ContactFormFields } from "./ContactFormFields";
-import { ContactInfo } from "./ContactInfo";
-import { ContactProcess } from "./ContactProcess";
+import {
+  ContactInfo,
+  ContactSectionBadge,
+  ContactSectionHeader,
+  ContactSectionTitle,
+} from "./ContactInfo";
+import { ContactWorkflowSection } from "./ContactWorkflowSection";
 
 interface SelectOption {
   value: string;
@@ -10,20 +15,20 @@ interface SelectOption {
 
 interface ContactItem {
   label: string;
-  value: string;
+  value?: string;
   href?: string;
 }
 
-interface ProcessStep {
+interface WorkflowStep {
   step: string;
   title: string;
   desc: string;
+  timing: string;
 }
 
 interface ContactFormProps {
   formBadge: string;
   formTitle: string;
-  formSubtitle: string;
 
   fieldName: string;
   fieldNamePlaceholder: string;
@@ -31,16 +36,19 @@ interface ContactFormProps {
   fieldEmailPlaceholder: string;
   fieldPhone: string;
   fieldPhonePlaceholder: string;
+  fieldPhoneCountryLabel: string;
   fieldPhoneOptional: string;
-  fieldSubject: string;
-  fieldSubjectPlaceholder: string;
   fieldService: string;
   fieldServicePlaceholder: string;
+  fieldPackage: string;
+  fieldPackagePlaceholder: string;
+  fieldTier: string;
+  fieldTierPlaceholder: string;
   fieldBudget: string;
   fieldBudgetPlaceholder: string;
   fieldMessage: string;
+  fieldMessageOptional: string;
   fieldMessagePlaceholder: string;
-  fieldRequired: string;
   submitButton: string;
   submitting: string;
   successTitle: string;
@@ -48,17 +56,19 @@ interface ContactFormProps {
   successButtonBack: string;
   errorMessage: string;
   serviceOptions: SelectOption[];
+  tierOptions: SelectOption[];
+  servicePackages: Record<string, SelectOption[]>;
   budgetOptions: SelectOption[];
 
   infoBadge: string;
   infoTitle: string;
   contactItems: ContactItem[];
 
-  responseTimeBadge: string;
-  responseTimeValue: string;
-  responseTimeNote: string;
-  processTitle: string;
-  processSteps: ProcessStep[];
+  workflowBadge: string;
+  workflowTitleLead: string;
+  workflowTitleAccent: string;
+  workflowSubtitle: string;
+  workflowSteps: WorkflowStep[];
 
   className?: string;
 }
@@ -66,70 +76,90 @@ interface ContactFormProps {
 export function ContactForm({
   formBadge,
   formTitle,
-  formSubtitle,
   infoBadge,
   infoTitle,
   contactItems,
-  responseTimeBadge,
-  responseTimeValue,
-  responseTimeNote,
-  processTitle,
-  processSteps,
+  workflowBadge,
+  workflowTitleLead,
+  workflowTitleAccent,
+  workflowSubtitle,
+  workflowSteps,
   className,
   ...fieldLabels
 }: ContactFormProps) {
+  const formLabels = {
+    ...fieldLabels,
+    serviceOptions: fieldLabels.serviceOptions,
+    tierOptions: fieldLabels.tierOptions,
+    servicePackages: fieldLabels.servicePackages,
+    budgetOptions: fieldLabels.budgetOptions,
+  };
+
+  const formCard = (
+    <div className="h-full rounded-2xl border border-border/60 bg-card p-6 shadow-[0_2px_16px_rgb(0_0_0/0.04)] sm:p-8">
+      <ContactFormFields labels={formLabels} />
+    </div>
+  );
+
   return (
     <section
       id="contact-form"
       aria-labelledby="contact-form-title"
-      className={`scroll-mt-16 bg-[#F8F9FA] py-20 md:py-28 ${className ?? ""}`}
+      className={`scroll-mt-16 bg-[#F8F9FA] pt-10 pb-16 md:pt-12 md:pb-20 ${className ?? ""}`}
     >
-      <SiteContainer className="px-6 sm:px-8 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1fr_380px] lg:gap-16 xl:gap-20">
-          {/* Left – Form */}
-          <div>
-            <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
-              {formBadge}
-            </span>
-            <h2
-              id="contact-form-title"
-              className="mt-5 font-(family-name:--font-heading) text-3xl font-bold tracking-tight md:text-4xl"
-            >
-              {formTitle}
-            </h2>
-            <p className="mt-3 max-w-lg text-base leading-relaxed text-muted-foreground">
-              {formSubtitle}
-            </p>
+      <SiteContainer>
+        {/* Mobile */}
+        <div className="flex flex-col gap-12 lg:hidden">
+          <section>
+            <ContactSectionHeader
+              badge={formBadge}
+              title={formTitle}
+              titleAs="h1"
+              titleId="contact-form-title"
+            />
+            <div className="mt-10">{formCard}</div>
+          </section>
 
-            <div className="mt-10 rounded-2xl border border-border/60 bg-card p-6 shadow-[0_2px_16px_rgb(0_0_0/0.04)] sm:p-8">
-              <ContactFormFields
-                labels={{
-                  ...fieldLabels,
-                  serviceOptions: fieldLabels.serviceOptions,
-                  budgetOptions: fieldLabels.budgetOptions,
-                }}
+          <ContactInfo
+            badge={infoBadge}
+            title={infoTitle}
+            items={contactItems}
+            showHeader={false}
+          />
+        </div>
+
+        {/* Desktop: sol başlık + içerik, sağda yalnızca kanallar */}
+        <div className="hidden lg:grid lg:grid-cols-[1fr_380px] lg:grid-rows-[auto_1fr] lg:items-stretch lg:gap-x-16 lg:gap-y-10 xl:gap-x-20">
+          <div>
+            <ContactSectionBadge badge={formBadge} />
+            <div className="mt-5">
+              <ContactSectionTitle
+                title={formTitle}
+                titleAs="h1"
+                titleId="contact-form-title"
               />
             </div>
           </div>
+          <div aria-hidden />
+          <div className="h-full">{formCard}</div>
+          <ContactInfo
+            badge={infoBadge}
+            title={infoTitle}
+            items={contactItems}
+            showHeader={false}
+            stretchItems
+            className="h-full"
+          />
+        </div>
 
-          {/* Right – Info + Process */}
-          <div className="flex flex-col gap-8 lg:pt-22">
-            <ContactInfo
-              badge={infoBadge}
-              title={infoTitle}
-              items={contactItems}
-            />
-
-            <div className="h-px bg-border/60" aria-hidden />
-
-            <ContactProcess
-              responseTimeBadge={responseTimeBadge}
-              responseTimeValue={responseTimeValue}
-              responseTimeNote={responseTimeNote}
-              processTitle={processTitle}
-              processSteps={processSteps}
-            />
-          </div>
+        <div className="mt-16 rounded-3xl border border-border/60 bg-card p-8 shadow-[0_2px_16px_rgb(0_0_0/0.04)] md:mt-20 md:p-12">
+          <ContactWorkflowSection
+            badge={workflowBadge}
+            titleLead={workflowTitleLead}
+            titleAccent={workflowTitleAccent}
+            subtitle={workflowSubtitle}
+            steps={workflowSteps}
+          />
         </div>
       </SiteContainer>
     </section>

@@ -28,8 +28,8 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
   );
 
   const trailingLinks = [
-    { href: "/blog", label: tNav("blog") },
     { href: "/hakkimda", label: tNav("about") },
+    { href: "/blog", label: tNav("blog") },
     { href: "/iletisim", label: tNav("contact") },
   ];
 

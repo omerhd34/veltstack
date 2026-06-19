@@ -1,23 +1,23 @@
-import { FooterLogo } from "./FooterLogo"
-import { FooterLinks } from "./FooterLinks"
-import { FooterSocial } from "./FooterSocial"
-import { FooterCopyright } from "./FooterCopyright"
+import { SiteContainer } from "@/components/layout/SiteContainer";
+import { FooterMainGrid } from "./FooterMainGrid";
+import { FooterBottomBar } from "./FooterBottomBar";
 
 interface FooterProps {
-  className?: string
+  className?: string;
 }
 
 export function Footer({ className }: FooterProps) {
   return (
-    <footer className={`border-t border-border bg-card ${className ?? ""}`}>
-      <div className="mx-auto flex max-w-7xl flex-col gap-6 py-12">
-        <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <FooterLogo className="text-lg font-bold" />
-          <FooterLinks />
-          <FooterSocial />
+    <footer className={`bg-foreground text-background ${className ?? ""}`}>
+      <SiteContainer className="px-4 sm:px-6">
+        <div className="py-14 lg:py-16">
+          <FooterMainGrid />
         </div>
-        <FooterCopyright />
-      </div>
+
+        <div className="border-t border-background/10">
+          <FooterBottomBar />
+        </div>
+      </SiteContainer>
     </footer>
-  )
+  );
 }

@@ -6,10 +6,11 @@ const contactSchema = z.object({
   name: z.string().min(2).max(100),
   email: z.string().email(),
   phone: z.string().optional(),
-  subject: z.string().min(5).max(200),
-  service: z.string().optional(),
-  budget: z.string().optional(),
-  content: z.string().min(20).max(2000),
+  service: z.string().min(1),
+  servicePackage: z.string().min(1),
+  serviceTier: z.string().min(1),
+  budget: z.string().min(1),
+  content: z.string().max(2000).default(""),
 })
 
 export async function POST(request: Request) {
@@ -17,7 +18,12 @@ export async function POST(request: Request) {
     const body = await request.json()
     const data = contactSchema.parse(body)
 
-    await prisma.message.create({ data })
+    await prisma.message.create({
+      data: {
+        ...data,
+        subject: `İletişim formu - ${data.name}`,
+      },
+    })
 
     return NextResponse.json({ success: true })
   } catch (error) {

@@ -1,4 +1,6 @@
+export { BlogDetailHero } from "./BlogDetailHero"
 export { BlogHero } from "./BlogHero"
 export { BlogContent } from "./BlogContent"
+export { BlogArticleBody } from "./BlogArticleBody"
 export { BlogTOC } from "./BlogTOC"
 export { BlogRelated } from "./BlogRelated"

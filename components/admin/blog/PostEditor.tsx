@@ -1,7 +1,7 @@
 interface PostEditorProps {
-  className?: string
+  className?: string;
 }
 
 export function PostEditor({ className }: PostEditorProps) {
-  return <div className={className} />
+  return <div className={className} />;
 }

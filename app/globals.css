@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -101,6 +102,137 @@
   }
   html {
     @apply scroll-smooth font-sans;
+  }
+}
+
+@layer components {
+  .blog-prose .blog-table-wrap {
+    @apply my-8 overflow-x-auto rounded-xl border border-border;
+  }
+
+  .blog-prose .blog-table-wrap table {
+    @apply m-0 w-full min-w-[28rem] border-collapse text-sm;
+  }
+
+  .blog-prose .blog-table-wrap thead {
+    @apply bg-muted/80;
+  }
+
+  .blog-prose .blog-table-wrap th {
+    @apply border-b border-border px-4 py-3 text-left font-semibold text-foreground;
+  }
+
+  .blog-prose .blog-table-wrap td {
+    @apply border-b border-border/70 px-4 py-3 text-foreground/75;
+  }
+
+  .blog-prose .blog-table-wrap tbody tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .blog-prose .blog-table-wrap tbody tr:hover {
+    @apply bg-muted/30;
+  }
+
+  .blog-prose .blog-chart {
+    @apply my-10 rounded-2xl border border-border bg-card p-5 md:p-6;
+  }
+
+  .blog-prose .blog-chart figcaption {
+    @apply mb-5 text-sm font-semibold text-foreground;
+  }
+
+  .blog-prose .blog-chart-bars {
+    @apply flex flex-col gap-4;
+  }
+
+  .blog-prose .blog-chart-row {
+    @apply grid items-center gap-3;
+    grid-template-columns: minmax(5.5rem, 7rem) 1fr minmax(3.5rem, auto);
+  }
+
+  .blog-prose .blog-chart-label {
+    @apply text-sm font-medium text-foreground/80;
+  }
+
+  .blog-prose .blog-chart-track {
+    @apply h-3 overflow-hidden rounded-full bg-muted;
+  }
+
+  .blog-prose .blog-chart-fill {
+    @apply h-full rounded-full bg-brand-accent transition-[width] duration-700;
+  }
+
+  .blog-prose .blog-chart-value {
+    @apply text-right text-sm font-semibold tabular-nums text-foreground;
+  }
+
+  .blog-prose .blog-stats {
+    @apply my-8 grid gap-4 sm:grid-cols-3;
+  }
+
+  .blog-prose .blog-stat {
+    @apply flex flex-col rounded-xl border border-border bg-muted/30 px-4 py-5 text-center;
+  }
+
+  .blog-prose .blog-stat-value {
+    @apply font-(family-name:--font-heading) text-2xl font-bold tracking-tight text-brand-accent;
+  }
+
+  .blog-prose .blog-stat-label {
+    @apply mt-1.5 text-xs leading-snug text-muted-foreground;
+  }
+
+  .blog-prose .blog-flow {
+    @apply my-10 flex flex-col items-stretch gap-3 md:flex-row md:items-center md:justify-between;
+  }
+
+  .blog-prose .blog-flow-step {
+    @apply flex-1 rounded-xl border border-border bg-card px-4 py-4 text-center text-sm font-medium text-foreground shadow-sm;
+  }
+
+  .blog-prose .blog-flow-arrow {
+    @apply hidden shrink-0 text-xl text-brand-accent md:block;
+  }
+
+  .blog-prose .blog-flow-arrow-mobile {
+    @apply text-center text-lg text-brand-accent md:hidden;
+  }
+
+  .blog-prose .blog-callout {
+    @apply my-8 rounded-xl border-l-4 border-brand-accent bg-brand-accent/5 px-5 py-4;
+  }
+
+  .blog-prose .blog-callout-title {
+    @apply mb-1 text-sm font-semibold text-foreground;
+  }
+
+  .blog-prose .blog-callout p {
+    @apply m-0 text-sm leading-relaxed text-foreground/75;
+  }
+
+  .blog-prose .blog-compare {
+    @apply my-8 grid gap-4 sm:grid-cols-2;
+  }
+
+  .blog-prose .blog-compare-card {
+    @apply rounded-xl border border-border bg-card p-5;
+  }
+
+  .blog-prose .blog-compare-card h4 {
+    @apply m-0 mb-3 font-(family-name:--font-heading) text-lg font-bold text-foreground;
+  }
+
+  .blog-prose .blog-compare-card ul {
+    @apply m-0 list-none p-0;
+  }
+
+  .blog-prose .blog-compare-card li {
+    @apply relative pl-5 text-sm text-foreground/75 before:absolute before:left-0 before:text-brand-accent before:content-['✓'];
+  }
+
+  .blog-prose .blog-compare-card li + li {
+    @apply mt-2;
   }
 }
 

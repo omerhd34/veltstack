@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { useTranslations } from "next-intl"
+import { useTranslations } from "next-intl";
 
 interface FooterCopyrightProps {
-  className?: string
+  className?: string;
 }
 
 export function FooterCopyright({ className }: FooterCopyrightProps) {
-  const t = useTranslations("footer")
-  const year = new Date().getFullYear()
+  const t = useTranslations("footer");
+  const year = new Date().getFullYear();
 
   return (
-    <p className={`text-sm text-muted-foreground ${className ?? ""}`}>
+    <p className={`text-sm text-background/50 ${className ?? ""}`}>
       {t("copyright", { year })}
     </p>
-  )
+  );
 }

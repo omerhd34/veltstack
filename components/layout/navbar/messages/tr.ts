@@ -12,7 +12,7 @@ export const navTr = {
   projectUzmanPsikolog: "Uzman Klinik Psikolog",
   projects: "Projeler",
   blog: "Blog",
-  about: "Hakkımda",
+  about: "Hakkımızda",
   contact: "İletişim",
   cta: "Proje Konuşalım",
 } as const;

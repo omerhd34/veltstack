@@ -1,5 +1,3 @@
-// components/pages/blog/blog-data.ts
-
 export interface BlogPost {
   slug: string;
   titleTr: string;
@@ -10,11 +8,83 @@ export interface BlogPost {
   categoryEn: string;
   imageUrl: string;
   readingTime: number;
-  publishedAt: string; // ISO date string
+  publishedAt: string;
   featured?: boolean;
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "domain-nasil-alinir",
+    titleTr: "Domain Nasıl Alınır?",
+    titleEn: "How to Buy a Domain?",
+    excerptTr:
+      "Alan adı satın alma sürecini adım adım anlatıyor; domain seçimi, DNS yapılandırması ve dikkat edilmesi gerekenleri paylaşıyoruz.",
+    excerptEn:
+      "A step-by-step guide to buying a domain — choosing a name, DNS setup and what to watch out for.",
+    category: "Hosting & Domain",
+    categoryEn: "Hosting & Domain",
+    imageUrl: "/images/blog/blog-1.svg",
+    readingTime: 5,
+    publishedAt: "2026-06-15",
+    featured: true,
+  },
+  {
+    slug: "domain-ve-hosting-nedir",
+    titleTr: "Domain ve Hosting Nedir?",
+    titleEn: "What Are Domain and Hosting?",
+    excerptTr:
+      "Domain ve hosting kavramlarını sade bir dille açıklıyor; ikisinin farkını ve birlikte nasıl çalıştığını anlatıyoruz.",
+    excerptEn:
+      "We explain domain and hosting in plain language — how they differ and work together.",
+    category: "Hosting & Domain",
+    categoryEn: "Hosting & Domain",
+    imageUrl: "/images/blog/blog-2.svg",
+    readingTime: 5,
+    publishedAt: "2026-06-10",
+  },
+  {
+    slug: "seo-nedir-nasil-yapilir",
+    titleTr: "SEO Nedir ve Nasıl Yapılır?",
+    titleEn: "What Is SEO and How to Do It?",
+    excerptTr:
+      "Arama motoru optimizasyonunun temellerini, türlerini ve uygulanabilir adımlarını kapsamlı bir rehberle paylaşıyoruz.",
+    excerptEn:
+      "A comprehensive guide to search engine optimization basics, types and actionable steps.",
+    category: "SEO",
+    categoryEn: "SEO",
+    imageUrl: "/images/blog/blog-3.svg",
+    readingTime: 8,
+    publishedAt: "2026-06-05",
+    featured: true,
+  },
+  {
+    slug: "en-iyi-hosting-firmalari",
+    titleTr: "En İyi Hosting Firmaları",
+    titleEn: "Best Hosting Providers",
+    excerptTr:
+      "Türkiye ve global pazarda öne çıkan hosting firmalarını değerlendiriyor; domain tescili dahil en iyi tercih olarak ixirhost'u öneriyoruz.",
+    excerptEn:
+      "We review leading hosting providers in Turkey and globally and recommend ixirhost for domain registration and hosting.",
+    category: "Hosting & Domain",
+    categoryEn: "Hosting & Domain",
+    imageUrl: "/images/blog/blog-1.svg",
+    readingTime: 7,
+    publishedAt: "2026-05-28",
+  },
+  {
+    slug: "en-iyi-freelancer-siteleri",
+    titleTr: "En İyi Freelancer Siteleri",
+    titleEn: "Best Freelancer Platforms",
+    excerptTr:
+      "Global ve Türkiye'deki en popüler freelance platformlarını karşılaştırıyor; doğru platformu seçmenize yardımcı oluyoruz.",
+    excerptEn:
+      "We compare the most popular freelance platforms globally and in Turkey to help you choose the right one.",
+    category: "Araçlar & İpuçları",
+    categoryEn: "Tools & Tips",
+    imageUrl: "/images/blog/blog-2.svg",
+    readingTime: 6,
+    publishedAt: "2026-05-20",
+  },
   {
     slug: "nextjs-seo-rehberi",
     titleTr: "Next.js ile SEO Optimizasyonu: Kapsamlı Rehber",
@@ -131,6 +201,14 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
+const footerBlogSlugs = [
+  "domain-nasil-alinir",
+  "en-iyi-hosting-firmalari",
+  "domain-ve-hosting-nedir",
+  "seo-nedir-nasil-yapilir",
+  "en-iyi-freelancer-siteleri",
+] as const;
+
 export function getAllCategories(locale: "tr" | "en"): string[] {
   const key = locale === "tr" ? "category" : "categoryEn";
   const unique = Array.from(new Set(blogPosts.map((p) => p[key])));
@@ -147,6 +225,17 @@ export function getPostsByCategory(
 
 export function getFeaturedPosts(): BlogPost[] {
   return blogPosts.filter((p) => p.featured);
+}
+
+export function getFooterBlogPosts(locale: "tr" | "en") {
+  return footerBlogSlugs
+    .map((slug) => blogPosts.find((post) => post.slug === slug))
+    .filter((post): post is BlogPost => post !== undefined)
+    .map((post) => ({
+      slug: post.slug,
+      title: locale === "tr" ? post.titleTr : post.titleEn,
+      category: locale === "tr" ? post.category : post.categoryEn,
+    }));
 }
 
 export function formatDate(dateString: string, locale: "tr" | "en"): string {

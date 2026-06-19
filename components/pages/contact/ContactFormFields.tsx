@@ -1,13 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { LuArrowRight, LuCheck, LuLoader, LuRotateCcw } from "react-icons/lu";
+import { LuCheck, LuLoader, LuRotateCcw } from "react-icons/lu";
 import { cn } from "@/lib/utils";
+import { ContactFormSelect } from "./ContactFormSelect";
+import { ContactPhoneField } from "./ContactPhoneField";
+import { defaultPhoneCountryCode } from "./phone-country-codes";
 
 interface SelectOption {
   value: string;
   label: string;
 }
+
+type ServicePackagesMap = Record<string, SelectOption[]>;
 
 interface ContactFormFieldsProps {
   labels: {
@@ -17,16 +22,19 @@ interface ContactFormFieldsProps {
     fieldEmailPlaceholder: string;
     fieldPhone: string;
     fieldPhonePlaceholder: string;
+    fieldPhoneCountryLabel: string;
     fieldPhoneOptional: string;
-    fieldSubject: string;
-    fieldSubjectPlaceholder: string;
     fieldService: string;
     fieldServicePlaceholder: string;
+    fieldPackage: string;
+    fieldPackagePlaceholder: string;
+    fieldTier: string;
+    fieldTierPlaceholder: string;
     fieldBudget: string;
     fieldBudgetPlaceholder: string;
     fieldMessage: string;
+    fieldMessageOptional: string;
     fieldMessagePlaceholder: string;
-    fieldRequired: string;
     submitButton: string;
     submitting: string;
     successTitle: string;
@@ -34,6 +42,8 @@ interface ContactFormFieldsProps {
     successButtonBack: string;
     errorMessage: string;
     serviceOptions: SelectOption[];
+    tierOptions: SelectOption[];
+    servicePackages: ServicePackagesMap;
     budgetOptions: SelectOption[];
   };
   className?: string;
@@ -44,8 +54,9 @@ type FormState = "idle" | "submitting" | "success" | "error";
 const inputBase =
   "w-full rounded-xl border border-border/70 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all focus:border-brand-accent/50 focus:ring-3 focus:ring-brand-accent/10 hover:border-border";
 
-const labelBase =
-  "mb-1.5 block text-[0.8125rem] font-semibold text-foreground/80";
+const labelBase = "mb-1.5 block text-[0.8125rem] text-foreground/80";
+
+const labelText = "font-semibold";
 
 export function ContactFormFields({
   labels,
@@ -53,6 +64,24 @@ export function ContactFormFields({
 }: ContactFormFieldsProps) {
   const [formState, setFormState] = useState<FormState>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [selectedService, setSelectedService] = useState("");
+  const [selectedPackage, setSelectedPackage] = useState("");
+  const [selectedTier, setSelectedTier] = useState("");
+  const [selectedBudget, setSelectedBudget] = useState("");
+  const [phoneCountryCode, setPhoneCountryCode] = useState<string>(
+    defaultPhoneCountryCode,
+  );
+  const [phoneNumber, setPhoneNumber] = useState("");
+
+  const basePackageOptions =
+    selectedService && labels.servicePackages[selectedService]
+      ? labels.servicePackages[selectedService]
+      : labels.servicePackages["web-sitesi"];
+
+  const unknownOption = labels.budgetOptions.find(
+    (o) => o.value === "belirsiz",
+  )!;
+  const packageOptions = [...basePackageOptions, unknownOption];
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -63,18 +92,17 @@ export function ContactFormFields({
     const data = {
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      phone:
-        (form.elements.namedItem("phone") as HTMLInputElement).value ||
-        undefined,
-      subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
-      service:
-        (form.elements.namedItem("service") as HTMLSelectElement).value ||
-        undefined,
-      budget:
-        (form.elements.namedItem("budget") as HTMLSelectElement).value ||
-        undefined,
-      content: (form.elements.namedItem("content") as HTMLTextAreaElement)
-        .value,
+      phone: phoneNumber.trim()
+        ? `${phoneCountryCode} ${phoneNumber.trim()}`
+        : undefined,
+      service: selectedService,
+      servicePackage: selectedPackage,
+      serviceTier: selectedTier,
+      budget: selectedBudget,
+      content:
+        (
+          form.elements.namedItem("content") as HTMLTextAreaElement
+        ).value.trim() || "",
     };
 
     try {
@@ -117,7 +145,15 @@ export function ContactFormFields({
         </div>
         <button
           type="button"
-          onClick={() => setFormState("idle")}
+          onClick={() => {
+            setFormState("idle");
+            setSelectedService("");
+            setSelectedPackage("");
+            setSelectedTier("");
+            setSelectedBudget("");
+            setPhoneCountryCode(defaultPhoneCountryCode);
+            setPhoneNumber("");
+          }}
           className="mt-2 inline-flex items-center gap-2 rounded-full border border-border/70 bg-background px-5 py-2 text-sm font-medium text-foreground transition-colors hover:border-brand-accent/40 hover:text-brand-accent"
         >
           <LuRotateCcw className="size-3.5" aria-hidden />
@@ -137,9 +173,11 @@ export function ContactFormFields({
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="cf-name" className={labelBase}>
-            {labels.fieldName}
-            <span className="ml-1 text-brand-accent" aria-hidden>
-              *
+            <span className={labelText}>
+              {labels.fieldName}
+              <span className="ml-1 text-brand-accent" aria-hidden>
+                *
+              </span>
             </span>
           </label>
           <input
@@ -156,9 +194,11 @@ export function ContactFormFields({
         </div>
         <div>
           <label htmlFor="cf-email" className={labelBase}>
-            {labels.fieldEmail}
-            <span className="ml-1 text-brand-accent" aria-hidden>
-              *
+            <span className={labelText}>
+              {labels.fieldEmail}
+              <span className="ml-1 text-brand-accent" aria-hidden>
+                *
+              </span>
             </span>
           </label>
           <input
@@ -173,103 +213,121 @@ export function ContactFormFields({
         </div>
       </div>
 
-      {/* Phone + Subject */}
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div>
-          <label htmlFor="cf-phone" className={labelBase}>
-            {labels.fieldPhone}
-            <span className="ml-2 text-[0.75rem] font-normal text-muted-foreground">
-              ({labels.fieldPhoneOptional})
-            </span>
-          </label>
-          <input
-            id="cf-phone"
-            name="phone"
-            type="tel"
-            autoComplete="tel"
-            placeholder={labels.fieldPhonePlaceholder}
-            className={inputBase}
-          />
-        </div>
-        <div>
-          <label htmlFor="cf-subject" className={labelBase}>
-            {labels.fieldSubject}
-            <span className="ml-1 text-brand-accent" aria-hidden>
-              *
-            </span>
-          </label>
-          <input
-            id="cf-subject"
-            name="subject"
-            type="text"
-            required
-            minLength={5}
-            maxLength={200}
-            placeholder={labels.fieldSubjectPlaceholder}
-            className={inputBase}
-          />
-        </div>
+      {/* Phone */}
+      <div>
+        <label htmlFor="cf-phone" className={labelBase}>
+          <span className={labelText}>{labels.fieldPhone}</span>
+          <span className="ml-1.5 text-[0.75rem] font-normal text-muted-foreground">
+            ({labels.fieldPhoneOptional})
+          </span>
+        </label>
+        <ContactPhoneField
+          id="cf-phone"
+          placeholder={labels.fieldPhonePlaceholder}
+          countryCodeLabel={labels.fieldPhoneCountryLabel}
+          countryCode={phoneCountryCode}
+          phoneNumber={phoneNumber}
+          onCountryCodeChange={setPhoneCountryCode}
+          onPhoneNumberChange={setPhoneNumber}
+        />
       </div>
 
-      {/* Service + Budget */}
+      {/* Service + Package / Tier + Budget */}
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="cf-service" className={labelBase}>
-            {labels.fieldService}
+            <span className={labelText}>
+              {labels.fieldService}
+              <span className="ml-1 text-brand-accent" aria-hidden>
+                *
+              </span>
+            </span>
           </label>
-          <select
+          <ContactFormSelect
             id="cf-service"
             name="service"
-            className={cn(
-              inputBase,
-              "cursor-pointer appearance-none bg-[url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E\")] bg-size-[16px] bg-position-[right_14px_center] bg-no-repeat pr-10",
-            )}
-          >
-            <option value="">{labels.fieldServicePlaceholder}</option>
-            {labels.serviceOptions.map((opt) => (
-              <option key={opt.value} value={opt.value}>
-                {opt.label}
-              </option>
-            ))}
-          </select>
+            required
+            placeholder={labels.fieldServicePlaceholder}
+            options={labels.serviceOptions}
+            value={selectedService}
+            onChange={(value) => {
+              setSelectedService(value);
+              setSelectedPackage("");
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="cf-package" className={labelBase}>
+            <span className={labelText}>
+              {labels.fieldPackage}
+              <span className="ml-1 text-brand-accent" aria-hidden>
+                *
+              </span>
+            </span>
+          </label>
+          <ContactFormSelect
+            id="cf-package"
+            name="servicePackage"
+            required
+            placeholder={labels.fieldPackagePlaceholder}
+            options={packageOptions}
+            value={selectedPackage}
+            onChange={setSelectedPackage}
+          />
+        </div>
+        <div>
+          <label htmlFor="cf-tier" className={labelBase}>
+            <span className={labelText}>
+              {labels.fieldTier}
+              <span className="ml-1 text-brand-accent" aria-hidden>
+                *
+              </span>
+            </span>
+          </label>
+          <ContactFormSelect
+            id="cf-tier"
+            name="serviceTier"
+            required
+            placeholder={labels.fieldTierPlaceholder}
+            options={labels.tierOptions}
+            value={selectedTier}
+            onChange={setSelectedTier}
+          />
         </div>
         <div>
           <label htmlFor="cf-budget" className={labelBase}>
-            {labels.fieldBudget}
+            <span className={labelText}>
+              {labels.fieldBudget}
+              <span className="ml-1 text-brand-accent" aria-hidden>
+                *
+              </span>
+            </span>
           </label>
-          <select
+          <ContactFormSelect
             id="cf-budget"
             name="budget"
-            className={cn(
-              inputBase,
-              "cursor-pointer appearance-none bg-[url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E\")] bg-size-[16px] bg-position-[right_14px_center] bg-no-repeat pr-10",
-            )}
-          >
-            <option value="">{labels.fieldBudgetPlaceholder}</option>
-            {labels.budgetOptions.map((opt) => (
-              <option key={opt.value} value={opt.value}>
-                {opt.label}
-              </option>
-            ))}
-          </select>
+            required
+            placeholder={labels.fieldBudgetPlaceholder}
+            options={labels.budgetOptions}
+            value={selectedBudget}
+            onChange={setSelectedBudget}
+          />
         </div>
       </div>
 
       {/* Message */}
       <div>
         <label htmlFor="cf-content" className={labelBase}>
-          {labels.fieldMessage}
-          <span className="ml-1 text-brand-accent" aria-hidden>
-            *
+          <span className={labelText}>{labels.fieldMessage}</span>
+          <span className="ml-1.5 text-[0.75rem] font-normal text-muted-foreground">
+            ({labels.fieldMessageOptional})
           </span>
         </label>
         <textarea
           id="cf-content"
           name="content"
-          required
-          minLength={20}
           maxLength={2000}
-          rows={6}
+          rows={4}
           placeholder={labels.fieldMessagePlaceholder}
           className={cn(inputBase, "resize-none leading-relaxed")}
         />
@@ -289,7 +347,14 @@ export function ContactFormFields({
       <button
         type="submit"
         disabled={formState === "submitting"}
-        className="group inline-flex h-12 w-full items-center justify-center gap-2.5 rounded-full bg-brand-accent px-8 text-sm font-semibold text-white transition-all hover:bg-brand-accent/85 disabled:pointer-events-none disabled:opacity-60"
+        className={cn(
+          "inline-flex h-12 w-full items-center justify-center gap-2 rounded-full px-8",
+          "bg-brand-accent text-sm font-semibold text-white",
+          "shadow-[0_4px_14px_rgb(58_107_82/0.25)] transition-colors duration-200",
+          "hover:bg-[#325a45] hover:shadow-[0_6px_18px_rgb(58_107_82/0.3)]",
+          "focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-brand-accent/25",
+          "disabled:pointer-events-none disabled:opacity-60 disabled:shadow-none",
+        )}
       >
         {formState === "submitting" ? (
           <>
@@ -297,22 +362,9 @@ export function ContactFormFields({
             {labels.submitting}
           </>
         ) : (
-          <>
-            {labels.submitButton}
-            <LuArrowRight
-              className="size-4 transition-transform group-hover:translate-x-0.5"
-              aria-hidden
-            />
-          </>
+          labels.submitButton
         )}
       </button>
-
-      <p className="text-center text-[0.75rem] text-muted-foreground/60">
-        <span aria-hidden className="text-brand-accent">
-          *
-        </span>{" "}
-        {labels.fieldRequired}
-      </p>
     </form>
   );
 }

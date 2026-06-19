@@ -16,7 +16,7 @@ export const servicesPageTr = {
   ctaNote: "24 saat içinde dönüş",
   stats: [
     { value: "5-120", label: "Teslim Süresi (Gün)" },
-    { value: "5", label: "Hizmet Tipi" },
+    { value: "4", label: "Hizmet Tipi" },
     { value: "∞", label: "Sayfa Kapasitesi" },
     { value: "98%", label: "Memnuniyet" },
   ],

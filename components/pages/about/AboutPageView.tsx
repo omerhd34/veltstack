@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
+import { ProcessSection } from "@/components/sections/process";
 import { ServicesPageCTA } from "@/components/pages/services/ServicesPageCTA";
 import { AboutContact } from "./AboutContact";
-import { AboutExperience } from "./AboutExperience";
 import { AboutHero } from "./AboutHero";
 import { AboutSkills } from "./AboutSkills";
 import { AboutStory } from "./AboutStory";
@@ -15,12 +15,6 @@ export async function AboutPageView({ className }: AboutPageViewProps) {
 
   const stats = t.raw("stats") as { value: string; label: string }[];
   const skillGroups = t.raw("skillGroups") as { label: string; tech: string[] }[];
-  const experienceItems = t.raw("experienceItems") as {
-    period: string;
-    role: string;
-    company: string;
-    description: string;
-  }[];
   const contactItems = t.raw("contactItems") as {
     label: string;
     value: string;
@@ -50,12 +44,7 @@ export async function AboutPageView({ className }: AboutPageViewProps) {
         subtitle={t("skillsSubtitle")}
         groups={skillGroups}
       />
-      <AboutExperience
-        badge={t("experienceBadge")}
-        title={t("experienceTitle")}
-        subtitle={t("experienceSubtitle")}
-        items={experienceItems}
-      />
+      <ProcessSection />
       <AboutContact
         badge={t("contactBadge")}
         title={t("contactTitle")}

@@ -1,7 +1,5 @@
 import {
-  LuGithub,
-  LuGlobe,
-  LuLinkedin,
+  LuArrowRight,
   LuMail,
   LuMapPin,
   LuPhone,
@@ -22,7 +20,7 @@ interface AboutContactProps {
   className?: string;
 }
 
-const contactIcons = [LuPhone, LuMail, LuMapPin, LuGithub, LuLinkedin, LuGlobe] as const;
+const contactIcons = [LuPhone, LuMail, LuMapPin, LuArrowRight] as const;
 
 export function AboutContact({
   badge,
