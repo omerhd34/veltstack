@@ -17,7 +17,6 @@ export function NavbarServicesMegaMenuPanel() {
     href: item.href,
     title: tHome(item.titleKey),
     description: tHome(item.descKey),
-    tag: tHome(item.tagKey),
     icon: item.icon,
   }));
 

@@ -41,7 +41,7 @@ export function ServiceCard({
       className={cn(
         "group relative flex h-full flex-col overflow-hidden rounded-2xl bg-card transition-all duration-300",
         isSlide
-          ? "box-border min-h-68 border-2 border-solid border-[#8aab99]! bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:-trahover:border-brand-accent!#3a6b52] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]"
+          ? "box-border min-h-68 border-2 border-solid border-[#8aab99]! bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:-translate-y-1 hover:border-brand-accent! hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]"
           : cn(
               "border border-solid border-border hover:-translate-y-0.5 hover:border-brand-accent! hover:shadow-lg",
               compact ? "p-4" : "p-6",
@@ -69,43 +69,54 @@ export function ServiceCard({
       ) : null}
       <div
         className={cn(
-          "flex shrink-0 items-center justify-center",
-          compact
-            ? "mb-3 size-9 rounded-xl bg-brand-accent text-brand-accent-foreground"
-            : isSlide
-              ? "mb-5 size-12 rounded-2xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 transition-colors group-hover:bg-brand-accent group-hover:text-brand-accent-foreground"
-              : "mb-5 size-11 rounded-xl bg-brand-accent text-brand-accent-foreground transition-transform group-hover:scale-105",
+          "flex",
+          compact ? "gap-3" : "gap-4",
+          !compact && "flex-1",
         )}
       >
-        <Icon
-          className={compact ? "size-4" : isSlide ? "size-6" : "size-5"}
-          strokeWidth={1.75}
-        />
+        <div
+          className={cn(
+            "flex shrink-0 items-center justify-center",
+            compact
+              ? "size-9 rounded-xl bg-brand-accent text-brand-accent-foreground"
+              : isSlide
+                ? "size-12 rounded-2xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 transition-colors group-hover:bg-brand-accent group-hover:text-brand-accent-foreground"
+                : "size-11 rounded-xl bg-brand-accent text-brand-accent-foreground transition-transform group-hover:scale-105",
+          )}
+        >
+          <Icon
+            className={compact ? "size-4" : isSlide ? "size-6" : "size-5"}
+            strokeWidth={1.75}
+          />
+        </div>
+        <div className="flex min-w-0 flex-1 flex-col">
+          <h3
+            className={cn(
+              "font-(family-name:--font-heading) font-bold leading-snug tracking-tight",
+              compact
+                ? "text-base"
+                : isSlide
+                  ? "pr-12 text-xl text-[#0A0A0F]"
+                  : "text-lg",
+            )}
+          >
+            {title}
+          </h3>
+          <p
+            className={cn(
+              "leading-relaxed",
+              compact
+                ? "mt-1.5 text-xs text-muted-foreground"
+                : isSlide
+                  ? "mt-2 text-[0.9375rem] leading-[1.7] text-foreground/60"
+                  : "mt-1.5 text-sm text-muted-foreground",
+              !compact && "flex-1",
+            )}
+          >
+            {description}
+          </p>
+        </div>
       </div>
-      <h3
-        className={cn(
-          "font-(family-name:--font-heading) font-bold leading-snug tracking-tight",
-          compact
-            ? "text-base"
-            : isSlide
-              ? "pr-12 text-xl text-[#0A0A0F]"
-              : "text-lg",
-        )}
-      >
-        {title}
-      </h3>
-      <p
-        className={cn(
-          "flex-1 leading-relaxed",
-          compact
-            ? "mt-1.5 text-xs text-muted-foreground"
-            : isSlide
-              ? "mt-3 text-[0.9375rem] leading-[1.7] text-foreground/60"
-              : "mt-2 text-sm text-muted-foreground",
-        )}
-      >
-        {description}
-      </p>
       {techStack?.length ? (
         <TechStackIcons
           names={techStack}
