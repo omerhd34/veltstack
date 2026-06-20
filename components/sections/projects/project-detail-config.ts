@@ -57,8 +57,8 @@ export const projectDemoUrls: Record<ProjectSlug, string> = {
 };
 
 export const projectImageUrls: Partial<Record<ProjectSlug, string>> = {
-  iqfinansai: "/IQfinansAI.png",
-  "yazici-ticaret": "/YazıcıTicaret.png",
+  iqfinansai: "/images/IQfinansAI.png",
+  "yazici-ticaret": "/images/YazıcıTicaret.png",
 };
 
 export const projectCoverGradients: Record<ProjectSlug, string> = {
