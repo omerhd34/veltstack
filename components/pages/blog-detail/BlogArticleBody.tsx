@@ -1,11 +1,17 @@
 import { cn } from "@/lib/utils";
+import { BlogArticleBodyInner } from "./BlogArticleBodyInner";
 
 interface BlogArticleBodyProps {
   html: string;
+  locale: "tr" | "en";
   className?: string;
 }
 
-export function BlogArticleBody({ html, className }: BlogArticleBodyProps) {
+export function BlogArticleBody({
+  html,
+  locale,
+  className,
+}: BlogArticleBodyProps) {
   return (
     <article
       className={cn(
@@ -21,10 +27,14 @@ export function BlogArticleBody({ html, className }: BlogArticleBodyProps) {
         "prose-em:text-foreground/80",
         "prose-blockquote:not-italic prose-blockquote:border-l-brand-accent prose-blockquote:bg-muted/40 prose-blockquote:py-1",
         "prose-code:rounded prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none",
+        "[&_.blog-steps]:list-none [&_.blog-steps]:pl-0 [&_.blog-steps_li]:p-0 [&_.blog-checklist]:list-none [&_.blog-checklist]:pl-0 [&_.blog-checklist_li]:p-0 [&_.blog-compare-card_ul]:list-disc [&_.blog-compare-card_li]:before:content-none",
+        "[&_.blog-type-card_p]:my-0 [&_.blog-type-card_h4]:mt-0 [&_.blog-section-lead]:mt-0 [&_.blog-analogy_p]:my-0 [&_.blog-analogy_svg]:block",
+        "[&_.blog-table-wrap]:prose-table:my-0 [&_.blog-table-wrap]:!p-0 [&_.blog-table-wrap_table]:my-0 [&_.blog-table-wrap_thead]:!m-0",
+        "[&_.blog-table-expandable_.blog-table-wrap]:my-0",
         className,
       )}
-      // biome-ignore lint/security/noDangerouslySetInnerHtml: static blog article HTML
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
+    >
+      <BlogArticleBodyInner html={html} locale={locale} />
+    </article>
   );
 }
