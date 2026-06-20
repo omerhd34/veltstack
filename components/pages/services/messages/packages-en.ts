@@ -313,7 +313,7 @@ export const servicesPackagesEn = {
               label: "Integration",
               items: [
                 "Live support / advanced WhatsApp integration",
-                "CRM and email marketing (newsletter) connection",
+                "CRM and email marketing integration",
                 "Third-party API integration readiness",
               ],
             },

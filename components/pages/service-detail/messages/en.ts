@@ -20,7 +20,7 @@ export const serviceDetailsEn = {
   breadcrumbHome: "Home",
   breadcrumbServices: "Services",
   "web-sitesi": {
-    metaTitle: "Website Development | Veltstack",
+    metaTitle: "Website Development",
     metaDesc:
       "End-to-end web development for corporate, e-commerce and portfolio projects. Fast, SEO-friendly and scalable solutions with Next.js.",
     heroBadge: "Web Development",
@@ -84,7 +84,7 @@ export const serviceDetailsEn = {
     ],
   },
   "uygulama": {
-    metaTitle: "Mobile App Development | Veltstack",
+    metaTitle: "Mobile App Development",
     metaDesc:
       "High-performance mobile apps for iOS and Android with React Native and Expo.",
     heroBadge: "App Development",
@@ -147,7 +147,7 @@ export const serviceDetailsEn = {
     ],
   },
   "seo-hizmetleri": {
-    metaTitle: "SEO Services | Veltstack",
+    metaTitle: "SEO Services",
     metaDesc:
       "Sustainable organic growth through technical SEO, content strategy and performance optimization.",
     heroBadge: "SEO",
@@ -211,7 +211,7 @@ export const serviceDetailsEn = {
     ],
   },
   "bakim-ve-destek": {
-    metaTitle: "Website Maintenance & Support | Veltstack",
+    metaTitle: "Website Maintenance & Support",
     metaDesc:
       "Regular maintenance, updates and technical support for your website, mobile app and backend infrastructure.",
     heroBadge: "Maintenance & Support",

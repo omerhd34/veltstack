@@ -22,7 +22,7 @@ export const projectDetailsTr = {
   breadcrumbHome: "Ana Sayfa",
   breadcrumbProjects: "Projeler",
   iqfinansai: {
-    metaTitle: "IQfinansAI — Yapay Zekâ Finans Platformu | Veltstack",
+    metaTitle: "IQfinansAI — Yapay Zekâ Finans Platformu",
     metaDesc:
       "Gelir-gider, bütçe, borç-alacak ve AI analiz raporu sunan kişisel finans platformu. 16.000+ kullanıcı, Shopier abonelik altyapısı.",
     heroBadge: "Finansal Teknoloji · AI",
@@ -92,7 +92,7 @@ export const projectDetailsTr = {
     ],
   },
   "yazici-ticaret": {
-    metaTitle: "Yazıcı Ticaret — E-Ticaret Platformu | Veltstack",
+    metaTitle: "Yazıcı Ticaret — E-Ticaret Platformu",
     metaDesc:
       "Beyaz eşya ve elektronik kategorilerinde uçtan uca e-ticaret deneyimi sunan Yazıcı Ticaret platformu.",
     heroBadge: "E-Ticaret · B2C",
@@ -147,7 +147,7 @@ export const projectDetailsTr = {
     ],
   },
   "uzman-klinik-psikolog": {
-    metaTitle: "Uzman Klinik Psikolog Web Sitesi | Veltstack",
+    metaTitle: "Uzman Klinik Psikolog Web Sitesi",
     metaDesc:
       "Randevu talebi, SEO ve güven odaklı klinik psikolog web sitesi. Next.js ile modern, erişilebilir kurumsal deneyim.",
     heroBadge: "Sağlık · Kurumsal",
@@ -199,7 +199,7 @@ export const projectDetailsTr = {
     ],
   },
   fablessi: {
-    metaTitle: "Fablessi — Bahçe & Balkon Mobilya Kataloğu | Veltstack",
+    metaTitle: "Fablessi — Bahçe & Balkon Mobilya Kataloğu",
     metaDesc:
       "Bahçe ve balkon mobilyaları için premium kurumsal ürün vitrini. Hero carousel, WhatsApp entegrasyonu ve SEO uyumlu katalog.",
     heroBadge: "Kurumsal · Katalog",

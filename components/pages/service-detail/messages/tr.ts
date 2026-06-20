@@ -21,7 +21,7 @@ export const serviceDetailsTr = {
   breadcrumbHome: "Ana Sayfa",
   breadcrumbServices: "Hizmetler",
   "web-sitesi": {
-    metaTitle: "Web Sitesi Geliştirme | Veltstack",
+    metaTitle: "Web Sitesi Geliştirme",
     metaDesc:
       "Kurumsal web sitesi, e-ticaret ve portfolyo projelerinde uçtan uca web geliştirme. Next.js ile hızlı, SEO uyumlu ve ölçeklenebilir çözümler.",
     heroBadge: "Web Geliştirme",
@@ -85,7 +85,7 @@ export const serviceDetailsTr = {
     ],
   },
   "uygulama": {
-    metaTitle: "Mobil Uygulama Geliştirme | Veltstack",
+    metaTitle: "Mobil Uygulama Geliştirme",
     metaDesc:
       "iOS ve Android için React Native ve Expo ile performanslı mobil uygulama geliştirme hizmeti.",
     heroBadge: "Uygulama Geliştirme",
@@ -149,7 +149,7 @@ export const serviceDetailsTr = {
     ],
   },
   "seo-hizmetleri": {
-    metaTitle: "SEO Hizmeti | Veltstack",
+    metaTitle: "SEO Hizmeti",
     metaDesc:
       "Teknik SEO, içerik stratejisi ve performans optimizasyonu ile sürdürülebilir organik büyüme.",
     heroBadge: "SEO",
@@ -213,7 +213,7 @@ export const serviceDetailsTr = {
     ],
   },
   "bakim-ve-destek": {
-    metaTitle: "Web Sitesi Bakım ve Destek | Veltstack",
+    metaTitle: "Web Sitesi Bakım ve Destek",
     metaDesc:
       "Web sitesi, mobil uygulama ve backend altyapınız için düzenli bakım, güncelleme ve teknik destek hizmeti.",
     heroBadge: "Bakım & Destek",

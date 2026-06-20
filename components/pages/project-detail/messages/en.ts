@@ -22,7 +22,7 @@ export const projectDetailsEn = {
   breadcrumbHome: "Home",
   breadcrumbProjects: "Projects",
   iqfinansai: {
-    metaTitle: "IQfinansAI — AI Finance Platform | Veltstack",
+    metaTitle: "IQfinansAI — AI Finance Platform",
     metaDesc:
       "Personal finance platform for income-expense, budgets, debt tracking and AI analysis reports. 16,000+ users, Shopier subscription stack.",
     heroBadge: "FinTech · AI",
@@ -92,7 +92,7 @@ export const projectDetailsEn = {
     ],
   },
   "yazici-ticaret": {
-    metaTitle: "Yazici Ticaret — E-Commerce Platform | Veltstack",
+    metaTitle: "Yazici Ticaret — E-Commerce Platform",
     metaDesc:
       "End-to-end e-commerce experience for white goods and electronics categories.",
     heroBadge: "E-Commerce · B2C",
@@ -147,7 +147,7 @@ export const projectDetailsEn = {
     ],
   },
   "uzman-klinik-psikolog": {
-    metaTitle: "Clinical Psychologist Website | Veltstack",
+    metaTitle: "Clinical Psychologist Website",
     metaDesc:
       "An appointment, SEO and trust-focused clinical psychologist website with Next.js.",
     heroBadge: "Healthcare · Corporate",
@@ -199,7 +199,7 @@ export const projectDetailsEn = {
     ],
   },
   fablessi: {
-    metaTitle: "Fablessi — Garden & Balcony Furniture Catalog | Veltstack",
+    metaTitle: "Fablessi — Garden & Balcony Furniture Catalog",
     metaDesc:
       "Premium corporate product showcase for garden and balcony furniture.",
     heroBadge: "Corporate · Catalog",

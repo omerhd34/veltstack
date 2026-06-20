@@ -313,7 +313,7 @@ export const servicesPackagesTr = {
               label: "Entegrasyon",
               items: [
                 "Canlı destek / gelişmiş WhatsApp entegrasyonu",
-                "CRM ve e-posta pazarlama (Newsletter) bağlantısı",
+                "CRM ve e-posta pazarlama entegrasyonu",
                 "Üçüncü parti API entegrasyon hazırlığı",
               ],
             },
