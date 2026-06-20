@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { toLatinUppercase } from "@/lib/utils";
 import { BlogPreviewImage } from "./BlogPreviewImage";
 
 interface BlogPreviewCardProps {
@@ -28,8 +29,8 @@ export function BlogPreviewCard({
       </div>
       <div className="flex flex-1 flex-col p-6">
         {readingTimeLabel && (
-          <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-brand-accent">
-            {readingTimeLabel}
+          <span className="mb-3 inline-block text-xs font-semibold tracking-[0.15em] text-brand-accent">
+            {toLatinUppercase(readingTimeLabel)}
           </span>
         )}
         <h3 className="font-(family-name:--font-heading) text-lg font-bold leading-snug text-[#0A0A0F] transition-colors group-hover:text-brand-accent">
