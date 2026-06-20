@@ -4,7 +4,9 @@ export const blogPageTr = {
   heroSubtitle:
     "Web geliştirme, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler. Gerçek projelerden öğrendiklerimizi paylaşıyoruz.",
   heroImageAlt: "Veltstack blog — geliştirici çalışma alanı",
+  postCountLabel: "{count} yazı",
   searchPlaceholder: "Yazı ara...",
+  clearSearch: "Aramayı temizle",
   allCategories: "Tümü",
   readMore: "Devamını oku",
   readingTime: "{minutes} dk okuma",
@@ -21,12 +23,6 @@ export const blogPageTr = {
     "E-Ticaret",
     "Araçlar & İpuçları",
   ],
-  newsletterTitle: "Yeni içeriklerden haberdar olun",
-  newsletterSubtitle:
-    "Web geliştirme, SEO ve dijital ürün üzerine pratik yazıları doğrudan gelen kutunuza gönderiyoruz.",
-  newsletterPlaceholder: "E-posta adresiniz",
-  newsletterButton: "Abone Ol",
-  newsletterNote: "Spam yok. İstediğiniz zaman çıkabilirsiniz.",
   ctaTitle: "Projenizi birlikte hayata geçirelim",
   ctaSubtitle:
     "Ücretsiz ön görüşmede ihtiyaçlarınızı dinleyip kapsam, süre ve teknoloji yığınını birlikte belirleyelim.",

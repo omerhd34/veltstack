@@ -1,4 +1,3 @@
-// components/pages/blog/BlogGrid.tsx
 "use client";
 
 import { useState, useMemo } from "react";
@@ -14,10 +13,9 @@ interface BlogGridProps {
   locale: "tr" | "en";
   labels: {
     searchPlaceholder: string;
+    clearSearch: string;
     allCategories: string;
     readMore: string;
-    featuredBadge: string;
-    latestBadge: string;
     noResults: string;
     noResultsSub: string;
     categories: string[];
@@ -57,14 +55,10 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
     excerptKey,
   ]);
 
-  // Derive unique categories from posts
   const uniqueCategories = useMemo(() => {
     const cats = Array.from(new Set(posts.map((p) => p[categoryKey])));
     return [labels.allCategories, ...cats];
   }, [posts, categoryKey, labels.allCategories]);
-
-  const featuredPosts = filtered.filter((p) => p.featured);
-  const regularPosts = filtered.filter((p) => !p.featured);
 
   return (
     <div>
@@ -90,7 +84,7 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
                   type="button"
                   onClick={() => setSearch("")}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="Aramayı temizle"
+                  aria-label={labels.clearSearch}
                 >
                   <LuX className="size-4" />
                 </button>
@@ -134,58 +128,19 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
             </p>
           </div>
         ) : (
-          <div className="space-y-16">
-            {/* Featured posts */}
-            {featuredPosts.length > 0 && (
-              <section>
-                <SectionHeader label={labels.featuredBadge} />
-                <div className="mt-8 space-y-6">
-                  {featuredPosts.map((post) => (
-                    <BlogCard
-                      key={post.slug}
-                      post={post}
-                      locale={locale}
-                      readMoreLabel={labels.readMore}
-                      readingTimeLabel={post.readingTimeLabel}
-                      featuredBadge={labels.featuredBadge}
-                      featured
-                    />
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {/* Regular posts */}
-            {regularPosts.length > 0 && (
-              <section>
-                <SectionHeader label={labels.latestBadge} />
-                <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                  {regularPosts.map((post) => (
-                    <BlogCard
-                      key={post.slug}
-                      post={post}
-                      locale={locale}
-                      readMoreLabel={labels.readMore}
-                      readingTimeLabel={post.readingTimeLabel}
-                    />
-                  ))}
-                </div>
-              </section>
-            )}
+          <div className="space-y-6">
+            {filtered.map((post) => (
+              <BlogCard
+                key={post.slug}
+                post={post}
+                locale={locale}
+                readMoreLabel={labels.readMore}
+                readingTimeLabel={post.readingTimeLabel}
+              />
+            ))}
           </div>
         )}
       </div>
-    </div>
-  );
-}
-
-function SectionHeader({ label }: { label: string }) {
-  return (
-    <div className="flex items-center gap-4">
-      <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
-        {label}
-      </span>
-      <div className="h-px flex-1 bg-border/60" />
     </div>
   );
 }

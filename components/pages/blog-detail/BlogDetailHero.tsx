@@ -3,7 +3,7 @@ import { LuArrowLeft, LuCalendar, LuClock, LuPenLine } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
-import { cn } from "@/lib/utils";
+import { cn, toLatinUppercase } from "@/lib/utils";
 
 const AUTHOR = {
   name: "Ömer Halis Demir",
@@ -70,7 +70,7 @@ export function BlogDetailHero({
         <div className="mt-8 grid min-h-0 flex-1 items-center gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-emerald-300/60">
-              <span className="inline-flex items-center rounded-full border border-emerald-500/25 bg-emerald-500/10 px-4 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-emerald-300">
+              <span className="inline-flex items-center rounded-full border border-emerald-500/25 bg-emerald-500/10 px-4 py-1.5 text-[0.6875rem] font-semibold text-emerald-300">
                 {category}
               </span>
               <span className="flex items-center gap-1.5">
@@ -114,9 +114,9 @@ export function BlogDetailHero({
                 />
               </div>
               <div className="min-w-0">
-                <p className="flex items-center gap-1.5 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-emerald-400/55">
+                <p className="flex items-center gap-1.5 text-[0.625rem] font-semibold tracking-[0.14em] text-emerald-400/55">
                   <LuPenLine className="size-3" aria-hidden />
-                  {writtenByLabel}
+                  {toLatinUppercase(writtenByLabel)}
                 </p>
                 <p className="mt-0.5 text-base font-semibold text-white">
                   {AUTHOR.name}

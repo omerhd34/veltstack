@@ -1,4 +1,3 @@
-// components/pages/blog/BlogCard.tsx
 import Image from "next/image";
 import { LuArrowRight, LuCalendar, LuClock } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
@@ -11,8 +10,7 @@ interface BlogCardProps {
   locale: "tr" | "en";
   readMoreLabel: string;
   readingTimeLabel: string;
-  featuredBadge?: string;
-  featured?: boolean;
+  layout?: "horizontal" | "vertical";
   className?: string;
 }
 
@@ -21,30 +19,30 @@ export function BlogCard({
   locale,
   readMoreLabel,
   readingTimeLabel,
-  featuredBadge,
-  featured = false,
+  layout = "horizontal",
   className,
 }: BlogCardProps) {
   const title = locale === "tr" ? post.titleTr : post.titleEn;
   const excerpt = locale === "tr" ? post.excerptTr : post.excerptEn;
   const category = locale === "tr" ? post.category : post.categoryEn;
   const date = formatDate(post.publishedAt, locale);
+  const isHorizontal = layout === "horizontal";
 
   return (
     <Link
       href={`/blog/${post.slug}`}
       className={cn(
         "group relative flex overflow-hidden rounded-3xl border border-border/70 bg-white shadow-[0_2px_12px_rgb(0_0_0/0.04)] transition-all duration-500 hover:-translate-y-1.5 hover:border-brand-accent/35 hover:shadow-[0_24px_56px_rgb(58_107_82/0.14)]",
-        featured ? "flex-col lg:flex-row" : "flex-col",
+        isHorizontal ? "flex-col md:flex-row" : "flex-col",
         className,
       )}
     >
       {/* Image */}
       <div
         className={cn(
-          "relative overflow-hidden bg-[#F4F8F5]",
-          featured
-            ? "aspect-16/10 lg:aspect-auto lg:min-h-full lg:w-[48%]"
+          "relative overflow-hidden bg-[#0B0F0D]",
+          isHorizontal
+            ? "aspect-16/10 md:aspect-auto md:min-h-[220px] md:w-[42%] lg:min-h-[240px]"
             : "aspect-16/10",
         )}
       >
@@ -54,8 +52,8 @@ export function BlogCard({
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes={
-            featured
-              ? "(max-width: 1024px) 100vw, 50vw"
+            isHorizontal
+              ? "(max-width: 768px) 100vw, 42vw"
               : "(max-width: 768px) 100vw, 33vw"
           }
         />
@@ -65,23 +63,18 @@ export function BlogCard({
         />
 
         {/* Category badge */}
-        <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md">
+        <span className="absolute left-4 top-4 rounded-full border border-white/25 bg-black/80 px-3 py-1 text-[0.6875rem] font-semibold text-white">
           {category}
         </span>
-
-        {/* Featured badge */}
-        {featured && featuredBadge && (
-          <span className="absolute right-4 top-4 rounded-full bg-brand-accent px-3 py-1 text-[0.6875rem] font-semibold text-white">
-            {featuredBadge}
-          </span>
-        )}
       </div>
 
       {/* Content */}
       <div
         className={cn(
           "flex flex-col",
-          featured ? "justify-center p-7 lg:w-[52%] lg:p-10" : "p-6",
+          isHorizontal
+            ? "justify-center p-7 md:w-[58%] md:p-8 lg:p-10"
+            : "p-6",
         )}
       >
         {/* Meta */}
@@ -101,7 +94,7 @@ export function BlogCard({
         <h2
           className={cn(
             "mt-3 font-(family-name:--font-heading) font-bold leading-tight tracking-tight transition-colors group-hover:text-brand-accent",
-            featured ? "text-xl lg:text-2xl" : "text-lg",
+            isHorizontal ? "text-xl lg:text-2xl" : "text-lg",
           )}
         >
           {title}
@@ -111,7 +104,7 @@ export function BlogCard({
         <p
           className={cn(
             "mt-3 leading-relaxed text-foreground/60",
-            featured ? "line-clamp-3 text-base" : "line-clamp-2 text-sm",
+            isHorizontal ? "line-clamp-3 text-base" : "line-clamp-2 text-sm",
           )}
         >
           {excerpt}

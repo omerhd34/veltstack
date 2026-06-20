@@ -21,11 +21,11 @@ export async function generateMetadata({
   })}`;
 
   return {
-    title: t("heroBadge") + " | Veltstack",
+    title: t("heroBadge"),
     description: t("heroSubtitle"),
     alternates: { canonical },
     openGraph: {
-      title: t("heroTitle") + " | Veltstack",
+      title: t("heroTitle"),
       description: t("heroSubtitle"),
       type: "website",
       locale: locale === "tr" ? "tr_TR" : "en_US",

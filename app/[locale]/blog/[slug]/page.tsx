@@ -10,6 +10,7 @@ import { BlogDetailHero } from "@/components/pages/blog-detail/BlogDetailHero";
 import { blogPosts, formatDate } from "@/components/pages/blog/blog-data";
 import { getBlogArticleContent } from "@/components/pages/blog/blog-articles";
 import { SITE_URL } from "@/lib/constants";
+import { toLatinUppercase } from "@/lib/utils";
 import { getPathname } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 
@@ -36,7 +37,7 @@ export async function generateMetadata({
   })}`;
 
   return {
-    title: title + " | Veltstack",
+    title,
     description: desc,
     alternates: { canonical },
     openGraph: {
@@ -138,7 +139,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
       {/* Article body */}
       <SiteContainer className="py-16 md:py-20">
         <div className="mx-auto max-w-5xl">
-          <BlogArticleBody html={articleContent} />
+          <BlogArticleBody html={articleContent} locale={loc} />
 
           {/* Share */}
           <div className="mt-14 border-t border-border pt-8">
@@ -156,8 +157,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         <section className="bg-[#F8F9FA] py-16 md:py-20">
           <SiteContainer>
             <div className="flex items-center gap-4">
-              <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
-                {loc === "tr" ? "İlgili Yazılar" : "Related Posts"}
+              <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold tracking-[0.18em] text-brand-accent">
+                {toLatinUppercase(loc === "tr" ? "İlgili Yazılar" : "Related Posts")}
               </span>
               <div className="h-px flex-1 bg-border/60" />
             </div>
@@ -167,6 +168,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
                   key={related.slug}
                   post={related}
                   locale={loc}
+                  layout="vertical"
                   readMoreLabel={t("readMore")}
                   readingTimeLabel={t("readingTime", {
                     minutes: related.readingTime,

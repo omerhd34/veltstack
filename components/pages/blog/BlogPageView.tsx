@@ -3,7 +3,6 @@ import { ServicesPageCTA } from "@/components/pages/services/ServicesPageCTA";
 import { blogPosts } from "./blog-data";
 import { BlogPageHero } from "./BlogPageHero";
 import { BlogGrid } from "./BlogGrid";
-import { BlogNewsletter } from "./BlogNewsletter";
 
 interface BlogPageViewProps {
   className?: string;
@@ -20,10 +19,9 @@ export async function BlogPageView({ className }: BlogPageViewProps) {
 
   const labels = {
     searchPlaceholder: t("searchPlaceholder"),
+    clearSearch: t("clearSearch"),
     allCategories: t("allCategories"),
     readMore: t("readMore"),
-    featuredBadge: t("featuredBadge"),
-    latestBadge: t("latestBadge"),
     noResults: t("noResults"),
     noResultsSub: t("noResultsSub"),
     categories: t.raw("categories") as string[],
@@ -36,18 +34,10 @@ export async function BlogPageView({ className }: BlogPageViewProps) {
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
         imageAlt={t("heroImageAlt")}
-        postCount={blogPosts.length}
+        postCountLabel={t("postCountLabel", { count: blogPosts.length })}
       />
 
       <BlogGrid posts={posts} locale={locale} labels={labels} />
-
-      <BlogNewsletter
-        title={t("newsletterTitle")}
-        subtitle={t("newsletterSubtitle")}
-        placeholder={t("newsletterPlaceholder")}
-        buttonLabel={t("newsletterButton")}
-        note={t("newsletterNote")}
-      />
 
       <ServicesPageCTA
         title={t("ctaTitle")}

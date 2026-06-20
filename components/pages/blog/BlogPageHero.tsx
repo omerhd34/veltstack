@@ -1,13 +1,14 @@
 // components/pages/blog/BlogPageHero.tsx
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
+import { toLatinUppercase } from "@/lib/utils";
 
 interface BlogPageHeroProps {
   badge: string;
   title: string;
   subtitle: string;
   imageAlt: string;
-  postCount: number;
+  postCountLabel: string;
 }
 
 export function BlogPageHero({
@@ -15,7 +16,7 @@ export function BlogPageHero({
   title,
   subtitle,
   imageAlt,
-  postCount,
+  postCountLabel,
 }: BlogPageHeroProps) {
   return (
     <section className="relative flex min-h-[calc(100svh-4rem)] flex-col overflow-hidden bg-[#050f0c] text-white">
@@ -39,8 +40,8 @@ export function BlogPageHero({
       <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col py-8 sm:py-10">
         <div className="grid min-h-0 flex-1 items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div className="min-w-0 max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-4 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-emerald-300/90">
-              {badge}
+            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-4 py-1.5 text-[0.6875rem] font-semibold tracking-[0.2em] text-emerald-300/90">
+              {toLatinUppercase(badge)}
             </span>
 
             <div
@@ -58,11 +59,11 @@ export function BlogPageHero({
 
             <div className="mt-8 flex items-center gap-3">
               <span className="inline-flex items-center rounded-full border border-emerald-800/60 bg-emerald-950/70 px-4 py-2 text-sm font-semibold text-emerald-300 shadow-[0_8px_24px_rgb(0_0_0/0.2)]">
-                {postCount} yazı
+                {postCountLabel}
               </span>
               <span className="h-px flex-1 max-w-[80px] bg-emerald-800/40" />
-              <span className="text-xs text-emerald-400/50 uppercase tracking-widest">
-                Veltstack
+              <span className="text-xs text-emerald-400/50 tracking-widest">
+                {toLatinUppercase("Veltstack")}
               </span>
             </div>
           </div>
