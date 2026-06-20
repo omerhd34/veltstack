@@ -12,6 +12,7 @@ export const navTr = {
   projectUzmanPsikolog: "Uzman Klinik Psikolog",
   projects: "Projeler",
   blog: "Blog",
+  blogAll: "Tüm Yazılar",
   about: "Hakkımızda",
   contact: "İletişim",
   cta: "Proje Konuşalım",

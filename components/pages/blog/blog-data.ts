@@ -209,6 +209,13 @@ const footerBlogSlugs = [
   "en-iyi-freelancer-siteleri",
 ] as const;
 
+const navBlogSlugs = [
+  "domain-nasil-alinir",
+  "en-iyi-hosting-firmalari",
+  "seo-nedir-nasil-yapilir",
+  "domain-ve-hosting-nedir",
+] as const;
+
 export function getAllCategories(locale: "tr" | "en"): string[] {
   const key = locale === "tr" ? "category" : "categoryEn";
   const unique = Array.from(new Set(blogPosts.map((p) => p[key])));
@@ -227,15 +234,30 @@ export function getFeaturedPosts(): BlogPost[] {
   return blogPosts.filter((p) => p.featured);
 }
 
-export function getFooterBlogPosts(locale: "tr" | "en") {
-  return footerBlogSlugs
+function getBlogPostsBySlugs(slugs: readonly string[], locale: "tr" | "en") {
+  return slugs
     .map((slug) => blogPosts.find((post) => post.slug === slug))
     .filter((post): post is BlogPost => post !== undefined)
     .map((post) => ({
       slug: post.slug,
       title: locale === "tr" ? post.titleTr : post.titleEn,
+      excerpt: locale === "tr" ? post.excerptTr : post.excerptEn,
       category: locale === "tr" ? post.category : post.categoryEn,
     }));
+}
+
+export function getFooterBlogPosts(locale: "tr" | "en") {
+  return getBlogPostsBySlugs(footerBlogSlugs, locale).map(
+    ({ slug, title, category }) => ({
+      slug,
+      title,
+      category,
+    }),
+  );
+}
+
+export function getNavBlogPosts(locale: "tr" | "en") {
+  return getBlogPostsBySlugs(navBlogSlugs, locale);
 }
 
 export function formatDate(dateString: string, locale: "tr" | "en"): string {

@@ -14,6 +14,7 @@ import { NavbarLangSwitcher } from "./NavbarLangSwitcher"
 import { NavbarCta } from "./NavbarCta"
 import { NavbarServicesMegaMenuPanel } from "./NavbarServicesMegaMenuPanel"
 import { NavbarProjectsMegaMenuPanel } from "./NavbarProjectsMegaMenuPanel"
+import { NavbarBlogMegaMenuPanel } from "./NavbarBlogMegaMenuPanel"
 
 interface NavbarProps {
   className?: string
@@ -25,6 +26,7 @@ export function Navbar({ className }: NavbarProps) {
   const setMobileMenuOpen = useUiStore((state) => state.setMobileMenuOpen)
   const servicesMenuOpen = useUiStore((state) => state.servicesMenuOpen)
   const projectsMenuOpen = useUiStore((state) => state.projectsMenuOpen)
+  const blogMenuOpen = useUiStore((state) => state.blogMenuOpen)
   const openServicesMenu = useUiStore((state) => state.openServicesMenu)
   const scheduleCloseServicesMenu = useUiStore(
     (state) => state.scheduleCloseServicesMenu
@@ -33,8 +35,12 @@ export function Navbar({ className }: NavbarProps) {
   const scheduleCloseProjectsMenu = useUiStore(
     (state) => state.scheduleCloseProjectsMenu
   )
+  const openBlogMenu = useUiStore((state) => state.openBlogMenu)
+  const scheduleCloseBlogMenu = useUiStore(
+    (state) => state.scheduleCloseBlogMenu
+  )
 
-  const megaMenuOpen = servicesMenuOpen || projectsMenuOpen
+  const megaMenuOpen = servicesMenuOpen || projectsMenuOpen || blogMenuOpen
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 0.75)
@@ -95,6 +101,16 @@ export function Navbar({ className }: NavbarProps) {
         aria-hidden={!projectsMenuOpen}
       >
         <NavbarProjectsMegaMenuPanel />
+      </div>
+
+      <div
+        data-state={blogMenuOpen ? "open" : "closed"}
+        className="navbar-mega-menu-panel absolute inset-x-0 top-full z-50 isolate overflow-hidden border-t border-border bg-background shadow-md"
+        onMouseEnter={openBlogMenu}
+        onMouseLeave={scheduleCloseBlogMenu}
+        aria-hidden={!blogMenuOpen}
+      >
+        <NavbarBlogMegaMenuPanel />
       </div>
 
       <NavbarMobileMenu />

@@ -16,8 +16,10 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
   const pathname = usePathname();
   const servicesMenuOpen = useUiStore((state) => state.servicesMenuOpen);
   const projectsMenuOpen = useUiStore((state) => state.projectsMenuOpen);
+  const blogMenuOpen = useUiStore((state) => state.blogMenuOpen);
   const setServicesMenuOpen = useUiStore((state) => state.setServicesMenuOpen);
   const setProjectsMenuOpen = useUiStore((state) => state.setProjectsMenuOpen);
+  const setBlogMenuOpen = useUiStore((state) => state.setBlogMenuOpen);
   const openServicesMenu = useUiStore((state) => state.openServicesMenu);
   const scheduleCloseServicesMenu = useUiStore(
     (state) => state.scheduleCloseServicesMenu,
@@ -26,10 +28,13 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
   const scheduleCloseProjectsMenu = useUiStore(
     (state) => state.scheduleCloseProjectsMenu,
   );
+  const openBlogMenu = useUiStore((state) => state.openBlogMenu);
+  const scheduleCloseBlogMenu = useUiStore(
+    (state) => state.scheduleCloseBlogMenu,
+  );
 
   const trailingLinks = [
     { href: "/hakkimda", label: tNav("about") },
-    { href: "/blog", label: tNav("blog") },
     { href: "/iletisim", label: tNav("contact") },
   ];
 
@@ -46,10 +51,16 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
     pathname === "/projeler" ||
     pathname.startsWith("/projeler/");
 
+  const blogActive =
+    blogMenuOpen ||
+    pathname === "/blog" ||
+    pathname.startsWith("/blog/");
+
   useEffect(() => {
     setServicesMenuOpen(false);
     setProjectsMenuOpen(false);
-  }, [pathname, setServicesMenuOpen, setProjectsMenuOpen]);
+    setBlogMenuOpen(false);
+  }, [pathname, setServicesMenuOpen, setProjectsMenuOpen, setBlogMenuOpen]);
 
   return (
     <nav
@@ -88,6 +99,24 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
         >
           <span className={navItemLabelClass(projectsActive)}>
             {tNav("projects")}
+          </span>
+        </Link>
+      </div>
+
+      <div
+        className="relative h-full"
+        onMouseEnter={openBlogMenu}
+        onMouseLeave={scheduleCloseBlogMenu}
+        onFocusCapture={openBlogMenu}
+      >
+        <Link
+          href="/blog"
+          aria-expanded={blogMenuOpen}
+          aria-haspopup="true"
+          className={navItemClass(blogActive)}
+        >
+          <span className={navItemLabelClass(blogActive)}>
+            {tNav("blog")}
           </span>
         </Link>
       </div>

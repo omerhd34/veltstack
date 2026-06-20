@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import { getNavBlogPosts } from "@/components/pages/blog/blog-data";
 import { navServiceItems, type NavServiceKey } from "./nav-services";
 import { navProjectItems, type NavProjectKey } from "./nav-projects";
 import { navItemClass } from "./nav-link-styles";
@@ -21,9 +22,12 @@ export function NavbarLinks({
   onNavigate,
 }: NavbarLinksProps) {
   const tNav = useTranslations("nav");
+  const locale = useLocale() as "tr" | "en";
   const pathname = usePathname();
   const [servicesOpen, setServicesOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
+  const [blogOpen, setBlogOpen] = useState(false);
+  const navBlogPosts = getNavBlogPosts(locale);
 
   const serviceLabels: Record<NavServiceKey, string> = {
     serviceWeb: tNav("serviceWeb"),
@@ -41,7 +45,6 @@ export function NavbarLinks({
 
   const links = [
     { href: "/hakkimda", label: tNav("about") },
-    { href: "/blog", label: tNav("blog") },
     { href: "/iletisim", label: tNav("contact") },
   ];
 
@@ -54,6 +57,7 @@ export function NavbarLinks({
     pathname === "/hizmetler" || pathname.startsWith("/hizmetler/");
   const projectsActive =
     pathname === "/projeler" || pathname.startsWith("/projeler/");
+  const blogActive = pathname === "/blog" || pathname.startsWith("/blog/");
 
   if (!isVertical) {
     return null;
@@ -167,6 +171,59 @@ export function NavbarLinks({
                     )}
                   >
                     {projectLabels[item.navKey]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+
+        <li>
+          <div className="flex items-center gap-1">
+            <Link
+              href="/blog"
+              onClick={onNavigate}
+              className={cn(navItemClass(blogActive, "mobile"), "flex-1")}
+            >
+              {tNav("blog")}
+            </Link>
+            <button
+              type="button"
+              onClick={() => setBlogOpen((open) => !open)}
+              className="flex size-11 shrink-0 items-center justify-center rounded-xl text-foreground/70 transition-colors hover:bg-muted/60 hover:text-foreground"
+              aria-expanded={blogOpen}
+              aria-label={tNav("blog")}
+            >
+              <LuChevronDown
+                className={cn(
+                  "size-4 transition-transform duration-200",
+                  blogOpen && "rotate-180",
+                )}
+              />
+            </button>
+          </div>
+          {blogOpen && (
+            <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
+              <li>
+                <Link
+                  href="/blog"
+                  onClick={onNavigate}
+                  className={navItemClass(isActive("/blog"), "mobile-nested")}
+                >
+                  {tNav("blogAll")}
+                </Link>
+              </li>
+              {navBlogPosts.map((post) => (
+                <li key={post.slug}>
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    onClick={onNavigate}
+                    className={navItemClass(
+                      isActive(`/blog/${post.slug}`),
+                      "mobile-nested",
+                    )}
+                  >
+                    {post.title}
                   </Link>
                 </li>
               ))}

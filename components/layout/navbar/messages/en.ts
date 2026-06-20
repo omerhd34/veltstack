@@ -12,6 +12,7 @@ export const navEn = {
   "projectUzmanPsikolog": "Clinical Psychologist",
   "projects": "Projects",
   "blog": "Blog",
+  "blogAll": "All Articles",
   "about": "About Us",
   "contact": "Contact",
   "cta": "Let's Talk"
