@@ -26,7 +26,7 @@ export const serviceDetailsEn = {
     heroBadge: "Web Development",
     heroTitle: "Website Development",
     heroSubtitle:
-      "I build every kind of web project end to end — from corporate sites and e-commerce to portfolios and landing pages.",
+      "I build every kind of web project end to end, from corporate sites and e-commerce to portfolios and landing pages.",
     deliveryTime: "1–8 weeks",
     features: [
       {

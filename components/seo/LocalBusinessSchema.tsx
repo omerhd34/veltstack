@@ -9,7 +9,7 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
     name: "Veltstack",
     url: "https://www.veltstack.com",
     description:
-      "Full Stack Developer — kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
+      "Kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
   };
 
   return (

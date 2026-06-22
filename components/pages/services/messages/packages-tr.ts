@@ -20,12 +20,12 @@ export const servicesPackagesTr = {
   getQuote: "Teklif Al",
   webIntroTitle: "İhtiyacınıza göre web geliştirme",
   webIntroP1:
-    "Tanıtım sitesinden kurumsal portala, e-ticaret mağazasından özel iş akışlarına — ne hedefliyorsanız ona uygun web çözümünü birlikte şekillendiriyoruz. Tasarımdan yayına almaya kadar tüm süreci tek elden yönetiyorum.",
+    "Tanıtım sitesinden kurumsal portala, e-ticaret mağazasından özel iş akışlarına, ne hedefliyorsanız ona uygun web çözümünü birlikte şekillendiriyoruz. Tasarımdan yayına almaya kadar tüm süreci tek elden yönetiyorum.",
   webIntroP2:
     "Temel, Standart ve Pro paketleri farklı ölçeklerdeki projelere uyum sağlar. Kapsamı sizin ihtiyaçlarınıza göre netleştirip, büyüdükçe genişleyebilecek bir yapı kuruyorum.",
   appIntroTitle: "Vizyonunuza uygun mobil uygulama",
   appIntroP1:
-    "Tanıtım uygulamasından kurumsal çözüme, sipariş ve rezervasyon sistemlerinden karmaşık iş süreçlerine — istediğiniz deneyimi tasarlayıp geliştiriyorum. iOS ve Android için tek bir projede ilerliyoruz.",
+    "Tanıtım uygulamasından kurumsal çözüme, sipariş ve rezervasyon sistemlerinden karmaşık iş süreçlerine, istediğiniz deneyimi tasarlayıp geliştiriyorum. iOS ve Android için tek bir projede ilerliyoruz.",
   appIntroP2:
     "Üç paket seviyesiyle farklı bütçe ve kapsamlara hitap ediyorum. Mağaza yayınından entegrasyonlara kadar ihtiyacınız olan her adımda yanınızdayım.",
   seoIntroTitle: "Arama sonuçlarında görünür olun",
@@ -35,7 +35,7 @@ export const servicesPackagesTr = {
     "Hangi tierden başlarsanız başlayın; denetim, optimizasyon ve raporlama her seviyede dahildir. Büyüdükçe tier değiştirip kapsamı genişletebilirsiniz.",
   maintenanceIntroTitle: "Yayın sonrası da yanınızdayım",
   maintenanceIntroP1:
-    "Güncelleme, yedekleme, güvenlik takibi ve acil müdahale — web sitesi, mobil uygulama ve backend altyapınız için tek çatı altında sürekli destek sunuyorum. Temel, Standart ve Pro tierleri farklı ölçek ve ihtiyaçlara göre şekilleniyor.",
+    "Güncelleme, yedekleme, güvenlik takibi ve acil müdahale, web sitesi, mobil uygulama ve backend altyapınız için tek çatı altında sürekli destek sunuyorum. Temel, Standart ve Pro tierleri farklı ölçek ve ihtiyaçlara göre şekilleniyor.",
   maintenanceIntroP2:
     "Her seviyede izleme, yedekleme ve teknik destek dahildir. İhtiyaçlarınız büyüdükçe bir üst seviyeye geçerek 7/24 SLA garantisi ve size özel mühendis desteğinden yararlanabilirsiniz.",
   webPackages: {

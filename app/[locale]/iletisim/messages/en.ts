@@ -126,12 +126,12 @@ export const contactEn = {
   workflowTitleLead: "From form to project,",
   workflowTitleAccent: "four steps are enough.",
   workflowSubtitle:
-    "From submission to proposal to kickoff — we tell you what happens at each stage upfront.",
+    "From submission to proposal to kickoff, we tell you what happens at each stage upfront.",
   workflowSteps: [
     {
       step: "1",
       title: "Fill Out the Form",
-      desc: "Share a few project basics — the form takes just a few minutes.",
+      desc: "Share a few project basics, the form takes just a few minutes.",
       timing: "1 minute",
     },
     {

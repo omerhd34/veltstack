@@ -4,7 +4,7 @@ export const servicesPageEn = {
   heroBadge: "Digital Services",
   heroTitle: "Clear packages for your web and mobile projects",
   heroSubtitle:
-    "Every project type comes in three tiers: Basic, Standard and Pro. Scope, delivery and revisions are defined upfront — large projects scale without limits.",
+    "Every project type comes in three tiers: Basic, Standard and Pro. Scope, delivery and revisions are defined upfront, large projects scale without limits.",
   heroSubtitleSecondary:
     "Browse the packages below and switch between website, app, SEO, API and maintenance tabs to find the scope that fits your project.",
   heroImageAlt: "Digital development workspace",

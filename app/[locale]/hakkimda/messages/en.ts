@@ -3,7 +3,7 @@ export const aboutEn = {
   heroTagline: "Digital Product Development",
   heroTitle: "We build digital solutions aligned with your business goals.",
   heroSubtitle:
-    "Veltstack is a development brand that delivers websites, mobile apps and SEO-focused digital products — from idea to launch with a clear process and measurable outcomes.",
+    "Veltstack is a development brand that delivers websites, mobile apps and SEO-focused digital products, from idea to launch with a clear process and measurable outcomes.",
   heroSubtitleSecondary:
     "From corporate web and e-commerce to performance-driven infrastructure, we unite design, software and growth goals in a single delivery line.",
   heroImageAlt: "Veltstack digital development workspace",
@@ -19,7 +19,7 @@ export const aboutEn = {
     "We combine aesthetics with performance and software with business goals.",
   profileParagraphs: [
     "In a landscape where technology and user habits change fast, being online alone is not enough. At Veltstack we evaluate user experience, maintainable code and measurable business outcomes together on every project.",
-    "Instead of fragmented handoffs common in classic agency models, we own the full journey: from discovery and scope definition through interface design, API architecture, production launch and SEO infrastructure — all under one discipline.",
+    "Instead of fragmented handoffs common in classic agency models, we own the full journey: from discovery and scope definition through interface design, API architecture, production launch and SEO infrastructure, all under one discipline.",
     "Rather than chasing trends or delivering visuals alone, we aim for lasting solutions to real business problems. Performance, accessibility, maintainability and conversion focus are baseline criteria on every engagement.",
   ],
   skillsBadge: "Technology",
@@ -91,7 +91,7 @@ export const aboutEn = {
   contactBadge: "Contact",
   contactTitle: "Get in touch",
   contactSubtitle:
-    "For a new project, partnership or consulting — use the form or reach out directly.",
+    "For a new project, partnership or consulting, use the form or reach out directly.",
   contactItems: [
     { label: "Phone", value: "+90 507 849 29 03", href: "tel:+905078492903" },
     {

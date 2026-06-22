@@ -1,7 +1,7 @@
 export const servicesPackagesEn = {
   packagesTitle: "Services & Packages",
   packagesSubtitle:
-    "Clear packages across five areas — switch tabs to compare scope and find the tier that fits your project.",
+    "Clear packages across five areas, switch tabs to compare scope and find the tier that fits your project.",
   tabWeb: "Website",
   tabApp: "Application",
   tabSeo: "SEO Services",
@@ -20,7 +20,7 @@ export const servicesPackagesEn = {
   getQuote: "Get a Quote",
   webIntroTitle: "End-to-end web development",
   webIntroP1:
-    "From design to deploy, UI to API — I handle the full web stack in one place. Fast, SEO-ready and scalable projects built on a modern React and Next.js foundation.",
+    "From design to deploy, UI to API, I handle the full web stack in one place. Fast, SEO-ready and scalable projects built on a modern React and Next.js foundation.",
   webIntroP2:
     "Portfolio, corporate and ecommerce solutions in Basic, Standard and Pro tiers. On Pro, corporate sites grow with unlimited pages; ecommerce platforms expand without product or category limits.",
   appIntroTitle: "End-to-end mobile development",
@@ -30,12 +30,12 @@ export const servicesPackagesEn = {
     "Promotional, corporate and ecommerce apps in three tiers. Source code delivery, store publishing guidance and API integration included in every package.",
   seoIntroTitle: "Sustainable organic growth",
   seoIntroP1:
-    "From technical audits to monthly optimization, keyword strategy to enterprise-scale SEO management — everything under one roof. Basic, Standard and Pro tiers scale with your goals.",
+    "From technical audits to monthly optimization, keyword strategy to enterprise-scale SEO management, everything under one roof. Basic, Standard and Pro tiers scale with your goals.",
   seoIntroP2:
-    "Every tier includes audit, optimization and reporting. Start where you are and move up as you grow — no need to switch providers or rebuild strategy from scratch.",
+    "Every tier includes audit, optimization and reporting. Start where you are and move up as you grow, no need to switch providers or rebuild strategy from scratch.",
   maintenanceIntroTitle: "Always-on digital assets",
   maintenanceIntroP1:
-    "Updates, backups, security monitoring and emergency response — ongoing support for your website, mobile app and backend infrastructure all in one place. Basic, Standard and Pro tiers scale with your needs.",
+    "Updates, backups, security monitoring and emergency response, ongoing support for your website, mobile app and backend infrastructure all in one place. Basic, Standard and Pro tiers scale with your needs.",
   maintenanceIntroP2:
     "Every tier includes monitoring, backups and technical support. Move up to Pro for 24/7 SLA guarantees, cloud infrastructure management and a dedicated engineer.",
   webPackages: {
@@ -880,7 +880,7 @@ export const servicesPackagesEn = {
     seoServices: {
       title: "Digital Marketing & SEO",
       description:
-        "Comprehensive search engine optimization and growth strategies — from technical audits to monthly ad campaigns, for individual sites and enterprise platforms alike.",
+        "Comprehensive search engine optimization and growth strategies, from technical audits to monthly ad campaigns, for individual sites and enterprise platforms alike.",
       tiers: {
         temel: {
           deliveryDays: "10-14",

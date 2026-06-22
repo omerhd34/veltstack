@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Veltstack",
   },
   description:
-    "Veltstack — Kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
+    "Kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
   metadataBase: new URL("https://www.Veltstack.com"),
 };
 

@@ -4,7 +4,7 @@ export const servicesPageTr = {
   heroBadge: "Dijital Hizmetler",
   heroTitle: "Web ve mobil projeleriniz için net paketler",
   heroSubtitle:
-    "Her proje tipi üç kademede sunulur: Temel, Standart ve Pro. Kapsam, teslim süresi ve revizyon sayısı baştan netleştirilir — büyük projeler sınırsız ölçeklenebilir.",
+    "Her proje tipi üç kademede sunulur: Temel, Standart ve Pro. Kapsam, teslim süresi ve revizyon sayısı baştan netleştirilir, büyük projeler sınırsız ölçeklenebilir.",
   heroSubtitleSecondary:
     "Paketleri inceleyin; web sitesi, uygulama, SEO, API ve bakım sekmeleri arasında geçiş yaparak size en uygun kapsamı belirleyin.",
   heroImageAlt: "Dijital geliştirme çalışma ortamı",
