@@ -1,3 +1,8 @@
+import {
+  BLOG_LUCIDE_BOT,
+  BLOG_LUCIDE_CODE,
+  blogAnalogyIcon,
+} from "./blog-analogy-icons";
 import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
@@ -5,9 +10,9 @@ export const blogPostEntry: BlogPostEntry = {
   titleTr: "Geleneksel Yazılım | Yapay Zeka (AI)",
   titleEn: "Traditional Software | AI",
   excerptTr:
-    "Kaliteli yazılımda insan geliştiricinin kod yazmasının neden şart olduğunu; AI'ın yardımcı araç olarak sınırlarını ve doğru yaklaşımı anlatıyoruz.",
+    "Kaliteli yazılımda insan geliştiricinin kod yazmasının neden şart olduğunu; AI'ın yardımcı araç olarak sınırlarını, risklerini ve doğru yaklaşımı detaylı biçimde anlatıyoruz.",
   excerptEn:
-    "Why a human developer writing code is essential for quality software — and where AI fits as a supporting tool only.",
+    "Why a human developer writing code is essential for quality software, where AI helps as a supporting tool only, and what limits and risks to keep in mind.",
   category: "Yapay Zeka",
   categoryEn: "Artificial Intelligence",
   imageUrl: "/images/blog/geleneksel-yazilim-yapay-zeka.png",
@@ -21,7 +26,7 @@ export const blogPostEntry: BlogPostEntry = {
 <div class="blog-stats">
   <div class="blog-stat"><span class="blog-stat-value">İnsan</span><span class="blog-stat-label">Kod yazımı ve sorumluluk</span></div>
   <div class="blog-stat"><span class="blog-stat-value">Review</span><span class="blog-stat-label">Zorunlu kod incelemesi</span></div>
-  <div class="blog-stat"><span class="blog-stat-value">AI</span><span class="blog-stat-label">Yardımcı araç · tek başına yeterli değil</span></div>
+  <div class="blog-stat"><span class="blog-stat-value">AI</span><span class="blog-stat-label">Yardımcı araç / tek başına yeterli değil</span></div>
 </div>
 
 <h2>Neden İnsan Geliştirici?</h2>
@@ -29,7 +34,7 @@ export const blogPostEntry: BlogPostEntry = {
 <ul class="blog-checklist">
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>İş mantığı anlayışı:</strong> Müşteri ihtiyacını, edge case'leri ve uzun vadeli etkileri yalnızca deneyimli geliştirici doğru yorumlar.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Mimari sorumluluk:</strong> Veritabanı şeması, güvenlik katmanları ve performans kararları insan tarafından alınmalıdır.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Kod sahipliği:</strong> Üretilen kodun bakımı, debug'u ve evrimi bir ekibe — en az bir insana — aittir.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Kod sahipliği:</strong> Üretilen kodun bakımı, debug'u ve evrimi bir ekibe, en az bir insana, aittir.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Güvenlik ve uyumluluk:</strong> KVKK, ödeme altyapısı ve erişim kontrolü AI'ın tek başına garanti edemeyeceği alanlardır.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Kalite standardı:</strong> Profesyonel projelerde teslim edilen kod, insan gözünden geçmeden yayına alınmamalıdır.</span></div></li>
 </ul>
@@ -44,10 +49,10 @@ export const blogPostEntry: BlogPostEntry = {
   <div class="blog-analogy-grid">
     <article class="blog-analogy-item blog-analogy-item--hosting">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--hosting" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/></svg></span>
+        ${blogAnalogyIcon("hosting", BLOG_LUCIDE_BOT)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">AI</p>
-          <span class="blog-analogy-item-tag">Asistan · taslak üretir</span>
+          <span class="blog-analogy-item-tag">Asistan / taslak üretir</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Tecrübeli bir stajyer gibidir: hızlı fikir verir, taslak çıkarır; ancak nihai karar ve imza ustada kalmalıdır.</p>
@@ -56,10 +61,10 @@ export const blogPostEntry: BlogPostEntry = {
     <div class="blog-analogy-join" aria-hidden="true"><span>→</span></div>
     <article class="blog-analogy-item blog-analogy-item--domain">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--domain" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+        ${blogAnalogyIcon("domain", BLOG_LUCIDE_CODE)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">İnsan Geliştirici</p>
-          <span class="blog-analogy-item-tag">Mimar · sorumlu uzman</span>
+          <span class="blog-analogy-item-tag">Mimar / sorumlu uzman</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Mimar ve mühendis gibidir: sistemi tasarlar, kodu yazar, inceler, test eder ve canlıya alır.</p>
@@ -89,7 +94,7 @@ export const blogPostEntry: BlogPostEntry = {
 </div>
 
 <h2>AI'ı Doğru Kullanmak</h2>
-<p>AI'ı tamamen reddetmiyoruz — <strong>yanlış yere koymuyoruz</strong>. Boş şablon üretimi, regex yazımı, dokümantasyon taslağı ve tekrarlayan CRUD parçalarında zaman kazandırır. Ancak her AI çıktısı insan geliştirici tarafından okunmalı, test edilmeli ve onaylanmalıdır. Kod review süreci opsiyonel değil, zorunludur.</p>
+<p>AI'ı tamamen reddetmiyoruz, <strong>yanlış yere koymuyoruz</strong>. Boş şablon üretimi, regex yazımı, dokümantasyon taslağı ve tekrarlayan CRUD parçalarında zaman kazandırır. Ancak her AI çıktısı insan geliştirici tarafından okunmalı, test edilmeli ve onaylanmalıdır. Kod review süreci opsiyonel değil, zorunludur.</p>
 
 <div class="blog-callout">
   <p class="blog-callout-title">Net tavsiyemiz</p>
@@ -126,7 +131,7 @@ export const blogPostEntry: BlogPostEntry = {
 <p>Veltstack olarak tüm projelerde <strong>kodu kendimiz yazıyoruz</strong>. AI'ı araştırma, taslak ve tekrarlayan işlerde kullanıyoruz; ancak mimari kararlar, güvenlik, performans ve nihai kod kalitesi tamamen insan geliştirici sorumluluğundadır. Her commit review edilir; her canlıya alma bilinçli bir onayla yapılır.</p>
 
 <h2>Sonuç</h2>
-<p>AI yazılım geliştirmeyi kolaylaştırır; fakat kaliteli, güvenli ve sürdürülebilir yazılım için <strong>bir insanın kod yazması şarttır</strong>. Geleneksel disiplin — analiz, tasarım, kod, review, test — profesyonel projelerin vazgeçilmezidir. Projenizi bu standarda taşımak için bizimle iletişime geçin.</p>
+<p>AI yazılım geliştirmeyi kolaylaştırır; fakat kaliteli, güvenli ve sürdürülebilir yazılım için <strong>bir insanın kod yazması şarttır</strong>. Geleneksel disiplin, analiz, tasarım, kod, review, test, profesyonel projelerin vazgeçilmezidir. Projenizi bu standarda taşımak için bizimle iletişime geçin.</p>
 `,
     en: `
 <p>Once you choose custom software, the next question is: will the project be built by <strong>human developers</strong> or by <strong>AI</strong> tools alone? Our clear view: for quality software, <strong>a human must write the code</strong>. AI is only a helper; architecture, code review and accountability stay with people. This guide explains why traditional software development remains essential, the limits of AI and the right balance.</p>
@@ -134,7 +139,7 @@ export const blogPostEntry: BlogPostEntry = {
 <div class="blog-stats">
   <div class="blog-stat"><span class="blog-stat-value">Human</span><span class="blog-stat-label">Coding and accountability</span></div>
   <div class="blog-stat"><span class="blog-stat-value">Review</span><span class="blog-stat-label">Mandatory code review</span></div>
-  <div class="blog-stat"><span class="blog-stat-value">AI</span><span class="blog-stat-label">Helper tool · not enough alone</span></div>
+  <div class="blog-stat"><span class="blog-stat-value">AI</span><span class="blog-stat-label">Helper tool / not enough alone</span></div>
 </div>
 
 <h2>Why a Human Developer?</h2>
@@ -142,7 +147,7 @@ export const blogPostEntry: BlogPostEntry = {
 <ul class="blog-checklist">
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Business logic:</strong> Only an experienced developer interprets customer needs, edge cases and long-term impact correctly.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Architecture ownership:</strong> Database schema, security layers and performance decisions must be made by humans.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Code ownership:</strong> Maintenance, debugging and evolution belong to a team — at least one person.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Code ownership:</strong> Maintenance, debugging and evolution belong to a team, at least one person.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Security and compliance:</strong> GDPR, payments and access control are areas AI alone cannot guarantee.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Quality bar:</strong> In professional projects, code must not go live without human review.</span></div></li>
 </ul>
@@ -157,10 +162,10 @@ export const blogPostEntry: BlogPostEntry = {
   <div class="blog-analogy-grid">
     <article class="blog-analogy-item blog-analogy-item--hosting">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--hosting" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/></svg></span>
+        ${blogAnalogyIcon("hosting", BLOG_LUCIDE_BOT)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">AI</p>
-          <span class="blog-analogy-item-tag">Assistant · drafts ideas</span>
+          <span class="blog-analogy-item-tag">Assistant / drafts ideas</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Like a skilled intern: fast drafts and ideas; final decisions and signature stay with the master.</p>
@@ -169,10 +174,10 @@ export const blogPostEntry: BlogPostEntry = {
     <div class="blog-analogy-join" aria-hidden="true"><span>→</span></div>
     <article class="blog-analogy-item blog-analogy-item--domain">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--domain" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+        ${blogAnalogyIcon("domain", BLOG_LUCIDE_CODE)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">Human Developer</p>
-          <span class="blog-analogy-item-tag">Architect · accountable expert</span>
+          <span class="blog-analogy-item-tag">Architect / accountable expert</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Like an architect and engineer: designs the system, writes code, reviews, tests and ships.</p>
@@ -202,7 +207,7 @@ export const blogPostEntry: BlogPostEntry = {
 </div>
 
 <h2>Using AI Correctly</h2>
-<p>We do not reject AI — we <strong>place it correctly</strong>. It saves time on boilerplate, regex, documentation drafts and repetitive CRUD. But every AI output must be read, tested and approved by a human developer. Code review is not optional; it is mandatory.</p>
+<p>We do not reject AI, we <strong>place it correctly</strong>. It saves time on boilerplate, regex, documentation drafts and repetitive CRUD. But every AI output must be read, tested and approved by a human developer. Code review is not optional; it is mandatory.</p>
 
 <div class="blog-callout">
   <p class="blog-callout-title">Our clear recommendation</p>
@@ -239,7 +244,7 @@ export const blogPostEntry: BlogPostEntry = {
 <p>At Veltstack we <strong>write the code ourselves</strong> on every project. We use AI for research, drafts and repetitive tasks; architecture, security, performance and final code quality remain fully human responsibilities. Every commit is reviewed; every production release is a deliberate sign-off.</p>
 
 <h2>Conclusion</h2>
-<p>AI makes development easier; but for quality, secure and sustainable software, <strong>a human must write the code</strong>. Traditional discipline — analysis, design, code, review, test — is non-negotiable for professional projects. Contact us to bring your project to this standard.</p>
+<p>AI makes development easier; but for quality, secure and sustainable software, <strong>a human must write the code</strong>. Traditional discipline, analysis, design, code, review, test, is non-negotiable for professional projects. Contact us to bring your project to this standard.</p>
 `,
   },
 };

@@ -2,8 +2,8 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "responsive-tasarim",
-  titleTr: "Gerçek Mobil Uyumluluk: Responsive Tasarım",
-  titleEn: "Real Mobile Compatibility: Responsive Design",
+  titleTr: "Gerçek Mobil Uyumluluk: Responsive",
+  titleEn: "Real Mobile Compatibility: Responsive",
   excerptTr:
     "Mobil uyumluluk ile responsive tasarım arasındaki farkı, mobile-first yaklaşımı ve gerçekten her ekranda çalışan arayüz için pratik kuralları paylaşıyoruz.",
   excerptEn:

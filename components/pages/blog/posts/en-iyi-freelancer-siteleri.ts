@@ -37,7 +37,7 @@ ${BLOG_FREELANCER_PLATFORMS_PLACEHOLDER}
 
 <div class="blog-callout">
   <p class="blog-callout-title">Veltstack perspektifi</p>
-  <p>Veltstack olarak web sitesi, mobil uygulama, SEO ve bakım hizmetlerini tek çatı altında sunuyoruz — proje boyunca tutarlı iletişim ve kalite garantisi sağlıyoruz.</p>
+  <p>Veltstack olarak web sitesi, mobil uygulama, SEO ve bakım hizmetlerini tek çatı altında sunuyoruz, proje boyunca tutarlı iletişim ve kalite garantisi sağlıyoruz.</p>
 </div>
 
 <h2>Freelancer Seçerken Dikkat Edilecekler</h2>
@@ -71,11 +71,11 @@ ${BLOG_FREELANCER_PLATFORMS_PLACEHOLDER}
 ${BLOG_FREELANCER_PLATFORMS_PLACEHOLDER}
 
 <h2>Freelancer or Agency?</h2>
-<p>Freelance platforms offer fast, affordable options — but they are not enough for every project. Multi-discipline work (web + mobile + <a href="/blog/seo">SEO</a> + maintenance) often runs better with an integrated team than a single freelancer.</p>
+<p>Freelance platforms offer fast, affordable options, but they are not enough for every project. Multi-discipline work (web + mobile + <a href="/blog/seo">SEO</a> + maintenance) often runs better with an integrated team than a single freelancer.</p>
 
 <div class="blog-callout">
   <p class="blog-callout-title">Veltstack perspective</p>
-  <p>At Veltstack we deliver website, mobile app, SEO and maintenance under one roof — consistent communication and quality across the project.</p>
+  <p>At Veltstack we deliver website, mobile app, SEO and maintenance under one roof, consistent communication and quality across the project.</p>
 </div>
 
 <h2>Tips for Choosing a Freelancer</h2>

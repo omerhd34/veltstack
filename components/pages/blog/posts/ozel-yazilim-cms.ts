@@ -1,3 +1,8 @@
+import {
+  BLOG_LUCIDE_CODE,
+  BLOG_LUCIDE_LAYOUT_TEMPLATE,
+  blogAnalogyIcon,
+} from "./blog-analogy-icons";
 import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
@@ -5,9 +10,9 @@ export const blogPostEntry: BlogPostEntry = {
   titleTr: "Özel Yazılım | CMS",
   titleEn: "Custom Software | CMS",
   excerptTr:
-    "Özel yazılımın CMS'e göre neden şart olduğunu; kaliteli projede bir insanın kod yazmasının neden vazgeçilmez olduğunu anlatıyoruz.",
+    "Özel yazılımın CMS'e göre neden şart olduğunu; kaliteli projede bir insanın kod yazmasının neden vazgeçilmez olduğunu örneklerle birlikte anlatıyoruz.",
   excerptEn:
-    "Why custom software beats CMS — and why a human developer writing code is non-negotiable for quality projects.",
+    "Why custom software beats CMS for quality projects, and why a human developer writing code is non-negotiable, with practical examples along the way.",
   category: "Özel Yazılım",
   categoryEn: "Custom Software",
   imageUrl: "/images/blog/ozel-yazilim-cms.png",
@@ -16,7 +21,7 @@ export const blogPostEntry: BlogPostEntry = {
   featured: true,
   content: {
     tr: `
-<p>Domain ve hosting hazır olduğunda web sitenizi inşa etmenin iki yolu vardır: hazır bir <strong>CMS</strong> veya ihtiyaca göre geliştirilen <strong>özel yazılım</strong>. Bizim net görüşümüz şudur: ciddi bir dijital varlık hedefliyorsanız <strong>özel yazılım şarttır</strong> — ve bu yazılımı <strong>bir insanın kod yazması şarttır</strong>. Şablon, eklenti veya sürükle-bırak panel kaliteli projelerin yerini tutamaz. Bu rehberde nedenini, CMS'in sınırlarını ve doğru yaklaşımı anlatıyoruz.</p>
+<p>Domain ve hosting hazır olduğunda web sitenizi inşa etmenin iki yolu vardır: hazır bir <strong>CMS</strong> veya ihtiyaca göre geliştirilen <strong>özel yazılım</strong>. Bizim net görüşümüz şudur: ciddi bir dijital varlık hedefliyorsanız <strong>özel yazılım şarttır</strong>, ve bu yazılımı <strong>bir insanın kod yazması şarttır</strong>. Şablon, eklenti veya sürükle-bırak panel kaliteli projelerin yerini tutamaz. Bu rehberde nedenini, CMS'in sınırlarını ve doğru yaklaşımı anlatıyoruz.</p>
 
 <div class="blog-stats">
   <div class="blog-stat"><span class="blog-stat-value">İnsan</span><span class="blog-stat-label">Kod yazımı şart</span></div>
@@ -37,7 +42,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ul>
 
 <h2>CMS Nedir ve Neden Yetersiz Kalır?</h2>
-<p>CMS (Content Management System); WordPress, Wix ve benzeri panel tabanlı sistemlerdir. İçerik girişi kolay görünür; ancak arka planda yine de bir şablona, eklenti yığınına ve genel mimariye mahkûmsunuz. Markanızı öne çıkarmak, hız hedeflemek veya özel iş süreçlerini yönetmek istediğinizde CMS hızla tavan yapar. CMS sizi geliştiriciden bağımsız kılmaz — yalnızca farklı kısıtlara hapseder.</p>
+<p>CMS (Content Management System); WordPress, Wix ve benzeri panel tabanlı sistemlerdir. İçerik girişi kolay görünür; ancak arka planda yine de bir şablona, eklenti yığınına ve genel mimariye mahkûmsunuz. Markanızı öne çıkarmak, hız hedeflemek veya özel iş süreçlerini yönetmek istediğinizde CMS hızla tavan yapar. CMS sizi geliştiriciden bağımsız kılmaz, yalnızca farklı kısıtlara hapseder.</p>
 
 <div class="blog-analogy">
   <div class="blog-analogy-header">
@@ -46,10 +51,10 @@ export const blogPostEntry: BlogPostEntry = {
   <div class="blog-analogy-grid">
     <article class="blog-analogy-item blog-analogy-item--domain">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--domain" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></span>
+        ${blogAnalogyIcon("domain", BLOG_LUCIDE_LAYOUT_TEMPLATE)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">CMS</p>
-          <span class="blog-analogy-item-tag">Seri üretim · geçici çözüm</span>
+          <span class="blog-analogy-item-tag">Seri üretim / geçici çözüm</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Hazır, seri üretim mobilya gibidir. Hızlı kurulur ama ölçünüze oturmaz; usta eli değmeden kalıcı olmaz.</p>
@@ -58,14 +63,14 @@ export const blogPostEntry: BlogPostEntry = {
     <div class="blog-analogy-join" aria-hidden="true"><span>→</span></div>
     <article class="blog-analogy-item blog-analogy-item--hosting">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--hosting" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+        ${blogAnalogyIcon("hosting", BLOG_LUCIDE_CODE)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">Özel Yazılım</p>
-          <span class="blog-analogy-item-tag">Usta eli · kalıcı yatırım</span>
+          <span class="blog-analogy-item-tag">Usta eli / kalıcı yatırım</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Ustanın ölçüye göre ürettiği ev gibidir. İnsan geliştirici tasarlar, kodlar, test eder; yıllarca size hizmet eder.</p>
-      <span class="blog-analogy-item-example">El ile kod · Next.js</span>
+      <span class="blog-analogy-item-example">El ile kod / Next.js</span>
     </article>
   </div>
 </div>
@@ -92,7 +97,7 @@ export const blogPostEntry: BlogPostEntry = {
 </div>
 
 <h2>CMS Neden Tercih Edilmemeli?</h2>
-<p>CMS yalnızca çok kısa vadeli, düşük beklentili ve teknik altyapısı hiç önemsenmeyen projelerde geçici olarak düşünülebilir. Kurumsal kimlik, dönüşüm hedefi, e-ticaret veya B2B süreçleri varsa CMS ile başlamak zaman ve para kaybıdır. Headless CMS (Strapi, Sanity) bile ancak üzerine <strong>insan geliştiricinin yazdığı özel frontend</strong> konduğunda anlamlıdır — panel kolaylığı, kaliteli yazılımın yerini alamaz.</p>
+<p>CMS yalnızca çok kısa vadeli, düşük beklentili ve teknik altyapısı hiç önemsenmeyen projelerde geçici olarak düşünülebilir. Kurumsal kimlik, dönüşüm hedefi, e-ticaret veya B2B süreçleri varsa CMS ile başlamak zaman ve para kaybıdır. Headless CMS (Strapi, Sanity) bile ancak üzerine <strong>insan geliştiricinin yazdığı özel frontend</strong> konduğunda anlamlıdır, panel kolaylığı, kaliteli yazılımın yerini alamaz.</p>
 
 <div class="blog-callout">
   <p class="blog-callout-title">Net tavsiyemiz</p>
@@ -126,13 +131,13 @@ export const blogPostEntry: BlogPostEntry = {
 <p>Özel yazılım kararı, altyapı hazır olduktan sonra devreye girer. Domain, DNS, SSL ve Vercel/hosting yapılandırması tamamlanmadan kaliteli bir yayın süreci yürütülemez. Temel kavramlar için <a href="/blog/domain-hosting">Domain & Hosting</a> yazımıza, insan geliştirici ve AI dengesi için <a href="/blog/geleneksel-yazilim-yapay-zeka">Geleneksel Yazılım | Yapay Zeka (AI)</a> rehberimize, modern stack için <a href="/blog/react-nextjs">React & Next.js</a> yazımıza göz atabilirsiniz.</p>
 
 <h2>Veltstack'te Yaklaşımımız</h2>
-<p>Veltstack olarak tüm ciddi projelerde <strong>kodu biz yazıyoruz</strong>. TypeScript, Next.js, Tailwind CSS, Prisma ve Vercel ile markanıza özel, hızlı, güvenli ve SEO uyumlu çözümler sunuyoruz. İçerik yönetimi gerektiğinde bunu özel yazılımın içine gömülü admin paneli olarak tasarlıyoruz — hazır CMS'e bağımlı kalmıyoruz. Mimari, güvenlik, review ve teslim kalitesi tamamen insan geliştiricide. IQfinansAI, Yazıcı Ticaret ve Fablessi projelerimizde farkı yaratan şey deneyimli geliştirici emeğidir.</p>
+<p>Veltstack olarak tüm ciddi projelerde <strong>kodu biz yazıyoruz</strong>. TypeScript, Next.js, Tailwind CSS, Prisma ve Vercel ile markanıza özel, hızlı, güvenli ve SEO uyumlu çözümler sunuyoruz. İçerik yönetimi gerektiğinde bunu özel yazılımın içine gömülü admin paneli olarak tasarlıyoruz, hazır CMS'e bağımlı kalmıyoruz. Mimari, güvenlik, review ve teslim kalitesi tamamen insan geliştiricide. IQfinansAI, Yazıcı Ticaret ve Fablessi projelerimizde farkı yaratan şey deneyimli geliştirici emeğidir.</p>
 
 <h2>Sonuç</h2>
-<p>CMS hızlı bir illüzyon sunabilir; ancak kaliteli, güvenli ve ölçeklenebilir bir dijital varlık için <strong>özel yazılım şarttır</strong> ve <strong>bir insanın kod yazması şarttır</strong>. Daha iyi performans, daha iyi SEO, daha iyi kullanıcı deneyimi ve uzun vadede daha düşük toplam maliyet — hepsi insan eliyle yazılmış özel geliştirmeyle gelir. Projenizi doğru temele oturtmak için bizimle iletişime geçin.</p>
+<p>CMS hızlı bir illüzyon sunabilir; ancak kaliteli, güvenli ve ölçeklenebilir bir dijital varlık için <strong>özel yazılım şarttır</strong> ve <strong>bir insanın kod yazması şarttır</strong>. Daha iyi performans, daha iyi SEO, daha iyi kullanıcı deneyimi ve uzun vadede daha düşük toplam maliyet, hepsi insan eliyle yazılmış özel geliştirmeyle gelir. Projenizi doğru temele oturtmak için bizimle iletişime geçin.</p>
 `,
     en: `
-<p>Once domain and hosting are ready, there are two ways to build your website: an off-the-shelf <strong>CMS</strong> or <strong>custom software</strong> built for your needs. Our clear view: for a serious digital presence, <strong>custom software is essential</strong> — and <strong>a human writing code is essential</strong>. Templates, plugins and drag-and-drop panels cannot replace quality software. This guide explains why, the limits of CMS and the right approach.</p>
+<p>Once domain and hosting are ready, there are two ways to build your website: an off-the-shelf <strong>CMS</strong> or <strong>custom software</strong> built for your needs. Our clear view: for a serious digital presence, <strong>custom software is essential</strong>, and <strong>a human writing code is essential</strong>. Templates, plugins and drag-and-drop panels cannot replace quality software. This guide explains why, the limits of CMS and the right approach.</p>
 
 <div class="blog-stats">
   <div class="blog-stat"><span class="blog-stat-value">Human</span><span class="blog-stat-label">Code writing essential</span></div>
@@ -153,7 +158,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ul>
 
 <h2>What Is CMS and Why It Falls Short</h2>
-<p>A CMS (Content Management System) — WordPress, Wix and similar panel-based systems — makes content entry look easy, but you are still tied to templates, plugin stacks and generic architecture. CMS hits a ceiling quickly when you want to stand out, target speed or run custom business processes. CMS does not free you from developers — it only traps you in different constraints.</p>
+<p>A CMS (Content Management System), WordPress, Wix and similar panel-based systems, makes content entry look easy, but you are still tied to templates, plugin stacks and generic architecture. CMS hits a ceiling quickly when you want to stand out, target speed or run custom business processes. CMS does not free you from developers, it only traps you in different constraints.</p>
 
 <div class="blog-analogy">
   <div class="blog-analogy-header">
@@ -162,10 +167,10 @@ export const blogPostEntry: BlogPostEntry = {
   <div class="blog-analogy-grid">
     <article class="blog-analogy-item blog-analogy-item--domain">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--domain" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></span>
+        ${blogAnalogyIcon("domain", BLOG_LUCIDE_LAYOUT_TEMPLATE)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">CMS</p>
-          <span class="blog-analogy-item-tag">Mass-produced · temporary fix</span>
+          <span class="blog-analogy-item-tag">Mass-produced / temporary fix</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Like mass-produced furniture. Quick to set up but never fits properly; it won't last without a craftsman's hand.</p>
@@ -174,14 +179,14 @@ export const blogPostEntry: BlogPostEntry = {
     <div class="blog-analogy-join" aria-hidden="true"><span>→</span></div>
     <article class="blog-analogy-item blog-analogy-item--hosting">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--hosting" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+        ${blogAnalogyIcon("hosting", BLOG_LUCIDE_CODE)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">Custom Software</p>
-          <span class="blog-analogy-item-tag">Craftsman's work · lasting investment</span>
+          <span class="blog-analogy-item-tag">Craftsman's work / lasting investment</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Like a home built to measure by a master. A human developer designs, codes and tests; it serves you for years.</p>
-      <span class="blog-analogy-item-example">Hand-written code · Next.js</span>
+      <span class="blog-analogy-item-example">Hand-written code / Next.js</span>
     </article>
   </div>
 </div>
@@ -208,7 +213,7 @@ export const blogPostEntry: BlogPostEntry = {
 </div>
 
 <h2>Why CMS Should Not Be Chosen</h2>
-<p>CMS is only a temporary option for very short-term, low-expectation projects where technical foundation does not matter at all. If you have a corporate identity, conversion goals, e-commerce or B2B processes, starting with CMS wastes time and money. Even headless CMS (Strapi, Sanity) only makes sense with a <strong>custom frontend written by a human developer</strong> — panel convenience cannot replace quality software.</p>
+<p>CMS is only a temporary option for very short-term, low-expectation projects where technical foundation does not matter at all. If you have a corporate identity, conversion goals, e-commerce or B2B processes, starting with CMS wastes time and money. Even headless CMS (Strapi, Sanity) only makes sense with a <strong>custom frontend written by a human developer</strong>, panel convenience cannot replace quality software.</p>
 
 <div class="blog-callout">
   <p class="blog-callout-title">Our clear recommendation</p>
@@ -242,10 +247,10 @@ export const blogPostEntry: BlogPostEntry = {
 <p>The custom software decision comes after infrastructure is ready. A quality launch cannot run without domain, DNS, SSL and Vercel or hosting configuration. See our <a href="/blog/domain-hosting">Domain & Hosting</a> article for the basics, our <a href="/blog/geleneksel-yazilim-yapay-zeka">Traditional Software | AI</a> guide for the human developer vs AI balance, and our <a href="/blog/react-nextjs">React & Next.js</a> article for the modern stack.</p>
 
 <h2>Our Approach at Veltstack</h2>
-<p>At Veltstack <strong>we write the code</strong> on every serious project. With TypeScript, Next.js, Tailwind CSS, Prisma and Vercel we deliver tailored, fast, secure and SEO-friendly solutions. When content management is needed, we design it as an embedded admin panel inside custom software — we do not depend on off-the-shelf CMS. Architecture, security, review and delivery quality are entirely human. Projects like IQfinansAI, Yazıcı Ticaret and Fablessi show that experienced developer craft makes the difference.</p>
+<p>At Veltstack <strong>we write the code</strong> on every serious project. With TypeScript, Next.js, Tailwind CSS, Prisma and Vercel we deliver tailored, fast, secure and SEO-friendly solutions. When content management is needed, we design it as an embedded admin panel inside custom software, we do not depend on off-the-shelf CMS. Architecture, security, review and delivery quality are entirely human. Projects like IQfinansAI, Yazıcı Ticaret and Fablessi show that experienced developer craft makes the difference.</p>
 
 <h2>Conclusion</h2>
-<p>CMS can offer a quick illusion; but for a high-quality, secure and scalable digital presence, <strong>custom software is essential</strong> and <strong>a human writing code is essential</strong>. Better performance, better SEO, better user experience and lower total cost long term — all come from custom development written by human hands. Contact us to put your project on the right foundation.</p>
+<p>CMS can offer a quick illusion; but for a high-quality, secure and scalable digital presence, <strong>custom software is essential</strong> and <strong>a human writing code is essential</strong>. Better performance, better SEO, better user experience and lower total cost long term, all come from custom development written by human hands. Contact us to put your project on the right foundation.</p>
 `,
   },
 };

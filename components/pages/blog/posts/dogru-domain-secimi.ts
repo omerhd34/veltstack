@@ -6,9 +6,9 @@ export const blogPostEntry: BlogPostEntry = {
   titleTr: "Doğru Domain Seçimi",
   titleEn: "Choosing the Right Domain",
   excerptTr:
-    "Markanıza uygun domain adını nasıl belirleyeceğinizi, uzantı seçimini ve sık yapılan hataları pratik bir rehberle paylaşıyoruz.",
+    "Markanıza uygun domain adını nasıl belirleyeceğinizi, uzantı seçimini ve sık yapılan hataları pratik bir rehberle paylaşıyoruz; SEO etkisini de ele alıyoruz.",
   excerptEn:
-    "A practical guide to picking a domain name that fits your brand, choosing the right extension and avoiding common mistakes.",
+    "A practical guide to picking a domain name that fits your brand, choosing the right extension, avoiding common mistakes and understanding SEO impact.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
   imageUrl: "/images/blog/dogru-domain-secimi.png",

@@ -3,7 +3,7 @@ export const blogPageEn = {
   heroTitle: "Insights from the digital world",
   heroSubtitle:
     "Practical content on web development, mobile apps, SEO and digital transformation. We share what we learn from real projects.",
-  heroImageAlt: "Veltstack blog — developer workspace",
+  heroImageAlt: "Veltstack blog: developer workspace",
   postCountLabel: "{count} posts",
   searchPlaceholder: "Search posts...",
   clearSearch: "Clear search",

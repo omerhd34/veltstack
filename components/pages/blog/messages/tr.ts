@@ -3,7 +3,7 @@ export const blogPageTr = {
   heroTitle: "Dijital dünyadan içgörüler",
   heroSubtitle:
     "Web geliştirme, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler. Gerçek projelerden öğrendiklerimizi paylaşıyoruz.",
-  heroImageAlt: "Veltstack blog — geliştirici çalışma alanı",
+  heroImageAlt: "Veltstack blog: geliştirici çalışma alanı",
   postCountLabel: "{count} yazı",
   searchPlaceholder: "Yazı ara...",
   clearSearch: "Aramayı temizle",

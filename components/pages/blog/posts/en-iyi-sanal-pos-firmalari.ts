@@ -7,7 +7,7 @@ export const blogPostEntry: BlogPostEntry = {
   excerptTr:
     "Türkiye'de e-ticaret ve online ödeme için PayTR, iyzico, Param, Paynet, Shopier ve iPara sanal POS sağlayıcılarını karşılaştırıyor; doğru entegrasyonu seçmenize yardımcı oluyoruz.",
   excerptEn:
-    "We compare PayTR, iyzico, Param, Paynet, Shopier and iPara — Turkey's leading virtual POS providers — to help you pick the right payment integration.",
+    "We compare PayTR, iyzico, Param, Paynet, Shopier and iPara, Turkey's leading virtual POS providers, to help you pick the right payment integration.",
   category: "Araçlar & İpuçları",
   categoryEn: "Tools & Tips",
   imageUrl: "/images/blog/en-iyi-sanal-pos-firmalari.png",
@@ -74,7 +74,7 @@ export const blogPostEntry: BlogPostEntry = {
 <h2>Sanal POS Seçerken Dikkat Edilecekler</h2>
 <ul class="blog-checklist">
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Komisyon ve gizli ücretler:</strong> Tek çekim, taksit ve yurtdışı kart komisyonlarını karşılaştırın.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Entegrasyon tipi:</strong> API, iFrame veya hazır eklenti — projenizin mimarisine uygun olanı seçin.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Entegrasyon tipi:</strong> API, iFrame veya hazır eklenti, projenizin mimarisine uygun olanı seçin.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>3D Secure zorunluluğu:</strong> PCI-DSS uyumu ve güvenli ödeme akışı şarttır.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Para transfer süresi:</strong> Valör (hesaba geçiş) gün sayısı nakit akışınızı doğrudan etkiler.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Destek ve dokümantasyon:</strong> Canlı entegrasyon sırasında teknik destek kalitesi kritiktir.</span></div></li>
@@ -85,7 +85,7 @@ export const blogPostEntry: BlogPostEntry = {
 
 <div class="blog-callout">
   <p class="blog-callout-title">Pratik ipucu</p>
-  <p>Canlıya almadan önce sanal POS sağlayıcısının test (sandbox) ortamında tüm ödeme senaryolarını — başarılı ödeme, iptal, iade ve 3D Secure hata akışlarını — deneyin.</p>
+  <p>Canlıya almadan önce sanal POS sağlayıcısının test (sandbox) ortamında tüm ödeme senaryolarını, başarılı ödeme, iptal, iade ve 3D Secure hata akışlarını, deneyin.</p>
 </div>
 
 <h2>Sık Yapılan Hatalar</h2>
@@ -113,7 +113,7 @@ export const blogPostEntry: BlogPostEntry = {
 </div>
 
 <h2>What Is Virtual POS?</h2>
-<p>Virtual POS lets you accept credit and debit card payments online — via website, mobile app or payment link — without a physical terminal. It offers 3D Secure verification, installment options and API integration. The right provider determines commission structure, integration ease, support quality and refund/chargeback workflows.</p>
+<p>Virtual POS lets you accept credit and debit card payments online, via website, mobile app or payment link, without a physical terminal. It offers 3D Secure verification, installment options and API integration. The right provider determines commission structure, integration ease, support quality and refund/chargeback workflows.</p>
 
 <h2>Leading Virtual POS Providers</h2>
 <div class="blog-type-grid">
@@ -135,7 +135,7 @@ export const blogPostEntry: BlogPostEntry = {
   </div>
   <div class="blog-type-card">
     <h4><a href="https://www.shopier.com/" target="_blank" rel="noopener noreferrer">Shopier</a></h4>
-    <p>Practical for launching a store quickly without coding. Link sales, simple storefront and built-in payment — ideal starting point for social media sales.</p>
+    <p>Practical for launching a store quickly without coding. Link sales, simple storefront and built-in payment, ideal starting point for social media sales.</p>
   </div>
   <div class="blog-type-card">
     <h4><a href="https://www.ipara.com/" target="_blank" rel="noopener noreferrer">iPara</a></h4>
@@ -166,7 +166,7 @@ export const blogPostEntry: BlogPostEntry = {
 <h2>What to Consider When Choosing</h2>
 <ul class="blog-checklist">
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Commissions and hidden fees:</strong> Compare single payment, installment and foreign card rates.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Integration type:</strong> API, iFrame or ready plugin — pick what fits your architecture.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Integration type:</strong> API, iFrame or ready plugin, pick what fits your architecture.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>3D Secure requirement:</strong> PCI-DSS compliance and secure payment flow are mandatory.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Payout timing:</strong> Settlement days directly affect your cash flow.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Support and docs:</strong> Technical support quality matters during live integration.</span></div></li>
@@ -177,7 +177,7 @@ export const blogPostEntry: BlogPostEntry = {
 
 <div class="blog-callout">
   <p class="blog-callout-title">Practical tip</p>
-  <p>Before going live, test all payment scenarios in the provider's sandbox — successful payment, cancel, refund and 3D Secure error flows.</p>
+  <p>Before going live, test all payment scenarios in the provider's sandbox, successful payment, cancel, refund and 3D Secure error flows.</p>
 </div>
 
 <h2>Common Mistakes</h2>
@@ -193,7 +193,7 @@ export const blogPostEntry: BlogPostEntry = {
 <p>We integrate PayTR, iyzico and iPara APIs securely on the backend for custom e-commerce and corporate web projects. With Next.js, TypeScript and Prisma we manage order, inventory and payment flow in one architecture.</p>
 
 <h2>Conclusion</h2>
-<p>There is no single "best virtual POS" — the choice depends on your business model, volume and technical stack. Shopier or PayTR for quick starts; iyzico for scale and marketplaces; iPara or Param for custom software integration. Contact us to plan the right payment infrastructure for your project.</p>
+<p>There is no single "best virtual POS", the choice depends on your business model, volume and technical stack. Shopier or PayTR for quick starts; iyzico for scale and marketplaces; iPara or Param for custom software integration. Contact us to plan the right payment infrastructure for your project.</p>
 `,
   },
 };

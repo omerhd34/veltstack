@@ -1,5 +1,10 @@
 import { BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER } from "@/components/pages/blog-detail/domain-extensions-data";
 
+import {
+  BLOG_LUCIDE_MAP_PIN,
+  BLOG_LUCIDE_SERVER,
+  blogAnalogyIcon,
+} from "./blog-analogy-icons";
 import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
@@ -7,9 +12,9 @@ export const blogPostEntry: BlogPostEntry = {
   titleTr: "Domain & Hosting",
   titleEn: "Domain & Hosting",
   excerptTr:
-    "Domain ve hosting kavramlarını açıklıyor; ikisinin farkını, birlikte nasıl çalıştıklarını ve domain satın alma sürecini adım adım anlatıyoruz.",
+    "Domain ve hosting kavramlarını açıklıyor; ikisinin farkını, birlikte nasıl çalıştıklarını ve domain satın alma sürecini adım adım, sade bir dille anlatıyoruz.",
   excerptEn:
-    "We explain domain and hosting, how they differ and work together, and walk through the domain purchase process step by step.",
+    "We explain domain and hosting concepts, how they differ and work together, and walk you through the domain purchase process step by step in plain language.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
   imageUrl: "/images/blog/domain-hosting.png",
@@ -38,10 +43,10 @@ export const blogPostEntry: BlogPostEntry = {
   <div class="blog-analogy-grid">
     <article class="blog-analogy-item blog-analogy-item--domain">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--domain" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        ${blogAnalogyIcon("domain", BLOG_LUCIDE_MAP_PIN)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">Domain</p>
-          <span class="blog-analogy-item-tag">Alan adı · adres</span>
+          <span class="blog-analogy-item-tag">Alan adı / adres</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Evinizin açık adresidir. Ziyaretçiler tarayıcıya adresi yazar; sizi doğru yere yönlendirir.</p>
@@ -50,10 +55,10 @@ export const blogPostEntry: BlogPostEntry = {
     <div class="blog-analogy-join" aria-hidden="true"><span>+</span></div>
     <article class="blog-analogy-item blog-analogy-item--hosting">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--hosting" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></svg></span>
+        ${blogAnalogyIcon("hosting", BLOG_LUCIDE_SERVER)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">Hosting</p>
-          <span class="blog-analogy-item-tag">Barındırma · evin kendisi</span>
+          <span class="blog-analogy-item-tag">Barındırma / evin kendisi</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Evin binası ve içindeki eşyalar gibidir. Site dosyalarınız, veritabanınız ve e-postalar burada saklanır.</p>
@@ -63,7 +68,7 @@ export const blogPostEntry: BlogPostEntry = {
 </div>
 
 <h2>Hosting Nedir?</h2>
-<p>Hosting (barındırma), web sitenizin dosyalarının — HTML, CSS, görseller, veritabanı — saklandığı sunucu hizmetidir. Domain adresiniz kullanıcıyı doğru eve yönlendirir; hosting ise o evin içindeki eşyaları barındırır.</p>
+<p>Hosting (barındırma), web sitenizin dosyalarının, HTML, CSS, görseller, veritabanı, saklandığı sunucu hizmetidir. Domain adresiniz kullanıcıyı doğru eve yönlendirir; hosting ise o evin içindeki eşyaları barındırır.</p>
 <p class="blog-section-lead">Hosting türlerini projenizin ölçeğine göre değerlendirin:</p>
 <div class="blog-type-grid">
   <div class="blog-type-card">
@@ -76,16 +81,16 @@ export const blogPostEntry: BlogPostEntry = {
   </div>
   <div class="blog-type-card">
     <h4>Bulut Hosting</h4>
-    <p>Ölçeklenebilir altyapı. Ani trafik artışlarında kaynak artırımı — <strong>yüksek erişilebilirlik</strong> hedefleyenler için.</p>
+    <p>Ölçeklenebilir altyapı. Ani trafik artışlarında kaynak artırımı, <strong>yüksek erişilebilirlik</strong> hedefleyenler için.</p>
   </div>
   <div class="blog-type-card">
     <h4>Platform (Vercel, Netlify)</h4>
-    <p>Next.js ve statik siteler için optimize. Git push ile deploy — <strong>modern web projeleri</strong> için ideal. Detay: <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a>.</p>
+    <p>Next.js ve statik siteler için optimize. Git push ile deploy, <strong>modern web projeleri</strong> için ideal. Detay: <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a>.</p>
   </div>
 </div>
 
 <figure class="blog-chart">
-  <figcaption>Ortalama aylık hosting maliyetleri (Türkiye, 2026 — gösterge)</figcaption>
+  <figcaption>Ortalama aylık hosting maliyetleri (Türkiye, 2026, gösterge)</figcaption>
   <div class="blog-chart-bars">
     <div class="blog-chart-row">
       <span class="blog-chart-label">Paylaşımlı</span>
@@ -196,7 +201,7 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 <p>Domain ve hosting'i aynı firmadan almak yönetimi kolaylaştırır. Projelerimizde <strong>ixirhost</strong> altyapısını kullanıyoruz; domain tescili, DNS, SSL ve hosting hizmetlerini tek panelden yönetebiliyoruz.</p>
 
 <h2>Sonuç</h2>
-<p>Domain sitenizin adresi, hosting ise içeriğinizin evi. İkisi birlikte çalışmadan web siteniz yayına giremez. Doğru isim, güvenilir sağlayıcı ve DNS yapılandırması yeterlidir — kurulum sürecinde destek almak isterseniz bizimle iletişime geçebilirsiniz.</p>
+<p>Domain sitenizin adresi, hosting ise içeriğinizin evi. İkisi birlikte çalışmadan web siteniz yayına giremez. Doğru isim, güvenilir sağlayıcı ve DNS yapılandırması yeterlidir, kurulum sürecinde destek almak isterseniz bizimle iletişime geçebilirsiniz.</p>
 `,
     en: `
 <p>Two building blocks are required to launch a website: a <strong>domain</strong> name and <strong>hosting</strong>. This guide explains what they are, how they differ, how they work together and walks through the domain purchase process step by step.</p>
@@ -208,7 +213,7 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 </div>
 
 <h2>What Is a Domain?</h2>
-<p>A domain name is your website's address on the internet. For example, <em>veltstack.com</em> is a domain name. Users type this address into their browser to reach your site. A domain is separate from hosting — you register the domain first, then connect it to a hosting service.</p>
+<p>A domain name is your website's address on the internet. For example, <em>veltstack.com</em> is a domain name. Users type this address into their browser to reach your site. A domain is separate from hosting, you register the domain first, then connect it to a hosting service.</p>
 <p>Domains are leased yearly through a registrar.</p>
 
 <div class="blog-analogy">
@@ -219,10 +224,10 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
   <div class="blog-analogy-grid">
     <article class="blog-analogy-item blog-analogy-item--domain">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--domain" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        ${blogAnalogyIcon("domain", BLOG_LUCIDE_MAP_PIN)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">Domain</p>
-          <span class="blog-analogy-item-tag">Domain name · address</span>
+          <span class="blog-analogy-item-tag">Domain name / address</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Like your home's street address. Visitors type it in the browser to find you.</p>
@@ -231,10 +236,10 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
     <div class="blog-analogy-join" aria-hidden="true"><span>+</span></div>
     <article class="blog-analogy-item blog-analogy-item--hosting">
       <div class="blog-analogy-item-head">
-        <span class="blog-analogy-item-icon blog-analogy-item-icon--hosting" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></svg></span>
+        ${blogAnalogyIcon("hosting", BLOG_LUCIDE_SERVER)}
         <div class="blog-analogy-item-meta">
           <p class="blog-analogy-item-label">Hosting</p>
-          <span class="blog-analogy-item-tag">Hosting · the building</span>
+          <span class="blog-analogy-item-tag">Hosting / the building</span>
         </div>
       </div>
       <p class="blog-analogy-item-desc">Like the building and everything inside. Your site files, database and email live here.</p>
@@ -244,7 +249,7 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 </div>
 
 <h2>What Is Hosting?</h2>
-<p>Hosting is the server space where your site files live — HTML, CSS, images, databases. The domain sends visitors to the right address; hosting stores what's inside.</p>
+<p>Hosting is the server space where your site files live, HTML, CSS, images, databases. The domain sends visitors to the right address; hosting stores what's inside.</p>
 <p class="blog-section-lead">Evaluate hosting types against your project scale:</p>
 <div class="blog-type-grid">
   <div class="blog-type-card">
@@ -257,16 +262,16 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
   </div>
   <div class="blog-type-card">
     <h4>Cloud Hosting</h4>
-    <p>Scalable infrastructure. Scale resources on traffic spikes — for teams targeting <strong>high availability</strong>.</p>
+    <p>Scalable infrastructure. Scale resources on traffic spikes, for teams targeting <strong>high availability</strong>.</p>
   </div>
   <div class="blog-type-card">
     <h4>Platform (Vercel, Netlify)</h4>
-    <p>Optimized for Next.js and static sites. Deploy via Git push — <strong>ideal for modern web projects</strong>. See <a href="/blog/vercel-de-yayin">Deploying on Vercel</a>.</p>
+    <p>Optimized for Next.js and static sites. Deploy via Git push, <strong>ideal for modern web projects</strong>. See <a href="/blog/vercel-de-yayin">Deploying on Vercel</a>.</p>
   </div>
 </div>
 
 <figure class="blog-chart">
-  <figcaption>Average monthly hosting costs (Turkey, 2026 — indicative)</figcaption>
+  <figcaption>Average monthly hosting costs (Turkey, 2026, indicative)</figcaption>
   <div class="blog-chart-bars">
     <div class="blog-chart-row">
       <span class="blog-chart-label">Shared</span>
@@ -365,19 +370,19 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 
 <h2>Tips for Choosing a Domain</h2>
 <ul>
-<li>Prefer <strong>.com</strong> when possible — it's the most trusted extension.</li>
+<li>Prefer <strong>.com</strong> when possible, it's the most trusted extension.</li>
 <li>Avoid hyphens; they make names harder to say aloud.</li>
 <li>Skip numbers and special characters.</li>
 <li>If you plan to register a trademark, align the domain with your brand name.</li>
-<li>Renew annually — expired domains can be sold to someone else.</li>
+<li>Renew annually, expired domains can be sold to someone else.</li>
 <li>Enable auto-renewal to avoid losing your domain.</li>
 </ul>
 
 <h2>Where to Get Domain and Hosting</h2>
-<p>Buying both from one provider simplifies management. We use <strong>ixirhost</strong> in our projects — domain registration, DNS, SSL and hosting from a single panel.</p>
+<p>Buying both from one provider simplifies management. We use <strong>ixirhost</strong> in our projects, domain registration, DNS, SSL and hosting from a single panel.</p>
 
 <h2>Conclusion</h2>
-<p>Domain is your address, hosting is your home for content. Both are required to go live. The right name, a reliable provider and DNS setup are enough — contact us if you want help with the process.</p>
+<p>Domain is your address, hosting is your home for content. Both are required to go live. The right name, a reliable provider and DNS setup are enough, contact us if you want help with the process.</p>
 `,
   },
 };

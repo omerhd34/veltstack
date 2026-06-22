@@ -5,9 +5,9 @@ export const blogPostEntry: BlogPostEntry = {
   titleTr: "Vercel'de Yayın",
   titleEn: "Deploying on Vercel",
   excerptTr:
-    "Next.js projelerini Vercel'e nasıl deploy edeceğinizi adım adım anlatıyor; ortam değişkenleri, özel domain ve preview ortamlarını kapsıyoruz.",
+    "Next.js projelerini Vercel'e nasıl deploy edeceğinizi adım adım anlatıyor; ortam değişkenleri, özel domain, preview ortamları ve sık karşılaşılan hataları kapsıyoruz.",
   excerptEn:
-    "A step-by-step guide to deploying Next.js projects on Vercel, covering environment variables, custom domains and preview environments.",
+    "A step-by-step guide to deploying Next.js projects on Vercel, covering environment variables, custom domains, preview environments and common pitfalls.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
   imageUrl: "/images/blog/vercel-de-yayin.png",

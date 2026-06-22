@@ -100,7 +100,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 <p>In this post, we cover the topic from all angles, sharing practical examples, real project experience and measurable results.</p>
 
 <h2>Why Did We Choose This Topic?</h2>
-<p>This is a challenge we frequently encounter in client projects — one that's often solvable with a small configuration change. We set out to create a guide that anyone facing a similar situation can benefit from.</p>
+<p>This is a challenge we frequently encounter in client projects, one that's often solvable with a small configuration change. We set out to create a guide that anyone facing a similar situation can benefit from.</p>
 
 <h2>Technical Details</h2>
 <p>As a team that follows modern web development practices, we approach every topic from both a theoretical and practical perspective, keeping our tools, libraries and processes continuously updated.</p>

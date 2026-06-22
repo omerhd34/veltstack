@@ -5,9 +5,9 @@ export const blogPostEntry: BlogPostEntry = {
   titleTr: "SEO",
   titleEn: "SEO",
   excerptTr:
-    "Arama motoru optimizasyonunun temellerini, türlerini ve uygulanabilir adımlarını kapsamlı bir rehberle paylaşıyoruz.",
+    "Arama motoru optimizasyonunun temellerini, türlerini ve uygulanabilir adımlarını kapsamlı bir rehberle paylaşıyoruz; teknik ve içerik tarafını birlikte ele alıyoruz.",
   excerptEn:
-    "A comprehensive guide to search engine optimization basics, types and actionable steps.",
+    "A comprehensive guide to SEO basics, types and actionable steps, covering both technical foundations and content strategy in one place.",
   category: "SEO",
   categoryEn: "SEO",
   imageUrl: "/images/blog/seo.png",
