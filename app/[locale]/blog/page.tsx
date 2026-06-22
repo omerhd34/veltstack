@@ -2,7 +2,6 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { BlogPageView } from "@/components/pages/blog";
-import { SITE_URL } from "@/lib/constants";
 import { getPathname } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 
@@ -15,7 +14,7 @@ export async function generateMetadata({
 }: BlogPageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blogPage" });
-  const canonical = `${SITE_URL}${getPathname({
+  const canonical = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
     href: "/blog",
   })}`;

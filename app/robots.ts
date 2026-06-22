@@ -1,12 +1,11 @@
-import type { MetadataRoute } from "next"
-import { SITE_URL } from "@/lib/constants"
+import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       { userAgent: "*", allow: "/", disallow: ["/admin/", "/api/admin/"] },
     ],
-    sitemap: `${SITE_URL}/sitemap.xml`,
-    host: SITE_URL,
-  }
+    sitemap: "https://www.veltstack.com/sitemap.xml",
+    host: "https://www.veltstack.com",
+  };
 }

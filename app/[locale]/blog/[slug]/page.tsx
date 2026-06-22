@@ -9,7 +9,6 @@ import { BlogArticleBody } from "@/components/pages/blog-detail/BlogArticleBody"
 import { BlogDetailHero } from "@/components/pages/blog-detail/BlogDetailHero";
 import { blogPosts, formatDate } from "@/components/pages/blog/blog-data";
 import { getBlogArticleContent } from "@/components/pages/blog/blog-articles";
-import { SITE_URL } from "@/lib/constants";
 import { toLatinUppercase } from "@/lib/utils";
 import { getPathname } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -31,7 +30,7 @@ export async function generateMetadata({
 
   const title = locale === "tr" ? post.titleTr : post.titleEn;
   const desc = locale === "tr" ? post.excerptTr : post.excerptEn;
-  const canonical = `${SITE_URL}${getPathname({
+  const canonical = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
     href: `/blog/${slug}`,
   })}`;
@@ -45,7 +44,7 @@ export async function generateMetadata({
       description: desc,
       type: "article",
       locale: locale === "tr" ? "tr_TR" : "en_US",
-      images: post.imageUrl ? [{ url: `${SITE_URL}${post.imageUrl}` }] : [],
+      images: post.imageUrl ? [{ url: `https://www.veltstack.com${post.imageUrl}` }] : [],
     },
   };
 }
@@ -66,8 +65,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const date = formatDate(post.publishedAt, loc);
   const readingTime = t("readingTime", { minutes: post.readingTime });
 
-  const blogUrl = `${SITE_URL}${getPathname({ locale: loc, href: "/blog" })}`;
-  const postUrl = `${SITE_URL}${getPathname({ locale: loc, href: `/blog/${slug}` })}`;
+  const blogUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: "/blog" })}`;
+  const postUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: `/blog/${slug}` })}`;
 
   // Related posts (same category, excluding current)
   const relatedPosts = blogPosts
@@ -119,7 +118,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
     <>
       <BreadcrumbSchema
         items={[
-          { name: loc === "tr" ? "Ana Sayfa" : "Home", url: SITE_URL },
+          { name: loc === "tr" ? "Ana Sayfa" : "Home", url: "https://www.veltstack.com" },
           { name: "Blog", url: blogUrl },
           { name: title, url: postUrl },
         ]}
@@ -158,7 +157,9 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           <SiteContainer>
             <div className="flex items-center gap-4">
               <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold tracking-[0.18em] text-brand-accent">
-                {toLatinUppercase(loc === "tr" ? "İlgili Yazılar" : "Related Posts")}
+                {toLatinUppercase(
+                  loc === "tr" ? "İlgili Yazılar" : "Related Posts",
+                )}
               </span>
               <div className="h-px flex-1 bg-border/60" />
             </div>

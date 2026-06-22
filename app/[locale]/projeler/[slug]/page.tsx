@@ -8,9 +8,7 @@ import {
 } from "@/components/pages/project-detail/ProjectDetailView";
 import { BreadcrumbSchema } from "@/components/seo";
 import { getPathname } from "@/i18n/navigation";
-import { SITE_URL } from "@/lib/constants";
 import type { Locale } from "@/i18n/routing";
-
 interface ProjectDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
@@ -29,7 +27,7 @@ export async function generateMetadata({
   if (!validateProjectSlug(slug)) return {};
 
   const t = await getTranslations({ locale, namespace: "projectDetails" });
-  const canonical = `${SITE_URL}${getPathname({
+  const canonical = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
     href: `/projeler/${slug}`,
   })}`;
@@ -56,11 +54,11 @@ export default async function ProjectDetailPage({
   if (!validateProjectSlug(slug)) notFound();
 
   const t = await getTranslations("projectDetails");
-  const projectUrl = `${SITE_URL}${getPathname({
+  const projectUrl = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
     href: `/projeler/${slug}`,
   })}`;
-  const projectsUrl = `${SITE_URL}${getPathname({
+  const projectsUrl = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
     href: "/projeler",
   })}`;
@@ -69,7 +67,7 @@ export default async function ProjectDetailPage({
     <>
       <BreadcrumbSchema
         items={[
-          { name: t("breadcrumbHome"), url: SITE_URL },
+          { name: t("breadcrumbHome"), url: "https://www.veltstack.com" },
           { name: t("breadcrumbProjects"), url: projectsUrl },
           { name: t(`${slug}.heroTitle`), url: projectUrl },
         ]}

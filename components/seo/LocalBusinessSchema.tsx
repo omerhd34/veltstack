@@ -1,17 +1,16 @@
-import { SITE_NAME, SITE_URL } from "@/lib/constants"
-
 interface LocalBusinessSchemaProps {
-  className?: string
+  className?: string;
 }
 
 export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: SITE_NAME,
-    url: SITE_URL,
-    description: "Full Stack Developer — kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
-  }
+    name: "Veltstack",
+    url: "https://www.veltstack.com",
+    description:
+      "Full Stack Developer — kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
+  };
 
   return (
     <script
@@ -19,5 +18,5 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
       className={className}
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
-  )
+  );
 }

@@ -6,13 +6,8 @@ import {
   getServiceStaticSlugs,
   isServiceSlug,
 } from "@/components/pages/service-detail";
-import {
-  BreadcrumbSchema,
-  FAQSchema,
-  ServiceSchema,
-} from "@/components/seo";
+import { BreadcrumbSchema, FAQSchema, ServiceSchema } from "@/components/seo";
 import { getPathname } from "@/i18n/navigation";
-import { SITE_URL } from "@/lib/constants";
 import type { Locale } from "@/i18n/routing";
 
 interface ServiceDetailPageProps {
@@ -33,7 +28,7 @@ export async function generateMetadata({
   if (!isServiceSlug(slug)) return {};
 
   const t = await getTranslations({ locale, namespace: "serviceDetails" });
-  const canonical = `${SITE_URL}${getPathname({
+  const canonical = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
     href: `/hizmetler/${slug}`,
   })}`;
@@ -61,11 +56,11 @@ export default async function ServiceDetailPage({
 
   const t = await getTranslations("serviceDetails");
   const faq = t.raw(`${slug}.faq`) as { question: string; answer: string }[];
-  const serviceUrl = `${SITE_URL}${getPathname({
+  const serviceUrl = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
     href: `/hizmetler/${slug}`,
   })}`;
-  const servicesUrl = `${SITE_URL}${getPathname({
+  const servicesUrl = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
     href: "/hizmetler",
   })}`;
@@ -74,7 +69,7 @@ export default async function ServiceDetailPage({
     <>
       <BreadcrumbSchema
         items={[
-          { name: t("breadcrumbHome"), url: SITE_URL },
+          { name: t("breadcrumbHome"), url: "https://www.veltstack.com" },
           { name: t("breadcrumbServices"), url: servicesUrl },
           { name: t(`${slug}.heroTitle`), url: serviceUrl },
         ]}
