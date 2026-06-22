@@ -46,7 +46,7 @@ export function HeroImage({ alt = "", className }: HeroImageProps) {
           alt={alt}
           fetchPriority="high"
           decoding="async"
-          className="h-full w-full object-cover object-center max-sm:object-[center_38%] md:object-[center_32%]"
+          className="h-full w-full object-cover object-center max-sm:object-[center_38%] md:object-[62%_32%]"
         />
       </picture>
       <div
@@ -54,7 +54,11 @@ export function HeroImage({ alt = "", className }: HeroImageProps) {
         aria-hidden
       />
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_55%_50%_at_50%_42%,rgb(10_10_15/0.58),transparent_72%)] max-md:bg-[radial-gradient(ellipse_85%_58%_at_50%_40%,rgb(10_10_15/0.68),transparent_78%)]"
+        className="absolute inset-0 bg-[linear-gradient(to_right,rgb(10_10_15/0.82)_0%,rgb(10_10_15/0.45)_42%,transparent_68%)]"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_55%_50%_at_28%_42%,rgb(10_10_15/0.55),transparent_72%)] max-md:bg-[radial-gradient(ellipse_85%_58%_at_22%_40%,rgb(10_10_15/0.65),transparent_78%)]"
         aria-hidden
       />
     </div>
