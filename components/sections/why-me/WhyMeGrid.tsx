@@ -11,7 +11,7 @@ export async function WhyMeGrid({ className }: WhyMeGridProps) {
 
   return (
     <div
-      className={`grid gap-5 sm:grid-cols-2 lg:grid-cols-3 ${className ?? ""}`}
+      className={`grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:items-start ${className ?? ""}`}
     >
       {whyMeItems.map((item, index) => (
         <WhyMeCard

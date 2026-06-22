@@ -156,7 +156,7 @@ export function WhyMeCarousel({
             return (
               <div
                 key={item.id}
-                className="min-w-0 shrink-0"
+                className="flex min-w-0 shrink-0"
                 style={{ width: cardWidth > 0 ? cardWidth : undefined }}
               >
                 <WhyMeCard

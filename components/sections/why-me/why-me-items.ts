@@ -1,11 +1,11 @@
 import type { IconType } from "react-icons";
 import {
-  LuEye,
-  LuLifeBuoy,
-  LuPalette,
-  LuTarget,
-  LuUserRound,
-  LuZap,
+  LuChartLine,
+  LuContact,
+  LuHeadset,
+  LuLayoutTemplate,
+  LuListChecks,
+  LuRocket,
 } from "react-icons/lu";
 
 export interface WhyMeItemConfig {
@@ -18,31 +18,31 @@ export const whyMeItems: WhyMeItemConfig[] = [
   {
     titleKey: "whyMeSingleTitle",
     descKey: "whyMeSingleDesc",
-    icon: LuUserRound,
+    icon: LuContact,
   },
   {
     titleKey: "whyMeFastTitle",
     descKey: "whyMeFastDesc",
-    icon: LuZap,
+    icon: LuRocket,
   },
   {
     titleKey: "whyMeSupportTitle",
     descKey: "whyMeSupportDesc",
-    icon: LuLifeBuoy,
+    icon: LuHeadset,
   },
   {
     titleKey: "whyMeTransparentTitle",
     descKey: "whyMeTransparentDesc",
-    icon: LuEye,
+    icon: LuListChecks,
   },
   {
     titleKey: "whyMeMeasurableTitle",
     descKey: "whyMeMeasurableDesc",
-    icon: LuTarget,
+    icon: LuChartLine,
   },
   {
     titleKey: "whyMeUxTitle",
     descKey: "whyMeUxDesc",
-    icon: LuPalette,
+    icon: LuLayoutTemplate,
   },
 ];

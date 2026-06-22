@@ -1,4 +1,7 @@
 import type { IconType } from "react-icons";
+import { BorderTrace } from "@/components/ui/BorderTrace";
+import { CardIndexNumber } from "@/components/ui/CardIndexNumber";
+import { cn } from "@/lib/utils";
 
 interface WhyMeCardProps {
   title: string;
@@ -7,6 +10,9 @@ interface WhyMeCardProps {
   index: number;
 }
 
+const slowTransition =
+  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
+
 export function WhyMeCard({
   title,
   description,
@@ -14,30 +20,39 @@ export function WhyMeCard({
   index,
 }: WhyMeCardProps) {
   return (
-    <div className="group relative flex h-full min-h-56 flex-col overflow-hidden rounded-2xl border border-white/8 bg-white/4 p-7 transition-all duration-300 hover:border-brand-accent/40 hover:bg-white/7 hover:shadow-[0_16px_48px_rgb(0,0,0,0.3)]">
-      <span
-        aria-hidden
-        className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-brand-accent transition-transform duration-500 group-hover:scale-x-100"
-      />
+    <div
+      className={cn(
+        "group relative flex flex-col rounded-2xl bg-white/4 p-6",
+        "border-trace-hover-fallback box-border border-2 border-solid border-[#8aab99]",
+        "hover:-translate-y-1 hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
+        slowTransition,
+      )}
+    >
+      <BorderTrace />
+      <CardIndexNumber index={index} theme="dark" />
 
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-brand-accent/25 bg-brand-accent/12 text-brand-accent transition-colors group-hover:border-brand-accent/50 group-hover:bg-brand-accent/20">
-          <Icon className="size-5" strokeWidth={1.75} aria-hidden />
-        </div>
-        <span
-          aria-hidden
-          className="font-mono text-xs font-bold tracking-widest text-white/15 transition-colors group-hover:text-brand-accent/40"
+      <div className="flex gap-4">
+        <div
+          className={cn(
+            "flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 group-hover:scale-110 group-hover:bg-brand-accent group-hover:text-brand-accent-foreground group-hover:ring-brand-accent/50",
+            slowTransition,
+          )}
         >
-          {String(index).padStart(2, "0")}
-        </span>
+          <Icon
+            className={cn("size-6", slowTransition)}
+            strokeWidth={1.75}
+            aria-hidden
+          />
+        </div>
+        <div className="flex min-w-0 flex-1 flex-col">
+          <h3 className="pr-10 font-(family-name:--font-heading) text-xl font-bold leading-snug tracking-tight text-white">
+            {title}
+          </h3>
+          <p className="mt-2 h-[calc(0.9375rem*1.7*3)] text-[0.9375rem] leading-[1.7] text-white/50">
+            {description}
+          </p>
+        </div>
       </div>
-
-      <h3 className="mt-5 font-(family-name:--font-heading) text-lg font-bold leading-tight tracking-tight text-white md:text-xl">
-        {title}
-      </h3>
-      <p className="mt-3 flex-1 text-sm leading-[1.8] text-white/50">
-        {description}
-      </p>
     </div>
   );
 }
