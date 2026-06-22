@@ -1,0 +1,66 @@
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes mega-menu-panel-unfold {
+  0% {
+    opacity: 0;
+    transform: perspective(1400px) rotateX(-18deg) translateY(-28px) scale(0.94);
+  }
+  55% {
+    opacity: 1;
+    transform: perspective(1400px) rotateX(4deg) translateY(6px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1400px) rotateX(0deg) translateY(0) scale(1);
+  }
+}
+
+@keyframes mega-menu-intro-reveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-36px) skewX(-6deg);
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) skewX(0deg);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes mega-menu-card-pop {
+  0% {
+    opacity: 0;
+    transform: translate(var(--mega-x, 0), var(--mega-y, 32px))
+      rotate(var(--mega-r, 0deg)) scale(0.78);
+  }
+  65% {
+    opacity: 1;
+    transform: translate(0, -6px) rotate(0deg) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes mega-menu-accent-sweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scaleX(0);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(1);
+  }
+}

@@ -1,0 +1,25 @@
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-marquee-scroll,
+  .animate-services-marquee {
+    animation: none;
+  }
+
+  .navbar-mega-menu-panel,
+  .navbar-mega-menu-panel::before,
+  .navbar-mega-menu-panel[data-state="open"] .mega-menu-intro,
+  .navbar-mega-menu-panel[data-state="open"] .mega-menu-card {
+    animation: none !important;
+    transition: none !important;
+    filter: none !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+
+  .navbar-mega-menu-panel[data-state="closed"] {
+    display: none;
+  }
+}

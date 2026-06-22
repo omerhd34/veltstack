@@ -1,0 +1,242 @@
+@layer components {
+  .blog-prose .blog-table-wrap {
+    @apply my-10 overflow-x-auto overflow-y-hidden rounded-2xl border border-border/60 bg-card p-0 shadow-[0_4px_24px_rgb(0_0_0/0.05)];
+  }
+
+  .blog-prose .blog-table-wrap table {
+    @apply m-0 border-collapse text-sm;
+  }
+
+  .blog-prose .blog-table-wrap thead {
+    @apply bg-brand-accent/[0.07];
+  }
+
+  .blog-prose .blog-table-wrap th {
+    @apply border-b border-brand-accent/20 text-left text-[0.8125rem] font-semibold text-foreground/80;
+    padding: 1rem 1.5rem !important;
+  }
+
+  .blog-prose .blog-table-wrap td {
+    @apply border-b border-border/40 align-top leading-relaxed text-foreground/75 transition-colors duration-200;
+    padding: 1rem 1.5rem !important;
+  }
+
+  @media (min-width: 640px) {
+    .blog-prose .blog-table-wrap th {
+      padding: 1.125rem 1.75rem !important;
+    }
+
+    .blog-prose .blog-table-wrap td {
+      padding: 1.125rem 1.75rem !important;
+    }
+  }
+
+  .blog-prose .blog-table-wrap tbody tr:last-child td,
+  .blog-prose .blog-table-wrap tbody tr.blog-table-row-last-visible td {
+    @apply border-b-0;
+  }
+
+  .blog-prose .blog-table-expandable {
+    @apply my-10;
+  }
+
+  .blog-prose .blog-table-expandable .blog-table-wrap--expandable {
+    @apply mb-0 rounded-b-none border-b-0 shadow-none;
+  }
+
+  .blog-prose .blog-table-expand-btn {
+    @apply w-full rounded-b-2xl border border-t-0 border-border/60 bg-card px-4 py-3.5 text-sm font-semibold text-brand-accent shadow-[0_4px_24px_rgb(0_0_0/0.05)] transition-colors hover:bg-brand-accent/5;
+  }
+
+  .blog-prose .blog-table-expand-btn:focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-accent;
+  }
+
+  .blog-prose .blog-table-expand-btn[hidden] {
+    display: none;
+  }
+
+  .blog-prose .blog-table-wrap tbody tr:hover td {
+    @apply bg-brand-accent/4;
+  }
+
+  .blog-prose .blog-table-wrap td strong {
+    @apply font-semibold text-foreground;
+  }
+
+  /* Karşılaştırma tablosu (Özellik | A | B) */
+  .blog-prose .blog-table-compare thead {
+    @apply bg-transparent;
+  }
+
+  .blog-prose .blog-table-compare table {
+    @apply w-full table-fixed;
+  }
+
+  .blog-prose .blog-table-compare-col-feature {
+    width: 34%;
+  }
+
+  .blog-prose .blog-table-compare-col-domain,
+  .blog-prose .blog-table-compare-col-hosting {
+    width: 33%;
+  }
+
+  .blog-prose .blog-table-compare thead th {
+    @apply border-b-0 font-(family-name:--font-heading) text-[0.8125rem] tracking-tight;
+    padding: 0.875rem 1.25rem !important;
+  }
+
+  .blog-prose .blog-table-compare thead th:first-child {
+    @apply bg-muted/40 text-foreground;
+    padding: 0.875rem 1.25rem 0.875rem 1.75rem !important;
+  }
+
+  .blog-prose .blog-table-compare thead th:nth-child(2) {
+    @apply border-b-2 border-brand-accent/35 bg-brand-accent/10 text-brand-accent;
+  }
+
+  .blog-prose .blog-table-compare thead th:nth-child(3) {
+    @apply border-b-2 border-emerald-600/30 bg-emerald-600/8 text-emerald-800;
+  }
+
+  .blog-prose .blog-table-compare tbody td {
+    padding: 0.875rem 1.25rem !important;
+  }
+
+  .blog-prose .blog-table-compare th:first-child,
+  .blog-prose .blog-table-compare td:first-child {
+    @apply border-r border-border/45 bg-muted/15 font-medium text-foreground/90;
+    padding: 0.875rem 1.25rem 0.875rem 1.75rem !important;
+  }
+
+  .blog-prose .blog-table-compare td:nth-child(2) {
+    @apply bg-brand-accent/3 text-foreground/80;
+  }
+
+  .blog-prose .blog-table-compare td:nth-child(3) {
+    @apply bg-emerald-600/3 text-foreground/80;
+  }
+
+  @media (min-width: 640px) {
+    .blog-prose .blog-table-compare thead th,
+    .blog-prose .blog-table-compare tbody td {
+      padding-block: 1rem !important;
+    }
+
+    .blog-prose .blog-table-compare thead th:first-child,
+    .blog-prose .blog-table-compare th:first-child,
+    .blog-prose .blog-table-compare td:first-child {
+      padding-inline: 1.75rem 1.5rem !important;
+    }
+
+    .blog-prose .blog-table-compare thead th:last-child,
+    .blog-prose .blog-table-compare td:last-child {
+      padding-inline: 1.5rem 1.75rem !important;
+    }
+  }
+
+  .blog-prose .blog-table-compare tbody tr:nth-child(even) td:first-child {
+    @apply bg-muted/25;
+  }
+
+  .blog-prose .blog-table-compare tbody tr:nth-child(even) td:nth-child(2) {
+    @apply bg-brand-accent/6;
+  }
+
+  .blog-prose .blog-table-compare tbody tr:nth-child(even) td:nth-child(3) {
+    @apply bg-emerald-600/6;
+  }
+
+  .blog-prose .blog-table-compare tbody tr:hover td:first-child {
+    @apply bg-brand-accent/10;
+  }
+
+  .blog-prose .blog-table-compare tbody tr:hover td:nth-child(2) {
+    @apply bg-brand-accent/8;
+  }
+
+  .blog-prose .blog-table-compare tbody tr:hover td:nth-child(3) {
+    @apply bg-emerald-600/10;
+  }
+
+  /* Veri tablosu (tür | fiyat | açıklama) */
+  .blog-prose .blog-table-data table {
+    @apply w-full min-w-lg;
+  }
+
+  .blog-prose .blog-table-data th:first-child,
+  .blog-prose .blog-table-data td:first-child {
+    @apply min-w-36;
+    padding: 1rem 1.25rem 1rem 1.75rem !important;
+  }
+
+  .blog-prose .blog-table-data th:last-child,
+  .blog-prose .blog-table-data td:last-child {
+    padding: 1rem 1.75rem 1rem 1.25rem !important;
+  }
+
+  .blog-prose .blog-table-data th:nth-child(2),
+  .blog-prose .blog-table-data td:nth-child(2) {
+    @apply min-w-32;
+    padding: 1rem 1.25rem !important;
+  }
+
+  @media (min-width: 640px) {
+    .blog-prose .blog-table-data th:first-child,
+    .blog-prose .blog-table-data td:first-child {
+      padding: 1.125rem 1.5rem 1.125rem 2rem !important;
+    }
+
+    .blog-prose .blog-table-data th:last-child,
+    .blog-prose .blog-table-data td:last-child {
+      padding: 1.125rem 2rem 1.125rem 1.5rem !important;
+    }
+  }
+
+  .blog-prose .blog-table-price {
+    @apply mx-auto max-w-3xl;
+  }
+
+  .blog-prose .blog-table-price table {
+    @apply table-fixed w-full min-w-0;
+  }
+
+  .blog-prose .blog-table-price th:first-child,
+  .blog-prose .blog-table-price td:first-child {
+    @apply w-[34%] whitespace-normal;
+    padding: 1rem 1.25rem 1rem 1.75rem !important;
+  }
+
+  .blog-prose .blog-table-price th:nth-child(2),
+  .blog-prose .blog-table-price td:nth-child(2) {
+    @apply w-[18%] text-center align-middle;
+    padding: 1rem 1rem !important;
+  }
+
+  .blog-prose .blog-table-price th:nth-child(3),
+  .blog-prose .blog-table-price td:nth-child(3) {
+    @apply w-[48%];
+    padding: 1rem 1.75rem 1rem 1.25rem !important;
+  }
+
+  @media (min-width: 640px) {
+    .blog-prose .blog-table-price th:first-child,
+    .blog-prose .blog-table-price td:first-child {
+      padding: 1.125rem 1.5rem 1.125rem 2rem !important;
+    }
+
+    .blog-prose .blog-table-price th:nth-child(3),
+    .blog-prose .blog-table-price td:nth-child(3) {
+      padding: 1.125rem 2rem 1.125rem 1.5rem !important;
+    }
+  }
+
+  .blog-prose .blog-table-price td:nth-child(2) {
+    @apply font-(family-name:--font-heading) text-base font-bold tabular-nums text-brand-accent;
+  }
+
+  .blog-prose .blog-table-data tbody tr:nth-child(even) {
+    @apply bg-muted/10;
+  }
+}

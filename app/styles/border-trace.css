@@ -1,0 +1,34 @@
+@layer components {
+  .border-trace-path {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+
+  .border-trace-path.border-trace-animate {
+    animation: card-border-trace var(--border-trace-duration, 3s) linear 1
+      forwards;
+  }
+
+  @keyframes card-border-trace {
+    0% {
+      stroke-dashoffset: 1;
+      opacity: 1;
+    }
+
+    88% {
+      stroke-dashoffset: 0.12;
+      opacity: 1;
+    }
+
+    100% {
+      stroke-dashoffset: 0.12;
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .border-trace-hover-fallback:hover {
+      border-color: var(--brand-accent) !important;
+    }
+  }
+}
