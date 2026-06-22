@@ -3,7 +3,7 @@ import type { BlogPostEntry } from "./types";
 export const blogPostEntry: BlogPostEntry = {
   slug: "geleneksel-yazilim-yapay-zeka",
   titleTr: "Geleneksel Yazılım | Yapay Zeka (AI)",
-  titleEn: "Traditional Software | Artificial Intelligence (AI)",
+  titleEn: "Traditional Software | AI",
   excerptTr:
     "Kaliteli yazılımda insan geliştiricinin kod yazmasının neden şart olduğunu; AI'ın yardımcı araç olarak sınırlarını ve doğru yaklaşımı anlatıyoruz.",
   excerptEn:
@@ -51,7 +51,7 @@ export const blogPostEntry: BlogPostEntry = {
         </div>
       </div>
       <p class="blog-analogy-item-desc">Tecrübeli bir stajyer gibidir: hızlı fikir verir, taslak çıkarır; ancak nihai karar ve imza ustada kalmalıdır.</p>
-      <span class="blog-analogy-item-example">Copilot, ChatGPT</span>
+      <span class="blog-analogy-item-example">Cursor & Claude</span>
     </article>
     <div class="blog-analogy-join" aria-hidden="true"><span>→</span></div>
     <article class="blog-analogy-item blog-analogy-item--domain">
@@ -63,7 +63,7 @@ export const blogPostEntry: BlogPostEntry = {
         </div>
       </div>
       <p class="blog-analogy-item-desc">Mimar ve mühendis gibidir: sistemi tasarlar, kodu yazar, inceler, test eder ve canlıya alır.</p>
-      <span class="blog-analogy-item-example">Senior Developer</span>
+      <span class="blog-analogy-item-example">Geliştirici (Developer)</span>
     </article>
   </div>
 </div>
@@ -164,7 +164,7 @@ export const blogPostEntry: BlogPostEntry = {
         </div>
       </div>
       <p class="blog-analogy-item-desc">Like a skilled intern: fast drafts and ideas; final decisions and signature stay with the master.</p>
-      <span class="blog-analogy-item-example">Copilot, ChatGPT</span>
+      <span class="blog-analogy-item-example">Cursor & Claude</span>
     </article>
     <div class="blog-analogy-join" aria-hidden="true"><span>→</span></div>
     <article class="blog-analogy-item blog-analogy-item--domain">
@@ -176,7 +176,7 @@ export const blogPostEntry: BlogPostEntry = {
         </div>
       </div>
       <p class="blog-analogy-item-desc">Like an architect and engineer: designs the system, writes code, reviews, tests and ships.</p>
-      <span class="blog-analogy-item-example">Senior Developer</span>
+      <span class="blog-analogy-item-example">Developer</span>
     </article>
   </div>
 </div>

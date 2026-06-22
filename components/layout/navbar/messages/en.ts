@@ -15,5 +15,7 @@ export const navEn = {
   "blogAll": "All Articles",
   "about": "About Us",
   "contact": "Contact",
-  "cta": "Let's Talk"
+  "cta": "Let's Talk",
+  "switchToEn": "Switch to English",
+  "switchToTr": "Switch to Turkish"
 } as const

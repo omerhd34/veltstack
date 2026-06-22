@@ -1,10 +1,20 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
-const LOCALES = ["tr", "en"] as const;
+const LOCALE_FLAGS = {
+  tr: {
+    src: "/images/language/turkey.png",
+    alt: "Türkçe",
+  },
+  en: {
+    src: "/images/language/united-kingdom.png",
+    alt: "English",
+  },
+} as const;
 
 interface NavbarLangSwitcherProps {
   className?: string;
@@ -13,39 +23,28 @@ interface NavbarLangSwitcherProps {
 export function NavbarLangSwitcher({ className }: NavbarLangSwitcherProps) {
   const locale = useLocale();
   const pathname = usePathname();
+  const tNav = useTranslations("nav");
+
+  const nextLocale = locale === "tr" ? "en" : "tr";
+  const flag = LOCALE_FLAGS[locale as keyof typeof LOCALE_FLAGS];
 
   return (
-    <div
+    <Link
+      href={pathname}
+      locale={nextLocale}
       className={cn(
-        "relative inline-grid grid-cols-2 rounded-full border border-border bg-muted/60 p-0.5",
+        "inline-flex size-9 shrink-0 items-center justify-center rounded-full transition-opacity hover:opacity-80 active:scale-95",
         className,
       )}
-      role="group"
-      aria-label="Dil seçimi"
+      aria-label={nextLocale === "en" ? tNav("switchToEn") : tNav("switchToTr")}
     >
-      <span
-        aria-hidden
-        className={cn(
-          "pointer-events-none absolute top-0.5 bottom-0.5 left-0.5 w-[calc(50%-2px)] rounded-full bg-background shadow-sm ring-1 ring-border/50 transition-transform duration-200 ease-out",
-          locale === "en" && "translate-x-full",
-        )}
+      <Image
+        src={flag.src}
+        alt={flag.alt}
+        width={32}
+        height={32}
+        className="size-8 rounded-full object-cover ring-1 ring-border/60"
       />
-      {LOCALES.map((code) => (
-        <Link
-          key={code}
-          href={pathname}
-          locale={code}
-          className={cn(
-            "relative z-10 inline-flex min-w-9 items-center justify-center rounded-full px-3 py-1 text-xs tracking-wide transition-colors",
-            locale === code
-              ? "font-semibold text-foreground"
-              : "font-medium text-muted-foreground hover:text-foreground/75",
-          )}
-          aria-current={locale === code ? "true" : undefined}
-        >
-          {code.toUpperCase()}
-        </Link>
-      ))}
-    </div>
+    </Link>
   );
 }

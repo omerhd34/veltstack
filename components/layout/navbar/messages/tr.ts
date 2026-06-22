@@ -16,4 +16,6 @@ export const navTr = {
   about: "Hakkımızda",
   contact: "İletişim",
   cta: "Proje Konuşalım",
+  switchToEn: "İngilizce'ye geç",
+  switchToTr: "Türkçe'ye geç",
 } as const;
