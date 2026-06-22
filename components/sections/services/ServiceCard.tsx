@@ -41,19 +41,13 @@ export function ServiceCard({
       className={cn(
         "group relative flex h-full flex-col overflow-hidden rounded-2xl bg-card transition-all duration-300",
         isSlide
-          ? "box-border min-h-68 border-2 border-solid border-[#8aab99]! bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:-translate-y-1 hover:border-brand-accent! hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]"
+          ? "box-border min-h-68 border-2 border-solid border-[#8aab99] bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] transition-[border-color,box-shadow,transform] hover:-translate-y-1 hover:border-brand-accent hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]"
           : cn(
-              "border border-solid border-border hover:-translate-y-0.5 hover:border-brand-accent! hover:shadow-lg",
+              "border border-solid border-border transition-[border-color,box-shadow,transform] hover:-translate-y-0.5 hover:border-brand-accent hover:shadow-lg",
               compact ? "p-4" : "p-6",
             ),
       )}
     >
-      {isSlide ? (
-        <span
-          aria-hidden
-          className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-brand-accent transition-transform duration-300 group-hover:scale-x-100"
-        />
-      ) : null}
       {numbered && index != null ? (
         <span
           aria-hidden
@@ -126,7 +120,7 @@ export function ServiceCard({
       ) : tag ? (
         <div
           className={cn(
-            "mt-auto flex items-center justify-between gap-3 border-t-2 border-solid border-t-[#8aab99]!",
+            "mt-auto flex items-center justify-between gap-3 border-t-2 border-solid border-t-[#8aab99] transition-colors group-hover:border-brand-accent",
             compact ? "mt-3 pt-3" : isSlide ? "mt-6 pt-5" : "mt-5 pt-0",
           )}
         >
