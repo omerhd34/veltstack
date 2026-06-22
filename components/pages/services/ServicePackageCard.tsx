@@ -1,7 +1,7 @@
 "use client";
 
 import type { IconType } from "react-icons";
-import { LuArrowRight, LuChevronDown, LuCircleCheck } from "react-icons/lu";
+import { LuChevronDown, LuCircleCheck, LuMessageCircle } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import type { PackageTier } from "./packages-config";
 import { cn } from "@/lib/utils";
@@ -232,8 +232,8 @@ export function ServicePackageCard({
           href="/iletisim"
           className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-brand-accent to-emerald-500 text-sm font-semibold text-white transition-all duration-300 hover:brightness-110 hover:shadow-[0_4px_24px_rgb(58_107_82/0.4)]"
         >
+          <LuMessageCircle className="size-4" aria-hidden />
           {labels.getQuote}
-          <LuArrowRight className="size-4" />
         </Link>
       </div>
     </article>

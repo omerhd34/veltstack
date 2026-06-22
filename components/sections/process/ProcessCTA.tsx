@@ -1,4 +1,4 @@
-import { LuArrowRight } from "react-icons/lu"
+import { LuMessageCircle } from "react-icons/lu"
 import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/shadcn"
 
@@ -10,8 +10,8 @@ export function ProcessCTA({ label }: ProcessCTAProps) {
   return (
     <Button size="lg" className="rounded-full px-8" asChild>
       <Link href="/iletisim">
+        <LuMessageCircle className="size-4" aria-hidden />
         {label}
-        <LuArrowRight className="size-4" />
       </Link>
     </Button>
   )

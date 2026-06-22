@@ -1,7 +1,6 @@
-import { LuArrowRight } from "react-icons/lu";
+import { LuEye } from "react-icons/lu";
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
-import { Button } from "@/components/ui/shadcn";
+import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 
 interface ProjectsIntroProps {
   className?: string;
@@ -32,16 +31,14 @@ export async function ProjectsIntro({ className }: ProjectsIntroProps) {
         {t("projectsIntro")}
       </p>
 
-      <Button
-        size="lg"
-        className="mt-8 h-12 gap-2 rounded-full bg-[#0A0A0F] px-8 text-base text-white hover:bg-[#0A0A0F]/85"
-        asChild
+      <PrimaryCtaLink
+        href="/projeler"
+        className="mt-8"
+        showArrow={false}
+        leadingIcon={<LuEye className="size-5" aria-hidden />}
       >
-        <Link href="/projeler">
-          {t("projectsCta")}
-          <LuArrowRight className="size-4" />
-        </Link>
-      </Button>
+        {t("projectsCta")}
+      </PrimaryCtaLink>
     </div>
   );
 }

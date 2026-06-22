@@ -1,7 +1,6 @@
+import { LuEye, LuMessageCircle } from "react-icons/lu";
 import { getTranslations } from "next-intl/server";
-import { LuArrowRight } from "react-icons/lu";
-import { Link } from "@/i18n/navigation";
-import { Button } from "@/components/ui/shadcn";
+import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 
 interface CTASectionProps {
@@ -39,22 +38,23 @@ export async function CTASection({ className }: CTASectionProps) {
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Button
-              size="lg"
-              className="h-13 gap-2 rounded-full bg-brand-accent px-10 text-base font-semibold text-white hover:bg-brand-accent/85"
-              asChild
+            <PrimaryCtaLink
+              href="/iletisim"
+              variant="accent"
+              className="h-13 px-10"
+              showArrow={false}
+              leadingIcon={<LuMessageCircle className="size-5" aria-hidden />}
             >
-              <Link href="/iletisim">
-                {t("ctaButton")}
-                <LuArrowRight className="size-4" />
-              </Link>
-            </Button>
-            <Link
+              {t("ctaButton")}
+            </PrimaryCtaLink>
+            <PrimaryCtaLink
               href="/projeler"
-              className="text-sm font-medium text-white/50 transition-colors hover:text-white/80"
+              className="ring-1 ring-white/20"
+              showArrow={false}
+              leadingIcon={<LuEye className="size-5" aria-hidden />}
             >
-              Projeleri İncele →
-            </Link>
+              {t("ctaSecondary")}
+            </PrimaryCtaLink>
           </div>
         </div>
       </SiteContainer>

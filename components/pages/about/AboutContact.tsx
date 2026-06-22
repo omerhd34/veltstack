@@ -1,7 +1,7 @@
 import {
-  LuArrowRight,
   LuMail,
   LuMapPin,
+  LuMessageCircle,
   LuPhone,
 } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
@@ -20,7 +20,7 @@ interface AboutContactProps {
   className?: string;
 }
 
-const contactIcons = [LuPhone, LuMail, LuMapPin, LuArrowRight] as const;
+const contactIcons = [LuPhone, LuMail, LuMapPin, LuMessageCircle] as const;
 
 export function AboutContact({
   badge,

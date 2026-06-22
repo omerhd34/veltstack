@@ -1,4 +1,4 @@
-import { LuArrowRight } from "react-icons/lu";
+import { LuMessageCircle } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/shadcn";
 import { SiteContainer } from "@/components/layout/SiteContainer";
@@ -41,8 +41,8 @@ export function ServicesPageCTA({
               asChild
             >
               <Link href="/iletisim">
+                <LuMessageCircle className="size-4" aria-hidden />
                 {buttonLabel}
-                <LuArrowRight className="size-4" />
               </Link>
             </Button>
             <span className="text-sm text-white/40">{note}</span>

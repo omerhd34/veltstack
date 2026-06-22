@@ -1,23 +1,24 @@
-import { LuArrowRight } from "react-icons/lu"
-import { Link } from "@/i18n/navigation"
-import { buttonVariants } from "@/components/ui/shadcn/button"
-import { cn } from "@/lib/utils"
+import { LuEye } from "react-icons/lu";
+import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
+import { cn } from "@/lib/utils";
 
 interface BlogPreviewMoreButtonProps {
-  label: string
+  label: string;
+  className?: string;
 }
 
-export function BlogPreviewMoreButton({ label }: BlogPreviewMoreButtonProps) {
+export function BlogPreviewMoreButton({
+  label,
+  className,
+}: BlogPreviewMoreButtonProps) {
   return (
-    <Link
+    <PrimaryCtaLink
       href="/blog"
-      className={cn(
-        buttonVariants({ variant: "outline", size: "lg" }),
-        "mt-10 gap-2 rounded-full px-8"
-      )}
+      className={cn(className)}
+      showArrow={false}
+      leadingIcon={<LuEye className="size-5" aria-hidden />}
     >
       {label}
-      <LuArrowRight className="size-4" />
-    </Link>
-  )
+    </PrimaryCtaLink>
+  );
 }
