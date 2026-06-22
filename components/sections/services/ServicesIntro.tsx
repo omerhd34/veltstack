@@ -68,9 +68,6 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
                 <LuArrowRight className="size-4" />
               </Link>
             </Button>
-            <span className="text-sm text-muted-foreground">
-              {t("servicesCtaNote")}
-            </span>
           </div>
         </div>
       </div>

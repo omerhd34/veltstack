@@ -20,7 +20,7 @@ export async function ServicesSlider({ className }: ServicesSliderProps) {
 
   return (
     <div className={className}>
-      <div className="hidden lg:grid lg:grid-cols-4 lg:gap-5">
+      <div className="hidden lg:grid lg:grid-cols-3 lg:items-start lg:gap-5">
         {services.map((service) => {
           const config = serviceItems.find(
             (item) => item.href === service.href,
