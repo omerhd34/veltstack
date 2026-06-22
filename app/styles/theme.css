@@ -83,4 +83,6 @@
   --brand-accent: #3a6b52;
   --brand-accent-foreground: #ffffff;
   --brand-accent-rgb: 58 107 82;
+  --border-trace-stroke: #a8dfc4;
+  --border-trace-width: 3px;
 }

@@ -8,6 +8,29 @@ interface BorderTraceProps {
   radius?: number;
   borderWidth?: number;
   durationSec?: number;
+  stroke?: string;
+}
+
+function parseRadius(value: string) {
+  const parsed = Number.parseFloat(value);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+}
+
+function readBorderRadius(element: HTMLElement, fallback: number) {
+  const style = getComputedStyle(element);
+  const corners = [
+    style.borderTopLeftRadius,
+    style.borderTopRightRadius,
+    style.borderBottomRightRadius,
+    style.borderBottomLeftRadius,
+  ].map(parseRadius);
+  const radius = corners.some((value) => value > 0)
+    ? Math.max(...corners)
+    : fallback;
+  const { width, height } = element.getBoundingClientRect();
+  const cap = Math.min(width, height) / 2;
+
+  return Math.min(radius, cap);
 }
 
 function buildRoundedRectPath(
@@ -17,8 +40,9 @@ function buildRoundedRectPath(
   strokeWidth: number,
 ) {
   const inset = strokeWidth / 2;
+  const centerlineRadius = Math.max(0, radius - inset);
   const r = Math.min(
-    radius,
+    centerlineRadius,
     (width - strokeWidth) / 2,
     (height - strokeWidth) / 2,
   );
@@ -30,13 +54,14 @@ function buildRoundedRectPath(
   return `
     M ${x} ${y + r}
     A ${r} ${r} 0 0 1 ${x + r} ${y}
-    L ${x + w - r} ${y}
+    H ${x + w - r}
     A ${r} ${r} 0 0 1 ${x + w} ${y + r}
-    L ${x + w} ${y + h - r}
+    V ${y + h - r}
     A ${r} ${r} 0 0 1 ${x + w - r} ${y + h}
-    L ${x + r} ${y + h}
+    H ${x + r}
     A ${r} ${r} 0 0 1 ${x} ${y + h - r}
-    L ${x} ${y + r}
+    V ${y + r}
+    Z
   `
     .replace(/\s+/g, " ")
     .trim();
@@ -45,95 +70,149 @@ function buildRoundedRectPath(
 export function BorderTrace({
   className,
   radius = 18,
-  borderWidth = 2,
+  borderWidth = 3,
   durationSec = 3,
+  stroke = "var(--border-trace-stroke)",
 }: BorderTraceProps) {
   const hostRef = useRef<HTMLSpanElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
+  const frameRef = useRef<number | null>(null);
   const hasAnimatedRef = useRef(false);
-  const isAnimatingRef = useRef(false);
   const [layout, setLayout] = useState({
     width: 0,
     height: 0,
     radius,
-    borderInset: borderWidth,
+    strokeWidth: borderWidth,
+    offsetTop: 0,
+    offsetLeft: 0,
   });
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const host = hostRef.current;
-    const parent = host?.parentElement;
-    if (!parent) return;
+    const target = host?.parentElement;
+    if (!target) return;
 
-    const update = () => {
-      if (isAnimatingRef.current) return;
-      const { width, height } = parent.getBoundingClientRect();
-      const style = getComputedStyle(parent);
-      const radiusPx = Number.parseFloat(style.borderTopLeftRadius) || radius;
-      const borderInset =
+    const measure = () => {
+      const style = getComputedStyle(target);
+      const strokeWidth =
         Number.parseFloat(style.borderTopWidth) || borderWidth;
-      setLayout({ width, height, radius: radiusPx, borderInset });
-      if (width > 0) setIsReady(true);
+      const borderTop = Number.parseFloat(style.borderTopWidth) || strokeWidth;
+      const borderLeft =
+        Number.parseFloat(style.borderLeftWidth) || strokeWidth;
+
+      setLayout({
+        width: target.offsetWidth,
+        height: target.offsetHeight,
+        radius: readBorderRadius(target, radius),
+        strokeWidth,
+        offsetTop: -borderTop,
+        offsetLeft: -borderLeft,
+      });
+
+      if (target.offsetWidth > 0) setIsReady(true);
     };
 
-    update();
-    const observer = new ResizeObserver(update);
-    observer.observe(parent);
-    return () => observer.disconnect();
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(target);
+    window.addEventListener("scroll", measure, true);
+    window.addEventListener("resize", measure);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", measure, true);
+      window.removeEventListener("resize", measure);
+    };
   }, [borderWidth, radius]);
 
   useEffect(() => {
-    const parent = hostRef.current?.parentElement;
+    const wrapper =
+      hostRef.current?.closest(".group") ?? hostRef.current?.parentElement;
     const path = pathRef.current;
-    if (!isReady || !parent || !path) return;
+    if (!isReady || !wrapper || !path) return;
+
+    const cancelFrame = () => {
+      if (frameRef.current != null) {
+        cancelAnimationFrame(frameRef.current);
+        frameRef.current = null;
+      }
+    };
 
     const hideTrace = () => {
-      path.classList.remove("border-trace-animate");
-      path.style.removeProperty("stroke-dashoffset");
-      path.style.removeProperty("opacity");
+      cancelFrame();
+      path.style.opacity = "0";
+      path.style.strokeDasharray = "none";
+      path.style.strokeDashoffset = "0";
     };
 
     const finishTrace = () => {
-      isAnimatingRef.current = false;
+      cancelFrame();
       hideTrace();
     };
 
     const startTrace = () => {
       if (hasAnimatedRef.current) return;
       hasAnimatedRef.current = true;
-      isAnimatingRef.current = true;
-      path.style.removeProperty("stroke-dashoffset");
-      path.style.removeProperty("opacity");
-      path.classList.remove("border-trace-animate");
-      void path.getBoundingClientRect();
-      path.classList.add("border-trace-animate");
+
+      cancelFrame();
+      const length = path.getTotalLength();
+      if (!length) return;
+
+      path.style.opacity = "1";
+      path.style.strokeDasharray = `${length}`;
+      path.style.strokeDashoffset = `${length}`;
+
+      const durationMs = durationSec * 1000;
+      const fadeStart = 0.97;
+      const startedAt = performance.now();
+
+      const tick = (now: number) => {
+        const progress = Math.min((now - startedAt) / durationMs, 1);
+
+        if (progress >= 1) {
+          finishTrace();
+          return;
+        }
+
+        path.style.strokeDashoffset = `${length * (1 - progress)}`;
+        path.style.opacity =
+          progress >= fadeStart
+            ? `${1 - (progress - fadeStart) / (1 - fadeStart)}`
+            : "1";
+
+        frameRef.current = requestAnimationFrame(tick);
+      };
+
+      frameRef.current = requestAnimationFrame(tick);
     };
 
     const resetTrace = () => {
       hasAnimatedRef.current = false;
-      isAnimatingRef.current = false;
-      hideTrace();
+      finishTrace();
     };
 
-    path.addEventListener("animationend", finishTrace);
-    parent.addEventListener("mouseenter", startTrace);
-    parent.addEventListener("mouseleave", resetTrace);
+    wrapper.addEventListener("mouseenter", startTrace);
+    wrapper.addEventListener("mouseleave", resetTrace);
+    wrapper.addEventListener("focusin", startTrace);
+    wrapper.addEventListener("focusout", resetTrace);
 
     return () => {
-      path.removeEventListener("animationend", finishTrace);
-      parent.removeEventListener("mouseenter", startTrace);
-      parent.removeEventListener("mouseleave", resetTrace);
+      cancelFrame();
+      wrapper.removeEventListener("mouseenter", startTrace);
+      wrapper.removeEventListener("mouseleave", resetTrace);
+      wrapper.removeEventListener("focusin", startTrace);
+      wrapper.removeEventListener("focusout", resetTrace);
     };
-  }, [isReady]);
+  }, [durationSec, isReady]);
 
-  const strokeWidth = layout.borderInset || borderWidth;
   const path =
     layout.width > 0
       ? buildRoundedRectPath(
           layout.width,
           layout.height,
           layout.radius,
-          strokeWidth,
+          layout.strokeWidth,
         )
       : "";
 
@@ -141,32 +220,32 @@ export function BorderTrace({
     <span
       ref={hostRef}
       className={cn(
-        "pointer-events-none absolute z-10 opacity-0 group-hover:opacity-100 motion-reduce:hidden",
+        "pointer-events-none absolute z-20 opacity-0 group-hover:opacity-100 motion-reduce:hidden",
         className,
       )}
       style={{
-        top: -strokeWidth,
-        right: -strokeWidth,
-        bottom: -strokeWidth,
-        left: -strokeWidth,
+        top: layout.offsetTop,
+        left: layout.offsetLeft,
+        width: layout.width,
+        height: layout.height,
       }}
       aria-hidden
     >
       {path ? (
         <svg
-          className="size-full"
+          className="size-full overflow-visible"
           viewBox={`0 0 ${layout.width} ${layout.height}`}
+          overflow="visible"
         >
           <path
             ref={pathRef}
             d={path}
             fill="none"
-            stroke="var(--brand-accent)"
-            strokeWidth={strokeWidth}
+            stroke={stroke}
+            strokeWidth={layout.strokeWidth}
             strokeLinecap="butt"
-            strokeLinejoin="round"
-            pathLength={1}
-            strokeDasharray="1"
+            strokeLinejoin="miter"
+            strokeMiterlimit={2}
             className="border-trace-path"
             style={
               {
