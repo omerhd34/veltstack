@@ -85,7 +85,7 @@ export function Navbar({ className }: NavbarProps) {
 
       <div
         data-state={servicesMenuOpen ? "open" : "closed"}
-        className="navbar-mega-menu-panel absolute inset-x-0 top-full z-50 isolate overflow-hidden border-t border-border bg-background shadow-md"
+        className="navbar-mega-menu-panel absolute inset-x-0 top-full z-50 isolate overflow-hidden border-t border-border bg-background shadow-md data-[state=open]:overflow-visible"
         onMouseEnter={openServicesMenu}
         onMouseLeave={scheduleCloseServicesMenu}
         aria-hidden={!servicesMenuOpen}
@@ -95,7 +95,7 @@ export function Navbar({ className }: NavbarProps) {
 
       <div
         data-state={projectsMenuOpen ? "open" : "closed"}
-        className="navbar-mega-menu-panel absolute inset-x-0 top-full z-50 isolate overflow-hidden border-t border-border bg-background shadow-md"
+        className="navbar-mega-menu-panel absolute inset-x-0 top-full z-50 isolate overflow-hidden border-t border-border bg-background shadow-md data-[state=open]:overflow-visible"
         onMouseEnter={openProjectsMenu}
         onMouseLeave={scheduleCloseProjectsMenu}
         aria-hidden={!projectsMenuOpen}
@@ -105,7 +105,7 @@ export function Navbar({ className }: NavbarProps) {
 
       <div
         data-state={blogMenuOpen ? "open" : "closed"}
-        className="navbar-mega-menu-panel absolute inset-x-0 top-full z-50 isolate overflow-hidden border-t border-border bg-background shadow-md"
+        className="navbar-mega-menu-panel absolute inset-x-0 top-full z-50 isolate overflow-hidden border-t border-border bg-background shadow-md data-[state=open]:overflow-visible"
         onMouseEnter={openBlogMenu}
         onMouseLeave={scheduleCloseBlogMenu}
         aria-hidden={!blogMenuOpen}

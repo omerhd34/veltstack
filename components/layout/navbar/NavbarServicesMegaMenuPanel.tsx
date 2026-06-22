@@ -1,13 +1,13 @@
 "use client";
 
-import { LuArrowRight } from "react-icons/lu";
+import { LuMessageCircle } from "react-icons/lu";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { Button } from "@/components/ui/shadcn";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { ServiceCard } from "@/components/sections/services/ServiceCard";
 import { serviceItems } from "@/components/sections/services/service-items";
 import { useUiStore } from "@/store/uiSlice";
+import { NavbarMegaMenuIntroColumn } from "./NavbarMegaMenuIntroColumn";
 
 export function NavbarServicesMegaMenuPanel() {
   const tHome = useTranslations("home");
@@ -22,25 +22,22 @@ export function NavbarServicesMegaMenuPanel() {
 
   return (
     <SiteContainer className="py-10">
-      <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-14 xl:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]">
-        <div className="mega-menu-intro max-w-md">
-          <h2 className="font-(family-name:--font-heading) text-2xl font-bold leading-tight tracking-tight md:text-3xl">
-            {tHome("servicesHeadline")}
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-            {tHome("servicesIntro")}
-          </p>
-          <Button
-            size="lg"
-            className="mt-6 rounded-full bg-[#0A0A0F] px-8 text-white hover:bg-[#0A0A0F]/90"
-            asChild
+      <div className="grid items-stretch gap-10 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-14 xl:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]">
+        <NavbarMegaMenuIntroColumn
+          headline={tHome("servicesHeadline")}
+          intro={tHome("servicesIntro")}
+          introLines={11}
+        >
+          <PrimaryCtaLink
+            href="/iletisim"
+            wrapperClassName="origin-left"
+            showArrow={false}
+            leadingIcon={<LuMessageCircle className="size-5" aria-hidden />}
+            onNavigate={() => setServicesMenuOpen(false)}
           >
-            <Link href="/iletisim" onClick={() => setServicesMenuOpen(false)}>
-              {tHome("servicesCta")}
-              <LuArrowRight className="size-4" />
-            </Link>
-          </Button>
-        </div>
+            {tHome("servicesCta")}
+          </PrimaryCtaLink>
+        </NavbarMegaMenuIntroColumn>
         <div className="grid min-w-0 grid-cols-2 gap-3">
           {cards.map((service) => (
             <div key={service.href} className="mega-menu-card">
