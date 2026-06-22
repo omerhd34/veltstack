@@ -6,7 +6,9 @@ interface NavbarLogoProps {
 
 export function NavbarLogo({ className }: NavbarLogoProps) {
   return (
-    <span className={`inline-flex items-center gap-2 ${className ?? ""}`}>
+    <span
+      className={`inline-flex select-none items-center gap-2 ${className ?? ""}`}
+    >
       <Image
         src="/images/favicons/favicon-48.png"
         alt=""
