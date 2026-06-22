@@ -1,10 +1,19 @@
 import type { IconType } from "react-icons";
-import { LuGlobe, LuLifeBuoy, LuSearch, LuSmartphone } from "react-icons/lu";
+import {
+  LuClipboardCheck,
+  LuGlobe,
+  LuLifeBuoy,
+  LuRefreshCw,
+  LuSearch,
+  LuSmartphone,
+} from "react-icons/lu";
 
 export const serviceSlugs = [
   "web-sitesi",
+  "web-sitesi-yenileme",
   "uygulama",
   "seo-hizmetleri",
+  "teknik-denetim",
   "bakim-ve-destek",
 ] as const;
 
@@ -29,6 +38,14 @@ export const serviceItems: ServiceItemConfig[] = [
     icon: LuGlobe,
   },
   {
+    slug: "web-sitesi-yenileme",
+    href: "/hizmetler/web-sitesi-yenileme",
+    titleKey: "servicesRefreshTitle",
+    descKey: "servicesRefreshDesc",
+    tagKey: "servicesRefreshTag",
+    icon: LuRefreshCw,
+  },
+  {
     slug: "uygulama",
     href: "/hizmetler/uygulama",
     titleKey: "servicesAppTitle",
@@ -43,6 +60,14 @@ export const serviceItems: ServiceItemConfig[] = [
     descKey: "servicesSeoDesc",
     tagKey: "servicesSeoTag",
     icon: LuSearch,
+  },
+  {
+    slug: "teknik-denetim",
+    href: "/hizmetler/teknik-denetim",
+    titleKey: "servicesAuditTitle",
+    descKey: "servicesAuditDesc",
+    tagKey: "servicesAuditTag",
+    icon: LuClipboardCheck,
   },
   {
     slug: "bakim-ve-destek",

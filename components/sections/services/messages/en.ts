@@ -4,29 +4,36 @@ export const servicesHomeEn = {
   servicesIntro:
     "We bring web, app, SEO and post-launch support under one roof for your brand's digital journey. We define scope upfront, manage the process transparently and focus on measurable business outcomes. From design and development to launch and ongoing maintenance — we're with you end to end.",
   servicesCta: "Let's plan together",
-  servicesCtaNote: "Free initial consultation - Response within 24h",
   servicesSubtitle: "End-to-end digital solutions tailored to your goals.",
   servicesSliderPrev: "Previous service",
   servicesSliderNext: "Next service",
   servicesSliderDot: "Service",
   servicesWebTitle: "Website Development",
   servicesWebDesc:
-    "End-to-end web development for corporate, e-commerce and portfolio projects.",
+    "From design to launch, we deliver fast and SEO-ready web development for corporate, e-commerce and portfolio projects.",
   servicesWebTag: "Web - Development",
+  servicesRefreshTitle: "Web & App Redesign",
+  servicesRefreshDesc:
+    "We modernize outdated or slow websites and mobile apps into fast, conversion-focused experiences.",
+  servicesRefreshTag: "Redesign - Modernization",
   servicesAppTitle: "App Development",
   servicesAppDesc:
-    "High-performance, user-friendly mobile apps for iOS and Android.",
+    "High-performance, user-friendly mobile apps for iOS and Android — from first prototype to App Store and Play Store launch.",
   servicesAppTag: "iOS - Android",
   servicesSeoTitle: "SEO Services",
   servicesSeoDesc:
-    "Sustainable organic growth through technical foundations and content strategy.",
+    "Sustainable organic growth through solid technical foundations, content strategy and ongoing search optimization.",
   servicesSeoTag: "SEO - Organic",
-  servicesMaintenanceTitle: "Ongoing Maintenance & Support",
+  servicesAuditTitle: "Technical Audit",
+  servicesAuditDesc:
+    "We audit your website, app and infrastructure for performance, security and SEO, with a clear prioritized action plan.",
+  servicesAuditTag: "Audit - Analysis",
+  servicesMaintenanceTitle: "Maintenance & Support",
   servicesMaintenanceDesc:
-    "Keep your digital assets always ready with updates, backups and technical support.",
+    "Keep your websites and apps secure and up to date with scheduled updates, backups and responsive technical support.",
   servicesMaintenanceTag: "Maintenance - Support",
   servicesStats: [
-    { num: "4", label: "Service Categories" },
+    { num: "6", label: "Service Categories" },
     { num: "20+", label: "Completed Projects" },
     { num: "6+", label: "Years of Experience" },
     { num: "98%", label: "Client Satisfaction" },

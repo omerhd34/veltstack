@@ -4,29 +4,36 @@ export const servicesHomeTr = {
   servicesIntro:
     "Markanızın dijital yolculuğunda web, uygulama, SEO ve yayın sonrası desteği tek çatı altında ele alıyoruz. Her projede kapsamı baştan netleştiriyor, süreci şeffaf yönetiyor ve ölçülebilir iş sonuçlarına odaklanıyoruz. Tasarımdan geliştirmeye, yayına almadan sürekli bakıma kadar uçtan uca yanınızdayız.",
   servicesCta: "Birlikte planlayalım",
-  servicesCtaNote: "Ücretsiz ön görüşme - 24s içinde yanıt",
   servicesSubtitle: "İhtiyacınıza özel, uçtan uca dijital çözümler.",
   servicesSliderPrev: "Önceki hizmet",
   servicesSliderNext: "Sonraki hizmet",
   servicesSliderDot: "Hizmet",
   servicesWebTitle: "Web Sitesi Geliştirme",
   servicesWebDesc:
-    "Kurumsal, e-ticaret ve portfolyo projelerinde uçtan uca web geliştirme.",
+    "Kurumsal, e-ticaret ve portfolyo projelerinde tasarımdan yayına kadar hızlı ve SEO uyumlu uçtan uca web geliştirme sunuyoruz.",
   servicesWebTag: "Web - Geliştirme",
+  servicesRefreshTitle: "Web & Uygulama Yenileme",
+  servicesRefreshDesc:
+    "Eski veya yavaş web ve mobil uygulamalarınızı modern, hızlı ve dönüşüm odaklı bir deneyime taşıyoruz.",
+  servicesRefreshTag: "Yenileme - Modernizasyon",
   servicesAppTitle: "Uygulama Geliştirme",
   servicesAppDesc:
-    "iOS ve Android için performanslı, kullanıcı dostu mobil uygulamalar.",
+    "iOS ve Android için performanslı, kullanıcı dostu mobil uygulamalar geliştiriyor; mağaza yayını ve bakım sürecini de birlikte yönetiyoruz.",
   servicesAppTag: "iOS - Android",
   servicesSeoTitle: "SEO Hizmetleri",
   servicesSeoDesc:
-    "Teknik altyapı ve içerik stratejisiyle sürdürülebilir organik büyüme.",
+    "Teknik altyapı, içerik stratejisi ve düzenli optimizasyonla arama motorlarında sürdürülebilir organik büyüme sağlıyoruz.",
   servicesSeoTag: "SEO - Organik",
-  servicesMaintenanceTitle: "Sürekli Bakım & Destek",
+  servicesAuditTitle: "Teknik Denetim",
+  servicesAuditDesc:
+    "Web sitesi, uygulama ve altyapınızı performans, güvenlik ve SEO açısından analiz ediyor; öncelikli iyileştirme planı çıkarıyoruz.",
+  servicesAuditTag: "Denetim - Analiz",
+  servicesMaintenanceTitle: "Bakım & Destek",
   servicesMaintenanceDesc:
-    "Güncelleme, yedekleme ve teknik destekle dijital varlığınızı her zaman hazır tutun.",
+    "Güncelleme, yedekleme ve teknik destekle web ve uygulama varlıklarınızı güvenli, güncel ve kesintisiz çalışır halde tutuyoruz.",
   servicesMaintenanceTag: "Bakım - Destek",
   servicesStats: [
-    { num: "4", label: "Hizmet Kategorisi" },
+    { num: "6", label: "Hizmet Kategorisi" },
     { num: "20+", label: "Tamamlanan Proje" },
     { num: "6+", label: "Yıl Deneyim" },
     { num: "98%", label: "Müşteri Memnuniyeti" },

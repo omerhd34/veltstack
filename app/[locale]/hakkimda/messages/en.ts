@@ -12,7 +12,7 @@ export const aboutEn = {
     { value: "20+", label: "Completed Projects" },
     { value: "6+", label: "Years of industry experience" },
     { value: "100%", label: "End-to-End Delivery" },
-    { value: "4", label: "Service Areas" },
+    { value: "6", label: "Service Areas" },
   ],
   profileBadge: "Veltstack DNA",
   profileTitle:

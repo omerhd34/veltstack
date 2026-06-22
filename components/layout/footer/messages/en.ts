@@ -6,9 +6,11 @@ export const footerEn = {
   contactTitle: "Contact",
   serviceLabels: {
     serviceWeb: "Website Development",
+    serviceRefresh: "Web & App Redesign",
     serviceApp: "App Development",
     serviceSeo: "SEO Services",
-    serviceMaintenance: "Ongoing Maintenance & Support",
+    serviceAudit: "Technical Audit",
+    serviceMaintenance: "Maintenance & Support",
   },
   projectLabels: {
     projectIqfinans: "IQfinansAI",

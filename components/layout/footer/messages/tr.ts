@@ -6,9 +6,11 @@ export const footerTr = {
   contactTitle: "İletişim",
   serviceLabels: {
     serviceWeb: "Web Sitesi Geliştirme",
+    serviceRefresh: "Web & Uygulama Yenileme",
     serviceApp: "Uygulama Geliştirme",
     serviceSeo: "SEO Hizmetleri",
-    serviceMaintenance: "Sürekli Bakım & Destek",
+    serviceAudit: "Teknik Denetim",
+    serviceMaintenance: "Bakım & Destek",
   },
   projectLabels: {
     projectIqfinans: "IQfinansAI",

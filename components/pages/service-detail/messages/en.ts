@@ -83,6 +83,70 @@ export const serviceDetailsEn = {
       },
     ],
   },
+  "web-sitesi-yenileme": {
+    metaTitle: "Web & App Redesign",
+    metaDesc:
+      "Refresh your outdated or slow website and mobile app with modern design, fast infrastructure and SEO improvements. Secure migration while preserving your content.",
+    heroBadge: "Web & App Redesign",
+    heroTitle: "Web & App Redesign",
+    heroSubtitle:
+      "We transform outdated, slow or mobile-unfriendly websites and apps into modern, fast and conversion-focused experiences.",
+    deliveryTime: "2–6 weeks",
+    features: [
+      {
+        title: "Current Site Audit",
+        description:
+          "Comprehensive review of technical infrastructure, performance, SEO and user experience with a prioritized action plan.",
+      },
+      {
+        title: "Modern Design & UX",
+        description:
+          "Up-to-date interface aligned with your brand, clear information architecture and conversion-focused page flows.",
+      },
+      {
+        title: "Performance Improvements",
+        description:
+          "Infrastructure upgrade targeting fast load times, optimized assets and strong Lighthouse scores.",
+      },
+      {
+        title: "SEO Protection & Growth",
+        description:
+          "Preserve existing rankings through URL structure, redirects and meta data while improving visibility.",
+      },
+      {
+        title: "Content Migration",
+        description:
+          "Safe, structured transfer of existing text, images and page content into the new setup.",
+      },
+      {
+        title: "Post-Launch Support",
+        description:
+          "Technical support, small fixes and monitoring throughout the transition after go-live.",
+      },
+    ],
+    faq: [
+      {
+        question: "Will my existing content be preserved?",
+        answer:
+          "Yes. We migrate your current content into the new design and infrastructure wherever possible; content refinement can be planned together when needed.",
+      },
+      {
+        question: "How long does a web and app redesign take?",
+        answer:
+          "Typically 2–6 weeks depending on site size. We share a clear timeline after the discovery call.",
+      },
+      {
+        question: "Will my SEO rankings be affected?",
+        answer:
+          "With proper redirects and technical SEO, we aim to preserve existing rankings; in most projects performance gains also support organic visibility.",
+      },
+      {
+        question: "Which platforms can you migrate from?",
+        answer:
+          "We can migrate from WordPress, Wix, legacy custom software or static sites to a modern Next.js-based stack.",
+      },
+    ],
+  },
   "uygulama": {
     metaTitle: "Mobile App Development",
     metaDesc:
@@ -210,12 +274,76 @@ export const serviceDetailsEn = {
       },
     ],
   },
+  "teknik-denetim": {
+    metaTitle: "Technical Audit",
+    metaDesc:
+      "Technical audit for your website, mobile app and digital infrastructure focused on performance, security, SEO and code quality.",
+    heroBadge: "Technical Audit",
+    heroTitle: "Technical Audit",
+    heroSubtitle:
+      "We analyze your existing digital assets for performance, security, SEO and code quality, then deliver a prioritized action plan.",
+    deliveryTime: "3–7 days",
+    features: [
+      {
+        title: "Performance Analysis",
+        description:
+          "Speed and user experience review via Lighthouse, Core Web Vitals and load time metrics.",
+      },
+      {
+        title: "Security Review",
+        description:
+          "Dependency vulnerabilities, HTTPS configuration, access controls and baseline security risks.",
+      },
+      {
+        title: "Technical SEO Audit",
+        description:
+          "Crawl errors, meta structure, indexing status and structured data checks.",
+      },
+      {
+        title: "Code & Architecture Review",
+        description:
+          "Assessment of code quality, maintainability, technical debt and scalability.",
+      },
+      {
+        title: "Accessibility Check",
+        description:
+          "WCAG compliance, contrast, keyboard access and identification of core UX issues.",
+      },
+      {
+        title: "Action Plan",
+        description:
+          "Prioritized findings, impact analysis and practical improvement recommendations.",
+      },
+    ],
+    faq: [
+      {
+        question: "How long does a technical audit take?",
+        answer:
+          "Typically 3–7 business days depending on scope. We share a clear timeline after the discovery call.",
+      },
+      {
+        question: "Do you need access to my code?",
+        answer:
+          "A live site may be enough for a website audit; repository or panel access is requested for code and infrastructure review.",
+      },
+      {
+        question: "Do you only deliver a report?",
+        answer:
+          "Yes, the audit output is a detailed report with a priority list. Implementation of findings can be planned separately if needed.",
+      },
+      {
+        question: "Which technologies do you audit?",
+        answer:
+          "We can audit Next.js, React, WordPress, mobile apps and Node.js-based projects.",
+      },
+    ],
+  },
   "bakim-ve-destek": {
     metaTitle: "Website Maintenance & Support",
     metaDesc:
       "Regular maintenance, updates and technical support for your website, mobile app and backend infrastructure.",
     heroBadge: "Maintenance & Support",
-    heroTitle: "Ongoing Maintenance & Support",
+    heroTitle: "Maintenance & Support",
     heroSubtitle:
       "I stay by your side after launch. Updates, backups, security and technical support all under one roof.",
     deliveryTime: "Ongoing / monthly",

@@ -5,7 +5,7 @@ export const servicesPackagesTr = {
   tabWeb: "Web Sitesi",
   tabApp: "Uygulama",
   tabSeo: "SEO Hizmetleri",
-  tabMaintenance: "Sürekli Bakım & Destek",
+  tabMaintenance: "Bakım & Destek",
   tierTemel: "Temel",
   tierStandart: "Standart",
   tierPro: "Pro",

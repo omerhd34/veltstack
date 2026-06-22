@@ -31,8 +31,10 @@ export function NavbarLinks({
 
   const serviceLabels: Record<NavServiceKey, string> = {
     serviceWeb: tNav("serviceWeb"),
+    serviceRefresh: tNav("serviceRefresh"),
     serviceApp: tNav("serviceApp"),
     serviceSeo: tNav("serviceSeo"),
+    serviceAudit: tNav("serviceAudit"),
     serviceMaintenance: tNav("serviceMaintenance"),
   };
 

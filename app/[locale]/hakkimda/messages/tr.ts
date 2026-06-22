@@ -12,7 +12,7 @@ export const aboutTr = {
     { value: "20+", label: "Tamamlanan Proje" },
     { value: "6+", label: "Yıllık sektör deneyimi" },
     { value: "100%", label: "Uçtan Uca Teslim" },
-    { value: "4", label: "Hizmet Alanı" },
+    { value: "6", label: "Hizmet Alanı" },
   ],
   profileBadge: "Veltstack DNA'sı",
   profileTitle:

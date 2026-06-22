@@ -5,7 +5,7 @@ export const servicesPackagesEn = {
   tabWeb: "Website",
   tabApp: "Application",
   tabSeo: "SEO Services",
-  tabMaintenance: "Ongoing Maintenance & Support",
+  tabMaintenance: "Maintenance & Support",
   tierTemel: "Basic",
   tierStandart: "Standard",
   tierPro: "Pro",

@@ -25,9 +25,11 @@ export const contactTr = {
 
   serviceOptions: [
     { value: "web-sitesi", label: "Web Sitesi Geliştirme" },
+    { value: "web-sitesi-yenileme", label: "Web & Uygulama Yenileme" },
     { value: "uygulama", label: "Uygulama Geliştirme" },
     { value: "seo-hizmetleri", label: "SEO Hizmetleri" },
-    { value: "bakim-ve-destek", label: "Sürekli Bakım & Destek" },
+    { value: "teknik-denetim", label: "Teknik Denetim" },
+    { value: "bakim-ve-destek", label: "Bakım & Destek" },
     { value: "diger", label: "Diğer / Henüz bilmiyorum" },
   ],
 
@@ -44,6 +46,11 @@ export const contactTr = {
       { value: "corporate", label: "Kurumsal Web Sitesi" },
       { value: "ecommerce", label: "E-Ticaret Web Sitesi" },
     ],
+    "web-sitesi-yenileme": [
+      { value: "portfolio", label: "Portföy / Tanıtım Sitesi Yenileme" },
+      { value: "corporate", label: "Kurumsal Site Yenileme" },
+      { value: "ecommerce", label: "E-Ticaret Sitesi Yenileme" },
+    ],
     uygulama: [
       { value: "portfolio", label: "Tanıtım / Portföy Uygulaması" },
       { value: "corporate", label: "Kurumsal Mobil Uygulama" },
@@ -51,6 +58,11 @@ export const contactTr = {
     ],
     "seo-hizmetleri": [
       { value: "seoServices", label: "Dijital Pazarlama & SEO" },
+    ],
+    "teknik-denetim": [
+      { value: "webAudit", label: "Web Sitesi Teknik Denetimi" },
+      { value: "appAudit", label: "Mobil Uygulama Teknik Denetimi" },
+      { value: "infrastructureAudit", label: "Altyapı ve Güvenlik Denetimi" },
     ],
     "bakim-ve-destek": [
       { value: "maintenanceServices", label: "Bakım & Destek Hizmetleri" },

@@ -84,6 +84,70 @@ export const serviceDetailsTr = {
       },
     ],
   },
+  "web-sitesi-yenileme": {
+    metaTitle: "Web & Uygulama Yenileme",
+    metaDesc:
+      "Eski veya yavaş web sitenizi ve mobil uygulamanızı modern tasarım, hızlı altyapı ve SEO iyileştirmeleriyle yenileyin. İçeriklerinizi koruyarak güvenli geçiş.",
+    heroBadge: "Web & Uygulama Yenileme",
+    heroTitle: "Web & Uygulama Yenileme",
+    heroSubtitle:
+      "Güncelliğini yitirmiş, yavaş veya mobil uyumsuz web ve uygulama deneyimlerinizi modern, hızlı ve dönüşüm odaklı bir yapıya taşıyoruz.",
+    deliveryTime: "2–6 hafta",
+    features: [
+      {
+        title: "Mevcut Site Analizi",
+        description:
+          "Teknik altyapı, performans, SEO ve kullanıcı deneyimi açısından kapsamlı denetim ve önceliklendirilmiş aksiyon planı.",
+      },
+      {
+        title: "Modern Tasarım ve UX",
+        description:
+          "Markanıza uygun güncel arayüz, net bilgi mimarisi ve dönüşüm odaklı sayfa akışları.",
+      },
+      {
+        title: "Performans İyileştirmesi",
+        description:
+          "Hızlı yükleme, optimize görseller ve yüksek Lighthouse skorları hedefleyen altyapı güncellemesi.",
+      },
+      {
+        title: "SEO Koruma ve Güçlendirme",
+        description:
+          "URL yapısı, yönlendirmeler ve meta verilerle mevcut sıralamayı koruyarak görünürlüğü artırma.",
+      },
+      {
+        title: "İçerik Migrasyonu",
+        description:
+          "Mevcut metin, görsel ve sayfa içeriklerinin yeni yapıya güvenli ve düzenli aktarımı.",
+      },
+      {
+        title: "Yayın Sonrası Destek",
+        description:
+          "Canlıya alım sonrası teknik destek, küçük düzeltmeler ve geçiş sürecinde izleme.",
+      },
+    ],
+    faq: [
+      {
+        question: "Mevcut içeriklerim korunur mu?",
+        answer:
+          "Evet. Yenileme sürecinde mevcut içeriklerinizi mümkün olduğunca koruyarak yeni tasarım ve altyapıya taşırız; gerekirse içerik düzenlemesi birlikte planlanır.",
+      },
+      {
+        question: "Web ve uygulama yenileme ne kadar sürer?",
+        answer:
+          "Site büyüklüğüne bağlı olarak 2–6 hafta sürer. Keşif görüşmesinden sonra net takvim paylaşırız.",
+      },
+      {
+        question: "SEO sıralamam etkilenir mi?",
+        answer:
+          "Doğru yönlendirme ve teknik SEO adımlarıyla mevcut sıralamanızı korumayı hedefleriz; çoğu projede performans artışı organik görünürlüğe de katkı sağlar.",
+      },
+      {
+        question: "Hangi platformlardan geçiş yapılabilir?",
+        answer:
+          "WordPress, Wix, eski özel yazılım veya statik sitelerden Next.js tabanlı modern altyapıya geçiş yapabiliriz.",
+      },
+    ],
+  },
   "uygulama": {
     metaTitle: "Mobil Uygulama Geliştirme",
     metaDesc:
@@ -212,12 +276,76 @@ export const serviceDetailsTr = {
       },
     ],
   },
+  "teknik-denetim": {
+    metaTitle: "Teknik Denetim",
+    metaDesc:
+      "Web sitesi, mobil uygulama ve dijital altyapınız için performans, güvenlik, SEO ve kod kalitesi odaklı teknik denetim hizmeti.",
+    heroBadge: "Teknik Denetim",
+    heroTitle: "Teknik Denetim",
+    heroSubtitle:
+      "Mevcut dijital varlıklarınızı performans, güvenlik, SEO ve kod kalitesi açısından analiz ediyoruz; önceliklendirilmiş aksiyon planı sunuyoruz.",
+    deliveryTime: "3–7 gün",
+    features: [
+      {
+        title: "Performans Analizi",
+        description:
+          "Lighthouse, Core Web Vitals ve yükleme süreleri üzerinden hız ve kullanıcı deneyimi değerlendirmesi.",
+      },
+      {
+        title: "Güvenlik İncelemesi",
+        description:
+          "Bağımlılık açıkları, HTTPS yapılandırması, erişim kontrolleri ve temel güvenlik riskleri.",
+      },
+      {
+        title: "SEO Teknik Denetimi",
+        description:
+          "Tarama hataları, meta yapısı, indeksleme durumu ve yapılandırılmış veri kontrolü.",
+      },
+      {
+        title: "Kod ve Mimari İncelemesi",
+        description:
+          "Kod kalitesi, bakım kolaylığı, teknik borç ve ölçeklenebilirlik değerlendirmesi.",
+      },
+      {
+        title: "Erişilebilirlik Kontrolü",
+        description:
+          "WCAG uyumluluk, kontrast, klavye erişimi ve temel UX sorunlarının tespiti.",
+      },
+      {
+        title: "Aksiyon Planı",
+        description:
+          "Önceliklendirilmiş bulgular, etki analizi ve uygulanabilir iyileştirme önerileri.",
+      },
+    ],
+    faq: [
+      {
+        question: "Teknik denetim ne kadar sürer?",
+        answer:
+          "Proje kapsamına bağlı olarak 3–7 iş günü içinde tamamlanır. Keşif görüşmesinden sonra net süre paylaşırız.",
+      },
+      {
+        question: "Mevcut koduma erişim gerekir mi?",
+        answer:
+          "Web sitesi denetiminde canlı site yeterli olabilir; kod ve altyapı incelemesi için repository veya panel erişimi istenir.",
+      },
+      {
+        question: "Sadece rapor mu sunuyorsunuz?",
+        answer:
+          "Evet, denetim çıktısı detaylı rapor ve öncelik listesidir. İsterseniz bulguların uygulanması ayrı kapsamda planlanır.",
+      },
+      {
+        question: "Hangi teknolojilerde denetim yapılıyor?",
+        answer:
+          "Next.js, React, WordPress, mobil uygulama ve Node.js tabanlı projelerde denetim yapabiliriz.",
+      },
+    ],
+  },
   "bakim-ve-destek": {
     metaTitle: "Web Sitesi Bakım ve Destek",
     metaDesc:
       "Web sitesi, mobil uygulama ve backend altyapınız için düzenli bakım, güncelleme ve teknik destek hizmeti.",
     heroBadge: "Bakım & Destek",
-    heroTitle: "Sürekli Bakım & Destek",
+    heroTitle: "Bakım & Destek",
     heroSubtitle:
       "Yayına aldıktan sonra da yanınızdayım. Güncelleme, yedekleme, güvenlik ve teknik destek tek çatı altında.",
     deliveryTime: "Sürekli / aylık",

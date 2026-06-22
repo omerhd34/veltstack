@@ -25,9 +25,11 @@ export const contactEn = {
 
   serviceOptions: [
     { value: "web-sitesi", label: "Web Site Development" },
+    { value: "web-sitesi-yenileme", label: "Web & App Redesign" },
     { value: "uygulama", label: "App Development" },
     { value: "seo-hizmetleri", label: "SEO Services" },
-    { value: "bakim-ve-destek", label: "Ongoing Maintenance & Support" },
+    { value: "teknik-denetim", label: "Technical Audit" },
+    { value: "bakim-ve-destek", label: "Maintenance & Support" },
     { value: "diger", label: "Other / Not sure yet" },
   ],
 
@@ -44,6 +46,11 @@ export const contactEn = {
       { value: "corporate", label: "Corporate Website" },
       { value: "ecommerce", label: "E-Commerce Website" },
     ],
+    "web-sitesi-yenileme": [
+      { value: "portfolio", label: "Portfolio / Showcase Site Redesign" },
+      { value: "corporate", label: "Corporate Website Redesign" },
+      { value: "ecommerce", label: "E-Commerce Website Redesign" },
+    ],
     uygulama: [
       { value: "portfolio", label: "Showcase / Portfolio App" },
       { value: "corporate", label: "Corporate Mobile App" },
@@ -51,6 +58,11 @@ export const contactEn = {
     ],
     "seo-hizmetleri": [
       { value: "seoServices", label: "Digital Marketing & SEO" },
+    ],
+    "teknik-denetim": [
+      { value: "webAudit", label: "Website Technical Audit" },
+      { value: "appAudit", label: "Mobile App Technical Audit" },
+      { value: "infrastructureAudit", label: "Infrastructure & Security Audit" },
     ],
     "bakim-ve-destek": [
       { value: "maintenanceServices", label: "Maintenance & Support Services" },
