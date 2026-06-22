@@ -12,7 +12,7 @@ export function HeroCTA({ primary, secondary, className }: HeroCTAProps) {
   const buttonClass = "h-11 gap-2 px-6 text-base"
 
   return (
-    <div className={`flex flex-wrap gap-4 ${className ?? ""}`}>
+    <div className={`flex flex-wrap justify-center gap-4 ${className ?? ""}`}>
       <Button size="lg" className={buttonClass} asChild>
         <Link href="/iletisim">
           <LuRocket className="size-5" aria-hidden />

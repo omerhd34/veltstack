@@ -7,10 +7,10 @@ interface HeroContentProps {
 export function HeroContent({ title, subtitle, className }: HeroContentProps) {
   return (
     <div className={className}>
-      <h1 className="max-w-md font-(family-name:--font-heading) text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+      <h1 className="mx-auto max-w-4xl font-(family-name:--font-heading) text-3xl font-bold leading-snug tracking-tight text-white/90 sm:text-4xl sm:leading-snug md:text-5xl md:leading-normal lg:text-6xl lg:leading-normal">
         {title}
       </h1>
-      <p className="mt-4 max-w-xl text-lg text-muted-foreground">{subtitle}</p>
+      <p className="mx-auto mt-4 max-w-2xl text-lg text-white/65">{subtitle}</p>
     </div>
   );
 }

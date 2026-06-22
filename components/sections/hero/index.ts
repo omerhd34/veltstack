@@ -1,4 +1,4 @@
 export { HeroSection } from "./HeroSection"
-export { HeroVideo } from "./HeroVideo"
+export { HeroImage } from "./HeroImage"
 export { HeroContent } from "./HeroContent"
 export { HeroCTA } from "./HeroCTA"
