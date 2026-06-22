@@ -4,7 +4,7 @@ export { blogPosts } from "./posts";
 import type { BlogPost } from "./posts/types";
 import { blogPosts } from "./posts";
 
-const NAV_BLOG_COUNT = 4;
+const NAV_BLOG_COUNT = 6;
 const FOOTER_BLOG_COUNT = 6;
 
 export function getAllCategories(locale: "tr" | "en"): string[] {
