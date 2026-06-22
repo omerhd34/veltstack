@@ -140,7 +140,7 @@ export function ServiceCard({
               aria-hidden
               className="flex size-8 items-center justify-center rounded-full bg-brand-accent/0 text-brand-accent transition-all duration-300 group-hover:bg-brand-accent/10"
             >
-              <LuArrowRight className="size-4 translate-x-0 transition-transform group-hover:translate-x-0.5" />
+              <LuArrowRight className="size-4 translate-x-0 stroke-[1.75] transition-[transform,stroke-width] duration-300 group-hover:translate-x-0.5 group-hover:stroke-[2.75]" />
             </span>
           ) : null}
         </div>
