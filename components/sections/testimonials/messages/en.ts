@@ -1,6 +1,7 @@
 export const testimonialsHomeEn = {
   testimonialsTitle: "Client Testimonials",
-  testimonialsSubtitle: "Experiences from brands we have worked with.",
+  testimonialsSubtitle:
+    "Feedback from partners across industries: a snapshot of how we work together, from design quality through to delivery.",
   testimonialItems: [
     {
       clientName: "Ahmet Y.",

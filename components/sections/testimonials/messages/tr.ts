@@ -1,6 +1,7 @@
 export const testimonialsHomeTr = {
   testimonialsTitle: "Müşteri Yorumları",
-  testimonialsSubtitle: "Birlikte çalıştığımız markaların deneyimleri.",
+  testimonialsSubtitle:
+    "Farklı sektörlerden iş ortaklarımızın deneyimleri; tasarım kalitesinden teslimat sürecine kadar birlikte yürüttüğümüz çalışmaların kısa özeti.",
   testimonialItems: [
     {
       clientName: "aaaaa",

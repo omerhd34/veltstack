@@ -23,12 +23,12 @@ export function WhyMeCard({
     <div
       className={cn(
         "group relative flex flex-col rounded-2xl bg-white/4 p-6",
-        "border-trace-hover-fallback box-border border-2 border-solid border-[#8aab99]",
-        "hover:-translate-y-1 hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
+        "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99]",
+        "hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
         slowTransition,
       )}
     >
-      <BorderTrace />
+      <BorderTrace durationSec={2.5} />
       <CardIndexNumber index={index} theme="dark" />
 
       <div className="flex gap-4">

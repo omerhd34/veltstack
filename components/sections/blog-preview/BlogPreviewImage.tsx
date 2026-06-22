@@ -7,7 +7,7 @@ interface BlogPreviewImageProps {
 
 export function BlogPreviewImage({ src, alt }: BlogPreviewImageProps) {
   return (
-    <div className="relative aspect-16/10 overflow-hidden bg-muted">
+    <div className="relative h-full w-full overflow-hidden bg-muted">
       <Image
         src={src}
         alt={alt}

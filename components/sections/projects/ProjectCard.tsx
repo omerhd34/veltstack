@@ -1,9 +1,11 @@
 import type { IconType } from "react-icons";
-import { LuArrowRight } from "react-icons/lu";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { Badge } from "@/components/ui/shadcn";
-import { cn } from "@/lib/utils";
+import { BorderTrace } from "@/components/ui/BorderTrace";
+import { cn, isExternalHref } from "@/lib/utils";
+
+const slowTransition =
+  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
 
 interface ProjectCardProps {
   title: string;
@@ -12,9 +14,7 @@ interface ProjectCardProps {
   imageUrl?: string;
   icon?: IconType;
   coverGradient?: string;
-  tag?: string;
   featured?: boolean;
-  viewLabel?: string;
   className?: string;
 }
 
@@ -25,9 +25,7 @@ export function ProjectCard({
   imageUrl,
   icon: Icon,
   coverGradient = "from-brand-accent/80 to-brand-accent",
-  tag,
   featured = false,
-  viewLabel = "View",
   className,
 }: ProjectCardProps) {
   const cover = (
@@ -75,11 +73,6 @@ export function ProjectCard({
           />
         </div>
       ) : null}
-      {tag ? (
-        <Badge className="absolute left-4 top-4 border-0 bg-black/25 px-2.5 py-1 text-[0.6875rem] font-medium text-white backdrop-blur-md">
-          {tag}
-        </Badge>
-      ) : null}
     </div>
   );
 
@@ -106,24 +99,38 @@ export function ProjectCard({
       >
         {description}
       </p>
-      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand-accent opacity-0 transition-all duration-300 group-hover:opacity-100">
-        {viewLabel}
-        <LuArrowRight className="size-3.5" />
-      </span>
     </div>
   );
 
-  return (
-    <Link
-      href={href}
-      className={cn(
-        "group overflow-hidden rounded-2xl border border-border/70 bg-white shadow-[0_2px_8px_rgb(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-accent/40 hover:shadow-[0_16px_40px_rgb(58,107,82,0.12)]",
-        featured ? "flex flex-col md:flex-row" : "flex flex-col",
-        className,
-      )}
-    >
+  const cardClassName = cn(
+    "group relative flex flex-col rounded-none",
+    "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent bg-white",
+    "shadow-[0_2px_8px_rgb(0,0,0,0.03)] hover:shadow-[0_16px_40px_rgb(58,107,82,0.12)]",
+    slowTransition,
+    featured ? "flex-col md:flex-row" : "",
+    className,
+  );
+
+  const cardContent = (
+    <>
+      <BorderTrace durationSec={2.5} radius={0} />
       {cover}
       {body}
+    </>
+  );
+
+  return isExternalHref(href) ? (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cardClassName}
+    >
+      {cardContent}
+    </a>
+  ) : (
+    <Link href={href} className={cardClassName}>
+      {cardContent}
     </Link>
   );
 }

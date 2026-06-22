@@ -1,45 +1,56 @@
-"use client"
+"use client";
 
-import { useCallback, useEffect, useState } from "react"
-import { LuChevronLeft, LuChevronRight } from "react-icons/lu"
-import { cn } from "@/lib/utils"
-import { TestimonialCard } from "./TestimonialCard"
+import { useCallback, useEffect, useState } from "react";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
+import { BorderTrace } from "@/components/ui/BorderTrace";
+import { cn } from "@/lib/utils";
+import { TestimonialCard } from "./TestimonialCard";
+
+const slowTransition =
+  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
+
+const navButtonClassName = cn(
+  "group relative flex size-10 items-center justify-center rounded-full bg-background/90",
+  "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
+  "transition-colors hover:bg-muted",
+  slowTransition,
+);
 
 export interface TestimonialItem {
-  clientName: string
-  companyName: string
-  feedback: string
-  rating: number
+  clientName: string;
+  companyName: string;
+  feedback: string;
+  rating: number;
 }
 
 interface TestimonialCarouselProps {
-  testimonials: TestimonialItem[]
-  className?: string
+  testimonials: TestimonialItem[];
+  className?: string;
 }
 
 export function TestimonialCarousel({
   testimonials,
   className,
 }: TestimonialCarouselProps) {
-  const [index, setIndex] = useState(0)
-  const count = testimonials.length
+  const [index, setIndex] = useState(0);
+  const count = testimonials.length;
 
   const goTo = useCallback(
     (nextIndex: number) => {
-      setIndex((nextIndex + count) % count)
+      setIndex((nextIndex + count) % count);
     },
-    [count]
-  )
+    [count],
+  );
 
-  const goNext = useCallback(() => goTo(index + 1), [goTo, index])
-  const goPrev = useCallback(() => goTo(index - 1), [goTo, index])
+  const goNext = useCallback(() => goTo(index + 1), [goTo, index]);
+  const goPrev = useCallback(() => goTo(index - 1), [goTo, index]);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((current) => (current + 1) % count)
-    }, 15000)
-    return () => clearInterval(timer)
-  }, [count])
+      setIndex((current) => (current + 1) % count);
+    }, 15000);
+    return () => clearInterval(timer);
+  }, [count]);
 
   return (
     <div className={cn("relative", className)}>
@@ -63,17 +74,25 @@ export function TestimonialCarousel({
         type="button"
         onClick={goPrev}
         aria-label="Önceki yorum"
-        className="absolute top-1/2 left-0 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/90 shadow-sm transition-colors hover:bg-muted md:-left-5"
+        className={cn(
+          navButtonClassName,
+          "absolute top-1/2 left-0 z-10 -translate-y-1/2 md:-left-5",
+        )}
       >
-        <LuChevronLeft className="size-5" />
+        <BorderTrace durationSec={2.5} />
+        <LuChevronLeft className="relative z-1 size-5" />
       </button>
       <button
         type="button"
         onClick={goNext}
         aria-label="Sonraki yorum"
-        className="absolute top-1/2 right-0 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/90 shadow-sm transition-colors hover:bg-muted md:-right-5"
+        className={cn(
+          navButtonClassName,
+          "absolute top-1/2 right-0 z-10 -translate-y-1/2 md:-right-5",
+        )}
       >
-        <LuChevronRight className="size-5" />
+        <BorderTrace durationSec={2.5} />
+        <LuChevronRight className="relative z-1 size-5" />
       </button>
 
       <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
@@ -86,12 +105,12 @@ export function TestimonialCarousel({
             className={cn(
               "size-2 rounded-full transition-all",
               dotIndex === index
-                ? "w-6 bg-[#6C63FF]"
-                : "bg-border hover:bg-[#6C63FF]/50"
+                ? "w-6 bg-brand-accent"
+                : "bg-border hover:bg-brand-accent/50",
             )}
           />
         ))}
       </div>
     </div>
-  )
+  );
 }

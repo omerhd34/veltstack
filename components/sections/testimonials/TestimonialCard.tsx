@@ -1,4 +1,9 @@
-import { LuStar } from "react-icons/lu";
+import { LuQuote, LuStar } from "react-icons/lu";
+import { BorderTrace } from "@/components/ui/BorderTrace";
+import { cn } from "@/lib/utils";
+
+const slowTransition =
+  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
 
 interface TestimonialCardProps {
   clientName: string;
@@ -23,18 +28,21 @@ export function TestimonialCard({
   rating,
 }: TestimonialCardProps) {
   return (
-    <article className="relative mx-auto flex h-full w-full max-w-3xl flex-col overflow-hidden rounded-3xl border border-border/60 bg-white p-8 shadow-[0_8px_40px_rgb(0,0,0,0.06)] md:p-12">
-      {/* Büyük tırnak işareti */}
-      <svg
+    <article
+      className={cn(
+        "group relative mx-auto flex h-full w-full max-w-3xl flex-col rounded-3xl bg-white p-8 md:p-12",
+        "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
+        "shadow-[0_2px_12px_rgb(0,0,0,0.04)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.1)]",
+        slowTransition,
+      )}
+    >
+      <BorderTrace durationSec={2.5} />
+      <LuQuote
         aria-hidden
         className="absolute right-8 top-8 size-20 text-brand-accent/8 md:size-28"
-        viewBox="0 0 80 60"
-        fill="currentColor"
-      >
-        <path d="M0 36C0 16.118 16.118 0 36 0v13.5C23.574 13.5 13.5 23.574 13.5 36v22.5H0V36zm43.5 0C43.5 16.118 59.618 0 79.5 0v13.5C67.074 13.5 57 23.574 57 36v22.5H43.5V36z" />
-      </svg>
+      />
 
-      <div className="flex items-center gap-1 mb-6">
+      <div className="mb-6 flex items-center gap-1">
         {Array.from({ length: rating }).map((_, starIndex) => (
           <LuStar
             key={starIndex}

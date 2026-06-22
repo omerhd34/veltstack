@@ -1,5 +1,5 @@
 import type { IconType } from "react-icons";
-import { LuArrowRight, LuClock } from "react-icons/lu";
+import { LuClock, LuMessageCircle } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/shadcn";
 import { SiteContainer } from "@/components/layout/SiteContainer";
@@ -68,8 +68,8 @@ export function ServiceHero({
                 asChild
               >
                 <Link href="/iletisim">
+                  <LuMessageCircle className="size-4" aria-hidden />
                   {ctaButton}
-                  <LuArrowRight className="size-4" />
                 </Link>
               </Button>
             </div>

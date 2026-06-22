@@ -1,9 +1,13 @@
 import Image from "next/image";
-import { LuArrowRight, LuCalendar, LuClock } from "react-icons/lu";
+import { LuArrowUpRight, LuCalendar, LuClock } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
+import { BorderTrace } from "@/components/ui/BorderTrace";
 import { cn } from "@/lib/utils";
 import type { BlogPost } from "./blog-data";
 import { formatDate } from "./blog-data";
+
+const slowTransition =
+  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -32,15 +36,22 @@ export function BlogCard({
     <Link
       href={`/blog/${post.slug}`}
       className={cn(
-        "group relative flex overflow-hidden rounded-3xl border border-border/70 bg-white shadow-[0_2px_12px_rgb(0_0_0/0.04)] transition-all duration-500 hover:-translate-y-1.5 hover:border-brand-accent/35 hover:shadow-[0_24px_56px_rgb(58_107_82/0.14)]",
+        "group relative flex rounded-3xl bg-white",
+        "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
+        "shadow-[0_2px_12px_rgb(0_0_0/0.04)] hover:-translate-y-1.5 hover:shadow-[0_24px_56px_rgb(58_107_82/0.14)]",
+        slowTransition,
         isHorizontal ? "flex-col md:flex-row" : "flex-col",
         className,
       )}
     >
+      <BorderTrace durationSec={2.5} />
       {/* Image */}
       <div
         className={cn(
           "relative overflow-hidden bg-[#0B0F0D]",
+          isHorizontal
+            ? "rounded-t-[calc(1.5rem-3px)] md:rounded-l-[calc(1.5rem-3px)] md:rounded-tr-none md:rounded-br-none"
+            : "rounded-t-[calc(1.5rem-3px)]",
           isHorizontal
             ? "aspect-16/10 md:aspect-auto md:min-h-[220px] md:w-[42%] lg:min-h-[240px]"
             : "aspect-16/10",
@@ -113,7 +124,7 @@ export function BlogCard({
         {/* Read more */}
         <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
           {readMoreLabel}
-          <LuArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+          <LuArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </span>
       </div>
     </Link>

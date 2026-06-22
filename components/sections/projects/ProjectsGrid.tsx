@@ -21,11 +21,9 @@ export async function ProjectsGrid({ className }: ProjectsGridProps) {
           href={project.href}
           title={t(project.titleKey)}
           description={t(project.descKey)}
-          tag={t(project.tagKey)}
           icon={project.icon}
           imageUrl={projectImageUrls[project.slug]}
           coverGradient={projectCoverGradients[project.slug]}
-          viewLabel={t("projectsViewLabel")}
         />
       ))}
     </div>

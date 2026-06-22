@@ -20,6 +20,7 @@ export async function BlogPreviewSection({
       (a, b) =>
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
     )
+    .slice(0, 6)
     .map((post) => ({
       title: locale === "tr" ? post.titleTr : post.titleEn,
       excerpt: locale === "tr" ? post.excerptTr : post.excerptEn,
@@ -49,8 +50,8 @@ export async function BlogPreviewSection({
           </div>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {posts.map((post, index) => (
+        <div className="mt-12 grid auto-rows-fr gap-6 md:grid-cols-3">
+          {posts.map((post) => (
             <BlogPreviewCard
               key={post.href}
               title={post.title}
@@ -58,7 +59,6 @@ export async function BlogPreviewSection({
               href={post.href}
               image={post.image}
               readingTimeLabel={t("readingTime", { minutes: post.readingTime })}
-              featured={index === 0}
             />
           ))}
         </div>

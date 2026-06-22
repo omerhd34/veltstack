@@ -1,8 +1,8 @@
-import { LuArrowRight } from "react-icons/lu";
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { LuQuote } from "react-icons/lu";
+import { TbWaveSine } from "react-icons/tb";
 import { SiteContainer } from "@/components/layout/SiteContainer";
-import { Button } from "@/components/ui/shadcn";
+import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 
 interface WhoWeAreSectionProps {
   className?: string;
@@ -24,7 +24,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
     >
       <SiteContainer>
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
-          {/* Sol — Başlık + Quote */}
+          {/* Sol: Başlık + Quote */}
           <div className="min-w-0">
             <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
               {t("whoWeAreTitle")}
@@ -38,21 +38,11 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
               <br />
               <span className="relative inline-block text-brand-accent">
                 {t("whoWeAreHeadlineAccent")}
-                <svg
+                <TbWaveSine
                   aria-hidden
-                  className="absolute -bottom-2 left-0 w-full"
-                  viewBox="0 0 300 8"
-                  fill="none"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M2 6 C60 2, 140 2, 298 6"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    opacity="0.4"
-                  />
-                </svg>
+                  className="absolute -bottom-2 left-0 w-full opacity-40"
+                  strokeWidth={2.5}
+                />
               </span>
             </h2>
 
@@ -71,18 +61,13 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
             </div>
           </div>
 
-          {/* Sağ — Açıklama + CTA */}
+          {/* Sağ: Açıklama + CTA */}
           <div className="min-w-0 space-y-6">
-            {/* Büyük tırnak */}
             <div className="relative rounded-3xl border border-border/60 bg-[#F8F9FA] p-8 md:p-10">
-              <svg
+              <LuQuote
                 aria-hidden
                 className="absolute -top-4 left-8 size-8 text-brand-accent/25"
-                viewBox="0 0 32 32"
-                fill="currentColor"
-              >
-                <path d="M0 16C0 7.163 7.163 0 16 0v6C10.477 6 6 10.477 6 16v14H0V16zm18 0C18 7.163 25.163 0 34 0v6c-5.523 0-10 4.477-10 10v14H18V16z" />
-              </svg>
+              />
               <p className="text-lg leading-[1.85] text-foreground/75 md:text-xl">
                 {t("whoWeAreDescription")}
               </p>
@@ -92,16 +77,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
               {t("whoWeAreDescriptionSecondary")}
             </p>
 
-            <Button
-              size="lg"
-              className="h-12 gap-2 rounded-full bg-[#0A0A0F] px-8 text-base text-white hover:bg-[#0A0A0F]/85"
-              asChild
-            >
-              <Link href="/hakkimda">
-                {t("whoWeAreCta")}
-                <LuArrowRight className="size-4" />
-              </Link>
-            </Button>
+            <PrimaryCtaLink href="/hakkimda">{t("whoWeAreCta")}</PrimaryCtaLink>
           </div>
         </div>
       </SiteContainer>

@@ -1,7 +1,6 @@
-import { LuArrowRight, LuCircleCheck } from "react-icons/lu";
+import { LuCircleCheck, LuMessageCircle } from "react-icons/lu";
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
-import { Button } from "@/components/ui/shadcn";
+import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 
 interface ServicesIntroProps {
   className?: string;
@@ -58,16 +57,13 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
           <div className="h-px w-full bg-border/50" />
 
           <div className="flex flex-wrap items-center gap-4">
-            <Button
-              size="lg"
-              className="h-12 gap-2 rounded-full bg-[#0A0A0F] px-8 text-base text-white hover:bg-[#0A0A0F]/85"
-              asChild
+            <PrimaryCtaLink
+              href="/iletisim"
+              showArrow={false}
+              trailingIcon={<LuMessageCircle className="size-5" aria-hidden />}
             >
-              <Link href="/iletisim">
-                {t("servicesCta")}
-                <LuArrowRight className="size-4" />
-              </Link>
-            </Button>
+              {t("servicesCta")}
+            </PrimaryCtaLink>
           </div>
         </div>
       </div>

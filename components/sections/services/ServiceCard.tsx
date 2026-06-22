@@ -1,11 +1,11 @@
 import type { IconType } from "react-icons";
-import { LuArrowRight } from "react-icons/lu";
+import { LuArrowUpRight } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/shadcn";
 import { BorderTrace } from "@/components/ui/BorderTrace";
 import { CardIndexNumber } from "@/components/ui/CardIndexNumber";
 import { TechStackIcons } from "@/components/sections/projects/TechStackIcons";
-import { cn } from "@/lib/utils";
+import { cn, isExternalHref } from "@/lib/utils";
 
 interface ServiceCardProps {
   title: string;
@@ -38,23 +38,21 @@ export function ServiceCard({
   const slowTransition =
     "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
 
-  return (
-    <Link
-      href={href}
-      onClick={onNavigate}
-      className={cn(
-        "group relative flex flex-col rounded-2xl bg-card",
-        slowTransition,
-        !isSlide && "h-full",
-        isSlide
-          ? "border-trace-hover-fallback box-border border-2 border-solid border-[#8aab99] bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]"
-          : cn(
-              "overflow-hidden border border-solid border-border hover:-translate-y-0.5 hover:border-brand-accent hover:shadow-lg",
-              compact ? "p-4" : "p-6",
-            ),
-      )}
-    >
-      {isSlide ? <BorderTrace /> : null}
+  const cardClassName = cn(
+    "group relative flex flex-col rounded-2xl bg-card",
+    slowTransition,
+    !isSlide && "h-full",
+    isSlide
+      ? "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99] bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]"
+      : cn(
+          "border-trace-hover-fallback box-border border-[3px] border-solid border-border hover:shadow-lg",
+          compact ? "p-4" : "p-6",
+        ),
+  );
+
+  const content = (
+    <>
+      <BorderTrace durationSec={2.5} />
       {numbered && index != null ? (
         <CardIndexNumber
           index={index}
@@ -104,7 +102,7 @@ export function ServiceCard({
             className={cn(
               "leading-relaxed",
               compact
-                ? "mt-1.5 text-xs text-muted-foreground"
+                ? "mt-1.5 h-[calc(0.75rem*1.625*3)] text-xs leading-relaxed text-muted-foreground"
                 : isSlide
                   ? "mt-2 text-[0.9375rem] leading-[1.7] text-foreground/60"
                   : "mt-1.5 text-sm text-muted-foreground",
@@ -147,9 +145,9 @@ export function ServiceCard({
                 slowTransition,
               )}
             >
-              <LuArrowRight
+              <LuArrowUpRight
                 className={cn(
-                  "size-4 translate-x-0 stroke-[1.75] group-hover:translate-x-0.5 group-hover:stroke-[2.75]",
+                  "size-4 translate-x-0 stroke-[1.75] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:stroke-[2.75]",
                   slowTransition,
                 )}
               />
@@ -157,6 +155,26 @@ export function ServiceCard({
           ) : null}
         </div>
       ) : null}
+    </>
+  );
+
+  if (isExternalHref(href)) {
+    return (
+      <a
+        href={href}
+        onClick={onNavigate}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cardClassName}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} onClick={onNavigate} className={cardClassName}>
+      {content}
     </Link>
   );
 }
