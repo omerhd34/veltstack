@@ -51,7 +51,7 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
         aria-modal="true"
         aria-label="Mobil menü"
       >
-        <div className="flex h-16 shrink-0 items-center justify-between border-b border-border px-4 sm:px-5">
+        <div className="flex h-[4.5rem] shrink-0 items-center justify-between border-b border-border px-4 sm:px-5">
           <NavbarLogo />
           <Button
             variant="ghost"
@@ -69,7 +69,7 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
         </div>
         <div className="shrink-0 border-t border-border p-4">
           <NavbarCta
-            className="h-11 w-full justify-center"
+            className="h-12 w-full justify-center"
             onNavigate={closeMenu}
           />
         </div>

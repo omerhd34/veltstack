@@ -6,7 +6,7 @@ export function navItemClass(
 ) {
   if (variant === "desktop") {
     return cn(
-      "relative inline-flex h-11 items-center gap-1 px-3.5 text-sm font-semibold tracking-[-0.01em] transition-colors duration-200",
+      "relative inline-flex h-12 items-center gap-1 px-4 text-base font-semibold tracking-[-0.01em] transition-colors duration-200",
       active ? "text-foreground" : "text-foreground/70 hover:text-foreground",
     );
   }
@@ -30,6 +30,6 @@ export function navItemLabelClass(active: boolean) {
   return cn(
     "relative inline-flex h-full items-center",
     active &&
-      "after:absolute after:bottom-2.5 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-accent",
+      "after:absolute after:bottom-3 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-accent",
   );
 }

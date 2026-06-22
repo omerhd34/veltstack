@@ -59,7 +59,7 @@ export function Navbar({ className }: NavbarProps) {
         className
       )}
     >
-      <SiteContainer className="relative flex min-h-16 items-center justify-between gap-4">
+      <SiteContainer className="relative flex min-h-[4.5rem] items-center justify-between gap-4">
         <Link href="/" className="shrink-0 select-none transition-opacity hover:opacity-80">
           <NavbarLogo />
         </Link>

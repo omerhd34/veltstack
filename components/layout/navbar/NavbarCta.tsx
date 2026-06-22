@@ -16,9 +16,9 @@ export function NavbarCta({ className, onNavigate }: NavbarCtaProps) {
   return (
     <PrimaryCtaLink
       href="/iletisim"
-      size="sm"
+      size="md"
       showArrow={false}
-      trailingIcon={<LuMessageCircle className="size-4" aria-hidden />}
+      trailingIcon={<LuMessageCircle className="size-[1.125rem]" aria-hidden />}
       onNavigate={onNavigate}
       className={cn(className)}
     >

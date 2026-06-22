@@ -33,7 +33,7 @@ export function NavbarLangSwitcher({ className }: NavbarLangSwitcherProps) {
       href={pathname}
       locale={nextLocale}
       className={cn(
-        "inline-flex size-9 shrink-0 items-center justify-center rounded-full transition-opacity hover:opacity-80 active:scale-95",
+        "inline-flex size-10 shrink-0 items-center justify-center rounded-full transition-opacity hover:opacity-80 active:scale-95",
         className,
       )}
       aria-label={nextLocale === "en" ? tNav("switchToEn") : tNav("switchToTr")}
@@ -43,7 +43,7 @@ export function NavbarLangSwitcher({ className }: NavbarLangSwitcherProps) {
         alt={flag.alt}
         width={32}
         height={32}
-        className="size-8 rounded-full object-cover ring-1 ring-border/60"
+        className="size-9 rounded-full object-cover ring-1 ring-border/60"
       />
     </Link>
   );

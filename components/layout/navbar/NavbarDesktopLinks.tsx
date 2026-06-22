@@ -64,7 +64,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
 
   return (
     <nav
-      className={cn("items-center gap-0.5 xl:gap-1", className)}
+      className={cn("items-center gap-1 xl:gap-1.5", className)}
       aria-label="Ana navigasyon"
     >
       <div
