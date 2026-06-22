@@ -118,7 +118,9 @@ export async function ProjectsDetailList({
 }: ProjectsDetailListProps) {
   return (
     <div className={className}>
-      {projectItems.map((project) => (
+      {projectItems
+        .filter((project) => !project.external)
+        .map((project) => (
         <ProjectDetailView
           key={project.slug}
           slug={project.slug}
@@ -131,9 +133,12 @@ export async function ProjectsDetailList({
 }
 
 export function getProjectStaticSlugs(): ProjectSlug[] {
-  return projectItems.map((item) => item.slug);
+  return projectItems
+    .filter((item) => !item.external)
+    .map((item) => item.slug);
 }
 
 export function validateProjectSlug(slug: string): slug is ProjectSlug {
-  return isProjectSlug(slug);
+  const project = projectItems.find((item) => item.slug === slug);
+  return isProjectSlug(slug) && !project?.external;
 }

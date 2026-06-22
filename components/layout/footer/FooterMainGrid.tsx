@@ -6,6 +6,7 @@ import type { IconType } from "react-icons";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getFooterBlogPosts } from "@/components/pages/blog/blog-data";
+import { isExternalHref } from "@/lib/utils";
 import {
   footerProjectItems,
   footerServiceItems,
@@ -23,7 +24,8 @@ interface FooterContactLink {
 }
 
 function getContactLinkIcon(href: string): IconType {
-  if (href.includes("wa.me") || href.includes("whatsapp.com")) return FaWhatsapp;
+  if (href.includes("wa.me") || href.includes("whatsapp.com"))
+    return FaWhatsapp;
   if (href.includes("github.com")) return LuGithub;
   if (href.includes("linkedin.com")) return LuLinkedin;
   return LuGlobe;
@@ -65,13 +67,26 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
         <ul className="space-y-3">
           {footerProjectItems.map((item) => {
             const Icon = item.icon;
+            const label = projectLabels[item.navKey];
 
             return (
               <li key={item.href}>
-                <Link href={item.href} className={footerLinkClassName}>
-                  <Icon className="size-4 shrink-0" aria-hidden />
-                  {projectLabels[item.navKey]}
-                </Link>
+                {isExternalHref(item.href) ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={footerLinkClassName}
+                  >
+                    <Icon className="size-4 shrink-0" aria-hidden />
+                    {label}
+                  </a>
+                ) : (
+                  <Link href={item.href} className={footerLinkClassName}>
+                    <Icon className="size-4 shrink-0" aria-hidden />
+                    {label}
+                  </Link>
+                )}
               </li>
             );
           })}

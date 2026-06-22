@@ -3,6 +3,10 @@ export const navProjectItems = [
   { href: "/projeler/yazici-ticaret", navKey: "projectYazici" },
   { href: "/projeler/fablessi", navKey: "projectFablessi" },
   { href: "/projeler/uzman-klinik-psikolog", navKey: "projectUzmanPsikolog" },
+  {
+    href: "https://www.omerhalisdemir.com.tr/",
+    navKey: "projectPortfolio",
+  },
 ] as const;
 
 export type NavProjectKey = (typeof navProjectItems)[number]["navKey"];

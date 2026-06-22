@@ -2,7 +2,7 @@ export const projectsPageEn = {
   heroBadge: "Portfolio",
   heroTitle: "Projects that serve real business goals",
   heroSubtitle:
-    "From fintech to e-commerce, corporate catalogs to healthcare platforms — every project is built for measurable outcomes and user experience.",
+    "From fintech to e-commerce, corporate catalogs to healthcare platforms, every project is built for measurable outcomes and user experience.",
   heroSubtitleSecondary:
     "Explore detailed case studies covering scope, tech stack, and delivery metrics for each project.",
   heroImageAlt:
@@ -17,7 +17,7 @@ export const projectsPageEn = {
   showcaseBadge: "Case Studies",
   showcaseTitle: "Every project tells a business story",
   showcaseSubtitle:
-    "Design and development in one line — balanced with performance and measurable results.",
+    "Design and development in one line, balanced with performance and measurable results.",
   viewLabel: "View details",
   featuredLabel: "Featured",
   approachBadge: "Approach",

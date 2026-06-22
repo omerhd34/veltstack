@@ -9,3 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 export function toLatinUppercase(value: string): string {
   return value.toLocaleUpperCase("en-US").replace(/\u0130/g, "I")
 }
+
+export function isExternalHref(href: string): boolean {
+  return href.startsWith("http://") || href.startsWith("https://")
+}

@@ -1,34 +1,37 @@
-import type { IconType } from "react-icons"
+import type { IconType } from "react-icons";
 import {
   LuBrain,
   LuChartLine,
+  LuGlobe,
   LuShoppingCart,
   LuTreePine,
-} from "react-icons/lu"
+} from "react-icons/lu";
 
 export const projectSlugs = [
   "iqfinansai",
   "yazici-ticaret",
   "fablessi",
   "uzman-klinik-psikolog",
-] as const
+  "portfolio",
+] as const;
 
 export const homepageProjectSlugs = [
   "iqfinansai",
   "uzman-klinik-psikolog",
   "yazici-ticaret",
   "fablessi",
-] as const
+] as const;
 
-export type ProjectSlug = (typeof projectSlugs)[number]
+export type ProjectSlug = (typeof projectSlugs)[number];
 
 export interface ProjectItemConfig {
-  slug: ProjectSlug
-  href: string
-  titleKey: string
-  descKey: string
-  tagKey: string
-  icon: IconType
+  slug: ProjectSlug;
+  href: string;
+  titleKey: string;
+  descKey: string;
+  tagKey: string;
+  icon: IconType;
+  external?: boolean;
 }
 
 export const projectItems: ProjectItemConfig[] = [
@@ -64,12 +67,21 @@ export const projectItems: ProjectItemConfig[] = [
     tagKey: "projectUzmanPsikologTag",
     icon: LuBrain,
   },
-]
+  {
+    slug: "portfolio",
+    href: "https://www.omerhalisdemir.com.tr/",
+    titleKey: "projectPortfolioTitle",
+    descKey: "projectPortfolioDesc",
+    tagKey: "projectPortfolioTag",
+    icon: LuGlobe,
+    external: true,
+  },
+];
 
 export const homepageProjectItems = projectItems.filter((item) =>
   (homepageProjectSlugs as readonly string[]).includes(item.slug),
-)
+);
 
 export function isProjectSlug(slug: string): slug is ProjectSlug {
-  return projectSlugs.includes(slug as ProjectSlug)
+  return projectSlugs.includes(slug as ProjectSlug);
 }

@@ -47,11 +47,9 @@ export async function ServiceProjects({
               href={project.href}
               title={tHome(project.titleKey)}
               description={tHome(project.descKey)}
-              tag={tHome(project.tagKey)}
               icon={project.icon}
               imageUrl={projectImageUrls[project.slug]}
               coverGradient={projectCoverGradients[project.slug]}
-              viewLabel={tHome("projectsViewLabel")}
             />
           ))}
         </div>

@@ -50,11 +50,9 @@ export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
             href={featured.href}
             title={tHome(featured.titleKey)}
             description={tHome(featured.descKey)}
-            tag={tHome(featured.tagKey)}
             icon={featured.icon}
             imageUrl={projectImageUrls[featured.slug]}
             coverGradient={projectCoverGradients[featured.slug]}
-            viewLabel={tPage("viewLabel")}
             featuredLabel={tPage("featuredLabel")}
             featured
           />
@@ -67,11 +65,9 @@ export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
                 href={project.href}
                 title={tHome(project.titleKey)}
                 description={tHome(project.descKey)}
-                tag={tHome(project.tagKey)}
                 icon={project.icon}
                 imageUrl={projectImageUrls[project.slug]}
                 coverGradient={projectCoverGradients[project.slug]}
-                viewLabel={tPage("viewLabel")}
               />
             ))}
           </div>

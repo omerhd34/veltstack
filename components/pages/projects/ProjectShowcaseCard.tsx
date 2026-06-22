@@ -1,19 +1,16 @@
 import type { IconType } from "react-icons";
-import { LuArrowRight } from "react-icons/lu";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { cn } from "@/lib/utils";
+import { cn, isExternalHref } from "@/lib/utils";
 
 interface ProjectShowcaseCardProps {
   index: number;
   title: string;
   description: string;
   href: string;
-  tag: string;
   icon: IconType;
   imageUrl?: string;
   coverGradient: string;
-  viewLabel: string;
   featuredLabel?: string;
   featured?: boolean;
   className?: string;
@@ -24,24 +21,21 @@ export function ProjectShowcaseCard({
   title,
   description,
   href,
-  tag,
   icon: Icon,
   imageUrl,
   coverGradient,
-  viewLabel,
   featuredLabel,
   featured = false,
   className,
 }: ProjectShowcaseCardProps) {
-  return (
-    <Link
-      href={href}
-      className={cn(
-        "group relative flex overflow-hidden rounded-3xl border border-border/70 bg-white shadow-[0_2px_12px_rgb(0_0_0/0.04)] transition-all duration-500 hover:-translate-y-1.5 hover:border-brand-accent/35 hover:shadow-[0_24px_56px_rgb(58_107_82/0.14)]",
-        featured ? "flex-col lg:flex-row" : "flex-col",
-        className,
-      )}
-    >
+  const cardClassName = cn(
+    "group relative flex overflow-hidden rounded-3xl border border-border/70 bg-white shadow-[0_2px_12px_rgb(0_0_0/0.04)] transition-all duration-500 hover:border-brand-accent/35 hover:shadow-[0_24px_56px_rgb(58_107_82/0.14)]",
+    featured ? "flex-col lg:flex-row" : "flex-col",
+    className,
+  );
+
+  const content = (
+    <>
       <div
         className={cn(
           "relative overflow-hidden bg-muted",
@@ -88,10 +82,6 @@ export function ProjectShowcaseCard({
           className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         />
 
-        <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md">
-          {tag}
-        </span>
-
         {featured && featuredLabel ? (
           <span className="absolute right-4 top-4 rounded-full bg-brand-accent px-3 py-1 text-[0.6875rem] font-semibold text-white">
             {featuredLabel}
@@ -134,12 +124,22 @@ export function ProjectShowcaseCard({
         >
           {description}
         </p>
-
-        <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
-          {viewLabel}
-          <LuArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
-        </span>
       </div>
+    </>
+  );
+
+  return isExternalHref(href) ? (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cardClassName}
+    >
+      {content}
+    </a>
+  ) : (
+    <Link href={href} className={cardClassName}>
+      {content}
     </Link>
   );
 }

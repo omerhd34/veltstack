@@ -14,9 +14,10 @@ export const footerTr = {
   },
   projectLabels: {
     projectIqfinans: "IQfinansAI",
-    projectYazici: "Yazıcı Ticaret",
+    projectYazici: "Yazıcı Ticaret | Profilo & LG",
     projectFablessi: "Fablessi",
     projectUzmanPsikolog: "Uzman Klinik Psikolog",
+    projectPortfolio: "Portfolio Web Sitesi",
   },
   contactPhone: "+90 507 849 29 03",
   contactPhoneHref: "tel:+905078492903",

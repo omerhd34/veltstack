@@ -17,6 +17,7 @@ export const footerEn = {
     projectYazici: "Yazici Trade",
     projectFablessi: "Fablessi",
     projectUzmanPsikolog: "Clinical Psychologist",
+    projectPortfolio: "Portfolio Website",
   },
   contactPhone: "+90 507 849 29 03",
   contactPhoneHref: "tel:+905078492903",

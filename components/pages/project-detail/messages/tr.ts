@@ -18,14 +18,14 @@ export const projectDetailsTr = {
   ctaSubtitle:
     "Finans, e-ticaret veya kurumsal platform ihtiyaçlarınızı birlikte değerlendirelim.",
   ctaButton: "Teklif Al",
-  ctaNote: "24 saat içinde yanıt · Ücretsiz ön görüşme",
+  ctaNote: "24 saat içinde yanıt / Ücretsiz ön görüşme",
   breadcrumbHome: "Ana Sayfa",
   breadcrumbProjects: "Projeler",
   iqfinansai: {
-    metaTitle: "IQfinansAI — Yapay Zekâ Finans Platformu",
+    metaTitle: "IQfinansAI | Yapay Zekâ Finans Platformu",
     metaDesc:
       "Gelir-gider, bütçe, borç-alacak ve AI analiz raporu sunan kişisel finans platformu. 16.000+ kullanıcı, Shopier abonelik altyapısı.",
-    heroBadge: "Finansal Teknoloji · AI",
+    heroBadge: "Finansal Teknoloji / AI",
     heroTitle: "IQfinansAI",
     heroSubtitle:
       "Kişisel finans asistanı: gelir-gider, bütçe, borç-alacak ve yatırım portföyünü tek panelde yönetin. Yapay zekâ destekli analizlerle harcamalarınızı netleştirin.",
@@ -92,10 +92,10 @@ export const projectDetailsTr = {
     ],
   },
   "yazici-ticaret": {
-    metaTitle: "Yazıcı Ticaret — E-Ticaret Platformu",
+    metaTitle: "Yazıcı Ticaret | E-Ticaret Platformu",
     metaDesc:
       "Beyaz eşya ve elektronik kategorilerinde uçtan uca e-ticaret deneyimi sunan Yazıcı Ticaret platformu.",
-    heroBadge: "E-Ticaret · B2C",
+    heroBadge: "E-Ticaret / B2C",
     heroTitle: "Yazıcı Ticaret",
     heroSubtitle:
       "Profilo ve LG beyaz eşya ve elektronik ürünleri için uçtan uca e-ticaret. Tüm Türkiye'ye nakliye-montaj, taksit seçenekleri ve iyzico ile güvenli ödeme.",
@@ -150,7 +150,7 @@ export const projectDetailsTr = {
     metaTitle: "Uzman Klinik Psikolog Web Sitesi",
     metaDesc:
       "Randevu talebi, SEO ve güven odaklı klinik psikolog web sitesi. Next.js ile modern, erişilebilir kurumsal deneyim.",
-    heroBadge: "Sağlık · Kurumsal",
+    heroBadge: "Sağlık / Kurumsal",
     heroTitle: "Uzman Klinik Psikolog",
     heroSubtitle:
       "Uzman Klinik Psikolog Nisa Demir için güven odaklı kurumsal site. Yüz yüze ve online terapi, randevu talebi, blog ve SEO altyapısı.",
@@ -199,10 +199,10 @@ export const projectDetailsTr = {
     ],
   },
   fablessi: {
-    metaTitle: "Fablessi — Bahçe & Balkon Mobilya Kataloğu",
+    metaTitle: "Fablessi | Bahçe & Balkon Mobilya Kataloğu",
     metaDesc:
       "Bahçe ve balkon mobilyaları için premium kurumsal ürün vitrini. Hero carousel, WhatsApp entegrasyonu ve SEO uyumlu katalog.",
-    heroBadge: "Kurumsal · Katalog",
+    heroBadge: "Kurumsal / Katalog",
     heroTitle: "Fablessi",
     heroSubtitle:
       "Bahçe ve balkon mobilyaları için premium kurumsal katalog. Oturma gruplarından şezlonglara 6 kategori, hero carousel ve WhatsApp iletişimi.",

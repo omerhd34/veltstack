@@ -18,14 +18,14 @@ export const projectDetailsEn = {
   ctaSubtitle:
     "Let's evaluate your finance, e-commerce or corporate platform needs together.",
   ctaButton: "Get a Quote",
-  ctaNote: "Response within 24 hours · Free initial consultation",
+  ctaNote: "Response within 24 hours / Free initial consultation",
   breadcrumbHome: "Home",
   breadcrumbProjects: "Projects",
   iqfinansai: {
-    metaTitle: "IQfinansAI — AI Finance Platform",
+    metaTitle: "IQfinansAI | AI Finance Platform",
     metaDesc:
       "Personal finance platform for income-expense, budgets, debt tracking and AI analysis reports. 16,000+ users, Shopier subscription stack.",
-    heroBadge: "FinTech · AI",
+    heroBadge: "FinTech / AI",
     heroTitle: "IQfinansAI",
     heroSubtitle:
       "Your personal finance assistant: manage income, expenses, budgets, debt and investment portfolio in one panel. Clarify spending with AI-powered insights.",
@@ -34,7 +34,7 @@ export const projectDetailsEn = {
     challengeText:
       "Income, expense, debt and budget data was scattered across Excel spreadsheets, banking apps and loose notes. Building a clear monthly financial picture took hours; questions about category spending, savings progress and debt-receivable balance often went unanswered. Switching to separate tools for investment tracking, AI-powered analysis or detailed reporting only made the experience more fragmented.",
     solutionText:
-      "IQfinansAI brings personal finance management into a single end-to-end platform. Nine modules cover everything from income-expense logging and category-based budgets to debt tracking and multi-currency support — all in one panel. Recharts-powered KPI dashboards and a financial health score deliver an instant snapshot, while Premium adds the IQfinansAI analysis report, natural-language assistant and investment portfolio for deeper insights. Shopier subscription infrastructure runs in production, serving thousands of active users.",
+      "IQfinansAI brings personal finance management into a single end-to-end platform. Nine modules cover everything from income-expense logging and category-based budgets to debt tracking and multi-currency support, all in one panel. Recharts-powered KPI dashboards and a financial health score deliver an instant snapshot, while Premium adds the IQfinansAI analysis report, natural-language assistant and investment portfolio for deeper insights. Shopier subscription infrastructure runs in production, serving thousands of active users.",
     details:
       "The frontend was built with Next.js, React and Redux for an SSR-capable, performance-focused interface. The backend runs on a Node.js REST API with Prisma ORM and MySQL; interactive Recharts graphs, Premium receipt OCR for fast entry and AI analysis PDF export are among the platform's standout technical capabilities. 40+ currency codes are supported, with calculation tools, email alerts and category limit warnings completing the operational flow. Deployed on Railway in production, serving 16,000+ registered users in the live environment.",
     features: [
@@ -92,17 +92,17 @@ export const projectDetailsEn = {
     ],
   },
   "yazici-ticaret": {
-    metaTitle: "Yazici Ticaret — E-Commerce Platform",
+    metaTitle: "Yazici Ticaret | E-Commerce Platform",
     metaDesc:
       "End-to-end e-commerce experience for white goods and electronics categories.",
-    heroBadge: "E-Commerce · B2C",
+    heroBadge: "E-Commerce / B2C",
     heroTitle: "Yazici Ticaret",
     heroSubtitle:
       "End-to-end e-commerce for Profilo and LG white goods and electronics. Nationwide shipping & installation, installment options and secure iyzico checkout.",
     summary:
       "End-to-end e-commerce for white goods, built-in appliances and electronics.",
     challengeText:
-      "Physical store traffic was limited while customers expected a wide product range, secure online payment, installment options and order tracking. The existing digital channel couldn't meet these expectations — category discovery was weak, campaign management was manual and order flows were fragmented. In high-ticket categories like white goods and electronics, trust and operational transparency are critical factors that directly affect conversion rates.",
+      "Physical store traffic was limited while customers expected a wide product range, secure online payment, installment options and order tracking. The existing digital channel couldn't meet these expectations, category discovery was weak, campaign management was manual and order flows were fragmented. In high-ticket categories like white goods and electronics, trust and operational transparency are critical factors that directly affect conversion rates.",
     solutionText:
       "We built an end-to-end B2C e-commerce platform for Profilo and LG white goods and electronics. Category mega menus and featured product showcases simplify discovery, while iyzico integration delivers secure checkout with Troy, Mastercard and Visa installment support. Order tracking, campaign and discount modules, customer accounts and an admin panel centralize operations. Nationwide shipping and installation plus a product request form integrate post-sale support into the digital flow.",
     details:
@@ -150,13 +150,13 @@ export const projectDetailsEn = {
     metaTitle: "Clinical Psychologist Website",
     metaDesc:
       "An appointment, SEO and trust-focused clinical psychologist website with Next.js.",
-    heroBadge: "Healthcare · Corporate",
+    heroBadge: "Healthcare / Corporate",
     heroTitle: "Clinical Psychologist",
     heroSubtitle:
       "Trust-focused corporate site for Clinical Psychologist Nisa Demir. In-person and online therapy, appointment requests, blog and SEO infrastructure.",
     summary: "Appointment, blog and SEO-focused clinical psychologist website.",
     challengeText:
-      "Clients needed a trustworthy digital presence, an easy appointment process and professional content; the existing setup couldn't meet these expectations. SEO performance was weak, the mobile experience was inconsistent and accessibility standards were only partially met. In healthcare, trust is the most critical factor — professional appearance, clear service narrative and seamless contact channels directly affect appointment conversion.",
+      "Clients needed a trustworthy digital presence, an easy appointment process and professional content; the existing setup couldn't meet these expectations. SEO performance was weak, the mobile experience was inconsistent and accessibility standards were only partially met. In healthcare, trust is the most critical factor, professional appearance, clear service narrative and seamless contact channels directly affect appointment conversion.",
     solutionText:
       "We designed an SSR-based, accessible and trust-focused corporate site for Clinical Psychologist Nisa Demir. The appointment request form clearly routes in-person and online therapy options, while a dynamic blog module enables regular publishing on psychology, psychoanalysis and mental health. Structured SEO, sitemap and meta infrastructure strengthen search visibility; calm typography and a professional visual language support client confidence.",
     details:
@@ -199,10 +199,10 @@ export const projectDetailsEn = {
     ],
   },
   fablessi: {
-    metaTitle: "Fablessi — Garden & Balcony Furniture Catalog",
+    metaTitle: "Fablessi | Garden & Balcony Furniture Catalog",
     metaDesc:
       "Premium corporate product showcase for garden and balcony furniture.",
-    heroBadge: "Corporate · Catalog",
+    heroBadge: "Corporate / Catalog",
     heroTitle: "Fablessi",
     heroSubtitle:
       "Premium corporate catalog for garden and balcony furniture. 6 categories from seating groups to sunbeds, hero carousel and WhatsApp contact.",
@@ -211,7 +211,7 @@ export const projectDetailsEn = {
     challengeText:
       "The brand couldn't showcase its products effectively online; potential customers expected rich visuals, category-based discovery and quick contact. The existing setup didn't reflect the outdoor living aesthetic, the product portfolio was presented in a scattered way and direct channels like WhatsApp weren't integrated. In a visually driven sector like garden and balcony furniture, showcase quality directly shapes brand perception and pre-sale confidence.",
     solutionText:
-      "We developed a premium corporate catalog site for Fablessi. A hero carousel delivers full-screen visual showcases, a six-category product catalog and featured product areas strengthen the brand's outdoor living identity. The full product family — from seating groups to sunbeds — is presented in a structured way; WhatsApp routing enables one-click contact. Emphasis on İnegöl craftsmanship and seasonal campaign areas complete the brand story digitally.",
+      "We developed a premium corporate catalog site for Fablessi. A hero carousel delivers full-screen visual showcases, a six-category product catalog and featured product areas strengthen the brand's outdoor living identity. The full product family, from seating groups to sunbeds, is presented in a structured way; WhatsApp routing enables one-click contact. Emphasis on İnegöl craftsmanship and seasonal campaign areas complete the brand story digitally.",
     details:
       "Corporate catalog built with Next.js, React and Node.js; Prisma and MySQL backend for category and product management. Product, pricing and image updates are managed via the admin panel; SEO-friendly meta tags, sitemap and structured data support search visibility. Premium typography, outdoor aesthetics and responsive design deliver a consistent showcase experience across devices. Vercel deployment targets fast load times and uninterrupted service in production.",
     features: [

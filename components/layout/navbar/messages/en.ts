@@ -12,6 +12,7 @@ export const navEn = {
   "projectYazici": "Yazici Trade",
   "projectFablessi": "Fablessi",
   "projectUzmanPsikolog": "Clinical Psychologist",
+  "projectPortfolio": "Portfolio Website",
   "projects": "Projects",
   "blog": "Blog",
   "blogAll": "All Articles",

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { cn } from "@/lib/utils";
+import { cn, isExternalHref } from "@/lib/utils";
 import { getNavBlogPosts } from "@/components/pages/blog/blog-data";
 import { navServiceItems, type NavServiceKey } from "./nav-services";
 import { navProjectItems, type NavProjectKey } from "./nav-projects";
@@ -43,6 +43,7 @@ export function NavbarLinks({
     projectYazici: tNav("projectYazici"),
     projectFablessi: tNav("projectFablessi"),
     projectUzmanPsikolog: tNav("projectUzmanPsikolog"),
+    projectPortfolio: tNav("projectPortfolio"),
   };
 
   const links = [
@@ -164,16 +165,28 @@ export function NavbarLinks({
               </li>
               {navProjectItems.map((item) => (
                 <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={onNavigate}
-                    className={navItemClass(
-                      isActive(item.href),
-                      "mobile-nested",
-                    )}
-                  >
-                    {projectLabels[item.navKey]}
-                  </Link>
+                  {isExternalHref(item.href) ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={onNavigate}
+                      className={navItemClass(false, "mobile-nested")}
+                    >
+                      {projectLabels[item.navKey]}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      onClick={onNavigate}
+                      className={navItemClass(
+                        isActive(item.href),
+                        "mobile-nested",
+                      )}
+                    >
+                      {projectLabels[item.navKey]}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
