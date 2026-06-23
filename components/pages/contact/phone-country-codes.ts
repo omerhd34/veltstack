@@ -1,11 +1,8 @@
 export const phoneCountryCodes = [
-  // Türkiye (Öncelikli)
   { value: "+90", label: "+90" },
 
-  // Kuzey Amerika (NANP)
   { value: "+1", label: "+1" },
 
-  // Afrika
   { value: "+20", label: "+20" },
   { value: "+27", label: "+27" },
   { value: "+211", label: "+211" },
@@ -63,7 +60,6 @@ export const phoneCountryCodes = [
   { value: "+268", label: "+268" },
   { value: "+269", label: "+269" },
 
-  // Avrupa
   { value: "+30", label: "+30" },
   { value: "+31", label: "+31" },
   { value: "+32", label: "+32" },
@@ -112,7 +108,6 @@ export const phoneCountryCodes = [
   { value: "+48", label: "+48" },
   { value: "+49", label: "+49" },
 
-  // Orta ve Güney Amerika
   { value: "+51", label: "+51" },
   { value: "+52", label: "+52" },
   { value: "+53", label: "+53" },
@@ -142,7 +137,6 @@ export const phoneCountryCodes = [
   { value: "+598", label: "+598" },
   { value: "+599", label: "+599" },
 
-  // Güneydoğu Asya ve Okyanusya
   { value: "+60", label: "+60" },
   { value: "+61", label: "+61" },
   { value: "+62", label: "+62" },
@@ -172,10 +166,8 @@ export const phoneCountryCodes = [
   { value: "+691", label: "+691" },
   { value: "+692", label: "+692" },
 
-  // Rusya ve Komşuları
   { value: "+7", label: "+7" },
 
-  // Doğu Asya ve Özel Servisler
   { value: "+81", label: "+81" },
   { value: "+82", label: "+82" },
   { value: "+84", label: "+84" },
@@ -187,8 +179,7 @@ export const phoneCountryCodes = [
   { value: "+856", label: "+856" },
   { value: "+880", label: "+880" },
   { value: "+886", label: "+886" },
-
-  // Orta Doğu, Güney Asya ve Diğerleri
+ 
   { value: "+91", label: "+91" },
   { value: "+92", label: "+92" },
   { value: "+93", label: "+93" },

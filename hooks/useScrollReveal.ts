@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -10,14 +9,13 @@ interface UseScrollRevealOptions {
 }
 
 export function useScrollReveal(options: UseScrollRevealOptions = {}) {
+  const { threshold = 0.1, rootMargin = "0px", repeat = false } = options;
   const ref = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
-
-    const { threshold = 0.1, rootMargin = "0px", repeat = false } = options;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -37,7 +35,7 @@ export function useScrollReveal(options: UseScrollRevealOptions = {}) {
     observer.observe(element);
 
     return () => observer.disconnect();
-  }, [options.threshold, options.rootMargin, options.repeat]);
+  }, [threshold, rootMargin, repeat]);
 
   return { ref, isVisible };
 }

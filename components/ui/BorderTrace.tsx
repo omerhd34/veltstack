@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/refs */
 "use client";
 
 import { type CSSProperties, useEffect, useRef, useState } from "react";
@@ -88,8 +87,6 @@ export function BorderTrace({
   const frameRef = useRef<number | null>(null);
   const hasAnimatedRef = useRef(false);
   const loopActiveRef = useRef(false);
-  const activeRef = useRef(active);
-  activeRef.current = active;
   const [layout, setLayout] = useState({
     width: 0,
     height: 0,
@@ -270,7 +267,7 @@ export function BorderTrace({
       const hoverActive = trigger !== "focus" && wrapper.matches(":hover");
       const focusActive =
         trigger !== "hover" &&
-        (wrapper.matches(":focus-within") || activeRef.current === true);
+        (wrapper.matches(":focus-within") || active === true);
 
       return hoverActive || focusActive;
     };

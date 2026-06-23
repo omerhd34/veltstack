@@ -64,7 +64,6 @@
     @apply font-semibold text-foreground;
   }
 
-  /* Karşılaştırma tablosu (Özellik | A | B) */
   .blog-prose .blog-table-compare thead {
     @apply bg-transparent;
   }
@@ -160,7 +159,6 @@
     @apply bg-emerald-600/10;
   }
 
-  /* Veri tablosu (tür | fiyat | açıklama) */
   .blog-prose .blog-table-data table {
     @apply w-full min-w-lg;
   }

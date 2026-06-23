@@ -1,5 +1,4 @@
 @layer components {
-  /* Stats */
   .blog-prose .blog-stats {
     @apply my-10 grid gap-4 sm:grid-cols-3;
   }
@@ -20,7 +19,6 @@
     @apply mt-2 text-xs leading-snug text-muted-foreground;
   }
 
-  /* Hosting type grid */
   .blog-prose .blog-type-grid {
     @apply my-6 grid gap-4 sm:grid-cols-2;
   }
@@ -37,7 +35,6 @@
     @apply m-0 text-sm leading-relaxed text-foreground/70;
   }
 
-  /* Compare cards */
   .blog-prose .blog-compare {
     @apply my-10 grid gap-5 sm:grid-cols-2;
   }
@@ -70,7 +67,6 @@
     @apply mt-3 border-t border-border/30 pt-3;
   }
 
-  /* Flow steps */
   .blog-prose .blog-flow {
     @apply my-10 grid grid-cols-1 gap-3 sm:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] sm:items-center;
   }
@@ -91,7 +87,6 @@
     @apply text-center text-lg text-brand-accent/60 sm:hidden;
   }
 
-  /* Callout */
   .blog-prose .blog-callout {
     @apply my-8 rounded-2xl border border-brand-accent/20 bg-linear-to-br from-brand-accent/6 to-brand-accent/2 px-6 py-5 shadow-[0_2px_12px_rgb(58_107_82/0.06)];
   }
@@ -108,7 +103,6 @@
     @apply mt-2;
   }
 
-  /* Domain / hosting analogy */
   .blog-prose .blog-analogy {
     @apply my-8 rounded-2xl border border-border/70 bg-[#F8FAF9] p-4 shadow-[0_2px_16px_rgb(58_107_82/0.06)] sm:p-5;
   }
@@ -201,7 +195,6 @@
     @apply text-emerald-800;
   }
 
-  /* Steps list */
   .blog-prose .blog-steps {
     @apply my-5 flex list-none flex-col gap-2.5 p-0;
     counter-reset: blog-step;
@@ -240,7 +233,6 @@
     @apply font-medium text-brand-accent underline-offset-2 hover:underline;
   }
 
-  /* Checklist */
   .blog-prose .blog-checklist {
     @apply my-6 grid list-none gap-3 p-0 sm:grid-cols-2;
   }
@@ -273,7 +265,6 @@
     @apply font-semibold text-foreground;
   }
 
-  /* Section lead & chart */
   .blog-prose .blog-section-lead {
     @apply -mt-1 mb-6 text-base leading-relaxed text-muted-foreground;
   }

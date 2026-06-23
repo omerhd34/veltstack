@@ -13,12 +13,7 @@ interface BlogArticleBodyInnerProps {
 function HtmlChunk({ html }: { html: string }) {
   if (!html.trim()) return null;
 
-  return (
-    <div
-      // biome-ignore lint/security/noDangerouslySetInnerHtml: static blog article HTML
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
-  );
+  return <div dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
 export function BlogArticleBodyInner({

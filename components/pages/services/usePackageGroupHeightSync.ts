@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useLayoutEffect, useRef, type RefObject } from "react";
 import {
   desktopGridQuery,
@@ -5,9 +6,11 @@ import {
 } from "./package-accordion";
 
 export function clearGroupMinHeights(container: HTMLElement) {
-  container.querySelectorAll<HTMLElement>("[data-package-group]").forEach((el) => {
-    el.style.minHeight = "";
-  });
+  container
+    .querySelectorAll<HTMLElement>("[data-package-group]")
+    .forEach((el) => {
+      el.style.minHeight = "";
+    });
 }
 
 function isGroupExpanded(element: HTMLElement) {
@@ -31,16 +34,18 @@ export function syncGroupHeights(container: HTMLElement) {
   const groupsByLabel = new Map<string, HTMLElement[]>();
 
   cards.forEach((card) => {
-    card.querySelectorAll<HTMLElement>("[data-package-group]").forEach((element) => {
-      const label = element.dataset.packageGroupLabel;
-      if (!label) {
-        return;
-      }
+    card
+      .querySelectorAll<HTMLElement>("[data-package-group]")
+      .forEach((element) => {
+        const label = element.dataset.packageGroupLabel;
+        if (!label) {
+          return;
+        }
 
-      const row = groupsByLabel.get(label) ?? [];
-      row.push(element);
-      groupsByLabel.set(label, row);
-    });
+        const row = groupsByLabel.get(label) ?? [];
+        row.push(element);
+        groupsByLabel.set(label, row);
+      });
   });
 
   groupsByLabel.forEach((elements) => {
@@ -112,7 +117,6 @@ export function usePackageGroupHeightSync(
       window.removeEventListener("resize", runLayoutSync);
       clearGroupMinHeights(container);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, layoutDeps);
 
   useLayoutEffect(() => {

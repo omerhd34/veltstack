@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { BlogPost, BlogPostEntry } from "./types";
 import { blogPostEntry as gelenekselYazilimYapayZeka } from "./geleneksel-yazilim-yapay-zeka";
 import { blogPostEntry as ozelYazilimCms } from "./ozel-yazilim-cms";
@@ -12,7 +13,6 @@ import { blogPostEntry as responsiveTasarim } from "./responsive-tasarim";
 import { blogPostEntry as enIyiFreelancerSiteleri } from "./en-iyi-freelancer-siteleri";
 import { blogPostEntry as reactNextjs } from "./react-nextjs";
 
-/** Sıra: blog listesi, navbar ve footer görünümünü belirler. */
 export const blogPostEntries: BlogPostEntry[] = [
   gelenekselYazilimYapayZeka,
   ozelYazilimCms,
@@ -28,7 +28,9 @@ export const blogPostEntries: BlogPostEntry[] = [
   reactNextjs,
 ];
 
-export const blogPosts: BlogPost[] = blogPostEntries.map(({ content, ...meta }) => meta);
+export const blogPosts: BlogPost[] = blogPostEntries.map(
+  ({ content: _content, ...meta }) => meta,
+);
 
 export function getBlogArticleContent(
   slug: string,

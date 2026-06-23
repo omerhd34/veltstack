@@ -1,4 +1,3 @@
-// components/pages/blog/BlogPageHero.tsx
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
 import { toLatinUppercase } from "@/lib/utils";
