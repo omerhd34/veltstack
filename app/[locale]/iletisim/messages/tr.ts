@@ -112,12 +112,12 @@ export const contactTr = {
     },
     {
       label: "LinkedIn",
-      value: "Ömer Halis Demir",
+      value: "ömer-halis-demir-7a9b79169/",
       href: "https://www.linkedin.com/in/%C3%B6mer-halis-demir-7a9b79169",
     },
     {
       label: "GitHub",
-      value: "Ömer Halis Demir",
+      value: "omerhd34",
       href: "https://github.com/omerhd34",
     },
   ],
@@ -144,7 +144,7 @@ export const contactTr = {
       step: "3",
       title: "Teklifi Oluşturalım",
       desc: "Kapsam, maliyet ve teslim planını içeren detaylı teklifinizi hazırlayıp size iletiyoruz.",
-      timing: "1–3 gün",
+      timing: "48 saat",
     },
     {
       step: "4",

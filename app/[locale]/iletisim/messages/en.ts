@@ -62,7 +62,10 @@ export const contactEn = {
     "teknik-denetim": [
       { value: "webAudit", label: "Website Technical Audit" },
       { value: "appAudit", label: "Mobile App Technical Audit" },
-      { value: "infrastructureAudit", label: "Infrastructure & Security Audit" },
+      {
+        value: "infrastructureAudit",
+        label: "Infrastructure & Security Audit",
+      },
     ],
     "bakim-ve-destek": [
       { value: "maintenanceServices", label: "Maintenance & Support Services" },
@@ -112,12 +115,12 @@ export const contactEn = {
     },
     {
       label: "LinkedIn",
-      value: "Ömer Halis Demir",
+      value: "ömer-halis-demir-7a9b79169",
       href: "https://www.linkedin.com/in/%C3%B6mer-halis-demir-7a9b79169",
     },
     {
       label: "GitHub",
-      value: "Ömer Halis Demir",
+      value: "omerhd34",
       href: "https://github.com/omerhd34",
     },
   ],
@@ -144,7 +147,7 @@ export const contactEn = {
       step: "3",
       title: "We Prepare Your Proposal",
       desc: "We prepare and send a detailed proposal covering scope, cost, and delivery timeline.",
-      timing: "2–3 business days",
+      timing: "Within 48 hours",
     },
     {
       step: "4",
