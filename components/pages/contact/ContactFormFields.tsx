@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { LuCheck, LuLoader, LuRotateCcw } from "react-icons/lu";
+import { BorderTrace } from "@/components/ui/BorderTrace";
 import { cn } from "@/lib/utils";
+import { ContactFormFieldShell } from "./ContactFormFieldShell";
 import { ContactFormSelect } from "./ContactFormSelect";
 import { ContactPhoneField } from "./ContactPhoneField";
 import { defaultPhoneCountryCode } from "./phone-country-codes";
@@ -51,8 +53,8 @@ interface ContactFormFieldsProps {
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
-const inputBase =
-  "w-full rounded-xl border border-border/70 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all focus:border-brand-accent/50 focus:ring-3 focus:ring-brand-accent/10 hover:border-border";
+const inputInner =
+  "w-full rounded-[9px] border-0 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none focus:ring-0";
 
 const labelBase = "mb-1.5 block text-[0.8125rem] text-foreground/80";
 
@@ -169,7 +171,6 @@ export function ContactFormFields({
       noValidate
       className={cn("space-y-5", className)}
     >
-      {/* Name + Email */}
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="cf-name" className={labelBase}>
@@ -180,17 +181,19 @@ export function ContactFormFields({
               </span>
             </span>
           </label>
-          <input
-            id="cf-name"
-            name="name"
-            type="text"
-            required
-            minLength={2}
-            maxLength={100}
-            autoComplete="name"
-            placeholder={labels.fieldNamePlaceholder}
-            className={inputBase}
-          />
+          <ContactFormFieldShell>
+            <input
+              id="cf-name"
+              name="name"
+              type="text"
+              required
+              minLength={2}
+              maxLength={100}
+              autoComplete="name"
+              placeholder={labels.fieldNamePlaceholder}
+              className={inputInner}
+            />
+          </ContactFormFieldShell>
         </div>
         <div>
           <label htmlFor="cf-email" className={labelBase}>
@@ -201,19 +204,20 @@ export function ContactFormFields({
               </span>
             </span>
           </label>
-          <input
-            id="cf-email"
-            name="email"
-            type="email"
-            required
-            autoComplete="email"
-            placeholder={labels.fieldEmailPlaceholder}
-            className={inputBase}
-          />
+          <ContactFormFieldShell>
+            <input
+              id="cf-email"
+              name="email"
+              type="email"
+              required
+              autoComplete="email"
+              placeholder={labels.fieldEmailPlaceholder}
+              className={inputInner}
+            />
+          </ContactFormFieldShell>
         </div>
       </div>
 
-      {/* Phone */}
       <div>
         <label htmlFor="cf-phone" className={labelBase}>
           <span className={labelText}>{labels.fieldPhone}</span>
@@ -232,7 +236,6 @@ export function ContactFormFields({
         />
       </div>
 
-      {/* Service + Package / Tier + Budget */}
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="cf-service" className={labelBase}>
@@ -315,7 +318,6 @@ export function ContactFormFields({
         </div>
       </div>
 
-      {/* Message */}
       <div>
         <label htmlFor="cf-content" className={labelBase}>
           <span className={labelText}>{labels.fieldMessage}</span>
@@ -323,17 +325,18 @@ export function ContactFormFields({
             ({labels.fieldMessageOptional})
           </span>
         </label>
-        <textarea
-          id="cf-content"
-          name="content"
-          maxLength={2000}
-          rows={4}
-          placeholder={labels.fieldMessagePlaceholder}
-          className={cn(inputBase, "resize-none leading-relaxed")}
-        />
+        <ContactFormFieldShell>
+          <textarea
+            id="cf-content"
+            name="content"
+            maxLength={2000}
+            rows={4}
+            placeholder={labels.fieldMessagePlaceholder}
+            className={cn(inputInner, "resize-none leading-relaxed")}
+          />
+        </ContactFormFieldShell>
       </div>
 
-      {/* Error message */}
       {formState === "error" && errorMsg && (
         <p
           role="alert"
@@ -343,27 +346,38 @@ export function ContactFormFields({
         </p>
       )}
 
-      {/* Submit */}
       <button
         type="submit"
         disabled={formState === "submitting"}
         className={cn(
-          "inline-flex h-12 w-full items-center justify-center gap-2 rounded-full px-8",
-          "bg-brand-accent text-sm font-semibold text-white",
-          "shadow-[0_4px_14px_rgb(58_107_82/0.25)] transition-colors duration-200",
-          "hover:bg-[#325a45] hover:shadow-[0_6px_18px_rgb(58_107_82/0.3)]",
+          "group relative flex h-12 w-full items-center justify-center gap-2 overflow-visible rounded-full px-8",
+          "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
+          "bg-transparent text-sm font-semibold text-white",
+          "transition-all duration-1000 ease-in-out motion-reduce:transition-none",
           "focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-brand-accent/25",
-          "disabled:pointer-events-none disabled:opacity-60 disabled:shadow-none",
+          "disabled:pointer-events-none disabled:opacity-60",
         )}
       >
-        {formState === "submitting" ? (
-          <>
-            <LuLoader className="size-4 animate-spin" aria-hidden />
-            {labels.submitting}
-          </>
-        ) : (
-          labels.submitButton
-        )}
+        <span
+          aria-hidden
+          className={cn(
+            "pointer-events-none absolute inset-[-3px] rounded-full bg-brand-accent",
+            "shadow-[0_4px_14px_rgb(58_107_82/0.25)] transition-all duration-1000 ease-in-out motion-reduce:transition-none",
+            "group-hover:bg-[#325a45] group-hover:shadow-[0_6px_18px_rgb(58_107_82/0.3)]",
+            "group-disabled:shadow-none",
+          )}
+        />
+        <BorderTrace durationSec={2.5} radius={24} />
+        <span className="relative z-10 inline-flex items-center gap-2">
+          {formState === "submitting" ? (
+            <>
+              <LuLoader className="size-4 animate-spin" aria-hidden />
+              {labels.submitting}
+            </>
+          ) : (
+            labels.submitButton
+          )}
+        </span>
       </button>
     </form>
   );

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
+import { ContactFormFieldShell } from "./ContactFormFieldShell";
 import { cn } from "@/lib/utils";
 import { phoneCountryCodes } from "./phone-country-codes";
 
@@ -111,18 +112,13 @@ export function ContactPhoneField({
   }
 
   return (
-    <div
-      className={cn(
-        "flex rounded-xl border border-border/70 bg-background transition-all",
-        "hover:border-border focus-within:border-brand-accent/50 focus-within:ring-3 focus-within:ring-brand-accent/10",
-        open && "relative z-20",
-      )}
-    >
-      <div
-        ref={containerRef}
-        className="relative flex shrink-0 items-stretch rounded-l-xl border-r border-border/70"
-      >
-        <input
+    <ContactFormFieldShell active={open} className={open ? "relative z-20" : undefined}>
+      <div className="flex rounded-[9px] bg-background">
+        <div
+          ref={containerRef}
+          className="relative flex shrink-0 items-stretch rounded-l-[9px] border-r border-border/70"
+        >
+          <input
           ref={inputRef}
           type="text"
           inputMode="tel"
@@ -149,7 +145,7 @@ export function ContactPhoneField({
               selectCode(filteredCodes[0].value);
             }
           }}
-          className="w-19 min-w-19 border-0 bg-transparent py-3 pl-3 pr-1 text-sm font-medium text-foreground outline-none"
+          className="w-19 min-w-19 border-0 bg-transparent py-3 pl-3 pr-1 text-sm font-medium text-foreground outline-none focus:ring-0"
         />
 
         <button
@@ -215,8 +211,9 @@ export function ContactPhoneField({
         onChange={(e) => onPhoneNumberChange(formatPhoneNumber(e.target.value))}
         placeholder={placeholder}
         maxLength={13}
-        className="min-w-0 flex-1 rounded-r-xl border-0 bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none"
+        className="min-w-0 flex-1 rounded-r-[9px] border-0 bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none focus:ring-0"
       />
     </div>
+    </ContactFormFieldShell>
   );
 }

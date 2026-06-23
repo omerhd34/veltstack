@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { LuCheck, LuChevronDown } from "react-icons/lu";
+import { ContactFormFieldShell } from "./ContactFormFieldShell";
 import { cn } from "@/lib/utils";
 
 export interface ContactSelectOption {
@@ -19,6 +20,9 @@ interface ContactFormSelectProps {
   onChange: (value: string) => void;
   className?: string;
 }
+
+const dropdownPanelClassName =
+  "absolute z-50 mt-1.5 max-h-60 w-full overflow-auto rounded-xl border border-border/60 bg-card py-1.5 shadow-[0_8px_30px_rgb(0_0_0/0.08)] [scrollbar-color:var(--brand-accent)_rgb(var(--brand-accent-rgb)/0.1)] [scrollbar-width:thin] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-brand-accent/10 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-brand-accent";
 
 export function ContactFormSelect({
   id,
@@ -66,36 +70,36 @@ export function ContactFormSelect({
     <div ref={containerRef} className={cn("relative", className)}>
       <input type="hidden" name={name} value={value} required={required} />
 
-      <button
-        type="button"
-        id={id}
-        aria-haspopup="listbox"
-        aria-expanded={open}
-        onClick={() => setOpen((prev) => !prev)}
-        className={cn(
-          "flex w-full items-center justify-between rounded-xl border border-border/70 bg-background px-4 py-3 text-sm outline-none transition-all",
-          "hover:border-border focus-visible:border-brand-accent/50 focus-visible:ring-3 focus-visible:ring-brand-accent/10",
-          open && "border-brand-accent/50 ring-3 ring-brand-accent/10",
-          !selectedLabel && "text-muted-foreground/50",
-        )}
-      >
-        <span className="truncate pr-2 text-left">
-          {selectedLabel ?? placeholder}
-        </span>
-        <LuChevronDown
+      <ContactFormFieldShell active={open}>
+        <button
+          type="button"
+          id={id}
+          aria-haspopup="listbox"
+          aria-expanded={open}
+          onClick={() => setOpen((prev) => !prev)}
           className={cn(
-            "size-4 shrink-0 text-muted-foreground transition-transform duration-200",
-            open && "rotate-180",
+            "flex w-full items-center justify-between rounded-[9px] border-0 bg-background px-4 py-3 text-sm outline-none focus-visible:ring-0",
+            !selectedLabel && "text-muted-foreground/50",
           )}
-          aria-hidden
-        />
-      </button>
+        >
+          <span className="truncate pr-2 text-left">
+            {selectedLabel ?? placeholder}
+          </span>
+          <LuChevronDown
+            className={cn(
+              "size-4 shrink-0 text-muted-foreground transition-transform duration-200",
+              open && "rotate-180",
+            )}
+            aria-hidden
+          />
+        </button>
+      </ContactFormFieldShell>
 
       {open && (
         <ul
           role="listbox"
           aria-labelledby={id}
-          className="absolute z-50 mt-1.5 max-h-60 w-full overflow-auto rounded-xl border border-border/60 bg-card py-1.5 shadow-[0_8px_30px_rgb(0_0_0/0.08)]"
+          className={dropdownPanelClassName}
         >
           {options.map((opt) => {
             const isSelected = value === opt.value;
