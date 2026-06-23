@@ -1,4 +1,3 @@
-// app/[locale]/blog/page.tsx
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { BlogPageView } from "@/components/pages/blog";

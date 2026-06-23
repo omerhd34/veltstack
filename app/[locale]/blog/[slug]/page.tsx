@@ -44,7 +44,9 @@ export async function generateMetadata({
       description: desc,
       type: "article",
       locale: locale === "tr" ? "tr_TR" : "en_US",
-      images: post.imageUrl ? [{ url: `https://www.veltstack.com${post.imageUrl}` }] : [],
+      images: post.imageUrl
+        ? [{ url: `https://www.veltstack.com${post.imageUrl}` }]
+        : [],
     },
   };
 }
@@ -68,7 +70,6 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const blogUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: "/blog" })}`;
   const postUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: `/blog/${slug}` })}`;
 
-  // Related posts (same category, excluding current)
   const relatedPosts = blogPosts
     .filter(
       (p) =>
@@ -118,7 +119,10 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
     <>
       <BreadcrumbSchema
         items={[
-          { name: loc === "tr" ? "Ana Sayfa" : "Home", url: "https://www.veltstack.com" },
+          {
+            name: loc === "tr" ? "Ana Sayfa" : "Home",
+            url: "https://www.veltstack.com",
+          },
           { name: "Blog", url: blogUrl },
           { name: title, url: postUrl },
         ]}
@@ -135,12 +139,10 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         writtenByLabel={t("writtenByLabel")}
       />
 
-      {/* Article body */}
       <SiteContainer className="py-16 md:py-20">
         <div className="mx-auto max-w-5xl">
           <BlogArticleBody html={articleContent} locale={loc} />
 
-          {/* Share */}
           <div className="mt-14 border-t border-border pt-8">
             <p className="text-sm text-muted-foreground">
               {loc === "tr"
@@ -151,7 +153,6 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         </div>
       </SiteContainer>
 
-      {/* Related posts */}
       {relatedPosts.length > 0 && (
         <section className="bg-[#F8F9FA] py-16 md:py-20">
           <SiteContainer>

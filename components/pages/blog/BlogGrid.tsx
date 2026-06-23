@@ -62,11 +62,9 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
 
   return (
     <div>
-      {/* Search + Filter Bar */}
       <div className="sticky top-16 z-30 bg-background/95 backdrop-blur-md border-b border-border/60 py-4">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            {/* Search */}
             <div className="relative w-full sm:max-w-xs">
               <LuSearch
                 className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
@@ -91,7 +89,6 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
               )}
             </div>
 
-            {/* Category Pills */}
             <div className="flex flex-wrap gap-2">
               {uniqueCategories.map((cat) => (
                 <button
@@ -113,7 +110,6 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
         </div>
       </div>
 
-      {/* Content */}
       <div className="mx-auto max-w-7xl py-16 md:py-20">
         {filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-24 text-center">

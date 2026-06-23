@@ -45,7 +45,6 @@ export function BlogCard({
       )}
     >
       <BorderTrace durationSec={2.5} />
-      {/* Image */}
       <div
         className={cn(
           "relative overflow-hidden bg-[#0B0F0D]",
@@ -73,13 +72,11 @@ export function BlogCard({
           className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         />
 
-        {/* Category badge */}
         <span className="absolute left-4 top-4 rounded-full border border-white/25 bg-black/80 px-3 py-1 text-[0.6875rem] font-semibold text-white">
           {category}
         </span>
       </div>
 
-      {/* Content */}
       <div
         className={cn(
           "flex flex-col",
@@ -88,7 +85,6 @@ export function BlogCard({
             : "p-6",
         )}
       >
-        {/* Meta */}
         <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
           <span className="flex items-center gap-1.5">
             <LuCalendar className="size-3.5 text-brand-accent/70" aria-hidden />
@@ -101,7 +97,6 @@ export function BlogCard({
           </span>
         </div>
 
-        {/* Title */}
         <h2
           className={cn(
             "mt-3 font-(family-name:--font-heading) font-bold leading-tight tracking-tight transition-colors group-hover:text-brand-accent",
@@ -111,7 +106,6 @@ export function BlogCard({
           {title}
         </h2>
 
-        {/* Excerpt */}
         <p
           className={cn(
             "mt-3 leading-relaxed text-foreground/60",
@@ -121,7 +115,6 @@ export function BlogCard({
           {excerpt}
         </p>
 
-        {/* Read more */}
         <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
           {readMoreLabel}
           <LuArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

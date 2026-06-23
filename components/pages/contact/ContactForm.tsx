@@ -108,7 +108,6 @@ export function ContactForm({
       className={`scroll-mt-16 bg-[#F8F9FA] pt-10 pb-16 md:pt-12 md:pb-20 ${className ?? ""}`}
     >
       <SiteContainer>
-        {/* Mobile */}
         <div className="flex flex-col gap-12 lg:hidden">
           <section>
             <ContactSectionHeader
@@ -128,7 +127,6 @@ export function ContactForm({
           />
         </div>
 
-        {/* Desktop: sol başlık + içerik, sağda yalnızca kanallar */}
         <div className="hidden lg:grid lg:grid-cols-[1fr_380px] lg:grid-rows-[auto_1fr] lg:items-stretch lg:gap-x-16 lg:gap-y-10 xl:gap-x-20">
           <div>
             <ContactSectionBadge badge={formBadge} />

@@ -25,7 +25,6 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
     >
       <SiteContainer>
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
-          {/* Sol: Başlık + istatistikler */}
           <WhoWeAreLeftColumn
             badge={t("whoWeAreTitle")}
             stats={stats}
@@ -48,7 +47,6 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
             }
           />
 
-          {/* Sağ: Açıklama + CTA */}
           <div className="min-w-0 space-y-6">
             <div className="relative rounded-3xl border border-border/60 bg-[#F8F9FA] p-8 md:p-10">
               <LuQuote
