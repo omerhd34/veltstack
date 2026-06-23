@@ -1,7 +1,10 @@
+/* eslint-disable react-hooks/refs */
 "use client";
 
 import { type CSSProperties, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+
+type BorderTraceTrigger = "hover" | "focus" | "both";
 
 interface BorderTraceProps {
   className?: string;
@@ -9,6 +12,9 @@ interface BorderTraceProps {
   borderWidth?: number;
   durationSec?: number;
   stroke?: string;
+  loop?: boolean;
+  trigger?: BorderTraceTrigger;
+  active?: boolean;
 }
 
 function parseRadius(value: string) {
@@ -73,11 +79,17 @@ export function BorderTrace({
   borderWidth = 3,
   durationSec = 3,
   stroke = "var(--border-trace-stroke)",
+  loop = false,
+  trigger = "both",
+  active,
 }: BorderTraceProps) {
   const hostRef = useRef<HTMLSpanElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
   const frameRef = useRef<number | null>(null);
   const hasAnimatedRef = useRef(false);
+  const loopActiveRef = useRef(false);
+  const activeRef = useRef(active);
+  activeRef.current = active;
   const [layout, setLayout] = useState({
     width: 0,
     height: 0,
@@ -127,6 +139,8 @@ export function BorderTrace({
   }, [borderWidth, radius]);
 
   useEffect(() => {
+    if (loop) return;
+
     const wrapper =
       hostRef.current?.closest(".group") ?? hostRef.current?.parentElement;
     const path = pathRef.current;
@@ -192,19 +206,150 @@ export function BorderTrace({
       finishTrace();
     };
 
-    wrapper.addEventListener("mouseenter", startTrace);
-    wrapper.addEventListener("mouseleave", resetTrace);
-    wrapper.addEventListener("focusin", startTrace);
-    wrapper.addEventListener("focusout", resetTrace);
+    const onMouseEnter = () => {
+      if (trigger === "focus") return;
+      startTrace();
+    };
+
+    const onMouseLeave = () => {
+      if (trigger === "focus") return;
+      resetTrace();
+    };
+
+    const onFocusIn = () => {
+      if (trigger === "hover") return;
+      startTrace();
+    };
+
+    const onFocusOut = (event: Event) => {
+      if (trigger === "hover") return;
+      const relatedTarget = (event as FocusEvent).relatedTarget;
+      if (wrapper.contains(relatedTarget as Node)) return;
+      resetTrace();
+    };
+
+    wrapper.addEventListener("mouseenter", onMouseEnter);
+    wrapper.addEventListener("mouseleave", onMouseLeave);
+    wrapper.addEventListener("focusin", onFocusIn);
+    wrapper.addEventListener("focusout", onFocusOut);
 
     return () => {
       cancelFrame();
-      wrapper.removeEventListener("mouseenter", startTrace);
-      wrapper.removeEventListener("mouseleave", resetTrace);
-      wrapper.removeEventListener("focusin", startTrace);
-      wrapper.removeEventListener("focusout", resetTrace);
+      wrapper.removeEventListener("mouseenter", onMouseEnter);
+      wrapper.removeEventListener("mouseleave", onMouseLeave);
+      wrapper.removeEventListener("focusin", onFocusIn);
+      wrapper.removeEventListener("focusout", onFocusOut);
     };
-  }, [durationSec, isReady]);
+  }, [durationSec, isReady, loop, trigger]);
+
+  useEffect(() => {
+    if (!loop || !isReady) return;
+
+    const wrapper =
+      hostRef.current?.closest(".group") ?? hostRef.current?.parentElement;
+    const path = pathRef.current;
+    if (!wrapper || !path) return;
+
+    let running = false;
+
+    const cancelFrame = () => {
+      if (frameRef.current != null) {
+        cancelAnimationFrame(frameRef.current);
+        frameRef.current = null;
+      }
+    };
+
+    const hideTrace = () => {
+      loopActiveRef.current = false;
+      path.style.opacity = "0";
+      path.style.strokeDasharray = "none";
+      path.style.strokeDashoffset = "0";
+    };
+
+    const shouldRun = () => {
+      const hoverActive = trigger !== "focus" && wrapper.matches(":hover");
+      const focusActive =
+        trigger !== "hover" &&
+        (wrapper.matches(":focus-within") || activeRef.current === true);
+
+      return hoverActive || focusActive;
+    };
+
+    const durationMs = durationSec * 1000;
+    const startedAt = performance.now();
+
+    const tick = (now: number) => {
+      if (!shouldRun()) {
+        running = false;
+        hideTrace();
+        return;
+      }
+
+      const length = path.getTotalLength();
+      if (!length) {
+        frameRef.current = requestAnimationFrame(tick);
+        return;
+      }
+
+      loopActiveRef.current = true;
+      const progress = ((now - startedAt) % durationMs) / durationMs;
+      const segment = Math.max(length * 0.3, 1);
+      path.style.opacity = "1";
+      path.style.strokeDasharray = `${segment} ${length - segment}`;
+      path.style.strokeDashoffset = `${length * progress}`;
+      frameRef.current = requestAnimationFrame(tick);
+    };
+
+    const startLoop = () => {
+      if (running || !shouldRun()) return;
+      running = true;
+      cancelFrame();
+      frameRef.current = requestAnimationFrame(tick);
+    };
+
+    const stopLoop = () => {
+      running = false;
+      cancelFrame();
+      hideTrace();
+    };
+
+    const onMouseEnter = () => {
+      if (trigger === "focus") return;
+      startLoop();
+    };
+
+    const onMouseLeave = () => {
+      if (trigger === "focus") return;
+      stopLoop();
+    };
+
+    const onFocusIn = () => {
+      if (trigger === "hover") return;
+      startLoop();
+    };
+
+    const onFocusOut = (event: Event) => {
+      if (trigger === "hover") return;
+      const relatedTarget = (event as FocusEvent).relatedTarget;
+      if (wrapper.contains(relatedTarget as Node)) return;
+      stopLoop();
+    };
+
+    if (shouldRun()) startLoop();
+
+    wrapper.addEventListener("mouseenter", onMouseEnter);
+    wrapper.addEventListener("mouseleave", onMouseLeave);
+    wrapper.addEventListener("focusin", onFocusIn);
+    wrapper.addEventListener("focusout", onFocusOut);
+
+    return () => {
+      stopLoop();
+      wrapper.removeEventListener("mouseenter", onMouseEnter);
+      wrapper.removeEventListener("mouseleave", onMouseLeave);
+      wrapper.removeEventListener("focusin", onFocusIn);
+      wrapper.removeEventListener("focusout", onFocusOut);
+    };
+  }, [durationSec, isReady, loop, trigger, active]);
 
   const path =
     layout.width > 0
@@ -220,7 +365,15 @@ export function BorderTrace({
     <span
       ref={hostRef}
       className={cn(
-        "pointer-events-none absolute z-20 opacity-0 group-hover:opacity-100 motion-reduce:hidden",
+        "pointer-events-none absolute z-20 motion-reduce:hidden",
+        loop
+          ? cn(
+              "opacity-0",
+              trigger !== "focus" && "group-hover:opacity-100",
+              trigger !== "hover" && "group-focus-within:opacity-100",
+              active !== undefined && "group-data-[active=true]:opacity-100",
+            )
+          : "opacity-0 group-hover:opacity-100",
         className,
       )}
       style={{
@@ -243,7 +396,7 @@ export function BorderTrace({
             fill="none"
             stroke={stroke}
             strokeWidth={layout.strokeWidth}
-            strokeLinecap="butt"
+            strokeLinecap={loop ? "round" : "butt"}
             strokeLinejoin="miter"
             strokeMiterlimit={2}
             className="border-trace-path"
