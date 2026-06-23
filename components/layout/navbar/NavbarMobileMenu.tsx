@@ -51,7 +51,7 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
         aria-modal="true"
         aria-label="Mobil menü"
       >
-        <div className="flex h-[4.5rem] shrink-0 items-center justify-between border-b border-border px-4 sm:px-5">
+        <div className="flex h-18 shrink-0 items-center justify-between border-b border-border px-4 sm:px-5">
           <NavbarLogo />
           <Button
             variant="ghost"
