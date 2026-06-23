@@ -11,5 +11,20 @@
   }
   html {
     @apply scroll-smooth font-sans;
+    scrollbar-color: var(--brand-accent) rgb(var(--brand-accent-rgb) / 0.1);
+    scrollbar-width: thin;
+  }
+  html::-webkit-scrollbar {
+    width: 10px;
+  }
+  html::-webkit-scrollbar-track {
+    background: rgb(var(--brand-accent-rgb) / 0.1);
+  }
+  html::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background: var(--brand-accent);
+  }
+  html::-webkit-scrollbar-thumb:hover {
+    background: #325a45;
   }
 }
