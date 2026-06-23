@@ -1,3 +1,4 @@
+import { BorderTrace } from "@/components/ui/BorderTrace";
 import { cn } from "@/lib/utils";
 import { ContactSectionBadge } from "./ContactInfo";
 
@@ -16,6 +17,9 @@ interface ContactWorkflowSectionProps {
   steps: WorkflowStep[];
   className?: string;
 }
+
+const slowTransition =
+  "transition-all duration-1000 ease-out motion-reduce:transition-none";
 
 export function ContactWorkflowSection({
   badge,
@@ -57,11 +61,28 @@ export function ContactWorkflowSection({
             <span
               aria-hidden
               className={cn(
-                "relative z-10 flex size-10 items-center justify-center rounded-full border border-border bg-background text-sm font-bold text-muted-foreground transition-all duration-1000 ease-out",
-                "group-hover:border-transparent group-hover:bg-brand-accent group-hover:text-white group-hover:shadow-[0_4px_14px_rgb(58_107_82/0.28)]",
+                "relative z-10 flex size-10 shrink-0 items-center justify-center overflow-visible rounded-full",
+                "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
+                slowTransition,
               )}
             >
-              {item.step}
+              <span
+                aria-hidden
+                className={cn(
+                  "pointer-events-none absolute inset-[-3px] rounded-full bg-background",
+                  "group-hover:bg-brand-accent group-hover:shadow-[0_4px_14px_rgb(58_107_82/0.28)]",
+                  slowTransition,
+                )}
+              />
+              <BorderTrace loop trigger="hover" durationSec={2.5} radius={20} />
+              <span
+                className={cn(
+                  "relative z-10 text-sm font-bold text-muted-foreground group-hover:text-white",
+                  slowTransition,
+                )}
+              >
+                {item.step}
+              </span>
             </span>
 
             <div className="mt-5 flex flex-1 flex-col">

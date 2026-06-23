@@ -10,6 +10,7 @@ import {
 } from "react-icons/lu";
 import { FaWhatsapp } from "react-icons/fa6";
 import type { IconType } from "react-icons";
+import { BorderTrace } from "@/components/ui/BorderTrace";
 import { cn } from "@/lib/utils";
 
 type ContactItemIcon = "location" | "clock";
@@ -49,6 +50,9 @@ interface ContactInfoProps {
 
 const badgeClassName =
   "inline-flex w-fit items-center gap-2 justify-self-start rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent";
+
+const slowTransition =
+  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
 
 export function ContactSectionBadge({ badge }: ContactSectionBadgeProps) {
   return (
@@ -119,7 +123,9 @@ export function ContactInfo({
   className,
 }: ContactInfoProps) {
   const itemClassName = cn(
-    "group flex items-center gap-3.5 rounded-xl border border-border/60 bg-card px-4 py-3.5 transition-all",
+    "group relative flex items-center gap-3.5 overflow-visible rounded-xl bg-card px-4 py-3.5",
+    "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
+    slowTransition,
     stretchItems && "h-full w-full",
   );
 
@@ -141,8 +147,17 @@ export function ContactInfo({
           const Icon = getContactIcon(item);
           const content = (
             <>
-              <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand-accent/10 text-brand-accent">
-                <Icon className="size-4" strokeWidth={1.75} aria-hidden />
+              <div
+                className={cn(
+                  "flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 group-hover:scale-110 group-hover:bg-brand-accent group-hover:text-brand-accent-foreground group-hover:ring-brand-accent/50",
+                  slowTransition,
+                )}
+              >
+                <Icon
+                  className={cn("size-4", slowTransition)}
+                  strokeWidth={1.75}
+                  aria-hidden
+                />
               </div>
               <div className="min-w-0">
                 <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
@@ -173,9 +188,10 @@ export function ContactInfo({
                   }
                   className={cn(
                     itemClassName,
-                    "hover:-translate-y-0.5 hover:border-brand-accent/30 hover:shadow-[0_8px_24px_rgb(58_107_82/0.08)]",
+                    "hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgb(58_107_82/0.08)]",
                   )}
                 >
+                  <BorderTrace durationSec={2.5} />
                   {content}
                 </a>
               </li>
@@ -187,7 +203,10 @@ export function ContactInfo({
               key={item.label}
               className={cn(stretchItems && "flex min-h-0 flex-1")}
             >
-              <div className={itemClassName}>{content}</div>
+              <div className={itemClassName}>
+                <BorderTrace durationSec={2.5} />
+                {content}
+              </div>
             </li>
           );
         })}
