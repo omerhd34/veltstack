@@ -26,7 +26,7 @@ export function NavbarServicesMegaMenuPanel() {
         <NavbarMegaMenuIntroColumn
           headline={tHome("servicesHeadline")}
           intro={tHome("servicesIntro")}
-          introLines={11}
+          introLines={6}
         >
           <PrimaryCtaLink
             href="/iletisim"

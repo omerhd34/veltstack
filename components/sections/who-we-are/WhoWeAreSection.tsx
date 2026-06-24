@@ -4,6 +4,7 @@ import { TbWaveSine } from "react-icons/tb";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { WhoWeAreLeftColumn } from "./WhoWeAreLeftColumn";
+import { WhoWeAreSignature } from "./WhoWeAreSignature";
 
 interface WhoWeAreSectionProps {
   className?: string;
@@ -15,7 +16,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
   const stats = [
     { target: 6, suffix: "+", label: t("whoWeAreStat1Label") },
     { target: 20, suffix: "+", label: t("whoWeAreStat2Label") },
-    { target: 98, suffix: "%", label: t("whoWeAreStat3Label") },
+    { target: 100, suffix: "%", label: t("whoWeAreStat3Label") },
   ];
 
   return (
@@ -47,7 +48,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
             }
           />
 
-          <div className="min-w-0 space-y-6">
+          <div className="min-w-0">
             <div className="relative rounded-3xl border border-border/60 bg-[#F8F9FA] p-8 md:p-10">
               <LuQuote
                 aria-hidden
@@ -56,13 +57,18 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
               <p className="text-lg leading-[1.85] text-foreground/75 md:text-xl">
                 {t("whoWeAreDescription")}
               </p>
+
+              <footer className="mt-8 flex flex-col gap-6 border-t border-border/50 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <WhoWeAreSignature
+                  name={t("whoWeAreSignatureName")}
+                  role={t("whoWeAreSignatureRole")}
+                />
+
+                <PrimaryCtaLink href="/hakkimda" size="md">
+                  {t("whoWeAreCta")}
+                </PrimaryCtaLink>
+              </footer>
             </div>
-
-            <p className="px-2 text-[0.9375rem] leading-[1.85] text-muted-foreground">
-              {t("whoWeAreDescriptionSecondary")}
-            </p>
-
-            <PrimaryCtaLink href="/hakkimda">{t("whoWeAreCta")}</PrimaryCtaLink>
           </div>
         </div>
       </SiteContainer>

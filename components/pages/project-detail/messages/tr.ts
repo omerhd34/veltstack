@@ -36,7 +36,7 @@ export const projectDetailsTr = {
     solutionText:
       "IQfinansAI, kişisel finans yönetimini tek bir uçtan uca platformda birleştiriyor. Dokuz modül ile gelir-gider kaydından kategori bazlı bütçe takibine, borç-alacak yönetiminden çoklu para birimi desteğine kadar temel ihtiyaçlar aynı panelde karşılanıyor. Recharts tabanlı KPI dashboard'ları ve finansal sağlık skoru anlık durum özeti sunarken; Premium katmanda IQfinansAI analiz raporu, doğal dilde asistan ve yatırım portföyü modülleri derinlemesine içgörü sağlıyor. Shopier entegrasyonuyla abonelik altyapısı production ortamında aktif çalışıyor ve platform binlerce kullanıcıya sürekli hizmet veriyor.",
     details:
-      "Frontend tarafında Next.js, React ve Redux ile SSR destekli, performans odaklı bir arayüz geliştirildi. Backend Node.js REST API üzerinde Prisma ORM ve MySQL ile konumlandırıldı; Recharts ile interaktif grafikler, Premium fiş OCR ile hızlı kayıt ve AI analiz raporunun PDF export'u platformun öne çıkan teknik yetenekleri arasında yer alıyor. 40'tan fazla döviz kodu destekleniyor; hesaplama araçları, e-posta bildirimleri ve kategori bazlı limit uyarıları operasyonel akışı tamamlıyor. Production Railway üzerinde deploy edilmiş olup canlı ortamda 16.000'den fazla kayıtlı kullanıcıya hizmet veriyor.",
+      "Frontend tarafında Next.js, React ve Redux ile SSR destekli, performans odaklı bir arayüz geliştirildi. Karanlık ve aydınlık mod desteği, Türkçe-İngilizce çok dilli yapı ve locale bazlı yönlendirme kullanıcı deneyimini güçlendiriyor. Backend Node.js REST API üzerinde Prisma ORM ve MySQL ile konumlandırıldı; Recharts ile interaktif grafikler, Premium fiş OCR ile hızlı kayıt ve AI analiz raporunun PDF export'u platformun öne çıkan teknik yetenekleri arasında yer alıyor. 40'tan fazla döviz kodu destekleniyor; hesaplama araçları, e-posta bildirimleri ve kategori bazlı limit uyarıları operasyonel akışı tamamlıyor. Production Railway üzerinde deploy edilmiş olup canlı ortamda 16.000'den fazla kayıtlı kullanıcıya hizmet veriyor.",
     features: [
       {
         title: "Finansal Performans Analizi",
@@ -83,6 +83,16 @@ export const projectDetailsTr = {
         description:
           "Premium'da bütçe ve harcamalarınız hakkında doğal dilde soru sorun; yanıtlar kayıtlarınıza dayanır.",
       },
+      {
+        title: "Karanlık & Aydınlık Mod",
+        description:
+          "Kullanıcı tercihine göre açık ve koyu tema; uzun panel kullanımında göz konforu.",
+      },
+      {
+        title: "Çok Dilli Destek",
+        description:
+          "Türkçe ve İngilizce arayüz; locale bazlı içerik ve yönlendirme.",
+      },
     ],
     metrics: [
       { value: "16.255", label: "Kayıtlı Kullanıcı" },
@@ -106,7 +116,7 @@ export const projectDetailsTr = {
     solutionText:
       "Profilo ve LG beyaz eşya ve elektronik ürünleri için uçtan uca bir B2C e-ticaret platformu geliştirdik. Kategori mega menüleri ve öne çıkan ürün vitrinleri keşfi kolaylaştırırken; iyzico entegrasyonu Troy, Mastercard ve Visa ile taksitli, güvenli checkout sunuyor. Sipariş takibi, kampanya-indirim modülleri, müşteri hesabı ve admin paneli operasyonu tek merkezden yönetilebilir hale getiriyor. Tüm Türkiye'ye nakliye-montaj hizmeti ve ürün talep formu ile satış sonrası destek de dijital akışa entegre edildi.",
     details:
-      "Platform Next.js, React ve Node.js ile geliştirildi; MongoDB veritabanı üzerinde sipariş, ürün ve kampanya yönetimi sağlandı. iyzico ödeme altyapısı, dinamik fiyatlandırma, SSS modülü ve SEO odaklı SSR yapısı arama görünürlüğünü güçlendiriyor. Admin paneli üzerinden ürün, kategori ve indirim yönetimi yapılabiliyor; Vercel deploy ile hızlı sayfa yüklemeleri ve yapılandırılmış veri desteği sunuluyor. Yüksek tutarlı ürün kategorilerine uygun güven odaklı checkout deneyimi ve mobil-first responsive tasarım tamamlandı.",
+      "Platform Next.js, React ve Node.js ile geliştirildi; MongoDB ve Mongoose ile sipariş, ürün ve kampanya yönetimi sağlandı. iyzico ödeme altyapısı, dinamik fiyatlandırma, SSS modülü ve SEO odaklı SSR yapısı arama görünürlüğünü güçlendiriyor. Admin paneli üzerinden ürün, kategori ve indirim yönetimi yapılabiliyor; Vercel deploy ile hızlı sayfa yüklemeleri ve yapılandırılmış veri desteği sunuluyor. Yüksek tutarlı ürün kategorilerine uygun güven odaklı checkout deneyimi ve mobil-first responsive tasarım tamamlandı.",
     features: [
       {
         title: "Geniş Ürün Kataloğu",
@@ -147,7 +157,7 @@ export const projectDetailsTr = {
     ],
   },
   "uzman-klinik-psikolog": {
-    metaTitle: "Uzman Klinik Psikolog Web Sitesi",
+    metaTitle: "Uzman Klinik Psikolog",
     metaDesc:
       "Randevu talebi, SEO ve güven odaklı klinik psikolog web sitesi. Next.js ile modern, erişilebilir kurumsal deneyim.",
     heroBadge: "Sağlık / Kurumsal",
@@ -160,7 +170,7 @@ export const projectDetailsTr = {
     solutionText:
       "Uzman Klinik Psikolog Nisa Demir için SSR tabanlı, erişilebilir ve güven odaklı bir kurumsal site tasarladık. Randevu talep formu yüz yüze ve online terapi seçeneklerini net biçimde yönlendirirken; dinamik blog modülü psikoloji, psikanaliz ve ruh sağlığına dair mesleki içeriklerin düzenli paylaşımına olanak tanıyor. Yapılandırılmış SEO, sitemap ve meta altyapısı arama görünürlüğünü güçlendiriyor; sakin tipografi ve profesyonel görsel dil danışan güvenini destekliyor.",
     details:
-      "Next.js ve React ile SSR destekli frontend; RESTful API katmanında MongoDB ve Prisma ORM kullanıldı. Kadıköy ofis ve online terapi bilgileri, dinamik blog yönetimi, iletişim formu ve responsive Tailwind CSS tasarımı tek mimaride birleştirildi. WCAG odaklı kontrast, klavye navigasyonu ve semantik HTML ile erişilebilirlik önceliklendirildi. Mobil-first yaklaşım tüm cihazlarda tutarlı deneyim sunuyor; yapılandırılmış veri ve meta etiketleri organik trafik hedeflerini destekliyor.",
+      "Next.js ve React ile SSR destekli frontend; RESTful API katmanında Prisma ORM ve MySQL kullanıldı. Karanlık ve aydınlık mod desteği, Kadıköy ofis ve online terapi bilgileri, dinamik blog yönetimi, iletişim formu ve responsive Tailwind CSS tasarımı tek mimaride birleştirildi. WCAG odaklı kontrast, klavye navigasyonu ve semantik HTML ile erişilebilirlik önceliklendirildi. Mobil-first yaklaşım tüm cihazlarda tutarlı deneyim sunuyor; yapılandırılmış veri ve meta etiketleri organik trafik hedeflerini destekliyor.",
     features: [
       {
         title: "Randevu Talep Sistemi",
@@ -190,6 +200,11 @@ export const projectDetailsTr = {
         description:
           "WCAG odaklı kontrast, klavye navigasyonu ve semantik HTML.",
       },
+      {
+        title: "Karanlık & Aydınlık Mod",
+        description:
+          "Kullanıcı tercihine göre açık ve koyu tema; uzun okuma sürelerinde göz konforu.",
+      },
     ],
     metrics: [
       { value: "4 hafta", label: "Geliştirme Süresi" },
@@ -212,7 +227,7 @@ export const projectDetailsTr = {
     solutionText:
       "Fablessi için premium bir kurumsal katalog sitesi geliştirdik. Hero carousel ile tam ekran görsel vitrin, altı kategorili ürün kataloğu ve öne çıkan ürün alanları markanın outdoor living kimliğini güçlendiriyor. Oturma gruplarından şezlonglara kadar tüm ürün ailesi yapılandırılmış biçimde sunuluyor; WhatsApp yönlendirmesi tek tıkla iletişim sağlıyor. İnegöl ustalığı vurgusu ve sezonluk kampanya alanları marka hikâyesini dijitalde tamamlıyor.",
     details:
-      "Next.js, React ve Node.js ile geliştirilen kurumsal katalog; Prisma ve MySQL backend üzerinde kategori ve ürün yönetimi sunuyor. Admin panelinden ürün, fiyat ve görsel güncellemeleri yapılabiliyor; SEO uyumlu meta etiketleri, sitemap ve yapılandırılmış veri arama görünürlüğünü destekliyor. Premium tipografi, outdoor estetiği ve responsive tasarım tüm cihazlarda tutarlı bir vitrin deneyimi sağlıyor. Vercel deploy ile hızlı yükleme süreleri ve production ortamında kesintisiz hizmet hedeflendi.",
+      "Next.js, React ve Node.js ile geliştirilen kurumsal katalog; Prisma ve MySQL backend üzerinde kategori ve ürün yönetimi sunuyor. Türkçe ve İngilizce çok dilli yapı ile locale bazlı içerik ve yönlendirme sağlandı. Admin panelinden ürün, fiyat ve görsel güncellemeleri yapılabiliyor; SEO uyumlu meta etiketleri, sitemap ve yapılandırılmış veri arama görünürlüğünü destekliyor. Premium tipografi, outdoor estetiği ve responsive tasarım tüm cihazlarda tutarlı bir vitrin deneyimi sağlıyor. Vercel deploy ile hızlı yükleme süreleri ve production ortamında kesintisiz hizmet hedeflendi.",
     features: [
       {
         title: "6 Kategorili Katalog",
@@ -238,15 +253,129 @@ export const projectDetailsTr = {
           "Outdoor living estetiği, marka kimliğine uygun tipografi.",
       },
       {
+        title: "Çok Dilli Destek",
+        description:
+          "Türkçe ve İngilizce içerik; locale bazlı katalog ve sayfa yönlendirmesi.",
+      },
+      {
         title: "SEO Uyumlu Yapı",
         description: "Meta etiketleri, sitemap ve yapılandırılmış veri.",
       },
     ],
     metrics: [
-      { value: "30 gün", label: "Geliştirme Süresi" },
+      { value: "4 hafta", label: "Geliştirme Süresi" },
       { value: "6", label: "Kategori" },
-      { value: "Katalog", label: "Site Türü" },
+      { value: "TR/EN", label: "Dil Desteği" },
       { value: "Outdoor", label: "Sektör" },
+    ],
+  },
+  portfolio: {
+    metaTitle: "Portfolyo | Ömer Halis Demir",
+    metaDesc:
+      "Full stack geliştirici portfolyo sitesi. Projeler, deneyimler ve hizmetler modern, performanslı ve SEO uyumlu bir arayüzde.",
+    heroBadge: "Portfolyo / Kişisel",
+    heroTitle: "Portfolyo | Ömer Halis Demir",
+    heroSubtitle:
+      "Ömer Halis Demir için full stack geliştirici portfolyo sitesi. Projeler, deneyimler ve hizmetler tek bir modern arayüzde.",
+    summary:
+      "Full stack geliştirici portfolyo sitesi; projeler, deneyimler ve hizmetler.",
+    challengeText:
+      "Geliştirici kimliği, proje geçmişi ve hizmet kapsamı dağınık kanallarda sunuluyordu; potansiyel müşteriler tek bir güvenilir vitrinde tüm yetkinlikleri görmek istiyordu. Performans, erişilebilirlik ve SEO beklentileri yüksekti; mevcut yapı bu standartları karşılamıyordu.",
+    solutionText:
+      "Modern, performanslı ve SEO uyumlu bir portfolyo sitesi geliştirdik. Proje vitrinleri, deneyim zaman çizelgesi, hizmet paketleri ve iletişim kanalları tek mimaride birleştirildi. Çok dilli yapı, hızlı yükleme süreleri ve erişilebilir arayüz profesyonel bir ilk izlenim sunuyor.",
+    details:
+      "Next.js, React ve TypeScript ile geliştirilen portfolyo sitesi; Tailwind CSS ile responsive tasarım ve next-intl ile Türkçe-İngilizce çok dilli yapı sunuyor. İçerikler veritabanı olmadan kod tabanlı modüllerle yönetiliyor. Proje detay sayfaları, blog, hizmet paketleri ve iletişim formu entegre edildi. Vercel deploy ile production ortamında hızlı ve güvenilir yayın sağlandı.",
+    features: [
+      {
+        title: "Proje Vitrini",
+        description: "Detaylı case study sayfaları ve canlı demo bağlantıları.",
+      },
+      {
+        title: "Hizmet Paketleri",
+        description:
+          "Web, mobil, SEO ve bakım hizmetleri için net paket yapısı.",
+      },
+      {
+        title: "Blog & İçerik",
+        description:
+          "Kod tabanlı teknik yazılar ve proje deneyimlerinin paylaşımı.",
+      },
+      {
+        title: "Çok Dilli Destek",
+        description:
+          "Türkçe ve İngilizce arayüz; locale bazlı içerik ve yönlendirme.",
+      },
+      {
+        title: "SEO Uyumlu Yapı",
+        description: "SSR, meta etiketleri, sitemap ve yapılandırılmış veri.",
+      },
+      {
+        title: "Performans Odaklı",
+        description: "Hızlı yükleme, erişilebilirlik ve modern UI.",
+      },
+    ],
+    metrics: [
+      { value: "3 hafta", label: "Geliştirme Süresi" },
+      { value: "TR/EN", label: "Dil Desteği" },
+      { value: "Portfolyo", label: "Site Türü" },
+      { value: "Full Stack", label: "Kapsam" },
+    ],
+  },
+  onlinemuhasebe: {
+    metaTitle: "Online Muhasebe | Şahin Demir Mali Müşavirlik",
+    metaDesc:
+      "Mali müşavirlik ve muhasebe hizmetleri için kurumsal portfolyo sitesi. Hizmetler, pratik bilgiler ve iletişim formu.",
+    heroBadge: "Mali Müşavirlik / Kurumsal",
+    heroTitle: "Online Muhasebe",
+    heroSubtitle:
+      "Şahin Demir Mali Müşavirlik için kurumsal web sitesi. Muhasebe, vergi danışmanlığı, pratik bilgiler ve resmi platform kısayolları.",
+    summary:
+      "Mali müşavirlik ve muhasebe hizmetleri için kurumsal portfolyo sitesi.",
+    challengeText:
+      "Mali müşavirlik ofisi dijitalde güvenilir bir kurumsal vitrin, hizmet tanıtımı ve müşteri iletişim kanallarına ihtiyaç duyuyordu. Mevzuat bilgileri, pratik kaynaklar ve sık kullanılan resmi platformlara erişim dağınık kaynaklarda kalıyordu. Profesyonel görünüm ve kolay iletişim, potansiyel mükelleflerin karar sürecinde kritik rol oynuyordu.",
+    solutionText:
+      "Şahin Demir Mali Müşavirlik için modern kurumsal bir web sitesi geliştirdik. Karanlık ve aydınlık mod desteği, hizmetler, değerler, istatistikler ve iletişim formu tek yapıda sunuluyor. Pratik bilgiler modülü mesleki kaynaklara hızlı erişim sağlarken; kısayollar bölümü e-Devlet, SGK ve vergi platformlarına tek tıkla yönlendirme sunuyor.",
+    details:
+      "Next.js, React ve TypeScript ile geliştirilen kurumsal site; Tailwind CSS ile responsive ve erişilebilir arayüz, karanlık-aydınlık mod geçişi, iletişim formu ve SEO altyapısı içeriyor. Backend tarafında Prisma ORM ve MongoDB ile içerik ve iletişim verileri yönetiliyor. Hakkımızda, hizmetler, pratik bilgiler ve kısayollar modülleri mali müşavirlik ofisinin dijital ihtiyaçlarını karşılıyor. Vercel deploy ile hızlı ve güvenilir yayın sağlandı.",
+    features: [
+      {
+        title: "Hizmet Vitrini",
+        description:
+          "Muhasebe, vergi danışmanlığı, SGK ve şirket kuruluşu hizmetleri.",
+      },
+      {
+        title: "Pratik Bilgiler",
+        description:
+          "Vergi kodları, gündelikler ve mesleki referans içerikleri.",
+      },
+      {
+        title: "Platform Kısayolları",
+        description:
+          "e-Devlet, SGK, dijital vergi dairesi ve resmi platformlara hızlı erişim.",
+      },
+      {
+        title: "İletişim Formu",
+        description: "Danışma talebi ve mesaj gönderimi.",
+      },
+      {
+        title: "Kurumsal Kimlik",
+        description: "Değerler, istatistikler ve güven odaklı tasarım.",
+      },
+      {
+        title: "Karanlık & Aydınlık Mod",
+        description:
+          "Kullanıcı tercihine göre açık ve koyu tema; gün içi ve gece kullanımına uyum.",
+      },
+      {
+        title: "SEO Uyumlu Yapı",
+        description: "Meta etiketleri, sitemap ve yapılandırılmış veri.",
+      },
+    ],
+    metrics: [
+      { value: "4 hafta", label: "Geliştirme Süresi" },
+      { value: "6+", label: "Hizmet Alanı" },
+      { value: "Kurumsal", label: "Site Türü" },
+      { value: "Mali Müşavirlik", label: "Sektör" },
     ],
   },
 } as const;

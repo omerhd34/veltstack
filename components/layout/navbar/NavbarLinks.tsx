@@ -44,6 +44,7 @@ export function NavbarLinks({
     projectFablessi: tNav("projectFablessi"),
     projectUzmanPsikolog: tNav("projectUzmanPsikolog"),
     projectPortfolio: tNav("projectPortfolio"),
+    projectOnlinemuhasebe: tNav("projectOnlinemuhasebe"),
   };
 
   const links = [

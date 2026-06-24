@@ -36,7 +36,7 @@ export const projectDetailsEn = {
     solutionText:
       "IQfinansAI brings personal finance management into a single end-to-end platform. Nine modules cover everything from income-expense logging and category-based budgets to debt tracking and multi-currency support, all in one panel. Recharts-powered KPI dashboards and a financial health score deliver an instant snapshot, while Premium adds the IQfinansAI analysis report, natural-language assistant and investment portfolio for deeper insights. Shopier subscription infrastructure runs in production, serving thousands of active users.",
     details:
-      "The frontend was built with Next.js, React and Redux for an SSR-capable, performance-focused interface. The backend runs on a Node.js REST API with Prisma ORM and MySQL; interactive Recharts graphs, Premium receipt OCR for fast entry and AI analysis PDF export are among the platform's standout technical capabilities. 40+ currency codes are supported, with calculation tools, email alerts and category limit warnings completing the operational flow. Deployed on Railway in production, serving 16,000+ registered users in the live environment.",
+      "The frontend was built with Next.js, React and Redux for an SSR-capable, performance-focused interface. Dark and light mode support, Turkish-English multilingual structure and locale-based routing strengthen the user experience. The backend runs on a Node.js REST API with Prisma ORM and MySQL; interactive Recharts graphs, Premium receipt OCR for fast entry and AI analysis PDF export are among the platform's standout technical capabilities. 40+ currency codes are supported, with calculation tools, email alerts and category limit warnings completing the operational flow. Deployed on Railway in production, serving 16,000+ registered users in the live environment.",
     features: [
       {
         title: "Financial Performance Analysis",
@@ -83,6 +83,15 @@ export const projectDetailsEn = {
         description:
           "Premium natural-language Q&A about your budget and spending; answers based on your records.",
       },
+      {
+        title: "Dark & Light Mode",
+        description:
+          "Open and dark themes based on user preference; comfortable reading during long panel sessions.",
+      },
+      {
+        title: "Multilingual Support",
+        description: "Turkish and English interface; locale-based content and routing.",
+      },
     ],
     metrics: [
       { value: "16,255", label: "Registered Users" },
@@ -106,7 +115,7 @@ export const projectDetailsEn = {
     solutionText:
       "We built an end-to-end B2C e-commerce platform for Profilo and LG white goods and electronics. Category mega menus and featured product showcases simplify discovery, while iyzico integration delivers secure checkout with Troy, Mastercard and Visa installment support. Order tracking, campaign and discount modules, customer accounts and an admin panel centralize operations. Nationwide shipping and installation plus a product request form integrate post-sale support into the digital flow.",
     details:
-      "The platform was built with Next.js, React and Node.js; MongoDB powers order, product and campaign management. iyzico payment infrastructure, dynamic pricing, an FAQ module and SEO-focused SSR strengthen search visibility. The admin panel handles product, category and discount management; Vercel deployment delivers fast page loads and structured data support. A trust-focused checkout experience suited to high-value product categories and a mobile-first responsive design were delivered end to end.",
+      "The platform was built with Next.js, React and Node.js; MongoDB and Mongoose power order, product and campaign management. iyzico payment infrastructure, dynamic pricing, an FAQ module and SEO-focused SSR strengthen search visibility. The admin panel handles product, category and discount management; Vercel deployment delivers fast page loads and structured data support. A trust-focused checkout experience suited to high-value product categories and a mobile-first responsive design were delivered end to end.",
     features: [
       {
         title: "Wide Product Catalog",
@@ -147,7 +156,7 @@ export const projectDetailsEn = {
     ],
   },
   "uzman-klinik-psikolog": {
-    metaTitle: "Clinical Psychologist Website",
+    metaTitle: "Clinical Psychologist",
     metaDesc:
       "An appointment, SEO and trust-focused clinical psychologist website with Next.js.",
     heroBadge: "Healthcare / Corporate",
@@ -160,7 +169,7 @@ export const projectDetailsEn = {
     solutionText:
       "We designed an SSR-based, accessible and trust-focused corporate site for Clinical Psychologist Nisa Demir. The appointment request form clearly routes in-person and online therapy options, while a dynamic blog module enables regular publishing on psychology, psychoanalysis and mental health. Structured SEO, sitemap and meta infrastructure strengthen search visibility; calm typography and a professional visual language support client confidence.",
     details:
-      "SSR-capable frontend with Next.js and React; RESTful API layer with MongoDB and Prisma ORM. Kadıköy office and online therapy information, dynamic blog management, contact form and responsive Tailwind CSS design were unified in a single architecture. WCAG-focused contrast, keyboard navigation and semantic HTML prioritized accessibility. A mobile-first approach delivers a consistent experience across devices; structured data and meta tags support organic traffic goals.",
+      "SSR-capable frontend with Next.js and React; RESTful API layer with Prisma ORM and MySQL. Dark and light mode support, Kadıköy office and online therapy information, dynamic blog management, contact form and responsive Tailwind CSS design were unified in a single architecture. WCAG-focused contrast, keyboard navigation and semantic HTML prioritized accessibility. A mobile-first approach delivers a consistent experience across devices; structured data and meta tags support organic traffic goals.",
     features: [
       {
         title: "Appointment Request System",
@@ -190,6 +199,11 @@ export const projectDetailsEn = {
         description:
           "WCAG-focused contrast, keyboard navigation and semantic HTML.",
       },
+      {
+        title: "Dark & Light Mode",
+        description:
+          "Open and dark themes based on user preference; eye comfort during long reading sessions.",
+      },
     ],
     metrics: [
       { value: "4 weeks", label: "Development Time" },
@@ -213,7 +227,7 @@ export const projectDetailsEn = {
     solutionText:
       "We developed a premium corporate catalog site for Fablessi. A hero carousel delivers full-screen visual showcases, a six-category product catalog and featured product areas strengthen the brand's outdoor living identity. The full product family, from seating groups to sunbeds, is presented in a structured way; WhatsApp routing enables one-click contact. Emphasis on İnegöl craftsmanship and seasonal campaign areas complete the brand story digitally.",
     details:
-      "Corporate catalog built with Next.js, React and Node.js; Prisma and MySQL backend for category and product management. Product, pricing and image updates are managed via the admin panel; SEO-friendly meta tags, sitemap and structured data support search visibility. Premium typography, outdoor aesthetics and responsive design deliver a consistent showcase experience across devices. Vercel deployment targets fast load times and uninterrupted service in production.",
+      "Corporate catalog built with Next.js, React and Node.js; Prisma and MySQL backend for category and product management. Turkish and English multilingual structure with locale-based content and routing. Product, pricing and image updates are managed via the admin panel; SEO-friendly meta tags, sitemap and structured data support search visibility. Premium typography, outdoor aesthetics and responsive design deliver a consistent showcase experience across devices. Vercel deployment targets fast load times and uninterrupted service in production.",
     features: [
       {
         title: "6-Category Catalog",
@@ -237,15 +251,125 @@ export const projectDetailsEn = {
         description: "Outdoor living aesthetic, brand-aligned typography.",
       },
       {
+        title: "Multilingual Support",
+        description: "Turkish and English content; locale-based catalog and page routing.",
+      },
+      {
         title: "SEO-Friendly Structure",
         description: "Meta tags, sitemap and structured data.",
       },
     ],
     metrics: [
-      { value: "30 days", label: "Development Time" },
+      { value: "4 weeks", label: "Development Time" },
       { value: "6", label: "Categories" },
-      { value: "Catalog", label: "Site Type" },
+      { value: "TR/EN", label: "Languages" },
       { value: "Outdoor", label: "Industry" },
+    ],
+  },
+  portfolio: {
+    metaTitle: "Portfolio | Ömer Halis Demir",
+    metaDesc:
+      "Full stack developer portfolio site. Projects, experience and services in a modern, performant and SEO-ready interface.",
+    heroBadge: "Portfolio / Personal",
+    heroTitle: "Portfolio | Ömer Halis Demir",
+    heroSubtitle:
+      "Full stack developer portfolio for Ömer Halis Demir. Projects, experience and services in one modern interface.",
+    summary:
+      "Full stack developer portfolio site with projects, experience and services.",
+    challengeText:
+      "Developer identity, project history and service scope were spread across disconnected channels; potential clients wanted to see all capabilities in one trustworthy showcase. Performance, accessibility and SEO expectations were high, and the existing setup couldn't meet those standards.",
+    solutionText:
+      "We built a modern, performant and SEO-ready portfolio site. Project showcases, experience timeline, service packages and contact channels were unified in a single architecture. Multilingual support, fast load times and an accessible interface deliver a professional first impression.",
+    details:
+      "Portfolio site built with Next.js, React and TypeScript; responsive design with Tailwind CSS and Turkish-English multilingual structure via next-intl. Content is managed through code-based modules without a database. Project detail pages, blog, service packages and contact form were integrated. Vercel deployment delivers fast and reliable production hosting.",
+    features: [
+      {
+        title: "Project Showcase",
+        description: "Detailed case study pages and live demo links.",
+      },
+      {
+        title: "Service Packages",
+        description: "Clear package structure for web, mobile, SEO and maintenance.",
+      },
+      {
+        title: "Blog & Content",
+        description: "Code-based technical articles and project experience sharing.",
+      },
+      {
+        title: "Multilingual Support",
+        description: "Turkish and English interface; locale-based content and routing.",
+      },
+      {
+        title: "SEO-Friendly Structure",
+        description: "SSR, meta tags, sitemap and structured data.",
+      },
+      {
+        title: "Performance Focused",
+        description: "Fast loading, accessibility and modern UI.",
+      },
+    ],
+    metrics: [
+      { value: "3 weeks", label: "Development Time" },
+      { value: "TR/EN", label: "Languages" },
+      { value: "Portfolio", label: "Site Type" },
+      { value: "Full Stack", label: "Scope" },
+    ],
+  },
+  onlinemuhasebe: {
+    metaTitle: "Online Muhasebe | Şahin Demir CPA",
+    metaDesc:
+      "Corporate portfolio site for accounting and financial consultancy services. Services, practical resources and contact form.",
+    heroBadge: "Accounting / Corporate",
+    heroTitle: "Online Muhasebe",
+    heroSubtitle:
+      "Corporate website for Şahin Demir Financial Consultancy. Accounting, tax consultancy, practical resources and government platform shortcuts.",
+    summary:
+      "Corporate portfolio site for accounting and financial consultancy services.",
+    challengeText:
+      "The CPA firm needed a trustworthy corporate presence online, service presentation and client contact channels. Regulatory information, practical resources and access to frequently used government platforms remained scattered. Professional appearance and easy contact play a critical role in potential clients' decision process.",
+    solutionText:
+      "We developed a modern corporate site for Şahin Demir Financial Consultancy. Dark and light mode support, services, values, statistics and a contact form are presented in one structure. The practical information module provides quick access to professional resources, while the shortcuts section offers one-click links to e-Government, SGK and tax platforms.",
+    details:
+      "Corporate site built with Next.js, React and TypeScript; responsive and accessible interface with Tailwind CSS, dark-light mode toggle, contact form and SEO infrastructure. Backend uses Prisma ORM and MongoDB for content and contact data management. About, services, practical information and shortcuts modules meet the digital needs of the CPA office. Vercel deployment delivers fast and reliable hosting.",
+    features: [
+      {
+        title: "Service Showcase",
+        description:
+          "Accounting, tax consultancy, social security and company formation services.",
+      },
+      {
+        title: "Practical Resources",
+        description:
+          "Tax codes, per diems and professional reference content.",
+      },
+      {
+        title: "Platform Shortcuts",
+        description:
+          "Quick access to e-Government, SGK, digital tax office and official platforms.",
+      },
+      {
+        title: "Contact Form",
+        description: "Consultation requests and message submission.",
+      },
+      {
+        title: "Corporate Identity",
+        description: "Values, statistics and trust-focused design.",
+      },
+      {
+        title: "Dark & Light Mode",
+        description:
+          "Open and dark themes based on user preference; suited for day and night use.",
+      },
+      {
+        title: "SEO-Friendly Structure",
+        description: "Meta tags, sitemap and structured data.",
+      },
+    ],
+    metrics: [
+      { value: "4 weeks", label: "Development Time" },
+      { value: "6+", label: "Service Areas" },
+      { value: "Corporate", label: "Site Type" },
+      { value: "Accounting", label: "Industry" },
     ],
   },
 } as const;

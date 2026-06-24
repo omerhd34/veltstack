@@ -1,10 +1,18 @@
 export const servicesHomeTr = {
   servicesTitle: "Hizmetler",
   servicesHeadline: "Ölçülebilir sonuç odaklı hizmetler",
+  servicesHeadlineDesc:
+    "Web, uygulama, SEO ve bakımda tek muhatapla ilerleyelim.",
   servicesIntro:
-    "Markanızın dijital yolculuğunda web, uygulama, SEO ve yayın sonrası desteği tek çatı altında ele alıyoruz. Her projede kapsamı baştan netleştiriyor, süreci şeffaf yönetiyor ve ölçülebilir iş sonuçlarına odaklanıyoruz. Tasarımdan geliştirmeye, yayına almadan sürekli bakıma kadar uçtan uca yanınızdayız. İhtiyacınıza göre doğru hizmeti birlikte belirler, karmaşık süreçleri sade ve anlaşılır adımlara böleriz. Performans, erişilebilirlik ve SEO uyumluluğunu her aşamada gözetir; yayın sonrası destekle projenizi güvenle büyütmenize yardımcı oluruz. İlk görüşmeden itibaren kapsamı, öncelikleri ve teslim takvimini birlikte netleştiririz.",
+    "Markanızın dijital ihtiyaçlarını web, uygulama, SEO ve bakım gibi alanlarda tek çatı altında ele alıyoruz. Her projede kapsamı baştan netleştirir, süreci şeffaf yönetir ve ölçülebilir iş sonuçlarına odaklanırız. Tasarımdan yayına kadar her aşamada performans, erişilebilirlik ve SEO uyumluluğunu önceliklendiririz.",
+  servicesBullets: [
+    "Tek muhatap, baştan sona şeffaf süreç",
+    "Tasarım + geliştirme + yayın tek pakette",
+    "Yayın sonrası teknik destek dahil",
+    "Düzenli bilgilendirme ve net teslim takvimi",
+    "Performans, erişilebilirlik ve SEO odaklı yaklaşım",
+  ],
   servicesCta: "Birlikte planlayalım",
-  servicesSubtitle: "İhtiyacınıza özel, uçtan uca dijital çözümler.",
   servicesSliderPrev: "Önceki hizmet",
   servicesSliderNext: "Sonraki hizmet",
   servicesSliderDot: "Hizmet",
@@ -27,15 +35,15 @@ export const servicesHomeTr = {
   servicesAuditTitle: "Teknik Denetim",
   servicesAuditDesc:
     "Web sitesi, uygulama ve altyapınızı performans, güvenlik ve SEO açısından analiz ediyor; öncelikli iyileştirme planı ve uygulanabilir adım listesi çıkarıyoruz.",
-  servicesAuditTag: "Denetim - Analiz",
+  servicesAuditTag: "Performans - Güvenlik - SEO",
   servicesMaintenanceTitle: "Bakım & Destek",
   servicesMaintenanceDesc:
     "Güncelleme, yedekleme ve teknik destekle web ve uygulama varlıklarınızı güvenli, güncel ve kesintisiz çalışır halde tutuyor; acil müdahale süreçlerini de yönetiyoruz.",
-  servicesMaintenanceTag: "Bakım - Destek",
+  servicesMaintenanceTag: "Güncelleme - Yedekleme - Destek",
   servicesStats: [
     { num: "6", label: "Hizmet Kategorisi" },
     { num: "20+", label: "Tamamlanan Proje" },
     { num: "6+", label: "Yıl Deneyim" },
-    { num: "98%", label: "Müşteri Memnuniyeti" },
+    { num: "100%", label: "Müşteri Memnuniyeti" },
   ],
 } as const;

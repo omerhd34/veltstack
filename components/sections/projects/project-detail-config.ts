@@ -21,6 +21,7 @@ export const projectTechStacks: Record<ProjectSlug, string[]> = {
     "Next.js",
     "Tailwind CSS",
     "MongoDB",
+    "Mongoose",
     "Node.js",
     "REST API",
     "Vercel",
@@ -41,7 +42,7 @@ export const projectTechStacks: Record<ProjectSlug, string[]> = {
     "React",
     "Next.js",
     "Tailwind CSS",
-    "MongoDB",
+    "MySQL",
     "Prisma",
     "Node.js",
     "REST API",
@@ -52,8 +53,18 @@ export const projectTechStacks: Record<ProjectSlug, string[]> = {
     "React",
     "Next.js",
     "Tailwind CSS",
+    "next-intl",
+    "Vercel",
+  ],
+  onlinemuhasebe: [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
     "Node.js",
-    "PostgreSQL",
+    "Prisma",
+    "MongoDB",
+    "REST API",
     "Vercel",
   ],
 };
@@ -64,6 +75,7 @@ export const projectDemoUrls: Record<ProjectSlug, string> = {
   fablessi: "https://www.fablessi.com/",
   "uzman-klinik-psikolog": "https://www.nisademir.com/",
   portfolio: "https://www.omerhalisdemir.com.tr/",
+  onlinemuhasebe: "https://www.onlinemuhasebe.org/",
 };
 
 export const projectImageUrls: Partial<Record<ProjectSlug, string>> = {
@@ -77,4 +89,5 @@ export const projectCoverGradients: Record<ProjectSlug, string> = {
   fablessi: "from-[#1e3d24] via-[#2d5c35] to-[#4a8f55]",
   "uzman-klinik-psikolog": "from-[#2a2540] via-[#3d3560] to-[#5a4f85]",
   portfolio: "from-[#1a2a3a] via-[#2a4058] to-[#3a5878]",
+  onlinemuhasebe: "from-[#0a1628] via-[#1a3a6a] to-[#2563eb]",
 };

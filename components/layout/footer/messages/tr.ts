@@ -17,7 +17,8 @@ export const footerTr = {
     projectYazici: "Yazıcı Ticaret | Profilo & LG",
     projectFablessi: "Fablessi",
     projectUzmanPsikolog: "Uzman Klinik Psikolog",
-    projectPortfolio: "Portfolio Web Sitesi",
+    projectPortfolio: "Portfolyo | Ömer Halis Demir",
+    projectOnlinemuhasebe: "Online Muhasebe | Mali Müşavirlik",
   },
   contactPhone: "+90 507 849 29 03",
   contactPhoneHref: "tel:+905078492903",
@@ -26,7 +27,7 @@ export const footerTr = {
   contactExtraLinks: [
     { label: "WhatsApp", href: "https://wa.me/905078492903" },
     {
-      label: "Portfolio Web Sitesi",
+      label: "Portfolyo | Ömer Halis Demir",
       href: "https://www.omerhalisdemir.com.tr/",
     },
     {

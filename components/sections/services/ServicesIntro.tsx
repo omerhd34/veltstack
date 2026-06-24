@@ -9,11 +9,7 @@ interface ServicesIntroProps {
 export async function ServicesIntro({ className }: ServicesIntroProps) {
   const t = await getTranslations("home");
 
-  const bullets = [
-    "Tek muhatap, baştan sona şeffaf süreç",
-    "Tasarım + geliştirme + yayın tek pakette",
-    "Yayın sonrası teknik destek dahil",
-  ];
+  const bullets = t.raw("servicesBullets") as string[];
 
   return (
     <div className={`w-full min-w-0 ${className ?? ""}`}>
@@ -21,19 +17,31 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
         {t("servicesTitle")}
       </span>
 
-      <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
-        <h2
-          id="services-section-title"
-          className="font-(family-name:--font-heading) text-5xl font-bold leading-[1.04] tracking-tight text-[#0A0A0F] md:text-6xl lg:text-[4rem]"
-        >
-          {t("servicesHeadline")}
-        </h2>
+      <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-16">
+        <div className="flex flex-col lg:h-full">
+          <h2
+            id="services-section-title"
+            className="font-(family-name:--font-heading) text-5xl font-bold leading-[1.04] tracking-tight text-[#0A0A0F] md:text-6xl lg:text-[4rem]"
+          >
+            {t("servicesHeadline")}
+          </h2>
+
+          <div className="mt-8 flex flex-col gap-6 lg:mt-auto">
+            <p className="max-w-sm text-[0.9375rem] leading-relaxed text-foreground/60">
+              {t("servicesHeadlineDesc")}
+            </p>
+
+            <PrimaryCtaLink
+              href="/iletisim"
+              showArrow={false}
+              trailingIcon={<LuMessageCircle className="size-5" aria-hidden />}
+            >
+              {t("servicesCta")}
+            </PrimaryCtaLink>
+          </div>
+        </div>
 
         <div className="flex flex-col gap-6">
-          <p className="text-lg font-semibold leading-snug text-brand-accent">
-            {t("servicesSubtitle")}
-          </p>
-
           <p className="text-[0.9375rem] leading-[1.9] text-foreground/60">
             {t("servicesIntro")}
           </p>
@@ -53,18 +61,6 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
               </li>
             ))}
           </ul>
-
-          <div className="h-px w-full bg-border/50" />
-
-          <div className="flex flex-wrap items-center gap-4">
-            <PrimaryCtaLink
-              href="/iletisim"
-              showArrow={false}
-              trailingIcon={<LuMessageCircle className="size-5" aria-hidden />}
-            >
-              {t("servicesCta")}
-            </PrimaryCtaLink>
-          </div>
         </div>
       </div>
     </div>

@@ -7,4 +7,5 @@ export const projectRelatedServices: Record<ProjectSlug, ServiceSlug[]> = {
   fablessi: ["web-sitesi", "web-sitesi-yenileme", "seo-hizmetleri", "teknik-denetim", "bakim-ve-destek"],
   "uzman-klinik-psikolog": ["web-sitesi", "web-sitesi-yenileme", "seo-hizmetleri", "teknik-denetim", "bakim-ve-destek"],
   portfolio: ["web-sitesi", "web-sitesi-yenileme", "seo-hizmetleri", "bakim-ve-destek"],
+  onlinemuhasebe: ["web-sitesi", "web-sitesi-yenileme", "seo-hizmetleri", "bakim-ve-destek"],
 };

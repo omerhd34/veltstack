@@ -1,6 +1,7 @@
 import type { IconType } from "react-icons";
 import {
   LuBrain,
+  LuCalculator,
   LuChartLine,
   LuGlobe,
   LuShoppingCart,
@@ -13,6 +14,7 @@ export const projectSlugs = [
   "fablessi",
   "uzman-klinik-psikolog",
   "portfolio",
+  "onlinemuhasebe",
 ] as const;
 
 export const homepageProjectSlugs = [
@@ -69,12 +71,19 @@ export const projectItems: ProjectItemConfig[] = [
   },
   {
     slug: "portfolio",
-    href: "https://www.omerhalisdemir.com.tr/",
+    href: "/projeler/portfolio",
     titleKey: "projectPortfolioTitle",
     descKey: "projectPortfolioDesc",
     tagKey: "projectPortfolioTag",
     icon: LuGlobe,
-    external: true,
+  },
+  {
+    slug: "onlinemuhasebe",
+    href: "/projeler/onlinemuhasebe",
+    titleKey: "projectOnlinemuhasebeTitle",
+    descKey: "projectOnlinemuhasebeDesc",
+    tagKey: "projectOnlinemuhasebeTag",
+    icon: LuCalculator,
   },
 ];
 

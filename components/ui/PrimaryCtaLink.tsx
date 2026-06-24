@@ -41,18 +41,18 @@ const iconTransition =
   "transition-[color,stroke-width] duration-1000 ease-in-out motion-reduce:transition-none";
 
 const iconHoverClasses = cn(
-  "text-white stroke-[1.75]",
+  "text-white stroke-[2.25]",
   iconTransition,
-  "group-hover:text-(--border-trace-stroke) group-hover:stroke-[2.75]",
-  "motion-reduce:group-hover:text-white motion-reduce:group-hover:stroke-[1.75]",
+  "group-hover:text-(--border-trace-stroke) group-hover:stroke-[3.25]",
+  "motion-reduce:group-hover:text-white motion-reduce:group-hover:stroke-[2.25]",
 );
 
 const iconSlotClasses = cn(
   "inline-flex shrink-0",
-  "[&_svg]:text-white [&_svg]:stroke-[1.75]",
+  "[&_svg]:text-white [&_svg]:stroke-[2.25]",
   "[&_svg]:transition-[color,stroke-width] [&_svg]:duration-1000 [&_svg]:ease-in-out",
-  "group-hover:[&_svg]:text-(--border-trace-stroke) group-hover:[&_svg]:stroke-[2.75]",
-  "motion-reduce:[&_svg]:transition-none motion-reduce:group-hover:[&_svg]:text-white motion-reduce:group-hover:[&_svg]:stroke-[1.75]",
+  "group-hover:[&_svg]:text-(--border-trace-stroke) group-hover:[&_svg]:stroke-[3.25]",
+  "motion-reduce:[&_svg]:transition-none motion-reduce:group-hover:[&_svg]:text-white motion-reduce:group-hover:[&_svg]:stroke-[2.25]",
 );
 
 const variantClasses: Record<PrimaryCtaLinkVariant, string> = {

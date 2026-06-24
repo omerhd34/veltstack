@@ -15,7 +15,7 @@ export const projectsHomeTr = {
   projectsSliderDot: "Proje",
   projectIqfinansTitle: "IQfinansAI | Yapay Zekâ Finans Platformu",
   projectIqfinansDesc:
-    "Yapay zekâ destekli finansal analiz, görselleştirme ve raporlama sunan platform. Karmaşık verileri anlaşılır panellere dönüştürür, yatırım kararlarını hızlandırır ve ölçülebilir içgörüler üretir.",
+    "Yapay zekâ destekli finansal analiz platformu. Karanlık-aydınlık mod, Türkçe-İngilizce dil desteği ve karmaşık verileri anlaşılır panellere dönüştüren raporlama.",
   projectIqfinansTag: "Finansal Teknoloji - AI",
   projectYaziciTitle: "Yazıcı Ticaret | Profilo & LG",
   projectYaziciDesc:
@@ -23,14 +23,18 @@ export const projectsHomeTr = {
   projectYaziciTag: "E-Ticaret - B2C",
   projectFablessiTitle: "Fablessi | Bahçe & Balkon",
   projectFablessiDesc:
-    "Bahçe ve balkon mobilyaları için premium kurumsal ürün vitrini geliştirdik. Zengin görsel sunum, net kategori yapısı ve marka algısını güçlendiren modern bir katalog deneyimi sunduk.",
+    "Bahçe ve balkon mobilyaları için premium kurumsal katalog. Türkçe-İngilizce dil desteği, zengin görsel sunum ve net kategori yapısıyla marka algısını güçlendiren vitrin.",
   projectFablessiTag: "Kurumsal - Katalog",
-  projectUzmanPsikologTitle: "Uzman Klinik Psikolog Web Sitesi",
+  projectUzmanPsikologTitle: "Uzman Klinik Psikolog",
   projectUzmanPsikologDesc:
-    "Uzman Klinik Psikolog Nisa Demir için profesyonel web platformu. RESTful API ile randevu, içerik ve iletişim süreçleri; SEO ve dinamik içerik yönetimi.",
+    "Uzman Klinik Psikolog Nisa Demir için profesyonel web platformu. Karanlık-aydınlık mod, randevu talebi, blog ve SEO odaklı kurumsal deneyim.",
   projectUzmanPsikologTag: "Sağlık - Kurumsal",
-  projectPortfolioTitle: "Portfolio Web Sitesi | Ömer Halis Demir",
+  projectPortfolioTitle: "Portfolyo | Ömer Halis Demir",
   projectPortfolioDesc:
-    "Full stack geliştirici portfolyo sitesi. Projeler, deneyimler ve hizmetler modern, performanslı, erişilebilir ve SEO uyumlu bir arayüzde ziyaretçilere sunuluyor.",
-  projectPortfolioTag: "Portfolio - Kişisel",
+    "Full stack geliştirici portfolyo sitesi. Türkçe-İngilizce dil desteği, projeler, deneyimler ve hizmetler modern ve SEO uyumlu bir arayüzde sunuluyor.",
+  projectPortfolioTag: "Portfolyo - Kişisel",
+  projectOnlinemuhasebeTitle: "Online Muhasebe | Mali Müşavirlik",
+  projectOnlinemuhasebeDesc:
+    "Mali müşavirlik ve muhasebe hizmetleri için kurumsal portfolyo sitesi. Karanlık-aydınlık mod, pratik bilgiler, resmi platform kısayolları ve iletişim formu.",
+  projectOnlinemuhasebeTag: "Mali Müşavirlik - Kurumsal",
 } as const;

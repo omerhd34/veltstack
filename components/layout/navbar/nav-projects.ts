@@ -4,8 +4,12 @@ export const navProjectItems = [
   { href: "/projeler/fablessi", navKey: "projectFablessi" },
   { href: "/projeler/uzman-klinik-psikolog", navKey: "projectUzmanPsikolog" },
   {
-    href: "https://www.omerhalisdemir.com.tr/",
+    href: "/projeler/portfolio",
     navKey: "projectPortfolio",
+  },
+  {
+    href: "/projeler/onlinemuhasebe",
+    navKey: "projectOnlinemuhasebe",
   },
 ] as const;
 

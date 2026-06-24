@@ -18,7 +18,7 @@ export const servicesPageEn = {
     { value: "5-120", label: "Delivery Days" },
     { value: "6", label: "Service Types" },
     { value: "∞", label: "Page Capacity" },
-    { value: "98%", label: "Satisfaction" },
+    { value: "100%", label: "Satisfaction" },
   ],
   ...servicesPackagesEn,
 } as const;

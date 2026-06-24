@@ -15,7 +15,7 @@ export const projectsHomeEn = {
   projectsSliderDot: "Project",
   projectIqfinansTitle: "IQfinansAI | AI Finance Analytics Platform",
   projectIqfinansDesc:
-    "An AI-powered platform for financial analysis, visualization and reporting. It turns complex data into clear dashboards, speeds up investment decisions and delivers measurable insights.",
+    "AI-powered financial analysis platform. Dark-light mode, Turkish-English support and reporting that turns complex data into clear dashboards.",
   projectIqfinansTag: "FinTech - AI",
   projectYaziciTitle: "Yazıcı Ticaret | Profilo & LG",
   projectYaziciDesc:
@@ -23,14 +23,18 @@ export const projectsHomeEn = {
   projectYaziciTag: "E-Commerce - B2C",
   projectFablessiTitle: "Fablessi | Garden & Balcony",
   projectFablessiDesc:
-    "A premium corporate product showcase for garden and balcony furniture. Rich visuals, a clear category structure and a modern catalog experience designed to strengthen brand perception.",
+    "Premium corporate catalog for garden and balcony furniture. Turkish-English support, rich visuals and a clear category structure that strengthens brand perception.",
   projectFablessiTag: "Corporate - Catalog",
-  projectUzmanPsikologTitle: "Clinical Psychologist Website",
+  projectUzmanPsikologTitle: "Clinical Psychologist",
   projectUzmanPsikologDesc:
-    "Professional web platform for Clinical Psychologist Nisa Demir. Appointments, content and contact via RESTful API; SEO and CMS included.",
+    "Professional web platform for Clinical Psychologist Nisa Demir. Dark-light mode, appointment requests, blog and SEO-focused corporate experience.",
   projectUzmanPsikologTag: "Healthcare - Corporate",
-  projectPortfolioTitle: "Portfolio Website | Ömer Halis Demir",
+  projectPortfolioTitle: "Portfolio | Ömer Halis Demir",
   projectPortfolioDesc:
-    "Full stack developer portfolio site. Projects, experience and services presented to visitors in a modern, performant, accessible and SEO-ready interface.",
+    "Full stack developer portfolio site. Turkish-English support with projects, experience and services in a modern, SEO-ready interface.",
   projectPortfolioTag: "Portfolio - Personal",
+  projectOnlinemuhasebeTitle: "Online Accounting | Financial Consulting",
+  projectOnlinemuhasebeDesc:
+    "Corporate portfolio for accounting and financial consultancy. Dark-light mode, practical resources, government platform shortcuts and a contact form.",
+  projectOnlinemuhasebeTag: "Accounting - Corporate",
 } as const;
