@@ -31,9 +31,9 @@ export const whyMeItems: WhyMeItemConfig[] = [
     icon: LuHeadset,
   },
   {
-    titleKey: "whyMeTransparentTitle",
-    descKey: "whyMeTransparentDesc",
-    icon: LuListChecks,
+    titleKey: "whyMeUxTitle",
+    descKey: "whyMeUxDesc",
+    icon: LuLayoutTemplate,
   },
   {
     titleKey: "whyMeMeasurableTitle",
@@ -41,8 +41,8 @@ export const whyMeItems: WhyMeItemConfig[] = [
     icon: LuChartLine,
   },
   {
-    titleKey: "whyMeUxTitle",
-    descKey: "whyMeUxDesc",
-    icon: LuLayoutTemplate,
+    titleKey: "whyMeTransparentTitle",
+    descKey: "whyMeTransparentDesc",
+    icon: LuListChecks,
   },
 ];

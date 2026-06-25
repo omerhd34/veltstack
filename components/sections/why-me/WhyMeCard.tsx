@@ -48,7 +48,7 @@ export function WhyMeCard({
           <h3 className="pr-10 font-(family-name:--font-heading) text-xl font-bold leading-snug tracking-tight text-white">
             {title}
           </h3>
-          <p className="mt-2 h-[calc(0.9375rem*1.7*3)] text-[0.9375rem] leading-[1.7] text-white/50">
+          <p className="mt-2 line-clamp-3 h-[calc(0.9375rem*1.7*3)] text-[0.9375rem] leading-[1.7] text-white/50">
             {description}
           </p>
         </div>
