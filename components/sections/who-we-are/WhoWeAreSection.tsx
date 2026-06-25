@@ -1,7 +1,8 @@
 import { getTranslations } from "next-intl/server";
-import { LuQuote } from "react-icons/lu";
-import { TbWaveSine } from "react-icons/tb";
+import { LuNetwork, LuQuote } from "react-icons/lu";
+import { TbGitBranch, TbWorldWww } from "react-icons/tb";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { WhoWeAreLeftColumn } from "./WhoWeAreLeftColumn";
 import { WhoWeAreSignature } from "./WhoWeAreSignature";
@@ -21,9 +22,26 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
 
   return (
     <section
-      className={`bg-background py-24 md:py-32 ${className ?? ""}`}
+      className={`relative overflow-hidden bg-background py-24 md:py-32 ${className ?? ""}`}
       aria-labelledby="who-we-are-title"
     >
+      <SectionDecorIcon
+        icon={TbGitBranch}
+        tone="accent"
+        className="-left-2 top-[38%] -rotate-12 xl:left-4"
+      />
+      <SectionDecorIcon
+        icon={LuNetwork}
+        tone="accent-muted"
+        size="md"
+        className="right-2 top-[18%] rotate-6 xl:right-8"
+      />
+      <SectionDecorIcon
+        icon={TbWorldWww}
+        tone="accent"
+        size="sm"
+        className="bottom-[20%] left-6 -rotate-6 xl:left-12"
+      />
       <SiteContainer>
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
           <WhoWeAreLeftColumn
@@ -36,13 +54,8 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
               >
                 {t("whoWeAreHeadline")}
                 <br />
-                <span className="relative inline-block text-brand-accent">
+                <span className="text-brand-accent">
                   {t("whoWeAreHeadlineAccent")}
-                  <TbWaveSine
-                    aria-hidden
-                    className="absolute -bottom-2 left-0 w-full opacity-40"
-                    strokeWidth={2.5}
-                  />
                 </span>
               </h2>
             }

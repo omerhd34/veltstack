@@ -1,6 +1,8 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import { useEffect, useState } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export interface WhoWeAreStat {
   target: number;
@@ -10,7 +12,6 @@ export interface WhoWeAreStat {
 
 interface WhoWeAreStatsProps {
   stats: readonly WhoWeAreStat[];
-  active: boolean;
 }
 
 const DURATION_MS = 2200;
@@ -19,7 +20,10 @@ function useCountUp(target: number, active: boolean) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!active) return;
+    if (!active) {
+      setCount(0);
+      return;
+    }
 
     let start: number | null = null;
     let frameId: number;
@@ -39,7 +43,7 @@ function useCountUp(target: number, active: boolean) {
     return () => cancelAnimationFrame(frameId);
   }, [target, active]);
 
-  return active ? count : 0;
+  return count;
 }
 
 function AnimatedStat({
@@ -61,18 +65,17 @@ function AnimatedStat({
   );
 }
 
-export function WhoWeAreStats({ stats, active }: WhoWeAreStatsProps) {
+export function WhoWeAreStats({ stats }: WhoWeAreStatsProps) {
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.4, repeat: true });
+
   return (
     <div
+      ref={ref as React.RefObject<HTMLDivElement | null>}
       className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-10"
       aria-live="polite"
     >
       {stats.map((stat) => (
-        <AnimatedStat
-          key={`${stat.label}-${active}`}
-          {...stat}
-          active={active}
-        />
+        <AnimatedStat key={stat.label} {...stat} active={isVisible} />
       ))}
     </div>
   );
