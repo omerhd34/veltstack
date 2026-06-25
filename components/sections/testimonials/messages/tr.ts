@@ -1,4 +1,7 @@
 export const testimonialsHomeTr = {
+  testimonialsBadge: "Referanslar",
+  testimonialsTitleLead: "Müşteri",
+  testimonialsTitleAccent: "Yorumları",
   testimonialsTitle: "Müşteri Yorumları",
   testimonialsSubtitle:
     "Farklı sektörlerden iş ortaklarımızın deneyimleri; tasarım kalitesinden teslimat sürecine kadar birlikte yürüttüğümüz çalışmaların kısa özeti.",
@@ -25,4 +28,7 @@ export const testimonialsHomeTr = {
       rating: 5,
     },
   ],
+  testimonialsPrev: "Önceki yorum",
+  testimonialsNext: "Sonraki yorum",
+  testimonialsSlide: "Yorum {index}",
 } as const;

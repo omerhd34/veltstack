@@ -1,6 +1,9 @@
-import { getTranslations } from "next-intl/server";
+import { LuMessageCircleHeart } from "react-icons/lu";
+import { TbGauge, TbHeartHandshake, TbStars } from "react-icons/tb";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 import { TestimonialSlider } from "./TestimonialSlider";
+import { TestimonialsIntro } from "./TestimonialsIntro";
 
 interface TestimonialsSectionProps {
   className?: string;
@@ -9,31 +12,58 @@ interface TestimonialsSectionProps {
 export async function TestimonialsSection({
   className,
 }: TestimonialsSectionProps) {
-  const t = await getTranslations("home");
-
   return (
     <section
-      className={`relative overflow-hidden bg-background py-24 md:py-32 ${className ?? ""}`}
+      className={`relative overflow-hidden bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}
+      aria-labelledby="testimonials-section-title"
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgb(58_107_82/0.06),transparent)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_100%_0%,rgb(58_107_82/0.08),transparent_55%)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_45%_at_0%_100%,rgb(58_107_82/0.07),transparent_50%)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-0 top-0 h-px w-full bg-linear-to-r from-transparent via-brand-accent/25 to-transparent"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-20 top-1/3 size-80 rounded-full bg-brand-accent/5 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-16 bottom-1/4 size-72 rounded-full bg-brand-accent/6 blur-3xl"
+      />
+
+      <SectionDecorIcon
+        icon={TbGauge}
+        tone="accent-muted"
+        className="right-4 top-[16%] rotate-12 xl:right-14"
+      />
+      <SectionDecorIcon
+        icon={TbStars}
+        tone="accent"
+        size="md"
+        className="left-2 top-[20%] -rotate-12 xl:left-10"
+      />
+      <SectionDecorIcon
+        icon={LuMessageCircleHeart}
+        tone="accent-muted"
+        className="right-0 bottom-[22%] rotate-6 xl:right-8"
+      />
+      <SectionDecorIcon
+        icon={TbHeartHandshake}
+        tone="accent"
+        size="sm"
+        className="bottom-[14%] left-6 -rotate-6 xl:left-14"
       />
 
       <SiteContainer className="relative">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
-            Referanslar
-          </span>
-          <h2 className="mt-6 font-(family-name:--font-heading) text-4xl font-bold tracking-tight text-[#0A0A0F] md:text-5xl">
-            {t("testimonialsTitle")}
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {t("testimonialsSubtitle")}
-          </p>
-        </div>
-
-        <TestimonialSlider className="mx-auto mt-14 max-w-4xl px-8 md:px-12" />
+        <TestimonialsIntro />
+        <TestimonialSlider className="mx-auto mt-14 max-w-4xl px-10 md:mt-16 md:px-14" />
       </SiteContainer>
     </section>
   );
