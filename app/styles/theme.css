@@ -44,6 +44,7 @@
   --radius-4xl: calc(var(--radius) * 2.6);
   --animate-marquee-scroll: marquee-scroll 60s linear infinite;
   --animate-services-marquee: marquee-scroll 35s linear infinite;
+  --animate-section-decor-spin: section-decor-spin 24s linear infinite;
   --animate-card-border-trace: card-border-trace 3s linear 1;
 }
 
