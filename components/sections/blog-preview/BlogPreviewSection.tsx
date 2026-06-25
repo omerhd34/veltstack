@@ -1,5 +1,8 @@
 import { getLocale, getTranslations } from "next-intl/server";
+import { LuWorkflow } from "react-icons/lu";
+import { TbShieldCheckFilled } from "react-icons/tb";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 import { blogPosts } from "@/components/pages/blog/blog-data";
 import { toLatinUppercase } from "@/lib/utils";
 import { BlogPreviewCard } from "./BlogPreviewCard";
@@ -31,7 +34,20 @@ export async function BlogPreviewSection({
     }));
 
   return (
-    <section className={`bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}>
+    <section
+      className={`relative overflow-hidden bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}
+    >
+      <SectionDecorIcon
+        icon={LuWorkflow}
+        tone="accent"
+        className="left-4 top-20 -rotate-6 xl:left-10"
+      />
+      <SectionDecorIcon
+        icon={TbShieldCheckFilled}
+        tone="accent-muted"
+        size="md"
+        className="right-2 top-[24%] rotate-12 xl:right-10"
+      />
       <SiteContainer>
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">
