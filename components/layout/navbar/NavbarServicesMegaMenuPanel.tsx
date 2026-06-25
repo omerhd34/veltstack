@@ -11,22 +11,30 @@ import { NavbarMegaMenuIntroColumn } from "./NavbarMegaMenuIntroColumn";
 
 export function NavbarServicesMegaMenuPanel() {
   const tHome = useTranslations("home");
+  const tNav = useTranslations("nav");
   const setServicesMenuOpen = useUiStore((state) => state.setServicesMenuOpen);
 
   const cards = serviceItems.map((item) => ({
+    slug: item.slug,
     href: item.href,
     title: tHome(item.titleKey),
-    description: tHome(item.descKey),
-    icon: item.icon,
+    description: tNav(item.navDescKey),
   }));
 
   return (
     <SiteContainer className="py-10">
       <div className="grid items-stretch gap-10 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-14 xl:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]">
         <NavbarMegaMenuIntroColumn
-          headline={tHome("servicesHeadline")}
-          intro={tHome("servicesIntro")}
-          introLines={6}
+          headline={
+            <>
+              {tHome("servicesHeadline")}{" "}
+              <span className="text-brand-accent">
+                {tHome("servicesHeadlineAccent")}
+              </span>
+            </>
+          }
+          intro={tNav("servicesMegaMenuIntro")}
+          introLines={9}
         >
           <PrimaryCtaLink
             href="/iletisim"

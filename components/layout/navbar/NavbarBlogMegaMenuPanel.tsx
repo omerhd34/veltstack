@@ -1,27 +1,29 @@
-"use client"
+"use client";
 
-import { LuEye } from "react-icons/lu"
-import { useLocale, useTranslations } from "next-intl"
-import { SiteContainer } from "@/components/layout/SiteContainer"
-import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink"
-import { ServiceCard } from "@/components/sections/services/ServiceCard"
-import { getNavBlogPosts } from "@/components/pages/blog/blog-data"
-import { getFooterBlogCategoryIcon } from "@/components/layout/footer/footer-config"
-import { useUiStore } from "@/store/uiSlice"
-import { NavbarMegaMenuIntroColumn } from "./NavbarMegaMenuIntroColumn"
+import { LuEye } from "react-icons/lu";
+import { useLocale, useTranslations } from "next-intl";
+import { SiteContainer } from "@/components/layout/SiteContainer";
+import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
+import { ServiceCard } from "@/components/sections/services/ServiceCard";
+import { getNavBlogPosts } from "@/components/pages/blog/blog-data";
+import { getFooterBlogCategoryIcon } from "@/components/layout/footer/footer-config";
+import { getNavBlogDescKey } from "@/components/layout/navbar/nav-blog-items";
+import { useUiStore } from "@/store/uiSlice";
+import { NavbarMegaMenuIntroColumn } from "./NavbarMegaMenuIntroColumn";
 
 export function NavbarBlogMegaMenuPanel() {
-  const locale = useLocale() as "tr" | "en"
-  const tHome = useTranslations("home")
-  const setBlogMenuOpen = useUiStore((state) => state.setBlogMenuOpen)
-  const posts = getNavBlogPosts(locale)
+  const locale = useLocale() as "tr" | "en";
+  const tHome = useTranslations("home");
+  const tNav = useTranslations("nav");
+  const setBlogMenuOpen = useUiStore((state) => state.setBlogMenuOpen);
+  const posts = getNavBlogPosts(locale);
 
   return (
     <SiteContainer className="py-10">
       <div className="grid items-stretch gap-10 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-14 xl:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]">
         <NavbarMegaMenuIntroColumn
           headline={tHome("blogHeadline")}
-          intro={tHome("blogIntro")}
+          intro={tNav("blogMegaMenuIntro")}
           introLines={11}
         >
           <PrimaryCtaLink
@@ -41,7 +43,7 @@ export function NavbarBlogMegaMenuPanel() {
                 compact
                 href={`/blog/${post.slug}`}
                 title={post.title}
-                description={post.excerpt}
+                description={tNav(getNavBlogDescKey(post.slug)!)}
                 icon={getFooterBlogCategoryIcon(post.category)}
                 onNavigate={() => setBlogMenuOpen(false)}
               />
@@ -50,5 +52,5 @@ export function NavbarBlogMegaMenuPanel() {
         </div>
       </div>
     </SiteContainer>
-  )
+  );
 }

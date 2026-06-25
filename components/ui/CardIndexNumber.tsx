@@ -26,7 +26,7 @@ export function CardIndexNumber({
           ? reveal === "hover"
             ? "text-muted/30 opacity-0 group-hover:opacity-100 group-hover:text-brand-accent/15"
             : "text-brand-accent/15 group-hover:text-brand-accent/30"
-          : "text-white/15 group-hover:text-brand-accent/40",
+          : "text-white/15 group-hover:text-brand-accent",
         className,
       )}
     >

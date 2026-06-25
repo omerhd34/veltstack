@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 interface NavbarLogoProps {
   className?: string;
@@ -7,7 +8,10 @@ interface NavbarLogoProps {
 export function NavbarLogo({ className }: NavbarLogoProps) {
   return (
     <span
-      className={`inline-flex select-none items-center gap-2 ${className ?? ""}`}
+      className={cn(
+        "inline-flex origin-left select-none items-center gap-2 transition-transform duration-500 ease-out hover:scale-[1.04]",
+        className,
+      )}
     >
       <Image
         src="/images/favicons/favicon-48.png"

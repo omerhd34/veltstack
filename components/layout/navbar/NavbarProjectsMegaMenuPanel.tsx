@@ -11,12 +11,13 @@ import { NavbarMegaMenuIntroColumn } from "./NavbarMegaMenuIntroColumn"
 
 export function NavbarProjectsMegaMenuPanel() {
   const tHome = useTranslations("home")
+  const tNav = useTranslations("nav")
   const setProjectsMenuOpen = useUiStore((state) => state.setProjectsMenuOpen)
 
   const cards = projectItems.map((project) => ({
     href: project.href,
     title: tHome(project.titleKey),
-    description: tHome(project.descKey),
+    description: tNav(project.navDescKey),
     icon: project.icon,
   }))
 
@@ -25,7 +26,7 @@ export function NavbarProjectsMegaMenuPanel() {
       <div className="grid items-stretch gap-10 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-14 xl:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]">
         <NavbarMegaMenuIntroColumn
           headline={tHome("projectsHeadline")}
-          intro={tHome("projectsIntro")}
+          intro={tNav("projectsMegaMenuIntro")}
           introLines={11}
         >
           <PrimaryCtaLink
