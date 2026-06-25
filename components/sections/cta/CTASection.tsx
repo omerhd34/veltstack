@@ -1,7 +1,9 @@
 import { LuEye, LuMessageCircle } from "react-icons/lu";
+import { TbGitBranch, TbLock } from "react-icons/tb";
 import { getTranslations } from "next-intl/server";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 
 interface CTASectionProps {
   className?: string;
@@ -21,6 +23,18 @@ export async function CTASection({ className }: CTASectionProps) {
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-accent/50 to-transparent"
+      />
+
+      <SectionDecorIcon
+        icon={TbGitBranch}
+        tone="on-dark-muted"
+        className="left-6 top-[32%] -rotate-12 xl:left-14"
+      />
+      <SectionDecorIcon
+        icon={TbLock}
+        tone="on-dark"
+        size="md"
+        className="right-8 bottom-[26%] rotate-6 xl:right-16"
       />
 
       <SiteContainer className="relative">
