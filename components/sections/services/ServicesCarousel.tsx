@@ -3,10 +3,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { cn } from "@/lib/utils";
+import type { ServiceSlug } from "./service-items";
 import { ServiceCard } from "./ServiceCard";
-import { serviceItems } from "./service-items";
 
 export interface ServiceSlideItem {
+  slug: ServiceSlug;
   href: string;
   title: string;
   description: string;
@@ -150,13 +151,7 @@ export function ServicesCarousel({
                 : undefined,
           }}
         >
-          {services.map((service) => {
-            const config = serviceItems.find(
-              (item) => item.href === service.href,
-            );
-            if (!config) return null;
-
-            return (
+          {services.map((service) => (
               <div
                 key={service.href}
                 className="min-w-0 shrink-0"
@@ -166,15 +161,14 @@ export function ServicesCarousel({
                   variant="slide"
                   numbered
                   index={service.index}
+                  slug={service.slug}
                   href={service.href}
                   title={service.title}
                   description={service.description}
                   tag={service.tag}
-                  icon={config.icon}
                 />
               </div>
-            );
-          })}
+            ))}
         </div>
       </div>
 

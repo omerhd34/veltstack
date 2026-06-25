@@ -1,8 +1,8 @@
 export const servicesHomeEn = {
   servicesTitle: "Services",
-  servicesHeadline: "Results-driven digital services",
-  servicesHeadlineDesc:
-    "One partner for web, apps, SEO and ongoing support.",
+  servicesHeadline:
+    "Designed to turn your goals into measurable results through",
+  servicesHeadlineAccent: "end-to-end digital services",
   servicesIntro:
     "We handle your brand's digital needs — web, apps, SEO and maintenance — under one roof. We define scope upfront, manage every step transparently and focus on measurable business outcomes. From design to launch, we prioritize performance, accessibility and SEO at every stage.",
   servicesBullets: [
@@ -18,27 +18,27 @@ export const servicesHomeEn = {
   servicesSliderDot: "Service",
   servicesWebTitle: "Website Development",
   servicesWebDesc:
-    "From design to launch, we deliver fast, SEO-ready web development for corporate, e-commerce and portfolio projects, with performance and accessibility built in from day one.",
+    "We deliver fast, SEO-ready web development for corporate, e-commerce and portfolio projects from design through launch; we prioritize performance, accessibility and conversion, then ship on a solid mobile-friendly foundation.",
   servicesWebTag: "Corporate - E-commerce - Portfolio",
   servicesRefreshTitle: "Web & App Redesign",
   servicesRefreshDesc:
-    "We modernize outdated or slow websites and mobile apps into fast, conversion-focused experiences, refreshing infrastructure, interface and content layers together.",
+    "We modernize outdated or slow websites and mobile apps into fast, conversion-focused experiences; we refresh infrastructure, interface and content together while keeping your workflows intact through a smooth transition.",
   servicesRefreshTag: "Web - Mobile - Infrastructure",
   servicesAppTitle: "App Development",
   servicesAppDesc:
-    "We build high-performance, user-friendly mobile apps for iOS and Android, managing App Store and Play Store launch, updates and maintenance from start to finish.",
+    "We build high-performance, user-friendly mobile apps for iOS and Android; we handle store launch, updates and maintenance end to end and shape integrations around your product goals.",
   servicesAppTag: "iOS - Android",
   servicesSeoTitle: "SEO Services",
   servicesSeoDesc:
-    "Sustainable organic growth through solid technical foundations, content strategy and ongoing optimization, with clear reporting and measurable targets at every stage.",
+    "We drive sustainable organic growth through technical SEO, content strategy and ongoing optimization; we set measurable targets and turn keyword insights into a focused, data-backed action plan.",
   servicesSeoTag: "Technical - Content - Reporting",
   servicesAuditTitle: "Technical Audit",
   servicesAuditDesc:
-    "We audit your website, app and infrastructure for performance, security and SEO, delivering a prioritized improvement plan with actionable next steps.",
+    "We comprehensively audit your website, app and infrastructure for performance, security and SEO; we deliver a prioritized improvement plan with actionable next steps, ranking findings by business impact so you get a clear roadmap forward.",
   servicesAuditTag: "Performance - Security - SEO",
   servicesMaintenanceTitle: "Maintenance & Support",
   servicesMaintenanceDesc:
-    "Keep your websites and apps secure and up to date with scheduled updates, backups and responsive support, plus clear processes for urgent issues when they arise.",
+    "We keep your websites and apps secure and up to date with scheduled updates, backups and responsive support; we respond quickly to urgent issues and monitor systems so problems are caught early.",
   servicesMaintenanceTag: "Updates - Backup - Support",
   servicesStats: [
     { num: "6", label: "Service Categories" },

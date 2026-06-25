@@ -17,20 +17,23 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
         {t("servicesTitle")}
       </span>
 
-      <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-16">
+      <div className="relative mt-10 grid gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-16">
         <div className="flex flex-col lg:h-full">
           <h2
             id="services-section-title"
-            className="font-(family-name:--font-heading) text-5xl font-bold leading-[1.04] tracking-tight text-[#0A0A0F] md:text-6xl lg:text-[4rem]"
+            className="font-(family-name:--font-heading) text-4xl font-bold leading-[1.04] tracking-tight text-[#0A0A0F] md:text-5xl lg:text-[3.25rem]"
           >
-            {t("servicesHeadline")}
+            {t("servicesHeadline")}{" "}
+            <span className="text-brand-accent">
+              {t("servicesHeadlineAccent")}
+            </span>
           </h2>
 
-          <div className="mt-8 flex flex-col gap-6 lg:mt-auto">
-            <p className="max-w-sm text-[0.9375rem] leading-relaxed text-foreground/60">
-              {t("servicesHeadlineDesc")}
-            </p>
-
+          <div className="mt-8 flex flex-col gap-8 lg:min-h-0 lg:flex-1 lg:gap-0">
+            <div
+              className="hidden min-h-0 flex-1 lg:block"
+              aria-hidden="true"
+            />
             <PrimaryCtaLink
               href="/iletisim"
               showArrow={false}

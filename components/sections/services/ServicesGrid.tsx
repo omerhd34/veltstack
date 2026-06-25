@@ -22,7 +22,7 @@ export async function ServicesGrid({ className }: ServicesGridProps) {
           title={t(service.titleKey)}
           description={t(service.descKey)}
           tag={t(service.tagKey)}
-          icon={service.icon}
+          slug={service.slug}
         />
       ))}
     </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import type { IconType } from "react-icons";
 import { LuArrowUpRight } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
@@ -6,6 +8,14 @@ import { BorderTrace } from "@/components/ui/BorderTrace";
 import { CardIndexNumber } from "@/components/ui/CardIndexNumber";
 import { TechStackIcons } from "@/components/sections/projects/TechStackIcons";
 import { cn, isExternalHref } from "@/lib/utils";
+import {
+  serviceItems,
+  type ServiceSlug,
+} from "@/components/sections/services/service-items";
+
+const serviceIconBySlug = Object.fromEntries(
+  serviceItems.map((item) => [item.slug, item.icon]),
+) as Record<ServiceSlug, IconType>;
 
 interface ServiceCardProps {
   title: string;
@@ -13,7 +23,8 @@ interface ServiceCardProps {
   tag?: string;
   techStack?: string[];
   href: string;
-  icon: IconType;
+  slug?: ServiceSlug;
+  icon?: IconType;
   compact?: boolean;
   numbered?: boolean;
   index?: number;
@@ -27,21 +38,22 @@ export function ServiceCard({
   tag,
   techStack,
   href,
-  icon: Icon,
+  slug,
+  icon,
   compact = false,
   numbered = false,
   index,
   variant = "default",
   onNavigate,
 }: ServiceCardProps) {
+  const Icon = icon ?? (slug ? serviceIconBySlug[slug] : LuArrowUpRight);
   const isSlide = variant === "slide";
   const slowTransition =
     "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
 
   const cardClassName = cn(
-    "group relative flex flex-col rounded-2xl bg-card",
+    "group relative flex h-full flex-col rounded-2xl bg-card",
     slowTransition,
-    !isSlide && "h-full",
     isSlide
       ? "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99] bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]"
       : cn(
@@ -60,7 +72,7 @@ export function ServiceCard({
           reveal={isSlide ? "always" : "hover"}
         />
       ) : null}
-      <div className={cn("flex", compact ? "gap-3" : "gap-4")}>
+      <div className={cn("flex flex-1", compact ? "gap-3" : "gap-4")}>
         <div
           className={cn(
             "flex shrink-0 items-center justify-center",
@@ -102,9 +114,9 @@ export function ServiceCard({
             className={cn(
               "leading-relaxed",
               compact
-                ? "mt-1.5 h-[calc(0.75rem*1.625*3)] text-xs leading-relaxed text-muted-foreground"
+                ? "mt-1.5 line-clamp-3 h-[calc(0.75rem*1.625*3)] text-xs leading-relaxed text-muted-foreground"
                 : isSlide
-                  ? "mt-2 text-[0.9375rem] leading-[1.7] text-foreground/60"
+                  ? "mt-2 mb-3 line-clamp-3 h-[calc(0.9375rem*1.7*3)] text-[0.9375rem] leading-[1.7] text-foreground/60"
                   : "mt-1.5 text-sm text-muted-foreground",
             )}
           >
@@ -123,7 +135,7 @@ export function ServiceCard({
           className={cn(
             "flex items-center justify-between gap-3 border-t-2 border-solid border-t-[#8aab99] group-hover:border-brand-accent",
             slowTransition,
-            compact ? "mt-3 pt-3" : isSlide ? "mt-4 pt-4" : "mt-5 pt-0",
+            compact ? "mt-3 pt-3" : isSlide ? "mt-auto pt-4" : "mt-5 pt-0",
           )}
         >
           <Badge

@@ -11,6 +11,7 @@ export async function ServicesSlider({ className }: ServicesSliderProps) {
   const t = await getTranslations("home");
 
   const services = serviceItems.map((item, index) => ({
+    slug: item.slug,
     href: item.href,
     title: t(item.titleKey),
     description: t(item.descKey),
@@ -20,27 +21,20 @@ export async function ServicesSlider({ className }: ServicesSliderProps) {
 
   return (
     <div className={className}>
-      <div className="hidden lg:grid lg:grid-cols-3 lg:items-start lg:gap-5">
-        {services.map((service) => {
-          const config = serviceItems.find(
-            (item) => item.href === service.href,
-          );
-          if (!config) return null;
-
-          return (
-            <ServiceCard
-              key={service.href}
-              variant="slide"
-              numbered
-              index={service.index}
-              href={service.href}
-              title={service.title}
-              description={service.description}
-              tag={service.tag}
-              icon={config.icon}
-            />
-          );
-        })}
+      <div className="hidden lg:grid lg:grid-cols-2 lg:items-stretch lg:gap-5">
+        {services.map((service) => (
+          <ServiceCard
+            key={service.href}
+            variant="slide"
+            numbered
+            index={service.index}
+            slug={service.slug}
+            href={service.href}
+            title={service.title}
+            description={service.description}
+            tag={service.tag}
+          />
+        ))}
       </div>
 
       <ServicesCarousel

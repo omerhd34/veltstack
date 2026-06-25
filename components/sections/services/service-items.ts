@@ -24,6 +24,7 @@ export interface ServiceItemConfig {
   href: string;
   titleKey: string;
   descKey: string;
+  navDescKey: string;
   tagKey: string;
   icon: IconType;
 }
@@ -34,6 +35,7 @@ export const serviceItems: ServiceItemConfig[] = [
     href: "/hizmetler/web-sitesi",
     titleKey: "servicesWebTitle",
     descKey: "servicesWebDesc",
+    navDescKey: "serviceWebDesc",
     tagKey: "servicesWebTag",
     icon: LuGlobe,
   },
@@ -42,6 +44,7 @@ export const serviceItems: ServiceItemConfig[] = [
     href: "/hizmetler/web-sitesi-yenileme",
     titleKey: "servicesRefreshTitle",
     descKey: "servicesRefreshDesc",
+    navDescKey: "serviceRefreshDesc",
     tagKey: "servicesRefreshTag",
     icon: LuRefreshCw,
   },
@@ -50,6 +53,7 @@ export const serviceItems: ServiceItemConfig[] = [
     href: "/hizmetler/uygulama",
     titleKey: "servicesAppTitle",
     descKey: "servicesAppDesc",
+    navDescKey: "serviceAppDesc",
     tagKey: "servicesAppTag",
     icon: LuSmartphone,
   },
@@ -58,6 +62,7 @@ export const serviceItems: ServiceItemConfig[] = [
     href: "/hizmetler/seo-hizmetleri",
     titleKey: "servicesSeoTitle",
     descKey: "servicesSeoDesc",
+    navDescKey: "serviceSeoDesc",
     tagKey: "servicesSeoTag",
     icon: LuSearch,
   },
@@ -66,6 +71,7 @@ export const serviceItems: ServiceItemConfig[] = [
     href: "/hizmetler/teknik-denetim",
     titleKey: "servicesAuditTitle",
     descKey: "servicesAuditDesc",
+    navDescKey: "serviceAuditDesc",
     tagKey: "servicesAuditTag",
     icon: LuClipboardCheck,
   },
@@ -74,6 +80,7 @@ export const serviceItems: ServiceItemConfig[] = [
     href: "/hizmetler/bakim-ve-destek",
     titleKey: "servicesMaintenanceTitle",
     descKey: "servicesMaintenanceDesc",
+    navDescKey: "serviceMaintenanceDesc",
     tagKey: "servicesMaintenanceTag",
     icon: LuLifeBuoy,
   },
