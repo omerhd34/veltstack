@@ -1,13 +1,13 @@
 export const projectsHomeEn = {
   projectsTitle: "Featured Projects",
   projectsBadge: "Projects",
-  projectsTitleLead: "Projects that serve",
-  projectsTitleAccent: "real business goals.",
+  projectsTitleLead: "Real business goals deserve",
+  projectsTitleAccent: "projects that serve them.",
   projectsHeadline: "Projects for real business goals",
   projectsSubtitle:
     "From FinTech to e-commerce, we focus on measurable business outcomes in every project.",
   projectsIntro:
-    "From FinTech to e-commerce, healthcare to corporate catalogs, every project we build follows the same discipline of putting business goals first. We unite design and development in one line and balance user experience with performance and measurable results. Experience gained across different sectors carries into every new project at the same quality standard. We set measurable targets for every project and stay involved after delivery to keep momentum going. Explore the cards to see which approach best matches your goals and industry context. Visit the detail pages to explore process, technology and outcomes more closely.",
+    "From FinTech to e-commerce, we center every project on business goals and unite design and development in one discipline. We turn cross-sector experience into measurable outcomes.",
   projectsCta: "Explore all projects",
   projectsViewLabel: "View",
   projectsSliderPrev: "Previous project",

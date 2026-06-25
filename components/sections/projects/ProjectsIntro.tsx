@@ -10,7 +10,7 @@ export async function ProjectsIntro({ className }: ProjectsIntroProps) {
   const t = await getTranslations("home");
 
   return (
-    <div className={`w-full lg:sticky lg:top-28 ${className ?? ""}`}>
+    <div className={`w-full max-w-5xl ${className ?? ""}`}>
       <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
         {t("projectsBadge")}
       </span>

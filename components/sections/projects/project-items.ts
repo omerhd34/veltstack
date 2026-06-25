@@ -17,12 +17,7 @@ export const projectSlugs = [
   "onlinemuhasebe",
 ] as const;
 
-export const homepageProjectSlugs = [
-  "iqfinansai",
-  "uzman-klinik-psikolog",
-  "yazici-ticaret",
-  "fablessi",
-] as const;
+export const homepageProjectSlugs = projectSlugs;
 
 export type ProjectSlug = (typeof projectSlugs)[number];
 
@@ -31,6 +26,7 @@ export interface ProjectItemConfig {
   href: string;
   titleKey: string;
   descKey: string;
+  navDescKey: string;
   tagKey: string;
   icon: IconType;
   external?: boolean;
@@ -42,6 +38,7 @@ export const projectItems: ProjectItemConfig[] = [
     href: "/projeler/iqfinansai",
     titleKey: "projectIqfinansTitle",
     descKey: "projectIqfinansDesc",
+    navDescKey: "projectIqfinansDesc",
     tagKey: "projectIqfinansTag",
     icon: LuChartLine,
   },
@@ -50,6 +47,7 @@ export const projectItems: ProjectItemConfig[] = [
     href: "/projeler/yazici-ticaret",
     titleKey: "projectYaziciTitle",
     descKey: "projectYaziciDesc",
+    navDescKey: "projectYaziciDesc",
     tagKey: "projectYaziciTag",
     icon: LuShoppingCart,
   },
@@ -58,6 +56,7 @@ export const projectItems: ProjectItemConfig[] = [
     href: "/projeler/fablessi",
     titleKey: "projectFablessiTitle",
     descKey: "projectFablessiDesc",
+    navDescKey: "projectFablessiDesc",
     tagKey: "projectFablessiTag",
     icon: LuTreePine,
   },
@@ -66,6 +65,7 @@ export const projectItems: ProjectItemConfig[] = [
     href: "/projeler/uzman-klinik-psikolog",
     titleKey: "projectUzmanPsikologTitle",
     descKey: "projectUzmanPsikologDesc",
+    navDescKey: "projectUzmanPsikologDesc",
     tagKey: "projectUzmanPsikologTag",
     icon: LuBrain,
   },
@@ -74,6 +74,7 @@ export const projectItems: ProjectItemConfig[] = [
     href: "/projeler/portfolio",
     titleKey: "projectPortfolioTitle",
     descKey: "projectPortfolioDesc",
+    navDescKey: "projectPortfolioDesc",
     tagKey: "projectPortfolioTag",
     icon: LuGlobe,
   },
@@ -82,6 +83,7 @@ export const projectItems: ProjectItemConfig[] = [
     href: "/projeler/onlinemuhasebe",
     titleKey: "projectOnlinemuhasebeTitle",
     descKey: "projectOnlinemuhasebeDesc",
+    navDescKey: "projectOnlinemuhasebeDesc",
     tagKey: "projectOnlinemuhasebeTag",
     icon: LuCalculator,
   },
