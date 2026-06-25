@@ -18,7 +18,7 @@ export const servicesPageTr = {
     { value: "5-120", label: "Teslim Süresi (Gün)" },
     { value: "6", label: "Hizmet Tipi" },
     { value: "∞", label: "Sayfa Kapasitesi" },
-    { value: "98%", label: "Memnuniyet" },
+    { value: "100%", label: "Memnuniyet" },
   ],
   ...servicesPackagesTr,
 } as const;
