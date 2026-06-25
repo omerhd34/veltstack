@@ -46,7 +46,7 @@ export async function ProjectRelated({
               title={tHome(service.titleKey)}
               description={tHome(service.descKey)}
               tag={tHome(service.tagKey)}
-              icon={service.icon}
+              slug={service.slug}
               techStack={serviceTechStacks[service.slug]}
               numbered
               index={index + 1}

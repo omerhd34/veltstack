@@ -22,7 +22,7 @@ export const projectDetailsTr = {
   breadcrumbHome: "Ana Sayfa",
   breadcrumbProjects: "Projeler",
   iqfinansai: {
-    metaTitle: "IQfinansAI | Yapay Zekâ Finans Platformu",
+    metaTitle: "IQfinansAI | AI Finans Platformu",
     metaDesc:
       "Gelir-gider, bütçe, borç-alacak ve AI analiz raporu sunan kişisel finans platformu. 16.000+ kullanıcı, Shopier abonelik altyapısı.",
     heroBadge: "Finansal Teknoloji / AI",
