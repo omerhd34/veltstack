@@ -73,7 +73,6 @@ export const techItems: TechItem[] = [
   { name: "Angular", icon: SiAngular },
   { name: "Vue", icon: SiVuedotjs },
   { name: "Redux", icon: SiRedux },
-  { name: "Redux Toolkit", icon: SiRedux },
   { name: "Zustand", icon: ZustandIcon },
   { name: "Shadcn", icon: SiShadcnui },
   {
