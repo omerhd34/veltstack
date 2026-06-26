@@ -28,6 +28,9 @@ interface PackagesPanelLabels {
   tierStandart: string;
   tierPro: string;
   statDelivery: string;
+  statDeliverySetup: string;
+  statDeliveryStart: string;
+  statDeliveryAudit: string;
   statDeliveryUnit: string;
   statRevision: string;
   statPages: string;
@@ -39,15 +42,19 @@ interface PackagesPanelLabels {
 
 interface CategoryPackages {
   web: Record<string, PackageCardData>;
+  refresh: Record<string, PackageCardData>;
   app: Record<string, PackageCardData>;
   seo: Record<string, PackageCardData>;
+  audit: Record<string, PackageCardData>;
   maintenance: Record<string, PackageCardData>;
 }
 
 interface CategoryIntros {
   web: PackagesIntro;
+  refresh: PackagesIntro;
   app: PackagesIntro;
   seo: PackagesIntro;
+  audit: PackagesIntro;
   maintenance: PackagesIntro;
 }
 
@@ -58,17 +65,30 @@ interface ServicesPackagesPanelProps {
   className?: string;
 }
 
+const deliveryLabelKey: Record<PackageCategory, keyof PackagesPanelLabels> = {
+  web: "statDelivery",
+  refresh: "statDelivery",
+  app: "statDelivery",
+  seo: "statDeliveryStart",
+  audit: "statDeliveryAudit",
+  maintenance: "statDeliverySetup",
+};
+
 const scopeLabelKey: Record<PackageCategory, keyof PackagesPanelLabels> = {
   web: "statPages",
+  refresh: "statPages",
   app: "statScreens",
   seo: "statKeywords",
+  audit: "statProjects",
   maintenance: "statProjects",
 };
 
 const revisionLabelKey: Record<PackageCategory, keyof PackagesPanelLabels> = {
   web: "statRevision",
+  refresh: "statRevision",
   app: "statRevision",
   seo: "statPages",
+  audit: "statPages",
   maintenance: "statRevision",
 };
 
@@ -89,6 +109,7 @@ export function ServicesPackagesPanel({
   const icons = categoryIcons[category];
   const scopeKey = scopeLabelKey[category];
   const revisionKey = revisionLabelKey[category];
+  const deliveryKey = deliveryLabelKey[category];
 
   const visiblePackages = useMemo(
     () => slugs.map((slug) => categoryPackages[slug]),
@@ -129,11 +150,12 @@ export function ServicesPackagesPanel({
     tierTemel: labels.tierTemel,
     tierStandart: labels.tierStandart,
     tierPro: labels.tierPro,
-    statDelivery: labels.statDelivery,
+    statDelivery: labels[deliveryKey] as string,
     statDeliveryUnit: labels.statDeliveryUnit,
     statRevision: labels[revisionKey] as string,
     statScope: labels[scopeKey] as string,
     getQuote: labels.getQuote,
+    hideMiddleStat: category === "audit",
   };
 
   return (

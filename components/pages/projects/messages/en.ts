@@ -12,7 +12,7 @@ export const projectsPageEn = {
     { value: "4", label: "Selected Projects" },
     { value: "__techCount__", label: "Technologies" },
     { value: "100%", label: "Design + Code" },
-    { value: "5-120", label: "Delivery Days" },
+    { value: "3-120", label: "Delivery Days" },
   ],
   showcaseBadge: "Case Studies",
   showcaseTitle: "Every project tells a business story",

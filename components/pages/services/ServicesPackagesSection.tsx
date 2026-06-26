@@ -15,8 +15,10 @@ export async function ServicesPackagesSection({
 
   const packages = {
     web: t.raw("webPackages") as Record<string, PackageCardData>,
+    refresh: t.raw("refreshPackages") as Record<string, PackageCardData>,
     app: t.raw("appPackages") as Record<string, PackageCardData>,
     seo: t.raw("seoPackages") as Record<string, PackageCardData>,
+    audit: t.raw("auditPackages") as Record<string, PackageCardData>,
     maintenance: t.raw("maintenancePackages") as Record<
       string,
       PackageCardData
@@ -26,7 +28,9 @@ export async function ServicesPackagesSection({
   const tabs: { id: PackageCategory; label: string }[] = [
     { id: "web", label: t("tabWeb") },
     { id: "app", label: t("tabApp") },
+    { id: "refresh", label: t("tabRefresh") },
     { id: "seo", label: t("tabSeo") },
+    { id: "audit", label: t("tabAudit") },
     { id: "maintenance", label: t("tabMaintenance") },
   ];
 
@@ -45,7 +49,7 @@ export async function ServicesPackagesSection({
           <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-brand-accent md:text-4xl lg:text-[2.75rem] lg:leading-tight">
             {t("packagesTitle")}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:max-w-3xl md:text-base lg:max-w-4xl">
             {t("packagesSubtitle")}
           </p>
         </div>
@@ -58,6 +62,9 @@ export async function ServicesPackagesSection({
             tierStandart: t("tierStandart"),
             tierPro: t("tierPro"),
             statDelivery: t("statDelivery"),
+            statDeliverySetup: t("statDeliverySetup"),
+            statDeliveryStart: t("statDeliveryStart"),
+            statDeliveryAudit: t("statDeliveryAudit"),
             statDeliveryUnit: t("statDeliveryUnit"),
             statRevision: t("statRevision"),
             statPages: t("statPages"),
@@ -72,6 +79,11 @@ export async function ServicesPackagesSection({
               p1: t("webIntroP1"),
               p2: t("webIntroP2"),
             },
+            refresh: {
+              title: t("refreshIntroTitle"),
+              p1: t("refreshIntroP1"),
+              p2: t("refreshIntroP2"),
+            },
             app: {
               title: t("appIntroTitle"),
               p1: t("appIntroP1"),
@@ -81,6 +93,11 @@ export async function ServicesPackagesSection({
               title: t("seoIntroTitle"),
               p1: t("seoIntroP1"),
               p2: t("seoIntroP2"),
+            },
+            audit: {
+              title: t("auditIntroTitle"),
+              p1: t("auditIntroP1"),
+              p2: t("auditIntroP2"),
             },
             maintenance: {
               title: t("maintenanceIntroTitle"),

@@ -29,7 +29,7 @@ export const navTr = {
   projectPortfolio: "Portfolyo | Ömer Halis Demir",
   projectOnlinemuhasebe: "Online Muhasebe | Mali Müşavirlik",
   projectsMegaMenuIntro:
-    "FinTech, e-ticaret, kurumsal ve sağlık gibi sektörlerde dijital ürünler geliştiriyoruz. Finans platformundan e-ticaret akışına, kurumsal vitrinden randevu sistemlerine kadar geniş bir yelpazede çalışıyoruz. İş hedeflerini baştan netleştirir, tasarım ve geliştirmeyi tek süreçte birleştiririz. Karmaşık gereksinimleri sade arayüzlere ve ölçülebilir sonuçlara dönüştürürüz. Performans, güvenlik ve SEO'yu yayın öncesinden planlarız. Her aşamada sizi bilgilendirir, net teslim takvimi sunarız. Tek muhatapla ilerler, karar süreçlerini sadeleştiririz. Yayın sonrası destekle ürünlerin canlı ve güncel kalmasını sağlarız.",
+    "FinTech, e-ticaret, kurumsal ve sağlık gibi sektörlerde dijital ürünler geliştiriyoruz. Finans platformundan e-ticaret akışına, kurumsal vitrinden randevu sistemlerine kadar geniş bir yelpazede çalışıyoruz. İş hedeflerini baştan netleştirir, tasarım ve geliştirmeyi tek süreçte birleştiririz. Karmaşık gereksinimleri sade arayüzlere ve ölçülebilir sonuçlara dönüştürürüz. Performans, güvenlik ve SEO'yu yayın öncesinden planlarız. Her aşamada sizi bilgilendirir, net teslim takvimi sunarız. Tek muhatapla ilerler, karar süreçlerini sadeleştiririz. Yayın sonrası destekle ürünlerin canlı ve güncel kalmasını sağlarız. Her projede ölçülebilir iş sonuçlarını hedefler, uzun vadeli büyümeye uygun çözümler sunarız.",
   projectIqfinansDesc:
     "Yapay zekâ destekli finansal analiz platformu. Karanlık-aydınlık mod, Türkçe-İngilizce dil desteği ve karmaşık verileri anlaşılır panellere dönüştüren raporlama.",
   projectYaziciDesc:

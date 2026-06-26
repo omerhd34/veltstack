@@ -22,9 +22,17 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
 
   return (
     <section
-      className={`relative overflow-hidden bg-background py-24 md:py-32 ${className ?? ""}`}
+      className={`relative overflow-hidden bg-[#EDF6F1] py-24 md:py-32 ${className ?? ""}`}
       aria-labelledby="who-we-are-title"
     >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_0%_0%,rgb(58_107_82/0.1),transparent_55%)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-accent/20 to-transparent"
+      />
       <SectionDecorIcon
         icon={TbGitBranch}
         tone="accent"
@@ -62,7 +70,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
           />
 
           <div className="min-w-0">
-            <div className="relative rounded-3xl border border-border/60 bg-[#F8F9FA] p-8 md:p-10">
+            <div className="relative rounded-3xl border border-emerald-900/10 bg-white p-8 shadow-[0_8px_32px_rgb(58_107_82/0.08)] md:p-10">
               <LuQuote
                 aria-hidden
                 className="absolute -top-4 left-8 size-8 text-brand-accent/25"

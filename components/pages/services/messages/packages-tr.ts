@@ -1,15 +1,20 @@
 export const servicesPackagesTr = {
   packagesTitle: "Hizmetler & Paketler",
   packagesSubtitle:
-    "Web, uygulama, SEO ve bakım alanlarında hizmet paketlerini inceleyin; sekmeler arasında geçerek kapsamları karşılaştırın ve projenize en uygun seviyeyi kolayca bulun.",
-  tabWeb: "Web Sitesi",
-  tabApp: "Uygulama",
+    "Web sitesi, mobil uygulama, yenileme, SEO, teknik denetim ve bakım alanlarında sunduğumuz hizmet paketlerini inceleyin. Sekmeler arasında geçerek Temel, Standart ve Pro seviyelerini karşılaştırın; teslim süresi, kapsam ve dahil özellikleri yan yana görüp projenize en uygun seviyeyi kolayca belirleyin.",
+  tabWeb: "Web Sitesi Geliştirme",
+  tabRefresh: "Web & Uygulama Yenileme",
+  tabApp: "Uygulama Geliştirme",
   tabSeo: "SEO Hizmetleri",
+  tabAudit: "Teknik Denetim",
   tabMaintenance: "Bakım & Destek",
   tierTemel: "Temel",
   tierStandart: "Standart",
   tierPro: "Pro",
   statDelivery: "Teslim (gün)",
+  statDeliverySetup: "Kurulum (gün)",
+  statDeliveryStart: "Başlangıç (gün)",
+  statDeliveryAudit: "Rapor (gün)",
   statDeliveryUnit: "gün",
   statRevision: "Revizyon",
   statPages: "Sayfa",
@@ -23,6 +28,11 @@ export const servicesPackagesTr = {
     "Tanıtım sitesinden kurumsal portala, e-ticaret mağazasından özel iş akışlarına, ne hedefliyorsanız ona uygun web çözümünü birlikte şekillendiriyoruz. Tasarımdan yayına almaya kadar tüm süreci tek elden yönetiyorum.",
   webIntroP2:
     "Temel, Standart ve Pro paketleri farklı ölçeklerdeki projelere uyum sağlar. Kapsamı sizin ihtiyaçlarınıza göre netleştirip, büyüdükçe genişleyebilecek bir yapı kuruyorum.",
+  refreshIntroTitle: "Mevcut sitenizi modern yapıya taşıyın",
+  refreshIntroP1:
+    "Eski veya yavaş web ve mobil uygulamalarını modern, hızlı deneyimlere dönüştürüyoruz. Altyapı, arayüz ve içerik katmanlarını birlikte yenileyerek mevcut verilerinizi koruyarak kesintisiz geçiş sağlıyoruz.",
+  refreshIntroP2:
+    "Portföy, kurumsal ve e-ticaret yenileme paketleri Temel, Standart ve Pro seviyelerinde sunulur. SEO sıralamanızı koruyarak performans ve dönüşüm odaklı bir yapıya geçiş planlıyoruz.",
   appIntroTitle: "Vizyonunuza uygun mobil uygulama",
   appIntroP1:
     "Tanıtım uygulamasından kurumsal çözüme, sipariş ve rezervasyon sistemlerinden karmaşık iş süreçlerine, istediğiniz deneyimi tasarlayıp geliştiriyorum. iOS ve Android için tek bir projede ilerliyoruz.",
@@ -33,11 +43,16 @@ export const servicesPackagesTr = {
     "Teknik denetimden aylık optimizasyona, anahtar kelime stratejisinden kurumsal SEO yönetimine kadar tüm süreci tek çatı altında yürütüyorum. Temel, Standart ve Pro tierleri farklı ölçek ve hedeflere göre şekilleniyor.",
   seoIntroP2:
     "Hangi tierden başlarsanız başlayın; denetim, optimizasyon ve raporlama her seviyede dahildir. Büyüdükçe tier değiştirip kapsamı genişletebilirsiniz.",
+  auditIntroTitle: "Dijital varlıklarınızı kapsamlı analiz edin",
+  auditIntroP1:
+    "Web sitesi, mobil uygulama ve altyapınızı performans, güvenlik ve SEO açısından kapsamlı analiz ediyoruz. Öncelikli iyileştirme planı ve uygulanabilir adım listesi sunuyoruz.",
+  auditIntroP2:
+    "Web, mobil uygulama ve altyapı denetim paketleri farklı kapsamlarda sunulur. Temel, Standart ve Pro seviyeleriyle ihtiyacınıza uygun derinlikte analiz ve raporlama alırsınız.",
   maintenanceIntroTitle: "Yayın sonrası da yanınızdayım",
   maintenanceIntroP1:
     "Güncelleme, yedekleme, güvenlik takibi ve acil müdahale, web sitesi, mobil uygulama ve backend altyapınız için tek çatı altında sürekli destek sunuyorum. Temel, Standart ve Pro tierleri farklı ölçek ve ihtiyaçlara göre şekilleniyor.",
   maintenanceIntroP2:
-    "Her seviyede izleme, yedekleme ve teknik destek dahildir. İhtiyaçlarınız büyüdükçe bir üst seviyeye geçerek 7/24 SLA garantisi ve size özel mühendis desteğinden yararlanabilirsiniz.",
+    "Her seviyede izleme, yedekleme ve teknik destek dahildir. İhtiyaçlarınız büyüdükçe bir üst seviyeye geçerek genişletilmiş SLA ve öncelikli teknik destekten yararlanabilirsiniz.",
   webPackages: {
     portfolio: {
       title: "Portföy / Tanıtım Web Sitesi",
@@ -47,7 +62,7 @@ export const servicesPackagesTr = {
         temel: {
           deliveryDays: "14-21",
           revisions: "2",
-          scope: "0-3",
+          scope: "1-5",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
@@ -82,13 +97,13 @@ export const servicesPackagesTr = {
         standart: {
           deliveryDays: "21-30",
           revisions: "4",
-          scope: "0-8",
+          scope: "1-10",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
               items: [
                 "Mobil uyumlu (responsive) geliştirme",
-                "90+ Google PageSpeed Skoru garantisi",
+                "90+ Google PageSpeed skoru hedefi",
                 "Sayfa geçiş animasyonları ve scroll efektleri",
                 "Premium UI bileşenleri ve hover efektleri",
                 "Tarayıcılar arası uyumluluk testi",
@@ -185,9 +200,9 @@ export const servicesPackagesTr = {
         "Marka kimliğinize uygun, güven veren ve yüksek performanslı web çözümü.",
       tiers: {
         temel: {
-          deliveryDays: "21-35",
+          deliveryDays: "21-28",
           revisions: "3",
-          scope: "0-5",
+          scope: "1-10",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
@@ -221,16 +236,16 @@ export const servicesPackagesTr = {
           ],
         },
         standart: {
-          deliveryDays: "35-50",
+          deliveryDays: "28-42",
           revisions: "5",
-          scope: "0-15",
+          scope: "1-25",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
               items: [
                 "Mobil uyumlu (responsive) geliştirme",
                 "Kurumsal renk paleti ve tipografi uyumlu özel kodlama",
-                "90+ Google PageSpeed Skoru garantisi",
+                "90+ Google PageSpeed skoru hedefi",
                 "Premium UI bileşenleri ve kurumsal animasyonlar",
                 "Tarayıcılar arası uyumluluk testi",
               ],
@@ -271,7 +286,7 @@ export const servicesPackagesTr = {
           ],
         },
         pro: {
-          deliveryDays: "50-70",
+          deliveryDays: "42-60",
           revisions: "8",
           scope: "∞",
           featureGroups: [
@@ -324,7 +339,6 @@ export const servicesPackagesTr = {
                 "Vercel yayınlama desteği",
                 "Hosting kurulum rehberi",
                 "45 gün teknik destek",
-                "Kullanım kılavuzu eğitimi/dokümanı",
                 "Kapsamlı kullanım kılavuzu dokümanı",
               ],
             },
@@ -338,9 +352,9 @@ export const servicesPackagesTr = {
         "Güvenli ödeme, ürün yönetimi ve sipariş takibi sunan ölçeklenebilir altyapı.",
       tiers: {
         temel: {
-          deliveryDays: "30-45",
+          deliveryDays: "28-42",
           revisions: "3",
-          scope: "0-15",
+          scope: "1-15",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
@@ -384,15 +398,15 @@ export const servicesPackagesTr = {
           ],
         },
         standart: {
-          deliveryDays: "45-60",
+          deliveryDays: "42-56",
           revisions: "5",
-          scope: "0-30",
+          scope: "1-35",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
               items: [
                 "Mobil uyumlu (responsive) modern geliştirme",
-                "90+ Google PageSpeed Skoru garantisi",
+                "90+ Google PageSpeed skoru hedefi",
                 "Premium e-ticaret UI bileşenleri ve filtre animasyonları",
                 "Tarayıcılar arası uyumluluk testi",
               ],
@@ -434,7 +448,7 @@ export const servicesPackagesTr = {
           ],
         },
         pro: {
-          deliveryDays: "60-90",
+          deliveryDays: "56-84",
           revisions: "10",
           scope: "∞",
           featureGroups: [
@@ -489,8 +503,303 @@ export const servicesPackagesTr = {
                 "Vercel yayınlama ve sunucu optimizasyon desteği",
                 "Gelişmiş hosting/sunucu kurulum rehberi",
                 "45 gün teknik destek ve hata onarımı",
-                "Kullanım kılavuzu eğitimi/dokümanı",
                 "Kapsamlı mağaza yönetim ve kullanım kılavuzu",
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  refreshPackages: {
+    portfolio: {
+      title: "Portföy / Tanıtım Sitesi Yenileme",
+      description:
+        "Mevcut tanıtım sitenizi modern tasarım, hızlı altyapı ve SEO korumasıyla yenileyin.",
+      tiers: {
+        temel: {
+          deliveryDays: "7-14",
+          revisions: "2",
+          scope: "1-8",
+          featureGroups: [
+            {
+              label: "Analiz & Planlama",
+              items: [
+                "Mevcut site performans ve SEO analizi",
+                "İçerik envanteri ve migrasyon planı",
+                "URL yapısı ve yönlendirme stratejisi",
+              ],
+            },
+            {
+              label: "Yenileme & Migrasyon",
+              items: [
+                "Mobil uyumlu modern arayüz",
+                "Mevcut içeriklerin güvenli aktarımı",
+                "Temel performans optimizasyonu",
+                "301 yönlendirme kurulumu",
+              ],
+            },
+            {
+              label: "Teslim & Destek",
+              items: [
+                "Canlıya alım ve DNS geçiş desteği",
+                "15 gün teknik destek",
+              ],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "14-21",
+          revisions: "4",
+          scope: "1-15",
+          featureGroups: [
+            {
+              label: "Analiz & Tasarım",
+              items: [
+                "Kapsamlı UX ve performans denetimi",
+                "Marka kimliğine uygun arayüz yenileme",
+                "Sayfa geçiş animasyonları",
+                "Core Web Vitals iyileştirmesi",
+              ],
+            },
+            {
+              label: "SEO & Migrasyon",
+              items: [
+                "Meta ve schema verilerinin korunması",
+                "Gelişmiş yönlendirme haritası",
+                "Search Console geçiş takibi",
+                "Site haritası güncelleme",
+              ],
+            },
+            {
+              label: "Teslim & Destek",
+              items: ["Kaynak kodu teslimi", "30 gün teknik destek"],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "21-30",
+          revisions: "6",
+          scope: "∞",
+          featureGroups: [
+            {
+              label: "Kapsamlı Yenileme",
+              items: [
+                "Next.js tabanlı modern altyapıya geçiş",
+                "Özel tasarım ve animasyonlar",
+                "Dark / Light mode desteği",
+                "90+ PageSpeed skoru hedefi",
+              ],
+            },
+            {
+              label: "SEO & CMS",
+              items: [
+                "Kapsamlı SEO koruma ve güçlendirme",
+                "Dinamik içerik yönetim paneli",
+                "Çoklu dil desteği altyapısı",
+                "Analytics ve dönüşüm takibi",
+              ],
+            },
+            {
+              label: "Teslim & Destek",
+              items: [
+                "Kaynak kodu teslimi",
+                "45 gün teknik destek",
+                "Kullanım kılavuzu eğitimi",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    corporate: {
+      title: "Kurumsal Site Yenileme",
+      description:
+        "Kurumsal web sitenizi güncel tasarım, hızlı altyapı ve güvenli geçişle yenileyin.",
+      tiers: {
+        temel: {
+          deliveryDays: "10-18",
+          revisions: "2",
+          scope: "1-15",
+          featureGroups: [
+            {
+              label: "Analiz & Planlama",
+              items: [
+                "Mevcut site teknik ve SEO denetimi",
+                "İçerik ve sayfa yapısı analizi",
+                "Geçiş takvimi ve risk planı",
+              ],
+            },
+            {
+              label: "Yenileme",
+              items: [
+                "Kurumsal kimliğe uygun arayüz yenileme",
+                "İçerik migrasyonu",
+                "Temel performans iyileştirmesi",
+                "SSL ve güvenlik güncellemesi",
+              ],
+            },
+            {
+              label: "Teslim & Destek",
+              items: ["Canlıya alım desteği", "15 gün teknik destek"],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "18-28",
+          revisions: "4",
+          scope: "1-30",
+          featureGroups: [
+            {
+              label: "Tasarım & UX",
+              items: [
+                "Bilgi mimarisi yeniden yapılandırma",
+                "Premium UI bileşenleri",
+                "Erişilebilirlik iyileştirmeleri",
+                "Mobil deneyim optimizasyonu",
+              ],
+            },
+            {
+              label: "Altyapı & SEO",
+              items: [
+                "Modern framework geçişi",
+                "SEO sıralama koruma planı",
+                "Form ve entegrasyon güncellemesi",
+                "Analytics yeniden yapılandırma",
+              ],
+            },
+            {
+              label: "Teslim & Destek",
+              items: ["Kaynak kodu teslimi", "30 gün teknik destek"],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "28-42",
+          revisions: "6",
+          scope: "∞",
+          featureGroups: [
+            {
+              label: "Kurumsal Yenileme",
+              items: [
+                "Özel geliştirilmiş yüksek hızlı altyapı",
+                "Çoklu dil ve çoklu departman yapısı",
+                "Gelişmiş CMS ve içerik yönetimi",
+                "API ve üçüncü taraf entegrasyonları",
+              ],
+            },
+            {
+              label: "Güvenlik & Performans",
+              items: [
+                "Kapsamlı güvenlik denetimi ve iyileştirme",
+                "CDN ve önbellek optimizasyonu",
+                "KVKK uyumlu çerez modülü",
+                "Yedekleme ve geri yükleme planı",
+              ],
+            },
+            {
+              label: "Teslim & Destek",
+              items: [
+                "Kaynak kodu teslimi",
+                "45 gün teknik destek",
+                "Ekip eğitimi ve dokümantasyon",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    ecommerce: {
+      title: "E-Ticaret Sitesi Yenileme",
+      description:
+        "E-ticaret sitenizi modern altyapı, hızlı ödeme akışları ve SEO korumasıyla yenileyin.",
+      tiers: {
+        temel: {
+          deliveryDays: "14-21",
+          revisions: "2",
+          scope: "1-20",
+          featureGroups: [
+            {
+              label: "Analiz & Planlama",
+              items: [
+                "Mevcut mağaza performans analizi",
+                "Ürün ve kategori migrasyon planı",
+                "Ödeme ve sipariş akışı denetimi",
+              ],
+            },
+            {
+              label: "Yenileme",
+              items: [
+                "Modern e-ticaret arayüzü",
+                "Ürün ve kategori aktarımı",
+                "Temel ödeme entegrasyonu güncelleme",
+                "Mobil alışveriş deneyimi iyileştirmesi",
+              ],
+            },
+            {
+              label: "Teslim & Destek",
+              items: ["Canlıya alım ve test siparişi", "15 gün teknik destek"],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "21-35",
+          revisions: "4",
+          scope: "1-40",
+          featureGroups: [
+            {
+              label: "Mağaza Yenileme",
+              items: [
+                "Gelişmiş ürün filtreleme ve arama",
+                "Sepet ve ödeme akışı optimizasyonu",
+                "Stok ve varyasyon yönetimi güncelleme",
+                "Kargo entegrasyonu yenileme",
+              ],
+            },
+            {
+              label: "SEO & Pazarlama",
+              items: [
+                "Ürün URL ve meta koruma planı",
+                "E-ticaret schema markup",
+                "Dönüşüm takibi yeniden kurulumu",
+                "Terk edilen sepet altyapısı",
+              ],
+            },
+            {
+              label: "Teslim & Destek",
+              items: ["Kaynak kodu teslimi", "30 gün teknik destek"],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "35-49",
+          revisions: "6",
+          scope: "∞",
+          featureGroups: [
+            {
+              label: "Kurumsal E-Ticaret Yenileme",
+              items: [
+                "Ölçeklenebilir modern altyapıya geçiş",
+                "Çoklu dil ve para birimi desteği",
+                "Gelişmiş kampanya ve promosyon modülü",
+                "ERP / muhasebe entegrasyonu",
+              ],
+            },
+            {
+              label: "Performans & Güvenlik",
+              items: [
+                "Yüksek trafik optimizasyonu",
+                "PCI-DSS uyumlu sanal POS entegrasyon altyapısı",
+                "Gelişmiş güvenlik ve fraud koruması",
+                "Anlık stok senkronizasyonu",
+              ],
+            },
+            {
+              label: "Teslim & Destek",
+              items: [
+                "Kaynak kodu teslimi",
+                "45 gün teknik destek",
+                "Mağaza yönetim eğitimi",
               ],
             },
           ],
@@ -507,7 +816,7 @@ export const servicesPackagesTr = {
         temel: {
           deliveryDays: "21-30",
           revisions: "2",
-          scope: "0-5",
+          scope: "1-5",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
@@ -523,7 +832,7 @@ export const servicesPackagesTr = {
               items: [
                 "İletişim / WhatsApp yönlendirme butonu",
                 "Temel REST API entegrasyonu",
-                "KVKK uyumlu çerez/gizlilik politikası modülü",
+                "Gizlilik politikası / KVKK onay ekranı",
               ],
             },
             {
@@ -539,7 +848,7 @@ export const servicesPackagesTr = {
         standart: {
           deliveryDays: "30-45",
           revisions: "4",
-          scope: "0-10",
+          scope: "1-10",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
@@ -562,7 +871,7 @@ export const servicesPackagesTr = {
               items: [
                 "Gelişmiş REST API entegrasyonu",
                 "Sosyal medya entegrasyonu ve paylaşım",
-                "KVKK uyumlu çerez/gizlilik politikası modülü",
+                "Gizlilik politikası / KVKK onay ekranı",
               ],
             },
             {
@@ -625,9 +934,9 @@ export const servicesPackagesTr = {
         "Çalışan veya müşteri odaklı, güvenilir kurumsal mobil platform.",
       tiers: {
         temel: {
-          deliveryDays: "30-45",
+          deliveryDays: "28-42",
           revisions: "3",
-          scope: "0-8",
+          scope: "1-8",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
@@ -644,7 +953,7 @@ export const servicesPackagesTr = {
                 "İletişim, geri bildirim ve destek formu",
                 "Temel kimlik doğrulama (Kullanıcı girişi) altyapısı",
                 "Temel Firebase analitik kurulumu",
-                "KVKK uyumlu çerez/gizlilik politikası modülü",
+                "Gizlilik politikası / KVKK onay ekranı",
               ],
             },
             {
@@ -658,9 +967,9 @@ export const servicesPackagesTr = {
           ],
         },
         standart: {
-          deliveryDays: "45-60",
+          deliveryDays: "42-56",
           revisions: "5",
-          scope: "0-15",
+          scope: "1-15",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
@@ -699,7 +1008,7 @@ export const servicesPackagesTr = {
           ],
         },
         pro: {
-          deliveryDays: "60-90",
+          deliveryDays: "56-84",
           revisions: "8",
           scope: "∞",
           featureGroups: [
@@ -734,7 +1043,7 @@ export const servicesPackagesTr = {
               label: "Teslim & Destek",
               items: [
                 "Kaynak kodu teslimi",
-                "App Store (Enterprise dahil) ve Play Store yayın yönetimi",
+                "App Store ve Play Store yayın süreci yönetimi",
                 "45 gün teknik destek",
                 "Kullanım kılavuzu eğitimi/dokümanı",
                 "Kurumsal kullanım kılavuzu",
@@ -750,9 +1059,9 @@ export const servicesPackagesTr = {
         "Ödeme, ürün ve sipariş yönetimi sunan mağazaya hazır e-ticaret uygulaması.",
       tiers: {
         temel: {
-          deliveryDays: "45-60",
+          deliveryDays: "42-56",
           revisions: "3",
-          scope: "0-12",
+          scope: "1-12",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
@@ -789,9 +1098,9 @@ export const servicesPackagesTr = {
           ],
         },
         standart: {
-          deliveryDays: "60-90",
+          deliveryDays: "56-77",
           revisions: "5",
-          scope: "0-20",
+          scope: "1-20",
           featureGroups: [
             {
               label: "Geliştirme & Tasarım",
@@ -831,7 +1140,7 @@ export const servicesPackagesTr = {
           ],
         },
         pro: {
-          deliveryDays: "90-120",
+          deliveryDays: "84-112",
           revisions: "8",
           scope: "∞",
           featureGroups: [
@@ -883,9 +1192,9 @@ export const servicesPackagesTr = {
         "Teknik SEO denetimlerinden aylık reklamlara, bireysel sitelerden kurumsal yapılara uygun kapsamlı arama motoru optimizasyonu ve büyüme stratejileri.",
       tiers: {
         temel: {
-          deliveryDays: "10-14",
+          deliveryDays: "7-14",
           pages: "5",
-          scope: "0-25",
+          scope: "1-20",
           featureGroups: [
             {
               label: "Denetim & Analiz",
@@ -907,9 +1216,9 @@ export const servicesPackagesTr = {
           ],
         },
         standart: {
-          deliveryDays: "21-30",
-          pages: "30",
-          scope: "0-75",
+          deliveryDays: "14-21",
+          pages: "15",
+          scope: "1-50",
           featureGroups: [
             {
               label: "Kapsamlı Denetim & Strateji",
@@ -933,15 +1242,14 @@ export const servicesPackagesTr = {
           ],
         },
         pro: {
-          deliveryDays: "45-60",
-          pages: "50",
+          deliveryDays: "21-30",
+          pages: "∞",
           scope: "∞",
           featureGroups: [
             {
               label: "Kurumsal SEO Programı",
               items: [
                 "Sınırsız sayfa SEO kapsamı",
-                "Özel Geliştirilmiş, Yüksek Hızlı Altyapı",
                 "Çoklu dil ve çoklu domain desteği",
                 "Log analizi ve crawl budget",
                 "E-ticaret SEO modülü",
@@ -964,6 +1272,242 @@ export const servicesPackagesTr = {
       },
     },
   },
+  auditPackages: {
+    webAudit: {
+      title: "Web Sitesi Teknik Denetimi",
+      description:
+        "Web sitenizin performans, güvenlik, SEO ve kod kalitesini kapsamlı analiz edin.",
+      tiers: {
+        temel: {
+          deliveryDays: "3-5",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "Performans & SEO",
+              items: [
+                "Lighthouse ve PageSpeed analizi",
+                "Core Web Vitals değerlendirmesi",
+                "Temel SEO ve meta yapı kontrolü",
+                "Mobil uyumluluk testi",
+              ],
+            },
+            {
+              label: "Raporlama",
+              items: [
+                "Önceliklendirilmiş bulgu listesi",
+                "Temel iyileştirme önerileri",
+                "PDF denetim raporu",
+              ],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "5-7",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "Kapsamlı Analiz",
+              items: [
+                "Detaylı performans profili",
+                "Güvenlik ve HTTPS yapılandırması",
+                "Erişilebilirlik (WCAG) kontrolü",
+                "Yapılandırılmış veri denetimi",
+                "Tarama hataları ve indeksleme analizi",
+              ],
+            },
+            {
+              label: "Raporlama & Plan",
+              items: [
+                "Etki analizi ile öncelik matrisi",
+                "Uygulanabilir aksiyon planı",
+                "Detaylı PDF rapor ve sunum",
+              ],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "7-10",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "Derinlemesine İnceleme",
+              items: [
+                "Kaynak kodu ve mimari analizi",
+                "Bağımlılık ve güvenlik açığı taraması",
+                "CDN, önbellek ve sunucu yapılandırması",
+                "Log analizi ve hata izleme",
+                "Rakip performans karşılaştırması",
+              ],
+            },
+            {
+              label: "Strateji & Destek",
+              items: [
+                "Yol haritası ve sprint planı",
+                "1 saatlik sonuç değerlendirme görüşmesi",
+                "Uygulama desteği için teklif hazırlığı",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    appAudit: {
+      title: "Mobil Uygulama Teknik Denetimi",
+      description:
+        "iOS ve Android uygulamanızın performans, güvenlik ve kullanıcı deneyimini analiz edin.",
+      tiers: {
+        temel: {
+          deliveryDays: "3-5",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "Uygulama Analizi",
+              items: [
+                "Açılış süresi ve performans testi",
+                "Temel UX ve navigasyon değerlendirmesi",
+                "Store uyumluluk kontrolü",
+                "Crash ve hata log incelemesi",
+              ],
+            },
+            {
+              label: "Raporlama",
+              items: [
+                "Önceliklendirilmiş bulgu listesi",
+                "Temel iyileştirme önerileri",
+                "PDF denetim raporu",
+              ],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "5-7",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "Kapsamlı Analiz",
+              items: [
+                "Bellek ve CPU kullanım profili",
+                "API güvenliği ve kimlik doğrulama",
+                "Offline davranış ve veri senkronizasyonu",
+                "Push bildirim altyapısı kontrolü",
+                "Erişilebilirlik değerlendirmesi",
+              ],
+            },
+            {
+              label: "Raporlama & Plan",
+              items: [
+                "Platform bazlı (iOS/Android) bulgular",
+                "Uygulanabilir aksiyon planı",
+                "Detaylı PDF rapor",
+              ],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "7-10",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "Derinlemesine İnceleme",
+              items: [
+                "Kaynak kodu ve mimari analizi",
+                "Bağımlılık güvenlik taraması",
+                "Store review risk değerlendirmesi",
+                "CI/CD ve build süreç analizi",
+                "Backend API entegrasyon denetimi",
+              ],
+            },
+            {
+              label: "Strateji & Destek",
+              items: [
+                "Yeniden yapılandırma yol haritası",
+                "1 saatlik sonuç değerlendirme görüşmesi",
+                "Uygulama desteği için teklif hazırlığı",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    infrastructureAudit: {
+      title: "Altyapı ve Güvenlik Denetimi",
+      description:
+        "Sunucu, veritabanı, CI/CD ve güvenlik altyapınızı kapsamlı analiz edin.",
+      tiers: {
+        temel: {
+          deliveryDays: "3-5",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "Altyapı Kontrolü",
+              items: [
+                "Sunucu kaynak kullanım analizi",
+                "SSL ve domain yapılandırması",
+                "Yedekleme durumu kontrolü",
+                "Temel güvenlik yapılandırması",
+              ],
+            },
+            {
+              label: "Raporlama",
+              items: [
+                "Önceliklendirilmiş risk listesi",
+                "Temel iyileştirme önerileri",
+                "PDF denetim raporu",
+              ],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "5-7",
+          scope: "1-2",
+          featureGroups: [
+            {
+              label: "Kapsamlı Analiz",
+              items: [
+                "Veritabanı performans ve yapılandırma",
+                "CI/CD pipeline güvenlik kontrolü",
+                "Erişim kontrolü ve kimlik yönetimi",
+                "DDoS ve firewall yapılandırması",
+                "Log ve izleme altyapısı değerlendirmesi",
+              ],
+            },
+            {
+              label: "Raporlama & Plan",
+              items: [
+                "Risk matrisi ve etki analizi",
+                "Uygulanabilir güvenlik aksiyon planı",
+                "Detaylı PDF rapor",
+              ],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "7-10",
+          scope: "2-3",
+          featureGroups: [
+            {
+              label: "Kurumsal Denetim",
+              items: [
+                "Bulut altyapı (AWS/GCP/Azure) optimizasyonu",
+                "Kubernetes ve container güvenliği",
+                "Penetrasyon testi hazırlık değerlendirmesi",
+                "Disaster recovery ve SLA analizi",
+                "Maliyet optimizasyonu önerileri",
+              ],
+            },
+            {
+              label: "Strateji & Destek",
+              items: [
+                "Altyapı modernizasyon yol haritası",
+                "1 saatlik sonuç değerlendirme görüşmesi",
+                "Uygulama desteği için teklif hazırlığı",
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
   maintenancePackages: {
     maintenanceServices: {
       title: "Bakım & Destek Hizmetleri",
@@ -971,7 +1515,7 @@ export const servicesPackagesTr = {
         "Web sitesi, mobil uygulama ve backend altyapınızın güvenli, güncel ve kesintisiz çalışması için kapsamlı sürekli destek.",
       tiers: {
         temel: {
-          deliveryDays: "25-35",
+          deliveryDays: "7-14",
           revisions: "2",
           scope: "1",
           featureGroups: [
@@ -994,9 +1538,9 @@ export const servicesPackagesTr = {
           ],
         },
         standart: {
-          deliveryDays: "25-35",
+          deliveryDays: "7-14",
           revisions: "5",
-          scope: "2-4",
+          scope: "2-3",
           featureGroups: [
             {
               label: "Bakım & Güncelleme",
@@ -1019,14 +1563,14 @@ export const servicesPackagesTr = {
               label: "Destek & SLA",
               items: [
                 "WhatsApp ve e-posta öncelikli destek",
-                "24 saat içinde hata giderme garantisi",
+                "24 saat içinde hata giderme hedefi",
               ],
             },
           ],
         },
         pro: {
-          deliveryDays: "25-35",
-          revisions: "12",
+          deliveryDays: "7-14",
+          revisions: "10",
           scope: "∞",
           featureGroups: [
             {
@@ -1035,24 +1579,24 @@ export const servicesPackagesTr = {
                 "Anlık kaynak kodu ve veritabanı yedekleme",
                 "CI/CD süreç bakımı ve güncellemesi",
                 "AWS, Google Cloud veya Azure altyapı optimizasyonu",
-                "Kubernetes ve cluster ağı yönetimi",
-                "Sınırsız içerik ve tasarım güncelleme desteği",
+                "Konteyner ve cluster altyapı bakım desteği",
+                "Genişletilmiş içerik ve tasarım güncelleme desteği",
               ],
             },
             {
               label: "Güvenlik & SLA",
               items: [
-                "7/24 Anlık uyarı ve izleme sistemi",
-                "%99.99 Uptime takibi ve SLA garantisi",
-                "1 saat içinde kritik olaylara müdahale",
-                "DDoS ve siber saldırı koruma sistemi yönetimi",
+                "7/24 uyarı ve izleme sistemi kurulumu",
+                "Yüksek erişilebilirlik hedefli uptime takibi ve öncelikli SLA",
+                "1 saat içinde kritik olaylara müdahale hedefi",
+                "Güvenlik duvarı ve saldırı izleme yapılandırma desteği",
               ],
             },
             {
-              label: "Dedike Destek",
+              label: "Öncelikli Destek",
               items: [
-                "Projeye atanmış dedike DevOps / Backend mühendisi",
-                "Haftalık durum değerlendirme toplantıları ve OKR takibi",
+                "Öncelikli teknik destek ve proaktif bakım",
+                "Haftalık durum değerlendirme toplantıları",
                 "Şirkete özel canlı sistem izleme paneli",
               ],
             },

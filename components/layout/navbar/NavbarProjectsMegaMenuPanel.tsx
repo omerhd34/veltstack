@@ -27,7 +27,7 @@ export function NavbarProjectsMegaMenuPanel() {
         <NavbarMegaMenuIntroColumn
           headline={tHome("projectsHeadline")}
           intro={tNav("projectsMegaMenuIntro")}
-          introLines={11}
+          introLines={12}
         >
           <PrimaryCtaLink
             href="/projeler"

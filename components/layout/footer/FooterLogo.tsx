@@ -11,7 +11,7 @@ export function FooterLogo({ className }: FooterLogoProps) {
     <Link
       href="/"
       className={cn(
-        "inline-flex select-none items-center gap-2 transition-opacity hover:opacity-80",
+        "inline-flex origin-left select-none items-center gap-2 transition-transform duration-500 ease-out hover:scale-[1.04]",
         className,
       )}
     >

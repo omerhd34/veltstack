@@ -12,7 +12,7 @@ export const projectsPageTr = {
     { value: "4", label: "Seçilmiş Proje" },
     { value: "__techCount__", label: "Teknoloji" },
     { value: "100%", label: "Tasarım + Kod" },
-    { value: "5-120", label: "Teslim Süresi(Gün)" },
+    { value: "3-120", label: "Teslim Süresi(Gün)" },
   ],
   showcaseBadge: "Proje İncelemeleri",
   showcaseTitle: "Her proje, bir iş hikayesi",

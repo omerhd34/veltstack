@@ -14,7 +14,7 @@ export async function TestimonialsSection({
 }: TestimonialsSectionProps) {
   return (
     <section
-      className={`relative overflow-hidden bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}
+      className={`relative overflow-hidden bg-[#F2F8F5] py-24 md:py-32 ${className ?? ""}`}
       aria-labelledby="testimonials-section-title"
     >
       <div

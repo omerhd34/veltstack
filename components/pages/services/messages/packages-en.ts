@@ -1,15 +1,20 @@
 export const servicesPackagesEn = {
   packagesTitle: "Services & Packages",
   packagesSubtitle:
-    "Clear packages across five areas, switch tabs to compare scope and find the tier that fits your project.",
+    "Explore our service packages across website development, mobile apps, redesign, SEO, technical audit and maintenance. Switch between tabs to compare Basic, Standard and Pro tiers side by side — delivery time, scope and included features — and find the level that fits your project.",
   tabWeb: "Website",
+  tabRefresh: "Web & App Redesign",
   tabApp: "Application",
   tabSeo: "SEO Services",
+  tabAudit: "Technical Audit",
   tabMaintenance: "Maintenance & Support",
   tierTemel: "Basic",
   tierStandart: "Standard",
   tierPro: "Pro",
   statDelivery: "Delivery (days)",
+  statDeliverySetup: "Setup (days)",
+  statDeliveryStart: "Onboarding (days)",
+  statDeliveryAudit: "Report (days)",
   statDeliveryUnit: "days",
   statRevision: "Revisions",
   statPages: "Pages",
@@ -23,6 +28,11 @@ export const servicesPackagesEn = {
     "From design to deploy, UI to API, I handle the full web stack in one place. Fast, SEO-ready and scalable projects built on a modern React and Next.js foundation.",
   webIntroP2:
     "Portfolio, corporate and ecommerce solutions in Basic, Standard and Pro tiers. On Pro, corporate sites grow with unlimited pages; ecommerce platforms expand without product or category limits.",
+  refreshIntroTitle: "Modernize your existing site",
+  refreshIntroP1:
+    "We transform outdated or slow web and mobile apps into modern, fast experiences. We renew infrastructure, interface and content layers together, preserving your existing data for a seamless transition.",
+  refreshIntroP2:
+    "Portfolio, corporate and ecommerce redesign packages come in Basic, Standard and Pro tiers. We plan a performance and conversion-focused migration while protecting your SEO rankings.",
   appIntroTitle: "End-to-end mobile development",
   appIntroP1:
     "iOS and Android apps with React Native and Flutter. Node.js APIs, authentication and push notification infrastructure built into the same project.",
@@ -33,11 +43,16 @@ export const servicesPackagesEn = {
     "From technical audits to monthly optimization, keyword strategy to enterprise-scale SEO management, everything under one roof. Basic, Standard and Pro tiers scale with your goals.",
   seoIntroP2:
     "Every tier includes audit, optimization and reporting. Start where you are and move up as you grow, no need to switch providers or rebuild strategy from scratch.",
+  auditIntroTitle: "Comprehensive analysis of your digital assets",
+  auditIntroP1:
+    "We comprehensively audit your website, mobile app and infrastructure for performance, security and SEO. You get a prioritized improvement plan with actionable next steps.",
+  auditIntroP2:
+    "Web, mobile app and infrastructure audit packages are offered at different scopes. Basic, Standard and Pro tiers deliver analysis and reporting at the depth your project requires.",
   maintenanceIntroTitle: "Always-on digital assets",
   maintenanceIntroP1:
     "Updates, backups, security monitoring and emergency response, ongoing support for your website, mobile app and backend infrastructure all in one place. Basic, Standard and Pro tiers scale with your needs.",
   maintenanceIntroP2:
-    "Every tier includes monitoring, backups and technical support. Move up to Pro for 24/7 SLA guarantees, cloud infrastructure management and a dedicated engineer.",
+    "Every tier includes monitoring, backups and technical support. Move up to Pro for extended SLA coverage and priority technical support.",
   webPackages: {
     portfolio: {
       title: "Portfolio / Promotional Website",
@@ -47,7 +62,7 @@ export const servicesPackagesEn = {
         temel: {
           deliveryDays: "14-21",
           revisions: "2",
-          scope: "0-3",
+          scope: "1-5",
           featureGroups: [
             {
               label: "Development & Design",
@@ -82,13 +97,13 @@ export const servicesPackagesEn = {
         standart: {
           deliveryDays: "21-30",
           revisions: "4",
-          scope: "0-8",
+          scope: "1-10",
           featureGroups: [
             {
               label: "Development & Design",
               items: [
                 "Mobile-compatible (responsive) development",
-                "90+ Google PageSpeed score guarantee",
+                "90+ Google PageSpeed score target",
                 "Page transition animations and scroll effects",
                 "Premium UI components and hover effects",
                 "Cross-browser compatibility testing",
@@ -185,9 +200,9 @@ export const servicesPackagesEn = {
         "Trustworthy, high-performance web solution aligned with your brand identity.",
       tiers: {
         temel: {
-          deliveryDays: "21-35",
+          deliveryDays: "21-28",
           revisions: "3",
-          scope: "0-5",
+          scope: "1-10",
           featureGroups: [
             {
               label: "Development & Design",
@@ -221,16 +236,16 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "35-50",
+          deliveryDays: "28-42",
           revisions: "5",
-          scope: "0-15",
+          scope: "1-25",
           featureGroups: [
             {
               label: "Development & Design",
               items: [
                 "Custom coding aligned with corporate color palette and typography",
                 "Mobile-compatible (responsive) development",
-                "90+ Google PageSpeed score guarantee",
+                "90+ Google PageSpeed score target",
                 "Premium UI components and corporate animations",
                 "Cross-browser compatibility testing",
               ],
@@ -271,7 +286,7 @@ export const servicesPackagesEn = {
           ],
         },
         pro: {
-          deliveryDays: "50-70",
+          deliveryDays: "42-60",
           revisions: "8",
           scope: "∞",
           featureGroups: [
@@ -338,9 +353,9 @@ export const servicesPackagesEn = {
         "Scalable infrastructure with secure payments, product management and order tracking.",
       tiers: {
         temel: {
-          deliveryDays: "30-45",
+          deliveryDays: "28-42",
           revisions: "3",
-          scope: "0-15",
+          scope: "1-15",
           featureGroups: [
             {
               label: "Development & Design",
@@ -384,15 +399,15 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "45-60",
+          deliveryDays: "42-56",
           revisions: "5",
-          scope: "0-30",
+          scope: "1-35",
           featureGroups: [
             {
               label: "Development & Design",
               items: [
                 "Modern mobile-compatible (responsive) development",
-                "90+ Google PageSpeed score guarantee",
+                "90+ Google PageSpeed score target",
                 "Premium ecommerce UI components and filter animations",
                 "Cross-browser compatibility testing",
               ],
@@ -434,7 +449,7 @@ export const servicesPackagesEn = {
           ],
         },
         pro: {
-          deliveryDays: "60-90",
+          deliveryDays: "56-84",
           revisions: "10",
           scope: "∞",
           featureGroups: [
@@ -489,8 +504,318 @@ export const servicesPackagesEn = {
                 "Vercel publishing and server optimization support",
                 "Advanced hosting / server setup guide",
                 "45 days technical support and bug fixes",
-                "User guide training and documentation",
                 "Comprehensive store management and user guide",
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  refreshPackages: {
+    portfolio: {
+      title: "Portfolio / Promotional Site Redesign",
+      description:
+        "Renew your promotional site with modern design, fast infrastructure and SEO protection.",
+      tiers: {
+        temel: {
+          deliveryDays: "7-14",
+          revisions: "2",
+          scope: "1-8",
+          featureGroups: [
+            {
+              label: "Analysis & Planning",
+              items: [
+                "Current site performance and SEO analysis",
+                "Content inventory and migration plan",
+                "URL structure and redirect strategy",
+              ],
+            },
+            {
+              label: "Redesign & Migration",
+              items: [
+                "Mobile-friendly modern interface",
+                "Safe migration of existing content",
+                "Basic performance optimization",
+                "301 redirect setup",
+              ],
+            },
+            {
+              label: "Delivery & Support",
+              items: [
+                "Go-live and DNS transition support",
+                "15 days technical support",
+              ],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "14-21",
+          revisions: "4",
+          scope: "1-15",
+          featureGroups: [
+            {
+              label: "Analysis & Design",
+              items: [
+                "Comprehensive UX and performance audit",
+                "Brand-aligned interface redesign",
+                "Page transition animations",
+                "Core Web Vitals improvement",
+              ],
+            },
+            {
+              label: "SEO & Migration",
+              items: [
+                "Meta and schema data preservation",
+                "Advanced redirect map",
+                "Search Console transition tracking",
+                "Sitemap update",
+              ],
+            },
+            {
+              label: "Delivery & Support",
+              items: [
+                "Source code delivery",
+                "30 days technical support",
+              ],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "21-30",
+          revisions: "6",
+          scope: "∞",
+          featureGroups: [
+            {
+              label: "Full Redesign",
+              items: [
+                "Migration to modern Next.js infrastructure",
+                "Custom design and animations",
+                "Dark / Light mode support",
+                "90+ PageSpeed score target",
+              ],
+            },
+            {
+              label: "SEO & CMS",
+              items: [
+                "Comprehensive SEO protection and strengthening",
+                "Dynamic content management panel",
+                "Multilingual infrastructure",
+                "Analytics and conversion tracking",
+              ],
+            },
+            {
+              label: "Delivery & Support",
+              items: [
+                "Source code delivery",
+                "45 days technical support",
+                "User guide training",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    corporate: {
+      title: "Corporate Site Redesign",
+      description:
+        "Renew your corporate website with current design, fast infrastructure and secure transition.",
+      tiers: {
+        temel: {
+          deliveryDays: "10-18",
+          revisions: "2",
+          scope: "1-15",
+          featureGroups: [
+            {
+              label: "Analysis & Planning",
+              items: [
+                "Current site technical and SEO audit",
+                "Content and page structure analysis",
+                "Transition timeline and risk plan",
+              ],
+            },
+            {
+              label: "Redesign",
+              items: [
+                "Corporate identity-aligned interface refresh",
+                "Content migration",
+                "Basic performance improvement",
+                "SSL and security update",
+              ],
+            },
+            {
+              label: "Delivery & Support",
+              items: [
+                "Go-live support",
+                "15 days technical support",
+              ],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "18-28",
+          revisions: "4",
+          scope: "1-30",
+          featureGroups: [
+            {
+              label: "Design & UX",
+              items: [
+                "Information architecture restructuring",
+                "Premium UI components",
+                "Accessibility improvements",
+                "Mobile experience optimization",
+              ],
+            },
+            {
+              label: "Infrastructure & SEO",
+              items: [
+                "Modern framework migration",
+                "SEO ranking protection plan",
+                "Form and integration update",
+                "Analytics reconfiguration",
+              ],
+            },
+            {
+              label: "Delivery & Support",
+              items: [
+                "Source code delivery",
+                "30 days technical support",
+              ],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "28-42",
+          revisions: "6",
+          scope: "∞",
+          featureGroups: [
+            {
+              label: "Corporate Redesign",
+              items: [
+                "Custom-built high-speed infrastructure",
+                "Multilingual and multi-department structure",
+                "Advanced CMS and content management",
+                "API and third-party integrations",
+              ],
+            },
+            {
+              label: "Security & Performance",
+              items: [
+                "Comprehensive security audit and improvement",
+                "CDN and cache optimization",
+                "GDPR compliant cookie module",
+                "Backup and restore plan",
+              ],
+            },
+            {
+              label: "Delivery & Support",
+              items: [
+                "Source code delivery",
+                "45 days technical support",
+                "Team training and documentation",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    ecommerce: {
+      title: "Ecommerce Site Redesign",
+      description:
+        "Renew your ecommerce site with modern infrastructure, fast checkout flows and SEO protection.",
+      tiers: {
+        temel: {
+          deliveryDays: "14-21",
+          revisions: "2",
+          scope: "1-20",
+          featureGroups: [
+            {
+              label: "Analysis & Planning",
+              items: [
+                "Current store performance analysis",
+                "Product and category migration plan",
+                "Payment and order flow audit",
+              ],
+            },
+            {
+              label: "Redesign",
+              items: [
+                "Modern ecommerce interface",
+                "Product and category migration",
+                "Basic payment integration update",
+                "Mobile shopping experience improvement",
+              ],
+            },
+            {
+              label: "Delivery & Support",
+              items: [
+                "Go-live and test order",
+                "15 days technical support",
+              ],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "21-35",
+          revisions: "4",
+          scope: "1-40",
+          featureGroups: [
+            {
+              label: "Store Redesign",
+              items: [
+                "Advanced product filtering and search",
+                "Cart and checkout flow optimization",
+                "Stock and variant management update",
+                "Shipping integration refresh",
+              ],
+            },
+            {
+              label: "SEO & Marketing",
+              items: [
+                "Product URL and meta protection plan",
+                "Ecommerce schema markup",
+                "Conversion tracking reconfiguration",
+                "Abandoned cart infrastructure",
+              ],
+            },
+            {
+              label: "Delivery & Support",
+              items: [
+                "Source code delivery",
+                "30 days technical support",
+              ],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "35-49",
+          revisions: "6",
+          scope: "∞",
+          featureGroups: [
+            {
+              label: "Enterprise Ecommerce Redesign",
+              items: [
+                "Migration to scalable modern infrastructure",
+                "Multilingual and multi-currency support",
+                "Advanced campaign and promo module",
+                "ERP / accounting integration",
+              ],
+            },
+            {
+              label: "Performance & Security",
+              items: [
+                "High-traffic optimization",
+                "PCI-DSS compliant virtual POS integration infrastructure",
+                "Advanced security and fraud protection",
+                "Real-time stock synchronization",
+              ],
+            },
+            {
+              label: "Delivery & Support",
+              items: [
+                "Source code delivery",
+                "45 days technical support",
+                "Store management training",
               ],
             },
           ],
@@ -507,7 +832,7 @@ export const servicesPackagesEn = {
         temel: {
           deliveryDays: "21-30",
           revisions: "2",
-          scope: "0-5",
+          scope: "1-5",
           featureGroups: [
             {
               label: "Development & Design",
@@ -539,7 +864,7 @@ export const servicesPackagesEn = {
         standart: {
           deliveryDays: "30-45",
           revisions: "4",
-          scope: "0-10",
+          scope: "1-10",
           featureGroups: [
             {
               label: "Development & Design",
@@ -625,9 +950,9 @@ export const servicesPackagesEn = {
         "Reliable corporate mobile platform for employees or customers.",
       tiers: {
         temel: {
-          deliveryDays: "30-45",
+          deliveryDays: "28-42",
           revisions: "3",
-          scope: "0-8",
+          scope: "1-8",
           featureGroups: [
             {
               label: "Development & Design",
@@ -658,9 +983,9 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "45-60",
+          deliveryDays: "42-56",
           revisions: "5",
-          scope: "0-15",
+          scope: "1-15",
           featureGroups: [
             {
               label: "Development & Design",
@@ -699,7 +1024,7 @@ export const servicesPackagesEn = {
           ],
         },
         pro: {
-          deliveryDays: "60-90",
+          deliveryDays: "56-84",
           revisions: "8",
           scope: "∞",
           featureGroups: [
@@ -734,7 +1059,7 @@ export const servicesPackagesEn = {
               label: "Delivery & Support",
               items: [
                 "Source code delivery",
-                "App Store (including Enterprise) and Play Store publishing management",
+                "App Store and Play Store publishing process management",
                 "45 days technical support",
                 "User guide training and documentation",
                 "Corporate user manual",
@@ -750,9 +1075,9 @@ export const servicesPackagesEn = {
         "Store-ready ecommerce app with payments, products and order management.",
       tiers: {
         temel: {
-          deliveryDays: "45-60",
+          deliveryDays: "42-56",
           revisions: "3",
-          scope: "0-12",
+          scope: "1-12",
           featureGroups: [
             {
               label: "Development & Design",
@@ -789,9 +1114,9 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "60-90",
+          deliveryDays: "56-77",
           revisions: "5",
-          scope: "0-20",
+          scope: "1-20",
           featureGroups: [
             {
               label: "Development & Design",
@@ -831,7 +1156,7 @@ export const servicesPackagesEn = {
           ],
         },
         pro: {
-          deliveryDays: "90-120",
+          deliveryDays: "84-120",
           revisions: "8",
           scope: "∞",
           featureGroups: [
@@ -883,9 +1208,9 @@ export const servicesPackagesEn = {
         "Comprehensive search engine optimization and growth strategies, from technical audits to monthly ad campaigns, for individual sites and enterprise platforms alike.",
       tiers: {
         temel: {
-          deliveryDays: "10-14",
+          deliveryDays: "7-14",
           pages: "5",
-          scope: "0-25",
+          scope: "1-20",
           featureGroups: [
             {
               label: "Audit & Analysis",
@@ -907,9 +1232,9 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "21-30",
-          pages: "30",
-          scope: "0-75",
+          deliveryDays: "14-21",
+          pages: "15",
+          scope: "1-50",
           featureGroups: [
             {
               label: "Comprehensive Audit & Strategy",
@@ -933,8 +1258,8 @@ export const servicesPackagesEn = {
           ],
         },
         pro: {
-          deliveryDays: "45-60",
-          pages: "50",
+          deliveryDays: "21-30",
+          pages: "∞",
           scope: "∞",
           featureGroups: [
             {
@@ -965,6 +1290,242 @@ export const servicesPackagesEn = {
       },
     },
   },
+  auditPackages: {
+    webAudit: {
+      title: "Website Technical Audit",
+      description:
+        "Comprehensive analysis of your website's performance, security, SEO and code quality.",
+      tiers: {
+        temel: {
+          deliveryDays: "3-5",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "Performance & SEO",
+              items: [
+                "Lighthouse and PageSpeed analysis",
+                "Core Web Vitals assessment",
+                "Basic SEO and meta structure check",
+                "Mobile compatibility test",
+              ],
+            },
+            {
+              label: "Reporting",
+              items: [
+                "Prioritized findings list",
+                "Basic improvement recommendations",
+                "PDF audit report",
+              ],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "5-7",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "Comprehensive Analysis",
+              items: [
+                "Detailed performance profile",
+                "Security and HTTPS configuration",
+                "Accessibility (WCAG) check",
+                "Structured data audit",
+                "Crawl errors and indexing analysis",
+              ],
+            },
+            {
+              label: "Reporting & Plan",
+              items: [
+                "Priority matrix with impact analysis",
+                "Actionable improvement plan",
+                "Detailed PDF report and presentation",
+              ],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "7-10",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "In-Depth Review",
+              items: [
+                "Source code and architecture analysis",
+                "Dependency and vulnerability scan",
+                "CDN, cache and server configuration",
+                "Log analysis and error monitoring",
+                "Competitor performance comparison",
+              ],
+            },
+            {
+              label: "Strategy & Support",
+              items: [
+                "Roadmap and sprint plan",
+                "1-hour results review call",
+                "Implementation quote preparation",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    appAudit: {
+      title: "Mobile App Technical Audit",
+      description:
+        "Analyze your iOS and Android app's performance, security and user experience.",
+      tiers: {
+        temel: {
+          deliveryDays: "3-5",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "App Analysis",
+              items: [
+                "Launch time and performance test",
+                "Basic UX and navigation assessment",
+                "Store compliance check",
+                "Crash and error log review",
+              ],
+            },
+            {
+              label: "Reporting",
+              items: [
+                "Prioritized findings list",
+                "Basic improvement recommendations",
+                "PDF audit report",
+              ],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "5-7",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "Comprehensive Analysis",
+              items: [
+                "Memory and CPU usage profile",
+                "API security and authentication",
+                "Offline behavior and data sync",
+                "Push notification infrastructure check",
+                "Accessibility assessment",
+              ],
+            },
+            {
+              label: "Reporting & Plan",
+              items: [
+                "Platform-specific (iOS/Android) findings",
+                "Actionable improvement plan",
+                "Detailed PDF report",
+              ],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "7-10",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "In-Depth Review",
+              items: [
+                "Source code and architecture analysis",
+                "Dependency security scan",
+                "Store review risk assessment",
+                "CI/CD and build process analysis",
+                "Backend API integration audit",
+              ],
+            },
+            {
+              label: "Strategy & Support",
+              items: [
+                "Restructuring roadmap",
+                "1-hour results review call",
+                "Implementation quote preparation",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    infrastructureAudit: {
+      title: "Infrastructure & Security Audit",
+      description:
+        "Comprehensive analysis of your server, database, CI/CD and security infrastructure.",
+      tiers: {
+        temel: {
+          deliveryDays: "3-5",
+          scope: "1",
+          featureGroups: [
+            {
+              label: "Infrastructure Check",
+              items: [
+                "Server resource usage analysis",
+                "SSL and domain configuration",
+                "Backup status check",
+                "Basic security configuration",
+              ],
+            },
+            {
+              label: "Reporting",
+              items: [
+                "Prioritized risk list",
+                "Basic improvement recommendations",
+                "PDF audit report",
+              ],
+            },
+          ],
+        },
+        standart: {
+          deliveryDays: "5-7",
+          scope: "1-2",
+          featureGroups: [
+            {
+              label: "Comprehensive Analysis",
+              items: [
+                "Database performance and configuration",
+                "CI/CD pipeline security check",
+                "Access control and identity management",
+                "DDoS and firewall configuration",
+                "Log and monitoring infrastructure assessment",
+              ],
+            },
+            {
+              label: "Reporting & Plan",
+              items: [
+                "Risk matrix and impact analysis",
+                "Actionable security improvement plan",
+                "Detailed PDF report",
+              ],
+            },
+          ],
+        },
+        pro: {
+          deliveryDays: "7-10",
+          scope: "2-3",
+          featureGroups: [
+            {
+              label: "Enterprise Audit",
+              items: [
+                "Cloud infrastructure (AWS/GCP/Azure) optimization",
+                "Kubernetes and container security",
+                "Penetration test readiness assessment",
+                "Disaster recovery and SLA analysis",
+                "Cost optimization recommendations",
+              ],
+            },
+            {
+              label: "Strategy & Support",
+              items: [
+                "Infrastructure modernization roadmap",
+                "1-hour results review call",
+                "Implementation quote preparation",
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
   maintenancePackages: {
     maintenanceServices: {
       title: "Maintenance & Support Services",
@@ -972,7 +1533,7 @@ export const servicesPackagesEn = {
         "Comprehensive ongoing support to keep your website, mobile app and backend infrastructure secure, up to date and always running.",
       tiers: {
         temel: {
-          deliveryDays: "25-35",
+          deliveryDays: "7-14",
           revisions: "2",
           scope: "1",
           featureGroups: [
@@ -995,9 +1556,9 @@ export const servicesPackagesEn = {
           ],
         },
         standart: {
-          deliveryDays: "25-35",
+          deliveryDays: "7-14",
           revisions: "5",
-          scope: "2-4",
+          scope: "2-3",
           featureGroups: [
             {
               label: "Maintenance & Updates",
@@ -1020,14 +1581,14 @@ export const servicesPackagesEn = {
               label: "Support & SLA",
               items: [
                 "Priority support via WhatsApp and email",
-                "Bug fixes guaranteed within 24 hours",
+                "Bug fixes targeted within 24 hours",
               ],
             },
           ],
         },
         pro: {
-          deliveryDays: "25-35",
-          revisions: "12",
+          deliveryDays: "7-14",
+          revisions: "10",
           scope: "∞",
           featureGroups: [
             {
@@ -1036,24 +1597,24 @@ export const servicesPackagesEn = {
                 "Real-time source code and database backup infrastructure",
                 "CI/CD process maintenance and updates",
                 "AWS, Google Cloud or Azure infrastructure optimization",
-                "Kubernetes and cluster network management",
-                "Unlimited content and design update support",
+                "Container and cluster infrastructure maintenance support",
+                "Extended content and design update support",
               ],
             },
             {
               label: "Security & SLA",
               items: [
-                "24/7 real-time alerting and monitoring system",
-                "99.99% uptime tracking and SLA guarantee",
-                "Critical incident response within 1 hour",
-                "DDoS and cyber attack protection system management",
+                "24/7 alerting and monitoring system setup",
+                "High-availability uptime tracking and priority SLA",
+                "Critical incident response targeted within 1 hour",
+                "Firewall and attack monitoring configuration support",
               ],
             },
             {
-              label: "Dedicated Support",
+              label: "Priority Support",
               items: [
-                "Dedicated DevOps / backend engineer assigned to the project",
-                "Weekly status review meetings and OKR tracking",
+                "Priority technical support and proactive maintenance",
+                "Weekly status review meetings",
                 "Custom live system monitoring dashboard",
               ],
             },

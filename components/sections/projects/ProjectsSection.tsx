@@ -12,49 +12,49 @@ interface ProjectsSectionProps {
 export function ProjectsSection({ className }: ProjectsSectionProps) {
   return (
     <section
-      className={`relative overflow-hidden bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}
+      className={`relative overflow-hidden bg-[#0C1F18] py-24 text-white md:py-32 ${className ?? ""}`}
       aria-labelledby="projects-section-title"
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_0%_0%,rgb(58_107_82/0.07),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_75%_50%_at_0%_0%,rgb(58_107_82/0.16),transparent_55%)]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_45%_at_100%_100%,rgb(58_107_82/0.06),transparent_50%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_45%_at_100%_100%,rgb(16_80_60/0.1),transparent_50%)]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute left-0 top-0 h-px w-full bg-linear-to-r from-transparent via-brand-accent/25 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-emerald-400/30 to-transparent"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-24 top-1/4 size-72 rounded-full bg-brand-accent/5 blur-3xl"
+        className="pointer-events-none absolute -right-24 top-1/4 size-72 rounded-full bg-brand-accent/8 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-16 bottom-1/4 size-64 rounded-full bg-brand-accent/4 blur-3xl"
+        className="pointer-events-none absolute -left-16 bottom-1/4 size-64 rounded-full bg-emerald-600/6 blur-3xl"
       />
 
       <SectionDecorIcon
         icon={LuCodeXml}
-        tone="accent-muted"
+        tone="on-dark-muted"
         className="left-2 top-[30%] -rotate-12 xl:left-8"
       />
       <SectionDecorIcon
         icon={TbMathFunction}
-        tone="accent"
+        tone="on-dark"
         size="md"
         className="right-0 bottom-[28%] rotate-6 xl:right-6"
       />
       <SectionDecorIcon
         icon={TbBrandReactNative}
-        tone="accent-muted"
+        tone="on-dark-muted"
         className="right-4 top-[14%] -rotate-6 xl:right-12"
       />
       <SectionDecorIcon
         icon={TbTopologyRing2}
-        tone="accent"
+        tone="on-dark"
         size="sm"
         className="bottom-[12%] left-6 rotate-12 xl:left-14"
       />
@@ -63,6 +63,11 @@ export function ProjectsSection({ className }: ProjectsSectionProps) {
         <ProjectsIntro />
         <ProjectsGrid className="mt-12 md:mt-14" />
       </SiteContainer>
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-emerald-400/20 to-transparent"
+      />
     </section>
   );
 }

@@ -29,7 +29,7 @@ export const navEn = {
   projectPortfolio: "Portfolio | Ömer Halis Demir",
   projectOnlinemuhasebe: "Online Accounting | Financial Consulting",
   projectsMegaMenuIntro:
-    "We build digital products for real business needs across FinTech, e-commerce, corporate and healthcare. From finance platforms to e-commerce flows and corporate showcases, we work across a wide range of sectors. We define goals upfront and unite design and development in one process. We turn complex requirements into clear interfaces and measurable outcomes. Performance, security and SEO are planned before launch. We keep you updated at every stage with a clear delivery timeline. One contact simplifies decisions throughout the project. Post-launch support keeps every product running and improving.",
+    "We build digital products for real business needs across FinTech, e-commerce, corporate and healthcare. From finance platforms to e-commerce flows and corporate showcases, we work across a wide range of sectors. We define goals upfront and unite design and development in one process. We turn complex requirements into clear interfaces and measurable outcomes. Performance, security and SEO are planned before launch. We keep you updated at every stage with a clear delivery timeline. One contact simplifies decisions throughout the project. Post-launch support keeps every product running and improving. Every project targets measurable business outcomes and solutions built to scale with your growth.",
   projectIqfinansDesc:
     "AI-powered financial analysis platform. Dark-light mode, Turkish-English support and reporting that turns complex data into clear dashboards.",
   projectYaziciDesc:

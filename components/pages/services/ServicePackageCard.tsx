@@ -35,6 +35,7 @@ interface PackageCardLabels {
   statRevision: string;
   statScope: string;
   getQuote: string;
+  hideMiddleStat?: boolean;
 }
 
 interface ServicePackageCardProps {
@@ -121,13 +122,25 @@ export function ServicePackageCard({
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-1.5 border-b border-emerald-900/35 px-3 py-5 sm:gap-2 sm:px-4">
+      <div
+        className={cn(
+          "grid gap-1.5 border-b border-emerald-900/35 px-3 py-5 sm:gap-2 sm:px-4",
+          labels.hideMiddleStat ? "grid-cols-2" : "grid-cols-3",
+        )}
+      >
         {[
           {
             label: labels.statDelivery,
             value: tier.deliveryDays,
           },
-          { label: labels.statRevision, value: tier.pages ?? tier.revisions },
+          ...(labels.hideMiddleStat
+            ? []
+            : [
+                {
+                  label: labels.statRevision,
+                  value: tier.pages ?? tier.revisions,
+                },
+              ]),
           { label: labels.statScope, value: tier.scope },
         ].map((stat) => (
           <div

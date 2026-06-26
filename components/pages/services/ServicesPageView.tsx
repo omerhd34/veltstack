@@ -24,8 +24,13 @@ export async function ServicesPageView({ className }: ServicesPageViewProps) {
       />
       <ServicesPackagesSection />
       <ServicesPageCTA
+        badge={t("ctaBadge")}
+        tagline={t("ctaTagline")}
         title={t("ctaTitle")}
+        titleLead={t("ctaTitleLead")}
+        titleAccent={t("ctaTitleAccent")}
         subtitle={t("ctaSubtitle")}
+        highlights={[t("ctaPoint1"), t("ctaPoint2"), t("ctaPoint3")]}
         buttonLabel={t("ctaButton")}
         note={t("ctaNote")}
       />

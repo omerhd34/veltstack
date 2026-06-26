@@ -22,14 +22,14 @@ export function WhyMeCard({
   return (
     <div
       className={cn(
-        "group relative flex flex-col rounded-2xl bg-white/4 p-6",
+        "group relative flex flex-col rounded-2xl bg-white p-6",
         "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99]",
-        "hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
+        "shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
         slowTransition,
       )}
     >
       <BorderTrace durationSec={2.5} />
-      <CardIndexNumber index={index} theme="dark" />
+      <CardIndexNumber index={index} theme="light" />
 
       <div className="flex gap-4">
         <div
@@ -45,10 +45,10 @@ export function WhyMeCard({
           />
         </div>
         <div className="flex min-w-0 flex-1 flex-col">
-          <h3 className="pr-10 font-(family-name:--font-heading) text-xl font-bold leading-snug tracking-tight text-white">
+          <h3 className="pr-10 font-(family-name:--font-heading) text-xl font-bold leading-snug tracking-tight text-[#0A0A0F]">
             {title}
           </h3>
-          <p className="mt-2 line-clamp-3 h-[calc(0.9375rem*1.7*3)] text-[0.9375rem] leading-[1.7] text-white/50">
+          <p className="mt-2 line-clamp-3 h-[calc(0.9375rem*1.7*3)] text-[0.9375rem] leading-[1.7] text-foreground/60">
             {description}
           </p>
         </div>

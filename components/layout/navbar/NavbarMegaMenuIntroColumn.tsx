@@ -14,7 +14,9 @@ export function NavbarMegaMenuIntroColumn({
   children,
 }: NavbarMegaMenuIntroColumnProps) {
   const introHeightClass =
-    introLines === 11
+    introLines === 12
+      ? " line-clamp-12 max-h-[calc(0.875rem*1.625*12)] md:max-h-[calc(1rem*1.625*12)]"
+      : introLines === 11
       ? " line-clamp-11 max-h-[calc(0.875rem*1.625*11)] md:max-h-[calc(1rem*1.625*11)]"
       : introLines === 9
         ? " line-clamp-9 max-h-[calc(0.875rem*1.625*9)] md:max-h-[calc(1rem*1.625*9)]"
@@ -23,7 +25,7 @@ export function NavbarMegaMenuIntroColumn({
           : "";
 
   return (
-    <div className="flex max-w-md flex-col">
+    <div className="flex h-full max-w-md flex-col">
       <div className="mega-menu-intro">
         <h2 className="font-(family-name:--font-heading) text-xl font-bold leading-tight tracking-tight md:text-2xl">
           {headline}
@@ -34,7 +36,7 @@ export function NavbarMegaMenuIntroColumn({
           {intro}
         </p>
       </div>
-      <div className="mt-6 shrink-0">{children}</div>
+      <div className="mt-auto shrink-0 pt-6">{children}</div>
     </div>
   );
 }

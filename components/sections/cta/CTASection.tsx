@@ -1,9 +1,11 @@
 import { LuEye, LuMessageCircle } from "react-icons/lu";
-import { TbGitBranch, TbLock } from "react-icons/tb";
+import { TbGitBranch, TbRocket, TbSparkles } from "react-icons/tb";
 import { getTranslations } from "next-intl/server";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
+import { toLatinUppercase } from "@/lib/utils";
+import { CTAHighlights } from "./CTAHighlights";
 
 interface CTASectionProps {
   className?: string;
@@ -14,64 +16,119 @@ export async function CTASection({ className }: CTASectionProps) {
 
   return (
     <section
-      className={`relative overflow-hidden bg-[#0A0A0F] py-24 md:py-32 ${className ?? ""}`}
+      className={`relative overflow-hidden bg-[#E8F3ED] py-20 md:py-28 ${className ?? ""}`}
+      aria-labelledby="home-cta-title"
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 size-[600px] rounded-full bg-brand-accent/10 blur-[100px]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_100%_0%,rgb(58_107_82/0.08),transparent_55%)]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-accent/50 to-transparent"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_45%_at_0%_100%,rgb(58_107_82/0.07),transparent_50%)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-20 top-1/3 size-80 rounded-full bg-brand-accent/5 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-16 bottom-1/4 size-72 rounded-full bg-brand-accent/6 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-accent/25 to-transparent"
       />
 
       <SectionDecorIcon
         icon={TbGitBranch}
-        tone="on-dark-muted"
-        className="left-6 top-[32%] -rotate-12 xl:left-14"
+        tone="accent-muted"
+        className="left-6 top-[18%] -rotate-12 xl:left-14"
       />
       <SectionDecorIcon
-        icon={TbLock}
-        tone="on-dark"
+        icon={TbRocket}
+        tone="accent"
         size="md"
-        className="right-8 bottom-[26%] rotate-6 xl:right-16"
+        className="right-8 top-[22%] rotate-6 xl:right-16"
+      />
+      <SectionDecorIcon
+        icon={TbSparkles}
+        tone="accent-muted"
+        size="sm"
+        className="bottom-[18%] left-4 rotate-12 xl:left-12"
       />
 
       <SiteContainer className="relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/12 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
-            Başlayalım
-          </span>
+        <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-[#0A0A0F] px-6 py-14 shadow-[0_24px_80px_rgb(58_107_82/0.12)] md:px-14 md:py-20">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-0 size-[480px] -translate-x-1/2 rounded-full bg-brand-accent/12 blur-[90px]"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgb(58_107_82/0.12),transparent_60%)]"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-emerald-400/30 to-transparent md:inset-x-12"
+          />
 
-          <h2 className="mt-8 font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-[3.25rem]">
-            {t("ctaTitle")}
-          </h2>
+          <div className="relative mx-auto max-w-3xl text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/8 px-4 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-emerald-300/90">
+              {toLatinUppercase(t("ctaBadge"))}
+            </span>
 
-          <p className="mt-6 text-lg leading-relaxed text-white/55 md:text-xl">
-            {t("ctaSubtitle")}
-          </p>
+            <p className="mt-6 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300/55">
+              <span aria-hidden className="h-px w-8 bg-emerald-500/25" />
+              {t("ctaTagline")}
+              <span aria-hidden className="h-px w-8 bg-emerald-500/25" />
+            </p>
 
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <PrimaryCtaLink
-              href="/iletisim"
-              variant="accent"
-              className="h-13 px-10"
-              showArrow={false}
-              leadingIcon={<LuMessageCircle className="size-5" aria-hidden />}
+            <h2
+              id="home-cta-title"
+              className="mt-5 font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-[3.25rem]"
             >
-              {t("ctaButton")}
-            </PrimaryCtaLink>
-            <PrimaryCtaLink
-              href="/projeler"
-              className="ring-1 ring-white/20"
-              showArrow={false}
-              leadingIcon={<LuEye className="size-5" aria-hidden />}
-            >
-              {t("ctaSecondary")}
-            </PrimaryCtaLink>
+              {t("ctaTitleLead")}{" "}
+              <span className="bg-linear-to-r from-emerald-200 via-emerald-300 to-brand-accent bg-clip-text text-transparent">
+                {t("ctaTitleAccent")}
+              </span>
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-emerald-50/60 md:text-lg">
+              {t("ctaSubtitle")}
+            </p>
+
+            <CTAHighlights
+              points={[t("ctaPoint1"), t("ctaPoint2"), t("ctaPoint3")]}
+            />
+
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <PrimaryCtaLink
+                href="/iletisim"
+                variant="accent"
+                className="h-13 px-10"
+                showArrow={false}
+                leadingIcon={<LuMessageCircle className="size-5" aria-hidden />}
+              >
+                {t("ctaButton")}
+              </PrimaryCtaLink>
+              <PrimaryCtaLink
+                href="/projeler"
+                className="ring-1 ring-white/20"
+                showArrow={false}
+                leadingIcon={<LuEye className="size-5" aria-hidden />}
+              >
+                {t("ctaSecondary")}
+              </PrimaryCtaLink>
+            </div>
           </div>
         </div>
       </SiteContainer>
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-brand-accent/20 to-transparent"
+      />
     </section>
   );
 }

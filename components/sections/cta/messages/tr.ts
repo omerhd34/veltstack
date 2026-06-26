@@ -1,6 +1,13 @@
 export const ctaHomeTr = {
-  ctaTitle: "Projenizi Hayata Geçirelim",
-  ctaSubtitle: "Veltstack ile dijital dönüşümünüze bugün başlayın.",
+  ctaBadge: "Başlayalım",
+  ctaTagline: "Bir sonraki adımınız",
+  ctaTitleLead: "Projenizi",
+  ctaTitleAccent: "Hayata Geçirelim",
+  ctaSubtitle:
+    "Web sitesinden mobil uygulamaya, SEO'dan yayın süreçlerine kadar dijital ihtiyaçlarınızı tek çatı altında planlıyor ve hayata geçiriyoruz. İlk görüşmede hedefinizi netleştirir, size özel bir yol haritası çıkarırız.",
+  ctaPoint1: "Ücretsiz keşif görüşmesi",
+  ctaPoint2: "24 saat içinde geri dönüş",
+  ctaPoint3: "Uçtan uca proje desteği",
   ctaButton: "İletişime Geç",
   ctaSecondary: "Projeleri İncele",
 } as const;
