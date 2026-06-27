@@ -36,6 +36,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
             />
             <PrimaryCtaLink
               href="/iletisim"
+              variant="accent"
               showArrow={false}
               trailingIcon={<LuMessageCircle className="size-5" aria-hidden />}
             >
