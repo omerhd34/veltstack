@@ -1140,7 +1140,7 @@ export const servicesPackagesTr = {
           ],
         },
         pro: {
-          deliveryDays: "84-112",
+          deliveryDays: "84-120",
           revisions: "8",
           scope: "∞",
           featureGroups: [

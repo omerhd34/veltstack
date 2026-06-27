@@ -23,9 +23,9 @@ export const servicesPageEn = {
   ctaNote: "Response within 24h",
   stats: [
     { value: "3-112", label: "Delivery (Days)" },
+    { value: "15-45", label: "Support Period (Days)" },
     { value: "6", label: "Service Types" },
     { value: "14", label: "Ready Packages" },
-    { value: "15-45", label: "Support Period (Days)" },
   ],
   ...servicesPackagesEn,
 } as const;
