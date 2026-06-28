@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { ServicesPageHero } from "./ServicesPageHero";
 import { ServicesPackagesSection } from "./ServicesPackagesSection";
 import { ServicesPageCTA } from "./ServicesPageCTA";
@@ -9,7 +10,7 @@ interface ServicesPageViewProps {
 
 export async function ServicesPageView({ className }: ServicesPageViewProps) {
   const t = await getTranslations("servicesPage");
-  const stats = t.raw("stats") as { value: string; label: string }[];
+  const stats = t.raw("stats") as HeroStat[];
 
   return (
     <div className={className}>

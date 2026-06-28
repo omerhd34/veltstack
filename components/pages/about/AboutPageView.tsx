@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { ProcessSection } from "@/components/sections/process";
 import { ServicesPageCTA } from "@/components/pages/services/ServicesPageCTA";
 import { AboutContact } from "./AboutContact";
@@ -13,8 +14,11 @@ interface AboutPageViewProps {
 export async function AboutPageView({ className }: AboutPageViewProps) {
   const t = await getTranslations("about");
 
-  const stats = t.raw("stats") as { value: string; label: string }[];
-  const skillGroups = t.raw("skillGroups") as { label: string; tech: string[] }[];
+  const stats = t.raw("stats") as HeroStat[];
+  const skillGroups = t.raw("skillGroups") as {
+    label: string;
+    tech: string[];
+  }[];
   const contactItems = t.raw("contactItems") as {
     label: string;
     value: string;

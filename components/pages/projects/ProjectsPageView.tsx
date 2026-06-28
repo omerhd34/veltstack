@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { techItemCount } from "@/components/sections/tech-marquee/tech-items";
 import { ServicesPageCTA } from "@/components/pages/services/ServicesPageCTA";
 import { ProjectsApproach } from "./ProjectsApproach";
@@ -13,7 +14,7 @@ const TECH_COUNT_PLACEHOLDER = "__techCount__";
 
 export async function ProjectsPageView({ className }: ProjectsPageViewProps) {
   const t = await getTranslations("projectsPage");
-  const stats = (t.raw("stats") as { value: string; label: string }[]).map(
+  const stats = (t.raw("stats") as HeroStat[]).map(
     (stat) =>
       stat.value === TECH_COUNT_PLACEHOLDER
         ? { ...stat, value: String(techItemCount) }

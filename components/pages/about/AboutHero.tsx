@@ -1,5 +1,6 @@
 import { LuChevronDown } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
 
 interface AboutHeroProps {
@@ -10,7 +11,7 @@ interface AboutHeroProps {
   subtitleSecondary: string;
   imageAlt: string;
   scrollLabel: string;
-  stats: { value: string; label: string }[];
+  stats: HeroStat[];
   className?: string;
 }
 
@@ -75,21 +76,7 @@ export function AboutHero({
         </div>
 
         <div className="mt-auto shrink-0 border-t border-emerald-900/35 pt-6 sm:pt-8">
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-2xl border border-emerald-900/45 bg-[#0a1612]/70 px-4 py-4 backdrop-blur-sm sm:px-5 sm:py-5"
-              >
-                <p className="font-(family-name:--font-heading) text-2xl font-bold text-white sm:text-3xl">
-                  {stat.value}
-                </p>
-                <p className="mt-1 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-emerald-300/50 sm:text-[0.6875rem]">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
+          <HeroStatsCards stats={stats} />
 
           <a
             href="#about-story"
