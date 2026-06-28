@@ -62,6 +62,7 @@ interface ServicesPackagesPanelProps {
   labels: PackagesPanelLabels;
   intros: CategoryIntros;
   packages: CategoryPackages;
+  lockedCategory?: PackageCategory;
   className?: string;
 }
 
@@ -96,20 +97,24 @@ export function ServicesPackagesPanel({
   labels,
   intros,
   packages,
+  lockedCategory,
   className,
 }: ServicesPackagesPanelProps) {
-  const [category, setCategory] = useState<PackageCategory>("web");
+  const [category, setCategory] = useState<PackageCategory>(
+    lockedCategory ?? "web",
+  );
+  const activeCategory = lockedCategory ?? category;
   const [activeTier, setActiveTier] = useState<PackageTier>("standart");
   const [openGroups, setOpenGroups] = useState<Set<string>>(new Set());
   const gridRef = useRef<HTMLDivElement>(null);
 
-  const intro = intros[category];
-  const categoryPackages = packages[category];
-  const slugs = categoryPackageSlugs[category];
-  const icons = categoryIcons[category];
-  const scopeKey = scopeLabelKey[category];
-  const revisionKey = revisionLabelKey[category];
-  const deliveryKey = deliveryLabelKey[category];
+  const intro = intros[activeCategory];
+  const categoryPackages = packages[activeCategory];
+  const slugs = categoryPackageSlugs[activeCategory];
+  const icons = categoryIcons[activeCategory];
+  const scopeKey = scopeLabelKey[activeCategory];
+  const revisionKey = revisionLabelKey[activeCategory];
+  const deliveryKey = deliveryLabelKey[activeCategory];
 
   const visiblePackages = useMemo(
     () => slugs.map((slug) => categoryPackages[slug]),
@@ -128,11 +133,11 @@ export function ServicesPackagesPanel({
     syncOpenGroups();
     mediaQuery.addEventListener("change", syncOpenGroups);
     return () => mediaQuery.removeEventListener("change", syncOpenGroups);
-  }, [activeTier, category, visiblePackages]);
+  }, [activeTier, activeCategory, visiblePackages]);
 
   const openGroupsKey = [...openGroups].sort().join("\0");
 
-  usePackageGroupHeightSync(gridRef, [category, activeTier], openGroupsKey);
+  usePackageGroupHeightSync(gridRef, [activeCategory, activeTier], openGroupsKey);
 
   const toggleGroup = (label: string) => {
     setOpenGroups((prev) => {
@@ -155,20 +160,23 @@ export function ServicesPackagesPanel({
     statRevision: labels[revisionKey] as string,
     statScope: labels[scopeKey] as string,
     getQuote: labels.getQuote,
-    hideMiddleStat: category === "audit",
+    hideMiddleStat: activeCategory === "audit",
   };
 
   return (
     <div className={`min-w-0 ${className ?? ""}`}>
-      <ServicesCategoryTabs
-        tabs={labels.tabs}
-        active={category}
-        onChange={setCategory}
-        className="mx-auto w-fit max-w-full"
-      />
+      {!lockedCategory ? (
+        <ServicesCategoryTabs
+          tabs={labels.tabs}
+          active={activeCategory}
+          onChange={setCategory}
+          className="mx-auto w-fit max-w-full"
+        />
+      ) : null}
 
       <ServicesPackagesIntro
-        className="mt-12 md:mt-14"
+        className={lockedCategory ? "mt-0" : "mt-12 md:mt-14"}
+        variant={lockedCategory ? "compact" : "full"}
         title={intro.title}
         p1={intro.p1}
         p2={intro.p2}
@@ -176,14 +184,14 @@ export function ServicesPackagesPanel({
 
       <div
         ref={gridRef}
-        key={category}
-        className={`mt-14 grid items-stretch gap-6 lg:gap-5 xl:gap-6 ${
+        key={activeCategory}
+        className={`${lockedCategory ? "mt-8 md:mt-10" : "mt-14"} grid items-stretch gap-6 lg:gap-5 xl:gap-6 ${
           slugs.length === 1 ? "mx-auto w-full max-w-2xl" : "lg:grid-cols-3"
         }`}
       >
         {slugs.map((slug) => (
           <ServicePackageCard
-            key={`${category}-${slug}`}
+            key={`${activeCategory}-${slug}`}
             icon={icons[slug]}
             data={categoryPackages[slug]}
             labels={cardLabels}

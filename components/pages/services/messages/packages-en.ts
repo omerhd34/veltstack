@@ -1,5 +1,6 @@
 export const servicesPackagesEn = {
   packagesTitle: "Services & Packages",
+  packagesTitleSuffix: "Packages",
   packagesSubtitle:
     "Explore our service packages across website development, mobile apps, redesign, SEO, technical audit and maintenance. Switch between tabs to compare Basic, Standard and Pro tiers side by side — delivery time, scope and included features — and find the level that fits your project.",
   tabWeb: "Website",

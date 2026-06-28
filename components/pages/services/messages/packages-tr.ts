@@ -1,5 +1,6 @@
 export const servicesPackagesTr = {
   packagesTitle: "Hizmetler & Paketler",
+  packagesTitleSuffix: "Paketleri",
   packagesSubtitle:
     "Web sitesi, mobil uygulama, yenileme, SEO, teknik denetim ve bakım alanlarında sunduğumuz hizmet paketlerini inceleyin. Sekmeler arasında geçerek Temel, Standart ve Pro seviyelerini karşılaştırın; teslim süresi, kapsam ve dahil özellikleri yan yana görüp projenize en uygun seviyeyi kolayca belirleyin.",
   tabWeb: "Web Sitesi Geliştirme",

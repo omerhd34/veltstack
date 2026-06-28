@@ -22,10 +22,26 @@ export const servicesPageEn = {
   ctaButton: "Schedule a Call",
   ctaNote: "Response within 24h",
   stats: [
-    { value: "3-112", label: "Delivery (Days)" },
-    { value: "15-45", label: "Support Period (Days)" },
-    { value: "6", label: "Service Types" },
-    { value: "14", label: "Ready Packages" },
+    {
+      value: "3-112",
+      label: "Delivery (Days)",
+      hint: "Estimated delivery range across all service categories. A clear timeline is shared once scope is defined.",
+    },
+    {
+      value: "15-45",
+      label: "Support Period (Days)",
+      hint: "Post-launch support window for technical assistance, revisions and minor updates.",
+    },
+    {
+      value: "6",
+      label: "Service Types",
+      hint: "Six service categories including website, app, redesign, SEO, technical audit and maintenance.",
+    },
+    {
+      value: "14",
+      label: "Ready Packages",
+      hint: "Total ready-made packages across all categories, each targeting different scope and scale.",
+    },
   ],
   ...servicesPackagesEn,
 } as const;

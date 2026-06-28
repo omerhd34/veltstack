@@ -22,10 +22,26 @@ export const servicesPageTr = {
   ctaButton: "Görüşme Planla",
   ctaNote: "24 saat içinde dönüş",
   stats: [
-    { value: "3-112", label: "Teslim Süresi (Gün)" },
-    { value: "15-45", label: "Destek Süresi (Gün)" },
-    { value: "6", label: "Hizmet Tipi" },
-    { value: "14", label: "Hazır Paket" },
+    {
+      value: "3-112",
+      label: "Teslim Süresi (Gün)",
+      hint: "Tüm hizmet kategorilerindeki paketlerin tahmini teslim aralığı. Kapsam netleştikten sonra kesin takvim paylaşılır.",
+    },
+    {
+      value: "15-45",
+      label: "Destek Süresi (Gün)",
+      hint: "Yayın sonrası teknik destek, revizyon ve küçük düzenlemeler için ayrılan süre aralığı.",
+    },
+    {
+      value: "6",
+      label: "Hizmet Tipi",
+      hint: "Web sitesi, uygulama, yenileme, SEO, teknik denetim ve bakım dahil altı farklı hizmet kategorisi.",
+    },
+    {
+      value: "14",
+      label: "Hazır Paket",
+      hint: "Altı kategoride sunulan toplam hazır paket sayısı. Her paket farklı kapsam ve ölçek hedefler.",
+    },
   ],
   ...servicesPackagesTr,
 } as const;

@@ -2,6 +2,7 @@ interface ServicesPackagesIntroProps {
   title: string;
   p1: string;
   p2: string;
+  variant?: "full" | "compact";
   className?: string;
 }
 
@@ -9,8 +10,19 @@ export function ServicesPackagesIntro({
   title,
   p1,
   p2,
+  variant = "full",
   className,
 }: ServicesPackagesIntroProps) {
+  if (variant === "compact") {
+    return (
+      <div className={`mx-auto max-w-4xl text-center ${className ?? ""}`}>
+        <p className="mx-auto max-w-3xl text-sm leading-relaxed text-muted-foreground/80 md:max-w-4xl md:text-[0.9375rem] md:leading-[1.85]">
+          {p2}
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className={`mx-auto max-w-4xl text-center ${className ?? ""}`}>
       <h3 className="font-(family-name:--font-heading) text-lg font-bold tracking-tight text-brand-accent md:text-xl">

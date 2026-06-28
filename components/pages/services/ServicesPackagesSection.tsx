@@ -6,10 +6,12 @@ import type { PackageCategory } from "./packages-config";
 
 interface ServicesPackagesSectionProps {
   className?: string;
+  lockedCategory?: PackageCategory;
 }
 
 export async function ServicesPackagesSection({
   className,
+  lockedCategory,
 }: ServicesPackagesSectionProps) {
   const t = await getTranslations("servicesPage");
 
@@ -34,6 +36,47 @@ export async function ServicesPackagesSection({
     { id: "maintenance", label: t("tabMaintenance") },
   ];
 
+  const activeCategory = lockedCategory ?? "web";
+  const activeIntro = {
+    web: {
+      title: t("webIntroTitle"),
+      p1: t("webIntroP1"),
+      p2: t("webIntroP2"),
+    },
+    refresh: {
+      title: t("refreshIntroTitle"),
+      p1: t("refreshIntroP1"),
+      p2: t("refreshIntroP2"),
+    },
+    app: {
+      title: t("appIntroTitle"),
+      p1: t("appIntroP1"),
+      p2: t("appIntroP2"),
+    },
+    seo: {
+      title: t("seoIntroTitle"),
+      p1: t("seoIntroP1"),
+      p2: t("seoIntroP2"),
+    },
+    audit: {
+      title: t("auditIntroTitle"),
+      p1: t("auditIntroP1"),
+      p2: t("auditIntroP2"),
+    },
+    maintenance: {
+      title: t("maintenanceIntroTitle"),
+      p1: t("maintenanceIntroP1"),
+      p2: t("maintenanceIntroP2"),
+    },
+  }[activeCategory];
+
+  const sectionTitle = lockedCategory
+    ? `${tabs.find((tab) => tab.id === lockedCategory)?.label ?? ""} ${t("packagesTitleSuffix")}`
+    : t("packagesTitle");
+  const sectionSubtitle = lockedCategory
+    ? activeIntro.p1
+    : t("packagesSubtitle");
+
   return (
     <section
       id="services-packages"
@@ -47,15 +90,16 @@ export async function ServicesPackagesSection({
       <SiteContainer className="relative min-w-0">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-brand-accent md:text-4xl lg:text-[2.75rem] lg:leading-tight">
-            {t("packagesTitle")}
+            {sectionTitle}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:max-w-3xl md:text-base lg:max-w-4xl">
-            {t("packagesSubtitle")}
+            {sectionSubtitle}
           </p>
         </div>
 
         <ServicesPackagesPanel
-          className="mt-12 md:mt-16"
+          className={lockedCategory ? "mt-3 md:mt-6" : "mt-12 md:mt-16"}
+          lockedCategory={lockedCategory}
           labels={{
             tabs,
             tierTemel: t("tierTemel"),
