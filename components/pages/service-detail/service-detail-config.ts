@@ -1,64 +1,70 @@
-import type { ProjectSlug } from "@/components/sections/projects/project-items";
+import type { PackageCategory } from "@/components/pages/services/packages-config";
 import type { ServiceSlug } from "@/components/sections/services/service-items";
+import {
+  bakimVeDestekTechCategories,
+  flattenTechCategories,
+  seoHizmetleriTechCategories,
+  teknikDenetimTechCategories,
+  uygulamaGelistirmeTechCategories,
+  webSitesiTechCategories,
+} from "./service-tech-categories";
 
-export const serviceTechStacks: Record<ServiceSlug, string[]> = {
-  "web-sitesi": [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Prisma",
-    "MySQL",
-    "Vercel",
-  ],
-  "web-sitesi-yenileme": [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Prisma",
-    "MySQL",
-    "Vercel",
-  ],
-  uygulama: [
-    "React Native",
-    "Expo",
-    "TypeScript",
-    "Node.js",
-    "REST API",
-    "PostgreSQL",
-    "Vercel",
-  ],
-  "seo-hizmetleri": [
-    "Next.js",
-    "Google Analytics",
-    "Google Search",
-    "TypeScript",
-    "Vercel",
-  ],
-  "teknik-denetim": [
-    "Lighthouse",
-    "Google Search Console",
-    "Next.js",
-    "TypeScript",
-    "GitHub",
-    "Vercel",
-  ],
-  "bakim-ve-destek": [
-    "Next.js",
-    "Node.js",
-    "TypeScript",
-    "Vercel",
-    "GitHub",
-    "PostgreSQL",
-  ],
+export const servicePackageCategories: Record<ServiceSlug, PackageCategory> = {
+  "web-sitesi-gelistirme": "web",
+  "web-sitesi-yenileme": "refresh",
+  "uygulama-gelistirme": "app",
+  "seo-hizmetleri": "seo",
+  "teknik-denetim": "audit",
+  "bakim-ve-destek": "maintenance",
 };
 
-export const serviceRelatedProjects: Record<ServiceSlug, ProjectSlug[]> = {
-  "web-sitesi": ["uzman-klinik-psikolog", "fablessi", "yazici-ticaret"],
-  "web-sitesi-yenileme": ["uzman-klinik-psikolog", "fablessi", "yazici-ticaret"],
-  uygulama: ["iqfinansai"],
-  "seo-hizmetleri": ["uzman-klinik-psikolog", "yazici-ticaret"],
-  "teknik-denetim": ["iqfinansai", "uzman-klinik-psikolog", "fablessi", "yazici-ticaret"],
-  "bakim-ve-destek": ["fablessi", "iqfinansai"],
+export const serviceHeroStats: Record<
+  ServiceSlug,
+  { delivery: string; support: string; tiers: string; revisions: string }
+> = {
+  "web-sitesi-gelistirme": {
+    delivery: "14-84",
+    support: "15-45",
+    tiers: "3",
+    revisions: "2-10",
+  },
+  "web-sitesi-yenileme": {
+    delivery: "7-49",
+    support: "15-45",
+    tiers: "3",
+    revisions: "2-8",
+  },
+  "uygulama-gelistirme": {
+    delivery: "21-120",
+    support: "15-45",
+    tiers: "3",
+    revisions: "2-8",
+  },
+  "seo-hizmetleri": {
+    delivery: "7-30",
+    support: "15-45",
+    tiers: "3",
+    revisions: "2-6",
+  },
+  "teknik-denetim": {
+    delivery: "3-10",
+    support: "15-45",
+    tiers: "3",
+    revisions: "2-6",
+  },
+  "bakim-ve-destek": {
+    delivery: "7-14",
+    support: "15-45",
+    tiers: "3",
+    revisions: "2-10",
+  },
+};
+
+export const serviceTechStacks: Record<ServiceSlug, string[]> = {
+  "web-sitesi-gelistirme": flattenTechCategories(webSitesiTechCategories),
+  "web-sitesi-yenileme": flattenTechCategories(webSitesiTechCategories),
+  "uygulama-gelistirme": flattenTechCategories(uygulamaGelistirmeTechCategories),
+  "seo-hizmetleri": flattenTechCategories(seoHizmetleriTechCategories),
+  "teknik-denetim": flattenTechCategories(teknikDenetimTechCategories),
+  "bakim-ve-destek": flattenTechCategories(bakimVeDestekTechCategories),
 };

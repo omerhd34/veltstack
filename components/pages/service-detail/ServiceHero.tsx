@@ -1,17 +1,16 @@
-import type { IconType } from "react-icons";
-import { LuClock, LuMessageCircle } from "react-icons/lu";
-import { Link } from "@/i18n/navigation";
-import { Button } from "@/components/ui/shadcn";
+import { LuChevronDown } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
+import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
 
 interface ServiceHeroProps {
   badge: string;
   title: string;
   subtitle: string;
-  deliveryTime: string;
-  deliveryLabel: string;
-  ctaButton: string;
-  icon: IconType;
+  subtitleSecondary: string;
+  imageAlt: string;
+  scrollLabel: string;
+  stats: HeroStat[];
   className?: string;
 }
 
@@ -19,71 +18,66 @@ export function ServiceHero({
   badge,
   title,
   subtitle,
-  deliveryTime,
-  deliveryLabel,
-  ctaButton,
-  icon: Icon,
+  subtitleSecondary,
+  imageAlt,
+  scrollLabel,
+  stats,
   className,
 }: ServiceHeroProps) {
   return (
     <section
-      className={`relative overflow-hidden bg-[#071510] py-24 text-white md:py-32 ${className ?? ""}`}
+      className={`relative flex min-h-[calc(100svh-4rem)] flex-col overflow-hidden bg-[#050f0c] text-white ${className ?? ""}`}
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-40 top-0 size-[500px] rounded-full bg-emerald-600/8 blur-[100px]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,rgb(58_107_82/0.14),transparent)]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-40 bottom-0 size-[400px] rounded-full bg-emerald-800/6 blur-[80px]"
+        className="pointer-events-none absolute -right-20 top-20 size-[420px] rounded-full bg-emerald-600/6 blur-[120px]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-20 bottom-20 size-[360px] rounded-full bg-emerald-800/5 blur-[100px]"
       />
 
-      <SiteContainer className="relative">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
+      <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col py-8 sm:py-10">
+        <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+          <div className="min-w-0">
+            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/8 px-4 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-emerald-300/90">
               {badge}
             </span>
 
-            <h1 className="mt-8 font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight md:text-5xl lg:text-[3.25rem]">
+            <h1 className="mt-6 font-(family-name:--font-heading) text-[1.875rem] font-bold leading-[1.08] tracking-tight sm:mt-8 sm:text-4xl lg:text-[2.875rem]">
               {title}
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-emerald-50/70">
+            <p className="mt-4 max-w-xl text-sm leading-[1.85] text-emerald-50/75 sm:mt-6 sm:text-base lg:text-lg">
               {subtitle}
             </p>
-
-            <div className="mt-8 flex flex-wrap items-center gap-6">
-              <div className="flex items-center gap-2 text-sm text-emerald-200/80">
-                <LuClock className="size-4 text-emerald-400" aria-hidden />
-                <span className="font-medium text-emerald-100">{deliveryLabel}:</span>
-                <span>{deliveryTime}</span>
-              </div>
-            </div>
-
-            <div className="mt-10">
-              <Button
-                size="lg"
-                className="h-12 gap-2 rounded-full bg-brand-accent px-8 text-base font-semibold text-white hover:bg-brand-accent/85"
-                asChild
-              >
-                <Link href="/iletisim">
-                  <LuMessageCircle className="size-4" aria-hidden />
-                  {ctaButton}
-                </Link>
-              </Button>
-            </div>
+            <p className="mt-3 max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:text-[0.9375rem]">
+              {subtitleSecondary}
+            </p>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative flex size-48 items-center justify-center rounded-3xl border border-emerald-800/50 bg-emerald-950/60 shadow-2xl shadow-black/30 md:size-56">
-              <div
-                aria-hidden
-                className="absolute inset-0 rounded-3xl bg-linear-to-br from-emerald-500/10 to-transparent"
-              />
-              <Icon className="relative size-20 text-emerald-300 md:size-24" strokeWidth={1.25} />
-            </div>
-          </div>
+          <ServicesPageHeroImage
+            alt={imageAlt}
+            className="mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end"
+          />
+        </div>
+
+        <div className="mt-auto shrink-0 border-t border-emerald-900/35 pt-6 sm:pt-8">
+          <HeroStatsCards stats={stats} />
+
+          <a
+            href="#service-features"
+            className="mt-6 flex flex-col items-center gap-1.5 text-emerald-300/50 transition-colors hover:text-emerald-300/80 sm:mt-8"
+          >
+            <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em]">
+              {scrollLabel}
+            </span>
+            <LuChevronDown className="size-4 animate-bounce" aria-hidden />
+          </a>
         </div>
       </SiteContainer>
     </section>

@@ -6,7 +6,7 @@ import {
   getServiceStaticSlugs,
   isServiceSlug,
 } from "@/components/pages/service-detail";
-import { BreadcrumbSchema, FAQSchema, ServiceSchema } from "@/components/seo";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/seo";
 import { getPathname } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 
@@ -55,7 +55,6 @@ export default async function ServiceDetailPage({
   if (!isServiceSlug(slug)) notFound();
 
   const t = await getTranslations("serviceDetails");
-  const faq = t.raw(`${slug}.faq`) as { question: string; answer: string }[];
   const serviceUrl = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
     href: `/hizmetler/${slug}`,
@@ -79,7 +78,6 @@ export default async function ServiceDetailPage({
         description={t(`${slug}.heroSubtitle`)}
         url={serviceUrl}
       />
-      <FAQSchema items={faq} />
       <ServiceDetailView slug={slug} />
     </>
   );

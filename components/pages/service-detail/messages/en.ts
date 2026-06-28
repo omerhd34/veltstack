@@ -1,85 +1,111 @@
+import {
+  bakimVeDestekProcessEn,
+  seoHizmetleriProcessEn,
+  teknikDenetimProcessEn,
+  uygulamaGelistirmeProcessEn,
+  webSitesiGelistirmeProcessEn,
+  webSitesiYenilemeProcessEn,
+} from "../service-process-items/en";
+
 export const serviceDetailsEn = {
-  featuresTitle: "What I Offer",
+  featuresTitle: "What We Offer",
   featuresBadge: "Features",
   featuresSubtitle:
-    "I define scope upfront and manage delivery through measurable milestones.",
+    "I define scope upfront and manage delivery through measurable milestones. You always know what will be delivered and when, with transparent communication throughout.",
   processTitle: "How We Work",
-  processSubtitle: "A transparent, predictable flow from discovery to launch.",
-  techTitle: "Technologies I Use",
-  techSubtitle: "Modern, scalable tools selected for your project needs.",
-  projectsTitle: "Related Projects",
-  projectsSubtitle: "Sample work delivered under this service category.",
-  faqTitle: "Frequently Asked Questions",
-  faqSubtitle: "Common questions before you make a decision.",
-  ctaTitle: "Let's discuss your project",
-  ctaSubtitle:
-    "In a free intro call, I'll map your needs and outline a clear roadmap.",
-  ctaButton: "Get a Quote",
-  ctaNote: "Response within 24h - Free intro call",
+  processSubtitle:
+    "At every stage from discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect. Design, development, testing and go-live follow a predictable plan, with regular updates throughout the project.",
+  techTitle: "Technologies We Use",
+  techSubtitle:
+    "Modern, scalable tools selected for your project needs. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
+  techCategoryFrontend: "Frontend",
+  techCategoryMobile: "Mobile Development",
+  techCategoryUi: "UI Libraries",
+  techCategoryBackend: "Backend",
+  techCategoryDatabase: "Database",
+  techCategoryDevops: "DevOps & Hosting",
+  techCategoryAnalytics: "Analytics & SEO",
+  techCategoryPayment: "Payments",
+  techCategoryStore: "Store & Publishing",
+  techCategoryTools: "Tools & Integrations",
   deliveryLabel: "Delivery Time",
+  heroImageAlt: "Digital development workspace",
+  statDelivery: "Delivery Time (Days)",
+  statSupport: "Support Period (Days)",
+  statTiers: "Package Tiers",
+  statRevisions: "Revision Count",
+  statDeliveryHint:
+    "Estimated delivery range based on project scope. A clear timeline is shared after the discovery call.",
+  statSupportHint:
+    "Post-launch support window for technical assistance, revisions and minor updates.",
+  statTiersHint:
+    "Three clear scope levels — Basic, Standard and Pro — so you can compare options easily.",
+  statRevisionsHint:
+    "Design and content revisions included in your chosen package. Send your feedback as a single list — each revision covers those items.",
+  featureDetailLabel: "Feature detail",
   breadcrumbHome: "Home",
   breadcrumbServices: "Services",
-  "web-sitesi": {
+  "web-sitesi-gelistirme": {
     metaTitle: "Website Development",
     metaDesc:
       "End-to-end web development for corporate, e-commerce and portfolio projects. Fast, SEO-friendly and scalable solutions with Next.js.",
     heroBadge: "Web Development",
     heroTitle: "Website Development",
     heroSubtitle:
-      "I build every kind of web project end to end, from corporate sites and e-commerce to portfolios and landing pages.",
-    deliveryTime: "1–8 weeks",
+      "I build every kind of web project end to end, from corporate sites and e-commerce to portfolios and promotional pages.",
+    heroSubtitleSecondary:
+      "With a modern stack tailored to your project, SEO-ready architecture and mobile-first design, I deliver fast, scalable solutions that represent your brand with confidence online.",
+    deliveryTime: "14-84 days",
+    processSubtitle:
+      "At every stage from discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect. Design, development, testing and go-live follow a predictable plan, with regular updates throughout the project.",
+    techSubtitle:
+      "Modern, scalable tools selected for your project needs. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
+    processItems: webSitesiGelistirmeProcessEn,
     features: [
       {
         title: "SEO Foundation",
         description:
-          "Server-side rendering, meta tags, sitemap and structured data ready for search engines.",
+          "Your site ships search-ready with SSR, meta tags, sitemap and structured data. Open Graph, canonical URLs and robots configuration prevent indexing issues from day one. Separate meta templates are prepared for blog, service and product pages. Google Search Console integration tracks crawl status before go-live. Title and description copy is optimized so you stand out more in search results.",
       },
       {
         title: "E-Commerce & Payments",
         description:
-          "Product catalog, secure payment integration, cart and order management.",
+          "Product catalog, cart, order management and secure checkout flows built end to end. Mobile-friendly, conversion-focused sales with gateways such as PayTR, Iyzico and Stripe. Inventory, shipping and order status can be tracked from a single panel. The checkout page is protected with SSL and 3D Secure; PCI-compliant infrastructure is preferred. Order confirmation emails and simple reporting screens make day-to-day operations easier.",
       },
       {
         title: "High Performance",
         description:
-          "Strong Lighthouse scores and fast load times with Next.js and optimized assets.",
+          "Next.js, image optimization and CDN target strong Lighthouse scores and fast load times. Core Web Vitals are defined upfront and monitored throughout the project. Lazy loading, font optimization and unnecessary script cleanup keep page speed high. Critical CSS and resource prioritization load in the right order. A final performance pass before launch keeps speed reliable in production.",
       },
       {
         title: "Responsive Design",
         description:
-          "Pixel-perfect experience on every screen size with touch-friendly mobile layouts.",
+          "A consistent, touch-friendly experience across mobile, tablet and desktop. Typography, spacing and interactions are tuned for every screen size. Navigation, forms and CTA buttons are comfortable to use on small screens. Hamburger menus and touch target sizes follow mobile standards. Real device and browser testing verifies compatibility before launch.",
       },
       {
         title: "Multilingual Support",
         description:
-          "Multi-language setup including Turkish and English based on your needs.",
+          "Infrastructure for Turkish, English and additional languages based on your needs. URL structure, meta tags and hreflang tags stay SEO-friendly per language. Language-specific sitemaps and content management support international reach. Default language and alternate redirects are defined clearly. When you add a new language, an extensible architecture keeps the existing setup intact.",
       },
       {
-        title: "Post-Launch Support",
+        title: "Dark & Light Mode",
         description:
-          "Technical support, security updates and small improvements after go-live.",
-      },
-    ],
-    faq: [
-      {
-        question: "How long does a website take?",
-        answer:
-          "Simple sites take 1–2 weeks; corporate and e-commerce projects typically take 4–8 weeks. I share a clear timeline after the discovery call.",
+          "Visitors can choose dark or light theme, or follow the system preference automatically. Contrast and brand consistency hold in both modes; the choice is remembered in the browser. Color tokens are tuned separately for each theme. Theme switches use smooth transitions for a polished feel. WCAG contrast standards are respected in both modes for an accessible experience.",
       },
       {
-        question: "Is hosting and domain included?",
-        answer:
-          "I set up Vercel deployment. Domain and hosting costs are separate; I provide setup guidance.",
+        title: "Admin Panel & CMS",
+        description:
+          "Manage blog posts, services and page content without code through a dedicated admin panel. The interface is built in whichever language you need; WYSIWYG editor, image uploads and draft-to-publish flows are standard. Role-based access lets you assign different permissions to team members. Content changes can go live instantly or on a schedule. The panel is mobile-friendly so you can update on the go.",
       },
       {
-        question: "Can you redesign my existing site?",
-        answer:
-          "Yes. I can migrate to modern infrastructure while keeping your content or rebuild from scratch.",
+        title: "Security & SSL",
+        description:
+          "HTTPS, secure header configuration and modern authentication standards built in from day one. Rate limiting and basic bot protection on form submissions. Dependency security scans run regularly during development. Admin and API endpoints are protected with an authorization layer. A pre-launch security checklist is completed before going live.",
       },
       {
-        question: "Is mobile shopping optimized?",
-        answer:
-          "Yes. All flows are mobile-first with touch-friendly cart and checkout steps.",
+        title: "Analytics & Form Tracking",
+        description:
+          "Google Analytics, Search Console and conversion events integrated into the project. Contact forms go live with spam protection and instant email notifications. Track which pages get traffic and how many forms are submitted. GTM or direct integration is planned based on your needs. A basic performance report in the first month verifies that data collection works correctly.",
       },
     ],
   },
@@ -91,63 +117,48 @@ export const serviceDetailsEn = {
     heroTitle: "Web & App Redesign",
     heroSubtitle:
       "We transform outdated, slow or mobile-unfriendly websites and apps into modern, fast and conversion-focused experiences.",
-    deliveryTime: "2–6 weeks",
+    heroSubtitleSecondary:
+      "We preserve your existing content and migrate to new design and infrastructure without putting your SEO rankings at risk.",
+    deliveryTime: "7-49 days",
+    processSubtitle:
+      "We renew your existing site or app through measurable steps from audit to go-live. Migration planning, design approval and content migration are managed with transparent communication to minimize SEO loss risk.",
+    techSubtitle:
+      "Modern, scalable tools we use when moving your existing site to new infrastructure.",
+    processItems: webSitesiYenilemeProcessEn,
     features: [
       {
         title: "Current Site Audit",
         description:
-          "Comprehensive review of technical infrastructure, performance, SEO and user experience with a prioritized action plan.",
+          "We comprehensively audit your existing site across technical infrastructure, performance, SEO and user experience. Issues are ranked by impact and urgency into a prioritized action plan. Renewal scope is clarified from this analysis so unnecessary work is ruled out early.",
       },
       {
         title: "Modern Design & UX",
         description:
-          "Up-to-date interface aligned with your brand, clear information architecture and conversion-focused page flows.",
+          "We design an up-to-date interface, clear information architecture and conversion-focused page flows aligned with your brand. A consistent experience is targeted on mobile and desktop; typography and component language stay in line with your identity. Development does not begin until you approve the design direction.",
       },
       {
         title: "Performance Improvements",
         description:
-          "Infrastructure upgrade targeting fast load times, optimized assets and strong Lighthouse scores.",
+          "We upgrade infrastructure targeting fast load times, optimized assets and strong Lighthouse scores. Core Web Vitals are monitored throughout the project; unnecessary scripts and heavy resources are removed. A final performance pass is completed before go-live.",
       },
       {
         title: "SEO Protection & Growth",
         description:
-          "Preserve existing rankings through URL structure, redirects and meta data while improving visibility.",
+          "We preserve your existing rankings while improving visibility through URL structure, 301 redirects and meta data. Sitemap, robots and structured data are verified before launch. Indexing is tracked via Search Console throughout the transition.",
       },
       {
         title: "Content Migration",
         description:
-          "Safe, structured transfer of existing text, images and page content into the new setup.",
+          "We safely and systematically transfer existing text, images and page content into the new structure. Missing, broken or mismatched content is identified and corrected. Page-by-page checklist validation runs after migration.",
       },
       {
         title: "Post-Launch Support",
         description:
-          "Technical support, small fixes and monitoring throughout the transition after go-live.",
-      },
-    ],
-    faq: [
-      {
-        question: "Will my existing content be preserved?",
-        answer:
-          "Yes. We migrate your current content into the new design and infrastructure wherever possible; content refinement can be planned together when needed.",
-      },
-      {
-        question: "How long does a web and app redesign take?",
-        answer:
-          "Typically 2–6 weeks depending on site size. We share a clear timeline after the discovery call.",
-      },
-      {
-        question: "Will my SEO rankings be affected?",
-        answer:
-          "With proper redirects and technical SEO, we aim to preserve existing rankings; in most projects performance gains also support organic visibility.",
-      },
-      {
-        question: "Which platforms can you migrate from?",
-        answer:
-          "We can migrate from WordPress, Wix, legacy custom software or static sites to a modern Next.js-based stack.",
+          "We provide technical support, small fixes and monitoring throughout the transition after go-live. Potential issues in the first week get fast response; redirects and form flows are watched closely. The goal is reliable operation for the full support period.",
       },
     ],
   },
-  "uygulama": {
+  "uygulama-gelistirme": {
     metaTitle: "Mobile App Development",
     metaDesc:
       "High-performance mobile apps for iOS and Android with React Native and Expo.",
@@ -155,58 +166,44 @@ export const serviceDetailsEn = {
     heroTitle: "Mobile App Development",
     heroSubtitle:
       "User-friendly, scalable mobile apps that run on iOS and Android from a single codebase.",
-    deliveryTime: "6–12 weeks",
+    heroSubtitleSecondary:
+      "With React Native and Expo, I manage fast delivery, smooth store publishing and backend integrations under one roof.",
+    deliveryTime: "21-120 days",
+    processSubtitle:
+      "From app concept to store launch, we clarify what will be done and what deliverable you can expect at each stage. Design, development, testing and publishing follow a predictable plan.",
+    techSubtitle:
+      "Modern, scalable tools we use in mobile app projects. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
+    processItems: uygulamaGelistirmeProcessEn,
     features: [
       {
         title: "Cross-Platform",
         description:
-          "Efficient development for iOS and Android with React Native and Expo.",
+          "We build efficiently for iOS and Android from a single codebase with React Native and Expo. Platform-specific behavior is supported through native modules; screen sizes and interactions are optimized for every device. This enables fast iteration on one track instead of two separate teams and budgets.",
       },
       {
         title: "API Integration",
         description:
-          "Secure backend connections, authentication and real-time data flows.",
+          "We set up secure backend connections, authentication and real-time data flows end to end. REST APIs, token management and third-party service integrations are structured to fit your project architecture. Offline scenarios and error handling are addressed without breaking the user experience.",
       },
       {
         title: "User Experience",
         description:
-          "Intuitive navigation, accessibility and platform-standard interfaces.",
+          "We design intuitive navigation, accessibility and interfaces aligned with iOS and Android platform standards. Typography, spacing and interactions stay consistent with your brand. Form flows, feedback and onboarding steps are tested against real user scenarios.",
       },
       {
         title: "Performance Optimization",
         description:
-          "Fast launch, smooth animations and efficient memory usage.",
+          "We target fast cold starts, smooth animations and low memory usage. Image caching, list performance and unnecessary re-renders are monitored throughout the project. Real-device testing verifies performance before store approval.",
       },
       {
         title: "Store Publishing",
         description:
-          "Technical preparation and build support for App Store and Google Play.",
+          "We provide technical preparation, builds and store metadata support for App Store and Google Play publishing. Icons, screenshot sizes and release notes are prepared to platform guidelines. A pre-launch checklist reduces rejection risk.",
       },
       {
         title: "Maintenance & Updates",
-        description: "OS compatibility, bug fixes and new feature iterations.",
-      },
-    ],
-    faq: [
-      {
-        question: "Do you use native or React Native?",
-        answer:
-          "I prefer React Native + Expo for fast delivery and dual-platform support. Native modules can be added when needed.",
-      },
-      {
-        question: "Is backend development included?",
-        answer:
-          "Yes. API, database and admin needs can be planned within the same project scope.",
-      },
-      {
-        question: "Do you help with app store approval?",
-        answer:
-          "I provide technical support for builds, signing and store submission steps.",
-      },
-      {
-        question: "Can you port my web app to mobile?",
-        answer:
-          "I can evaluate your existing API and business logic and build a tailored mobile experience.",
+        description:
+          "OS compatibility, bug fixes and new feature iterations run on a regular plan. Crash reports are monitored and critical issues get priority response. Your app keeps evolving sustainably after go-live.",
       },
     ],
   },
@@ -218,7 +215,14 @@ export const serviceDetailsEn = {
     heroTitle: "SEO Services",
     heroSubtitle:
       "I improve your search visibility from technical infrastructure to content strategy.",
-    deliveryTime: "Ongoing / monthly",
+    heroSubtitleSecondary:
+      "From site audits and keyword planning to on-page optimization and regular reporting, I provide end-to-end SEO support for sustainable organic growth.",
+    deliveryTime: "7-30 days",
+    processSubtitle:
+      "We run SEO work through measurable steps from site analysis to continuous improvement. We share what is done and expected outcomes transparently at each stage.",
+    techSubtitle:
+      "Tools we use for analysis, monitoring and optimization in SEO projects.",
+    processItems: seoHizmetleriProcessEn,
     features: [
       {
         title: "Technical SEO Audit",
@@ -251,28 +255,6 @@ export const serviceDetailsEn = {
           "Identify opportunity areas by analyzing competitor visibility in your sector.",
       },
     ],
-    faq: [
-      {
-        question: "How soon will I see SEO results?",
-        answer:
-          "Technical improvements may show impact within weeks; organic ranking gains typically become clear in 3–6 months.",
-      },
-      {
-        question: "Do you only do technical SEO?",
-        answer:
-          "No. Technical SEO, content strategy and on-page optimization are handled together.",
-      },
-      {
-        question: "Can you work on my existing site?",
-        answer:
-          "Yes. A comprehensive audit comes first, followed by a prioritized action plan.",
-      },
-      {
-        question: "Is monthly reporting included?",
-        answer:
-          "Yes. Traffic, rankings and completed work are shared in regular reports.",
-      },
-    ],
   },
   "teknik-denetim": {
     metaTitle: "Technical Audit",
@@ -282,7 +264,14 @@ export const serviceDetailsEn = {
     heroTitle: "Technical Audit",
     heroSubtitle:
       "We analyze your existing digital assets for performance, security, SEO and code quality, then deliver a prioritized action plan.",
-    deliveryTime: "3–7 days",
+    heroSubtitleSecondary:
+      "From Lighthouse scores and accessibility to infrastructure risks and technical debt, we produce a comprehensive audit report with a clear roadmap.",
+    deliveryTime: "3-10 days",
+    processSubtitle:
+      "We manage the audit process through clear steps from briefing to action plan. Findings are reported by priority with actionable recommendations.",
+    techSubtitle:
+      "Tools we use for performance, security and SEO analysis in technical audits. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
+    processItems: teknikDenetimProcessEn,
     features: [
       {
         title: "Performance Analysis",
@@ -315,28 +304,6 @@ export const serviceDetailsEn = {
           "Prioritized findings, impact analysis and practical improvement recommendations.",
       },
     ],
-    faq: [
-      {
-        question: "How long does a technical audit take?",
-        answer:
-          "Typically 3–7 business days depending on scope. We share a clear timeline after the discovery call.",
-      },
-      {
-        question: "Do you need access to my code?",
-        answer:
-          "A live site may be enough for a website audit; repository or panel access is requested for code and infrastructure review.",
-      },
-      {
-        question: "Do you only deliver a report?",
-        answer:
-          "Yes, the audit output is a detailed report with a priority list. Implementation of findings can be planned separately if needed.",
-      },
-      {
-        question: "Which technologies do you audit?",
-        answer:
-          "We can audit Next.js, React, WordPress, mobile apps and Node.js-based projects.",
-      },
-    ],
   },
   "bakim-ve-destek": {
     metaTitle: "Website Maintenance & Support",
@@ -346,7 +313,14 @@ export const serviceDetailsEn = {
     heroTitle: "Maintenance & Support",
     heroSubtitle:
       "I stay by your side after launch. Updates, backups, security and technical support all under one roof.",
-    deliveryTime: "Ongoing / monthly",
+    heroSubtitleSecondary:
+      "Continuous monitoring, rapid response and regular reporting for your website, mobile app and backend infrastructure.",
+    deliveryTime: "7-14 days",
+    processSubtitle:
+      "We manage maintenance from project handover to monthly reporting through regular, predictable steps. Updates, monitoring and support requests follow a clear schedule.",
+    techSubtitle:
+      "Infrastructure and monitoring tools we use in maintenance and support services. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
+    processItems: bakimVeDestekProcessEn,
     features: [
       {
         title: "Updates & Patches",
@@ -377,28 +351,6 @@ export const serviceDetailsEn = {
         title: "Reporting",
         description:
           "Monthly status report covering completed work, system health and recommendations.",
-      },
-    ],
-    faq: [
-      {
-        question: "What does a maintenance plan cover?",
-        answer:
-          "Updates, backups, security scans, technical support and small content changes. Details are clarified when selecting a package tier.",
-      },
-      {
-        question: "How fast is the response in an emergency?",
-        answer:
-          "The Pro tier includes a 24-hour SLA guarantee. Basic and Standard tiers receive a same-business-day response.",
-      },
-      {
-        question: "Can I get maintenance for my existing site or app?",
-        answer:
-          "Yes. A short technical review is done first, then a maintenance plan is started based on your needs.",
-      },
-      {
-        question: "Monthly or annual contract?",
-        answer:
-          "Both options are available. Annual plans come with discounted pricing.",
       },
     ],
   },

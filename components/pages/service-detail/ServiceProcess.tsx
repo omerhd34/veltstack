@@ -1,15 +1,22 @@
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { ProcessTimeline } from "@/components/sections/process/ProcessTimeline";
 
+interface ProcessStep {
+  title: string;
+  description: string;
+}
+
 interface ServiceProcessProps {
   title: string;
   subtitle: string;
+  steps: ProcessStep[];
   className?: string;
 }
 
 export function ServiceProcess({
   title,
   subtitle,
+  steps,
   className,
 }: ServiceProcessProps) {
   return (
@@ -31,7 +38,11 @@ export function ServiceProcess({
           </p>
         </div>
 
-        <ProcessTimeline className="mt-14 md:mt-16" variant="dark" />
+        <ProcessTimeline
+          className="mt-14 md:mt-16"
+          variant="dark"
+          steps={steps}
+        />
       </SiteContainer>
     </section>
   );
