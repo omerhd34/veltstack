@@ -26,3 +26,4 @@ export {
   TooltipContent,
   TooltipProvider,
 } from "./tooltip";
+export { HoverCard, HoverCardTrigger, HoverCardContent } from "./hover-card";
