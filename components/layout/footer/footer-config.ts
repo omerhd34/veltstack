@@ -1,5 +1,5 @@
-import { navServiceItems } from "@/components/layout/navbar/nav-services";
 import { navProjectItems } from "@/components/layout/navbar/nav-projects";
+import type { NavServiceKey } from "@/components/layout/navbar/nav-services";
 import { serviceItems } from "@/components/sections/services/service-items";
 import { projectItems } from "@/components/sections/projects/project-items";
 import type { IconType } from "react-icons";
@@ -12,9 +12,10 @@ import {
   LuWrench,
 } from "react-icons/lu";
 
-export const footerServiceItems = navServiceItems.map((item) => ({
-  ...item,
-  icon: serviceItems.find((service) => service.href === item.href)!.icon,
+export const footerServiceItems = serviceItems.map((service) => ({
+  href: service.href,
+  navKey: service.navDescKey.replace(/Desc$/, "") as NavServiceKey,
+  icon: service.icon,
 }));
 
 export const footerProjectItems = navProjectItems.map((item) => ({

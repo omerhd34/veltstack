@@ -9,9 +9,9 @@ import {
 } from "react-icons/lu";
 
 export const serviceSlugs = [
-  "web-sitesi",
+  "web-sitesi-gelistirme",
   "web-sitesi-yenileme",
-  "uygulama",
+  "uygulama-gelistirme",
   "seo-hizmetleri",
   "teknik-denetim",
   "bakim-ve-destek",
@@ -31,8 +31,8 @@ export interface ServiceItemConfig {
 
 export const serviceItems: ServiceItemConfig[] = [
   {
-    slug: "web-sitesi",
-    href: "/hizmetler/web-sitesi",
+    slug: "web-sitesi-gelistirme",
+    href: "/hizmetler/web-sitesi-gelistirme",
     titleKey: "servicesWebTitle",
     descKey: "servicesWebDesc",
     navDescKey: "serviceWebDesc",
@@ -49,8 +49,8 @@ export const serviceItems: ServiceItemConfig[] = [
     icon: LuRefreshCw,
   },
   {
-    slug: "uygulama",
-    href: "/hizmetler/uygulama",
+    slug: "uygulama-gelistirme",
+    href: "/hizmetler/uygulama-gelistirme",
     titleKey: "servicesAppTitle",
     descKey: "servicesAppDesc",
     navDescKey: "serviceAppDesc",
