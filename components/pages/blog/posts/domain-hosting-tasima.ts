@@ -43,10 +43,10 @@ export const blogPostEntry: BlogPostEntry = {
 </colgroup>
 <thead><tr><th>Tür</th><th>Ne değişir?</th><th>Tipik süre</th></tr></thead>
 <tbody>
-<tr><td>Sadece hosting taşıma</td><td>Site dosyaları ve veritabanı; domain aynı kalır</td><td>1–24 saat (DNS yayılımı)</td></tr>
-<tr><td>DNS yönlendirme</td><td>A/CNAME kayıtları yeni sunucuya işaret eder</td><td>15 dk – 48 saat</td></tr>
-<tr><td>Domain transfer</td><td>Registrar değişir; auth code gerekir</td><td>5–7 gün</td></tr>
-<tr><td>Platform taşıma (Vercel vb.)</td><td>Deploy ortamı değişir; DNS güncellenir</td><td>1–4 saat</td></tr>
+<tr><td>Sadece hosting taşıma</td><td>Site dosyaları ve veritabanı; domain aynı kalır</td><td>1-24 saat (DNS yayılımı)</td></tr>
+<tr><td>DNS yönlendirme</td><td>A/CNAME kayıtları yeni sunucuya işaret eder</td><td>15 dk - 48 saat</td></tr>
+<tr><td>Domain transfer</td><td>Registrar değişir; auth code gerekir</td><td>5-7 gün</td></tr>
+<tr><td>Platform taşıma (Vercel vb.)</td><td>Deploy ortamı değişir; DNS güncellenir</td><td>1-4 saat</td></tr>
 </tbody>
 </table>
 </div>
@@ -55,7 +55,7 @@ export const blogPostEntry: BlogPostEntry = {
 <ul class="blog-checklist">
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Tam yedek alın:</strong> Site dosyaları, veritabanı dump'ı ve e-posta ayarları.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Mevcut DNS kayıtlarını not edin:</strong> A, CNAME, MX, TXT kayıtlarının ekran görüntüsünü alın.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>TTL değerini düşürün:</strong> Taşımadan 24–48 saat önce TTL'yi 300–600 saniyeye indirin; yayılım hızlanır.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>TTL değerini düşürün:</strong> Taşımadan 24-48 saat önce TTL'yi 300-600 saniyeye indirin; yayılım hızlanır.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Düşük trafik saati seçin:</strong> Gece veya hafta sonu bakım penceresi planlayın.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>E-posta etkisini değerlendirin:</strong> MX kayıtları değişirse kurumsal e-posta kesilebilir.</span></div></li>
 </ul>
@@ -86,7 +86,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ol>
 
 <h2>Domain Transfer (Registrar Değişikliği)</h2>
-<p>Domain'i başka bir registrar'a taşımak farklı bir süreçtir. Mevcut firmadan <strong>EPP / auth code</strong> alınır, domain kilidi kaldırılır ve yeni firmada transfer başlatılır. Transfer sırasında nameserver'lar genelde değişmez; site çalışmaya devam eder. Ancak transfer süresi (5–7 gün) boyunca WHOIS bilgilerinde değişiklik yapılamayabilir.</p>
+<p>Domain'i başka bir registrar'a taşımak farklı bir süreçtir. Mevcut firmadan <strong>EPP / auth code</strong> alınır, domain kilidi kaldırılır ve yeni firmada transfer başlatılır. Transfer sırasında nameserver'lar genelde değişmez; site çalışmaya devam eder. Ancak transfer süresi (5-7 gün) boyunca WHOIS bilgilerinde değişiklik yapılamayabilir.</p>
 <p>Domain seçimi ve uzantı kararı için <a href="/blog/dogru-domain-secimi">Doğru Domain Seçimi</a> yazımıza bakabilirsiniz.</p>
 
 <h2>Vercel veya Bulut Platforma Taşıma</h2>
@@ -173,10 +173,10 @@ export const blogPostEntry: BlogPostEntry = {
 </colgroup>
 <thead><tr><th>Type</th><th>What changes</th><th>Typical duration</th></tr></thead>
 <tbody>
-<tr><td>Hosting only</td><td>Site files and database; domain stays the same</td><td>1–24 hours (DNS propagation)</td></tr>
-<tr><td>DNS update</td><td>A/CNAME records point to new server</td><td>15 min – 48 hours</td></tr>
-<tr><td>Domain transfer</td><td>Registrar changes; auth code required</td><td>5–7 days</td></tr>
-<tr><td>Platform move (Vercel etc.)</td><td>Deploy environment changes; DNS updated</td><td>1–4 hours</td></tr>
+<tr><td>Hosting only</td><td>Site files and database; domain stays the same</td><td>1-24 hours (DNS propagation)</td></tr>
+<tr><td>DNS update</td><td>A/CNAME records point to new server</td><td>15 min - 48 hours</td></tr>
+<tr><td>Domain transfer</td><td>Registrar changes; auth code required</td><td>5-7 days</td></tr>
+<tr><td>Platform move (Vercel etc.)</td><td>Deploy environment changes; DNS updated</td><td>1-4 hours</td></tr>
 </tbody>
 </table>
 </div>
@@ -185,7 +185,7 @@ export const blogPostEntry: BlogPostEntry = {
 <ul class="blog-checklist">
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Full backup:</strong> Site files, database dump and email settings.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Record current DNS:</strong> Screenshot A, CNAME, MX and TXT records.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Lower TTL:</strong> Set TTL to 300–600 seconds 24–48 hours before migration.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Lower TTL:</strong> Set TTL to 300-600 seconds 24-48 hours before migration.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Pick a low-traffic window:</strong> Plan maintenance at night or on weekends.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Assess email impact:</strong> Changing MX records can break corporate email.</span></div></li>
 </ul>
@@ -216,7 +216,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ol>
 
 <h2>Domain Transfer (Registrar Change)</h2>
-<p>Moving a domain to another registrar is a separate process. Get an <strong>EPP / auth code</strong> from the current provider, unlock the domain and start transfer at the new registrar. Nameservers usually stay the same during transfer; the site keeps running. WHOIS changes may be locked for 5–7 days while transfer completes.</p>
+<p>Moving a domain to another registrar is a separate process. Get an <strong>EPP / auth code</strong> from the current provider, unlock the domain and start transfer at the new registrar. Nameservers usually stay the same during transfer; the site keeps running. WHOIS changes may be locked for 5-7 days while transfer completes.</p>
 <p>See our <a href="/blog/dogru-domain-secimi">Choosing the Right Domain</a> article for naming and extension decisions.</p>
 
 <h2>Moving to Vercel or Cloud Platforms</h2>

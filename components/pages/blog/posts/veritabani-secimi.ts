@@ -80,7 +80,7 @@ export const blogPostEntry: BlogPostEntry = {
 
 <h2>Seçim Kriterleri</h2>
 <ul>
-<li><strong>Veri yapısı:</strong> Sipariş–ürün–kullanıcı gibi net ilişkiler varsa SQL genelde daha doğrudur.</li>
+<li><strong>Veri yapısı:</strong> Sipariş-ürün-kullanıcı gibi net ilişkiler varsa SQL genelde daha doğrudur.</li>
 <li><strong>Ölçek beklentisi:</strong> Başlangıçta küçük, ileride büyüyecek projelerde managed servis ve connection pooling planlayın.</li>
 <li><strong>Deploy ortamı:</strong> Vercel gibi serverless platformlarda kalıcı bağlantı limitleri kritiktir; pooler kullanın.</li>
 <li><strong>Ekip deneyimi:</strong> Ekibin bildiği teknoloji, bakım maliyetini düşürür.</li>
@@ -181,7 +181,7 @@ export const blogPostEntry: BlogPostEntry = {
 
 <h2>Selection Criteria</h2>
 <ul>
-<li><strong>Data shape:</strong> Clear relations like order–product–user usually favor SQL.</li>
+<li><strong>Data shape:</strong> Clear relations like order-product-user usually favor SQL.</li>
 <li><strong>Scale expectations:</strong> Plan managed services and pooling if you start small but expect growth.</li>
 <li><strong>Deploy environment:</strong> Connection limits matter on serverless platforms like Vercel; use a pooler.</li>
 <li><strong>Team experience:</strong> What the team knows reduces maintenance cost.</li>

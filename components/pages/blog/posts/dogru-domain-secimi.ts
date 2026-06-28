@@ -30,7 +30,7 @@ export const blogPostEntry: BlogPostEntry = {
 
 <h2>İyi Bir Domain Adının Özellikleri</h2>
 <ul class="blog-checklist">
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Kısa ve net:</strong> İdeal olarak 6–14 karakter arası; tek seferde okunup yazılabilmeli.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Kısa ve net:</strong> İdeal olarak 6-14 karakter arası; tek seferde okunup yazılabilmeli.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Telaffuzu kolay:</strong> Telefonda söylediğinizde karşı taraf doğru yazabilmeli.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Markayla uyumlu:</strong> Şirket veya ürün adınızla tutarlı olmalı; farklı yazımlardan kaçının.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Tire ve rakam yok:</strong> <em>marka-site.com</em> veya <em>marka2024.com</em> hatırlamayı zorlaştırır.</span></div></li>
@@ -71,7 +71,7 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 
 <h2>Müsaitlik ve Marka Koruması</h2>
 <ol class="blog-steps">
-<li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>İsim listesi oluşturun</strong> 5–10 alternatif yazın; birincil tercih doluysa hemen ikinciye geçin.</span></div></li>
+<li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>İsim listesi oluşturun</strong> 5-10 alternatif yazın; birincil tercih doluysa hemen ikinciye geçin.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Müsaitliği sorgulayın</strong> Registrar panelinden veya <a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a> üzerinden kontrol edin.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Sosyal medyayı kontrol edin</strong> Aynı kullanıcı adının Instagram, LinkedIn ve X'te boş olup olmadığına bakın.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Marka tescilini planlayın</strong> Domain ile marka adınızın örtüşmesi ileride hukuki sorunları önler.</span></div></li>
@@ -115,7 +115,7 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 
 <h2>Traits of a Good Domain Name</h2>
 <ul class="blog-checklist">
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Short and clear:</strong> Ideally 6–14 characters; readable and writable at a glance.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Short and clear:</strong> Ideally 6-14 characters; readable and writable at a glance.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Easy to say:</strong> Someone on a phone call should spell it correctly.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Brand-aligned:</strong> Match your company or product name; avoid alternate spellings.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>No hyphens or numbers:</strong> <em>brand-site.com</em> or <em>brand2024.com</em> are harder to remember.</span></div></li>
@@ -156,7 +156,7 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 
 <h2>Availability and Brand Protection</h2>
 <ol class="blog-steps">
-<li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Build a shortlist</strong> Write 5–10 alternatives; move to the next if your first choice is taken.</span></div></li>
+<li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Build a shortlist</strong> Write 5-10 alternatives; move to the next if your first choice is taken.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Check availability</strong> Use a registrar panel or <a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a>.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Check social handles</strong> See if the same username is free on Instagram, LinkedIn and X.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Plan trademark registration</strong> Aligning domain and brand name prevents legal issues later.</span></div></li>
