@@ -24,9 +24,9 @@ export const contactTr = {
     "Projenizi, beklentilerinizi ve varsa teknik gereksinimlerinizi anlatın…",
 
   serviceOptions: [
-    { value: "web-sitesi", label: "Web Sitesi Geliştirme" },
+    { value: "web-sitesi-gelistirme", label: "Web Sitesi Geliştirme" },
     { value: "web-sitesi-yenileme", label: "Web & Uygulama Yenileme" },
-    { value: "uygulama", label: "Uygulama Geliştirme" },
+    { value: "uygulama-gelistirme", label: "Uygulama Geliştirme" },
     { value: "seo-hizmetleri", label: "SEO Hizmetleri" },
     { value: "teknik-denetim", label: "Teknik Denetim" },
     { value: "bakim-ve-destek", label: "Bakım & Destek" },
@@ -41,7 +41,7 @@ export const contactTr = {
   ],
 
   servicePackages: {
-    "web-sitesi": [
+    "web-sitesi-gelistirme": [
       { value: "portfolio", label: "Portföy / Tanıtım Web Sitesi" },
       { value: "corporate", label: "Kurumsal Web Sitesi" },
       { value: "ecommerce", label: "E-Ticaret Web Sitesi" },
@@ -51,7 +51,7 @@ export const contactTr = {
       { value: "corporate", label: "Kurumsal Site Yenileme" },
       { value: "ecommerce", label: "E-Ticaret Sitesi Yenileme" },
     ],
-    uygulama: [
+    "uygulama-gelistirme": [
       { value: "portfolio", label: "Tanıtım / Portföy Uygulaması" },
       { value: "corporate", label: "Kurumsal Mobil Uygulama" },
       { value: "ecommerce", label: "E-Ticaret Mobil Uygulama" },
@@ -70,11 +70,11 @@ export const contactTr = {
   },
 
   budgetOptions: [
-    { value: "0k-15k", label: "0 – 15.000 ₺" },
-    { value: "15k-25k", label: "15.000 – 25.000 ₺" },
-    { value: "25k-50k", label: "25.000 – 50.000 ₺" },
-    { value: "50k-75k", label: "50.000 – 75.000 ₺" },
-    { value: "75k-100k", label: "75.000 – 100.000 ₺" },
+    { value: "0k-15k", label: "0 - 15.000 ₺" },
+    { value: "15k-25k", label: "15.000 - 25.000 ₺" },
+    { value: "25k-50k", label: "25.000 - 50.000 ₺" },
+    { value: "50k-75k", label: "50.000 - 75.000 ₺" },
+    { value: "75k-100k", label: "75.000 - 100.000 ₺" },
     { value: "100k+", label: "100.000 ₺ ve üzeri" },
     { value: "belirsiz", label: "Henüz bilmiyorum" },
   ],

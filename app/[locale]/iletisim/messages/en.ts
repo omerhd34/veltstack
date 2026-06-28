@@ -24,9 +24,9 @@ export const contactEn = {
     "Describe your project, expectations, and any technical requirements…",
 
   serviceOptions: [
-    { value: "web-sitesi", label: "Web Site Development" },
+    { value: "web-sitesi-gelistirme", label: "Web Site Development" },
     { value: "web-sitesi-yenileme", label: "Web & App Redesign" },
-    { value: "uygulama", label: "App Development" },
+    { value: "uygulama-gelistirme", label: "App Development" },
     { value: "seo-hizmetleri", label: "SEO Services" },
     { value: "teknik-denetim", label: "Technical Audit" },
     { value: "bakim-ve-destek", label: "Maintenance & Support" },
@@ -41,7 +41,7 @@ export const contactEn = {
   ],
 
   servicePackages: {
-    "web-sitesi": [
+    "web-sitesi-gelistirme": [
       { value: "portfolio", label: "Portfolio / Showcase Website" },
       { value: "corporate", label: "Corporate Website" },
       { value: "ecommerce", label: "E-Commerce Website" },
@@ -51,7 +51,7 @@ export const contactEn = {
       { value: "corporate", label: "Corporate Website Redesign" },
       { value: "ecommerce", label: "E-Commerce Website Redesign" },
     ],
-    uygulama: [
+    "uygulama-gelistirme": [
       { value: "portfolio", label: "Showcase / Portfolio App" },
       { value: "corporate", label: "Corporate Mobile App" },
       { value: "ecommerce", label: "E-Commerce Mobile App" },
@@ -73,11 +73,11 @@ export const contactEn = {
   },
 
   budgetOptions: [
-    { value: "0k-15k", label: "$0 – $500" },
-    { value: "15k-25k", label: "$500 – $750" },
-    { value: "25k-50k", label: "$750 – $1,500" },
-    { value: "50k-75k", label: "$1,500 – $2,200" },
-    { value: "75k-100k", label: "$2,200 – $3,000" },
+    { value: "0k-15k", label: "$0 - $500" },
+    { value: "15k-25k", label: "$500 - $750" },
+    { value: "25k-50k", label: "$750 - $1,500" },
+    { value: "50k-75k", label: "$1,500 - $2,200" },
+    { value: "75k-100k", label: "$2,200 - $3,000" },
     { value: "100k+", label: "$3,000+" },
     { value: "belirsiz", label: "Not sure yet" },
   ],

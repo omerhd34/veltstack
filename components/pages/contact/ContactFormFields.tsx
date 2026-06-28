@@ -78,7 +78,7 @@ export function ContactFormFields({
   const basePackageOptions =
     selectedService && labels.servicePackages[selectedService]
       ? labels.servicePackages[selectedService]
-      : labels.servicePackages["web-sitesi"];
+      : labels.servicePackages["web-sitesi-gelistirme"];
 
   const unknownOption = labels.budgetOptions.find(
     (o) => o.value === "belirsiz",
