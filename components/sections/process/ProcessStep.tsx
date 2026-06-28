@@ -21,7 +21,7 @@ export function ProcessStep({
   return (
     <div
       className={cn(
-        "group relative flex h-full min-h-56 flex-col overflow-hidden rounded-2xl border p-5 transition-all duration-300 md:p-6",
+        "group relative flex h-full min-h-52 flex-col overflow-hidden rounded-2xl border p-4 transition-all duration-300 md:p-5",
         isDark
           ? "border-emerald-700/35 bg-[rgb(8_28_22/0.55)] backdrop-blur-md hover:border-emerald-400/35 hover:bg-[rgb(12_36_28/0.65)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.28)]"
           : "border-border/70 bg-white/90 shadow-sm hover:border-brand-accent/50 hover:shadow-md",
@@ -50,7 +50,7 @@ export function ProcessStep({
       </div>
       <h3
         className={cn(
-          "mt-4 font-(family-name:--font-heading) text-base font-bold leading-tight tracking-tight md:text-lg",
+          "mt-3 font-(family-name:--font-heading) text-base font-bold leading-tight tracking-tight md:text-lg",
           isDark ? "text-white" : "text-[#0A0A0F]",
         )}
       >
@@ -58,7 +58,7 @@ export function ProcessStep({
       </h3>
       <p
         className={cn(
-          "mt-2.5 flex-1 text-[0.875rem] leading-[1.7]",
+          "mt-2 text-[0.875rem] leading-[1.65]",
           isDark ? "text-emerald-50/55" : "text-foreground/68",
         )}
       >

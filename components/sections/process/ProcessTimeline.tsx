@@ -1,15 +1,7 @@
-import {
-  LuClipboardList,
-  LuCodeXml,
-  LuLayoutTemplate,
-  LuPalette,
-  LuRocket,
-  LuSearch,
-  LuServer,
-  LuShieldCheck,
-} from "react-icons/lu"
 import { getTranslations } from "next-intl/server"
+import { ProcessFlowGrid } from "./ProcessFlowGrid"
 import { ProcessStep } from "./ProcessStep"
+import { processStepIcons } from "./process-step-icons"
 
 interface ProcessItem {
   title: string
@@ -19,38 +11,40 @@ interface ProcessItem {
 interface ProcessTimelineProps {
   className?: string
   variant?: "light" | "dark"
+  steps?: ProcessItem[]
 }
-
-const stepIcons = [
-  LuSearch,
-  LuClipboardList,
-  LuPalette,
-  LuLayoutTemplate,
-  LuCodeXml,
-  LuServer,
-  LuShieldCheck,
-  LuRocket,
-] as const
 
 export async function ProcessTimeline({
   className,
   variant = "light",
+  steps: stepsProp,
 }: ProcessTimelineProps) {
   const t = await getTranslations("home")
-  const steps = t.raw("processItems") as ProcessItem[]
+  const steps =
+    stepsProp ?? (t.raw("processItems") as ProcessItem[])
+
+  const flowItems = steps.map((step, index) => ({
+    step: index + 1,
+    title: step.title,
+    description: step.description,
+  }))
 
   return (
-    <div className={`grid gap-4 sm:grid-cols-2 lg:grid-cols-4 ${className ?? ""}`}>
-      {steps.map((step, index) => (
-        <ProcessStep
-          key={step.title}
-          step={index + 1}
-          title={step.title}
-          description={step.description}
-          icon={stepIcons[index]}
-          variant={variant}
-        />
-      ))}
+    <div className={className}>
+      <div className="grid gap-4 sm:grid-cols-2 lg:hidden">
+        {flowItems.map((item, index) => (
+          <ProcessStep
+            key={item.step}
+            step={item.step}
+            title={item.title}
+            description={item.description}
+            icon={processStepIcons[index]!}
+            variant={variant}
+          />
+        ))}
+      </div>
+
+      <ProcessFlowGrid items={flowItems} variant={variant} />
     </div>
   )
 }
