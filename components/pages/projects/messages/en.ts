@@ -9,10 +9,26 @@ export const projectsPageEn = {
     "Developer workspace with a laptop connected to an external monitor via HDMI cable, both screens showing code",
   scrollLabel: "Browse projects",
   stats: [
-    { value: "4", label: "Selected Projects" },
-    { value: "__techCount__", label: "Technologies" },
-    { value: "100%", label: "Design + Code" },
-    { value: "3-120", label: "Delivery Days" },
+    {
+      value: "4",
+      label: "Selected Projects",
+      hint: "Selected projects with detailed case studies in our portfolio, each delivered against real business goals.",
+    },
+    {
+      value: "__techCount__",
+      label: "Technologies",
+      hint: "Technologies we use or can adopt across projects. The stack is chosen based on your project needs.",
+    },
+    {
+      value: "100%",
+      label: "Design + Code",
+      hint: "We combine UI design and development in one team and one process for every project.",
+    },
+    {
+      value: "3-120",
+      label: "Delivery Days",
+      hint: "Delivery range across portfolio projects. Scope is the main factor for your new project timeline.",
+    },
   ],
   showcaseBadge: "Case Studies",
   showcaseTitle: "Every project tells a business story",
