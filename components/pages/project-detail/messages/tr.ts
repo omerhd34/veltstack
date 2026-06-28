@@ -41,7 +41,7 @@ export const projectDetailsTr = {
       {
         title: "Finansal Performans Analizi",
         description:
-          "Gelir, gider, net bakiye ve finansal sağlık skoru; 2–12 aylık trend grafikleri ve kategori dağılımı.",
+          "Gelir, gider, net bakiye ve finansal sağlık skoru; 2-12 aylık trend grafikleri ve kategori dağılımı.",
       },
       {
         title: "Gelir-Gider Yönetimi",

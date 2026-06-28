@@ -41,7 +41,7 @@ export const projectDetailsEn = {
       {
         title: "Financial Performance Analysis",
         description:
-          "Income, expenses, net balance and financial health score; 2–12 month trend charts and category breakdown.",
+          "Income, expenses, net balance and financial health score; 2-12 month trend charts and category breakdown.",
       },
       {
         title: "Income & Expense Management",
@@ -90,7 +90,8 @@ export const projectDetailsEn = {
       },
       {
         title: "Multilingual Support",
-        description: "Turkish and English interface; locale-based content and routing.",
+        description:
+          "Turkish and English interface; locale-based content and routing.",
       },
     ],
     metrics: [
@@ -252,7 +253,8 @@ export const projectDetailsEn = {
       },
       {
         title: "Multilingual Support",
-        description: "Turkish and English content; locale-based catalog and page routing.",
+        description:
+          "Turkish and English content; locale-based catalog and page routing.",
       },
       {
         title: "SEO-Friendly Structure",
@@ -289,15 +291,18 @@ export const projectDetailsEn = {
       },
       {
         title: "Service Packages",
-        description: "Clear package structure for web, mobile, SEO and maintenance.",
+        description:
+          "Clear package structure for web, mobile, SEO and maintenance.",
       },
       {
         title: "Blog & Content",
-        description: "Code-based technical articles and project experience sharing.",
+        description:
+          "Code-based technical articles and project experience sharing.",
       },
       {
         title: "Multilingual Support",
-        description: "Turkish and English interface; locale-based content and routing.",
+        description:
+          "Turkish and English interface; locale-based content and routing.",
       },
       {
         title: "SEO-Friendly Structure",
@@ -339,8 +344,7 @@ export const projectDetailsEn = {
       },
       {
         title: "Practical Resources",
-        description:
-          "Tax codes, per diems and professional reference content.",
+        description: "Tax codes, per diems and professional reference content.",
       },
       {
         title: "Platform Shortcuts",
