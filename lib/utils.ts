@@ -12,3 +12,9 @@ export function toLatinUppercase(value: string): string {
 export function isExternalHref(href: string): boolean {
   return href.startsWith("http://") || href.startsWith("https://");
 }
+
+export function truncateToSentences(text: string, maxSentences = 2): string {
+  const parts = text.split(/(?<=[.!?])\s+/).filter(Boolean);
+  if (parts.length <= maxSentences) return text.trim();
+  return parts.slice(0, maxSentences).join(" ").trim();
+}
