@@ -9,10 +9,26 @@ export const aboutEn = {
   heroImageAlt: "Veltstack digital development workspace",
   scrollLabel: "Read more",
   stats: [
-    { value: "20+", label: "Completed Projects" },
-    { value: "6+", label: "Years of industry experience" },
-    { value: "100%", label: "End-to-End Delivery" },
-    { value: "6", label: "Service Areas" },
+    {
+      value: "20+",
+      label: "Completed Projects",
+      hint: "Projects delivered across industries, with a portfolio focused on corporate web, e-commerce and mobile apps.",
+    },
+    {
+      value: "6+",
+      label: "Years of industry experience",
+      hint: "Accumulated expertise in web and mobile development, working with current technologies and production standards.",
+    },
+    {
+      value: "100%",
+      label: "End-to-End Delivery",
+      hint: "We manage the full process from discovery to launch in one line — holistic delivery instead of fragmented handoffs.",
+    },
+    {
+      value: "6",
+      label: "Service Areas",
+      hint: "End-to-end support across web, mobile, SEO, redesign, audit and maintenance services.",
+    },
   ],
   profileBadge: "Veltstack DNA",
   profileTitle:

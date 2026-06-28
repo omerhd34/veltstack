@@ -9,10 +9,26 @@ export const aboutTr = {
   heroImageAlt: "Veltstack dijital geliştirme çalışma alanı",
   scrollLabel: "Devamını oku",
   stats: [
-    { value: "20+", label: "Tamamlanan Proje" },
-    { value: "6+", label: "Yıllık sektör deneyimi" },
-    { value: "100%", label: "Uçtan Uca Teslim" },
-    { value: "6", label: "Hizmet Alanı" },
+    {
+      value: "20+",
+      label: "Tamamlanan Proje",
+      hint: "Farklı sektörlerde teslim ettiğimiz proje sayısı. Kurumsal web, e-ticaret ve mobil uygulama ağırlıklı portföy.",
+    },
+    {
+      value: "6+",
+      label: "Yıllık sektör deneyimi",
+      hint: "Web ve mobil geliştirmede birikmiş uzmanlık. Güncel teknolojiler ve üretim standartlarıyla çalışıyoruz.",
+    },
+    {
+      value: "100%",
+      label: "Uçtan Uca Teslim",
+      hint: "Keşiften canlıya alıma kadar tüm süreçleri tek çizgide yönetiyoruz; parçalı teslim yerine bütüncül yaklaşım.",
+    },
+    {
+      value: "6",
+      label: "Hizmet Alanı",
+      hint: "Web, mobil, SEO, yenileme, denetim ve bakım hizmetlerinde uçtan uca destek sunuyoruz.",
+    },
   ],
   profileBadge: "Veltstack DNA'sı",
   profileTitle:
