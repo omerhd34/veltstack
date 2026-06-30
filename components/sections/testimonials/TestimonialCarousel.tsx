@@ -80,12 +80,6 @@ export function TestimonialCarousel({
       >
         {formatSlideNumber(index + 1)}
       </div>
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-4 bottom-16 select-none font-(family-name:--font-heading) text-5xl font-bold leading-none text-brand-accent/4 md:-left-8 md:bottom-20 md:text-6xl"
-      >
-        {formatSlideNumber(count)}
-      </div>
 
       <div className="relative min-h-[320px] md:min-h-[340px]">
         {testimonials.map((testimonial, slideIndex) => (

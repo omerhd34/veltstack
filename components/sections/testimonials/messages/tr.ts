@@ -7,13 +7,6 @@ export const testimonialsHomeTr = {
     "Farklı sektörlerden iş ortaklarımızın deneyimleri; tasarım kalitesinden teslimat sürecine kadar birlikte yürüttüğümüz çalışmaların kısa özeti.",
   testimonialItems: [
     {
-      clientName: "aaaaa",
-      companyName: "IQfinansAI",
-      feedback:
-        "Yapay zekâ destekli finansal analiz platformumuzu Veltstack ile geliştirdik. Karmaşık verileri anlaşılır panellere dönüştüren arayüz, görselleştirme ve raporlama modülleri beklentimizi karşıladı. Teknik ekip süreç boyunca net iletişim kurdu; ürün zamanında canlıya alındı.",
-      rating: 5,
-    },
-    {
       clientName: "Halil İbrahim Yazıcı",
       companyName: "Yazıcı Ticaret",
       feedback:
@@ -24,9 +17,23 @@ export const testimonialsHomeTr = {
       clientName: "Berat Özkan",
       companyName: "Fablessi",
       feedback:
-        "Bahçe ve balkon mobilyalarımızı dijitalde premium hissettirmek istiyorduk. Veltstack, zengin görseller ve net kategori yapısıyla markamıza yakışan bir katalog oluşturdu. Bayilerimiz ve müşterilerimiz ürünleri artık çok daha hızlı buluyor; tasarım kalitesi beklentimizin üzerindeydi.",
+        "Kurumsal ve akıcı çalışan, özgün bir web sitesine ihtiyacımız vardı. Veltstack bu konuda tüm isteklerimizi karşıladı. Süreç boyunca ilgi ve alakaları çok iyiydi; kendilerine teşekkür ederiz. Gönül rahatlığıyla tavsiye ederiz.",
       rating: 5,
     },
+    {
+      clientName: "Nisa D.",
+      companyName: "Uzman Klinik Psikolog",
+      feedback:
+        "Danışanlarıma güven veren, mesleki kimliğimi doğru yansıtan bir web sitesine ihtiyacım vardı. Veltstack sakin ve profesyonel bir tasarımla randevu talebi ve blog modüllerini bir araya getirdi; SEO altyapısı sayesinde dijitalde de görünür ve erişilebilir bir deneyim oluşturduk.",
+      rating: 5,
+    },
+    {
+     clientName: "Halil Tunç",
+     companyName: "Online Muhasebe",
+     feedback:
+       "Kurumsal web sitemiz ve online muhasebe hizmetlerimizi aynı çatı altında toplamak istediğimizde Veltstack tam ihtiyacımız olan ekipti. Markaya uygun arayüz, güvenilir altyapı ve net süreç yönetimiyle proje planlanan tarihte eksiksiz teslim edildi.",
+     rating: 5,
+   },
   ],
   testimonialsPrev: "Önceki yorum",
   testimonialsNext: "Sonraki yorum",
