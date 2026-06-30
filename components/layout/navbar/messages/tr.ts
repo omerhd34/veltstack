@@ -25,7 +25,7 @@ export const navTr = {
     "Web geliştirme, SEO, hosting ve dijital dönüşüm üzerine pratik içerikler paylaşıyoruz. Gerçek projelerden öğrendiklerimizi sade bir dille aktarıyoruz.",
   about: "Hakkımızda",
   contact: "İletişim",
-  cta: "Proje Konuşalım",
+  cta: "Görüşme Planla",
   switchToEn: "İngilizce'ye geç",
   switchToTr: "Türkçe'ye geç",
 } as const;

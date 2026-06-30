@@ -25,7 +25,7 @@ export const navEn = {
     "Practical content on web development, SEO, hosting and digital transformation. We share what we learn from real projects in plain language.",
   about: "About Us",
   contact: "Contact",
-  cta: "Let's Talk",
+  cta: "Schedule a Call",
   switchToEn: "Switch to English",
   switchToTr: "Switch to Turkish",
 } as const;
