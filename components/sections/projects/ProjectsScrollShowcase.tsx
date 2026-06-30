@@ -1,16 +1,18 @@
 import { getTranslations } from "next-intl/server";
-import { ProjectsThreeDCarousel } from "./ProjectsThreeDCarousel";
+import { ProjectsScrollCarousel } from "./ProjectsScrollCarousel";
 import {
   projectCoverGradients,
   projectImageUrls,
 } from "./project-detail-config";
 import { homepageProjectItems } from "./project-items";
 
-interface ProjectsSliderProps {
+interface ProjectsScrollShowcaseProps {
   className?: string;
 }
 
-export async function ProjectsSlider({ className }: ProjectsSliderProps) {
+export async function ProjectsScrollShowcase({
+  className,
+}: ProjectsScrollShowcaseProps) {
   const t = await getTranslations("home");
 
   const projects = homepageProjectItems.map((project, index) => ({
@@ -19,10 +21,10 @@ export async function ProjectsSlider({ className }: ProjectsSliderProps) {
     title: t(project.titleKey),
     description: t(project.descKey),
     tag: t(project.tagKey),
-    imageUrl: projectImageUrls[project.slug],
+    image: projectImageUrls[project.slug],
     coverGradient: projectCoverGradients[project.slug],
     index: index + 1,
   }));
 
-  return <ProjectsThreeDCarousel className={className} projects={projects} />;
+  return <ProjectsScrollCarousel className={className} projects={projects} />;
 }

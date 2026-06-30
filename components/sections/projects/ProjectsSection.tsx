@@ -2,8 +2,8 @@ import { LuCodeXml } from "react-icons/lu";
 import { TbBrandReactNative, TbMathFunction, TbTopologyRing2 } from "react-icons/tb";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
-import { ProjectsGrid } from "./ProjectsGrid";
 import { ProjectsIntro } from "./ProjectsIntro";
+import { ProjectsScrollShowcase } from "./ProjectsScrollShowcase";
 
 interface ProjectsSectionProps {
   className?: string;
@@ -61,8 +61,9 @@ export function ProjectsSection({ className }: ProjectsSectionProps) {
 
       <SiteContainer className="relative">
         <ProjectsIntro />
-        <ProjectsGrid className="mt-12 md:mt-14" />
       </SiteContainer>
+
+      <ProjectsScrollShowcase className="mt-4 md:mt-5" />
 
       <div
         aria-hidden

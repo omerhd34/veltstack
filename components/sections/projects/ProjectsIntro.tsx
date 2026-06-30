@@ -1,6 +1,4 @@
-import { LuEye } from "react-icons/lu";
 import { getTranslations } from "next-intl/server";
-import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 
 interface ProjectsIntroProps {
   className?: string;
@@ -30,15 +28,6 @@ export async function ProjectsIntro({ className }: ProjectsIntroProps) {
       <p className="mt-4 text-[0.9375rem] leading-[1.85] text-white/55">
         {t("projectsIntro")}
       </p>
-
-      <PrimaryCtaLink
-        href="/projeler"
-        className="mt-8"
-        showArrow={false}
-        leadingIcon={<LuEye className="size-5" aria-hidden />}
-      >
-        {t("projectsCta")}
-      </PrimaryCtaLink>
     </div>
   );
 }

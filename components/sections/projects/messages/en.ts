@@ -13,6 +13,9 @@ export const projectsHomeEn = {
   projectsSliderPrev: "Previous project",
   projectsSliderNext: "Next project",
   projectsSliderDot: "Project",
+  projectsSliderRegion: "Projects carousel",
+  projectsSliderStatus: "{label}, {current} / {total}",
+  projectsSliderActivate: "Show {title} project",
   projectIqfinansTitle: "IQfinansAI | AI Finance Analytics Platform",
   projectIqfinansDesc:
     "AI-powered financial analysis platform. Dark-light mode, Turkish-English support and reporting that turns complex data into clear dashboards.",

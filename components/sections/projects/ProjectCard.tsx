@@ -20,7 +20,10 @@ interface ProjectCardProps {
   index?: number;
   viewLabel?: string;
   featured?: boolean;
-  variant?: "default" | "grid";
+  variant?: "default" | "grid" | "slide";
+  isActive?: boolean;
+  onActivate?: () => void;
+  activateLabel?: string;
   className?: string;
 }
 
@@ -36,15 +39,20 @@ export function ProjectCard({
   viewLabel = "View",
   featured = false,
   variant = "default",
+  isActive = true,
+  onActivate,
+  activateLabel,
   className,
 }: ProjectCardProps) {
   const isGrid = variant === "grid";
+  const isSlide = variant === "slide";
+  const isCompactCard = isGrid || isSlide;
 
   const cover = (
     <div
       className={cn(
         "relative overflow-hidden bg-muted",
-        isGrid
+        isCompactCard
           ? "aspect-3/2 rounded-t-2xl"
           : featured
             ? "aspect-16/10 rounded-t-3xl md:aspect-auto md:min-h-full md:w-[48%] md:rounded-tl-3xl md:rounded-tr-none md:rounded-bl-3xl"
@@ -67,14 +75,14 @@ export function ProjectCard({
             <div
               className={cn(
                 "flex h-full items-center justify-center",
-                isGrid ? "min-h-28" : "min-h-40",
+                isCompactCard ? "min-h-28" : "min-h-40",
               )}
             >
               <Icon
                 className={cn(
                   "text-white/20 group-hover:scale-110 group-hover:text-white/35",
                   slowTransition,
-                  isGrid
+                  isCompactCard
                     ? "size-12"
                     : featured
                       ? "size-20 md:size-24 lg:size-28"
@@ -93,7 +101,7 @@ export function ProjectCard({
           fill
           className={cn("object-cover group-hover:scale-105", slowTransition)}
           sizes={
-            isGrid
+            isCompactCard
               ? "(max-width: 768px) 100vw, 33vw"
               : featured
                 ? "(max-width: 768px) 100vw, 60vw"
@@ -106,7 +114,7 @@ export function ProjectCard({
         aria-hidden
         className={cn(
           "pointer-events-none absolute inset-0 bg-linear-to-t from-black/35 via-black/5 to-transparent transition-opacity duration-500 motion-reduce:transition-none",
-          isGrid ? "opacity-50 group-hover:opacity-70" : "opacity-60 group-hover:opacity-80",
+          isCompactCard ? "opacity-50 group-hover:opacity-70" : "opacity-60 group-hover:opacity-80",
         )}
       />
 
@@ -115,7 +123,7 @@ export function ProjectCard({
           aria-hidden
           className={cn(
             "pointer-events-none absolute font-(family-name:--font-heading) font-bold leading-none text-white/10 transition-colors duration-500 group-hover:text-white/20 motion-reduce:transition-none",
-            isGrid
+            isCompactCard
               ? "bottom-2.5 right-3 text-4xl"
               : featured
                 ? "bottom-4 right-5 text-7xl md:text-8xl"
@@ -131,7 +139,7 @@ export function ProjectCard({
           variant="secondary"
           className={cn(
             "absolute left-3 top-3 rounded-full border-0 bg-white/90 font-semibold text-[#0A0A0F] shadow-sm backdrop-blur-sm",
-            isGrid
+            isCompactCard
               ? "px-2.5 py-0.5 text-[0.625rem]"
               : "px-3 py-1 text-[0.6875rem]",
           )}
@@ -140,7 +148,7 @@ export function ProjectCard({
         </Badge>
       ) : null}
 
-      {isGrid ? (
+      {isCompactCard ? (
         <span
           aria-hidden
           className={cn(
@@ -157,8 +165,10 @@ export function ProjectCard({
     <div
       className={cn(
         "flex flex-1 flex-col",
-        isGrid
-          ? "p-4"
+        isCompactCard
+          ? isSlide
+            ? "p-5"
+            : "p-4"
           : featured
             ? "justify-center p-6 md:w-[52%] md:p-8"
             : "p-5 sm:p-6",
@@ -168,7 +178,7 @@ export function ProjectCard({
         className={cn(
           "font-(family-name:--font-heading) font-bold leading-snug tracking-tight transition-colors group-hover:text-brand-accent",
           slowTransition,
-          isGrid ? "text-base" : featured ? "text-xl md:text-2xl" : "text-lg",
+          isCompactCard ? "text-base" : featured ? "text-xl md:text-2xl" : "text-lg",
         )}
       >
         {title}
@@ -176,8 +186,10 @@ export function ProjectCard({
       <p
         className={cn(
           "mt-1.5 text-foreground/60",
-          isGrid
-            ? "line-clamp-2 text-sm leading-relaxed"
+          isCompactCard
+            ? isSlide
+              ? "line-clamp-3 text-sm leading-relaxed"
+              : "line-clamp-2 text-sm leading-relaxed"
             : cn(
                 "mt-2 line-clamp-3",
                 featured ? "text-base leading-relaxed" : "text-sm leading-relaxed",
@@ -187,7 +199,7 @@ export function ProjectCard({
         {description}
       </p>
 
-      {!isGrid ? (
+      {!isCompactCard ? (
         <div
           className={cn(
             "mt-auto flex items-center justify-between gap-3 border-t border-border/60 pt-4",
@@ -220,11 +232,17 @@ export function ProjectCard({
 
   const cardClassName = cn(
     "group relative flex flex-col overflow-hidden",
-    isGrid ? "rounded-2xl" : "rounded-3xl",
+    isCompactCard ? "rounded-2xl" : "rounded-3xl",
     "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent bg-white",
-    isGrid
-      ? "shadow-[0_2px_8px_rgb(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgb(58,107,82,0.12)]"
-      : "shadow-[0_2px_8px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_48px_rgb(58,107,82,0.14)]",
+    isSlide
+      ? cn(
+          "shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
+          !isActive &&
+            "brightness-[0.72] saturate-[0.65] hover:brightness-[0.88] hover:saturate-[0.85] active:brightness-95",
+        )
+      : isGrid
+        ? "shadow-[0_2px_8px_rgb(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgb(58,107,82,0.12)]"
+        : "shadow-[0_2px_8px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_48px_rgb(58,107,82,0.14)]",
     slowTransition,
     featured ? "flex-col md:flex-row" : "",
     className,
@@ -232,11 +250,34 @@ export function ProjectCard({
 
   const cardContent = (
     <>
-      <BorderTrace durationSec={2.5} />
+      <BorderTrace
+        durationSec={2.5}
+        {...(isSlide
+          ? {
+              radius: 16,
+              loop: true,
+              trigger: "hover" as const,
+              stroke: "var(--brand-accent)",
+            }
+          : {})}
+      />
       {cover}
       {body}
     </>
   );
+
+  if (isSlide && !isActive) {
+    return (
+      <button
+        type="button"
+        onClick={onActivate}
+        aria-label={activateLabel ?? title}
+        className={cn(cardClassName, "w-full cursor-pointer text-left")}
+      >
+        {cardContent}
+      </button>
+    );
+  }
 
   return isExternalHref(href) ? (
     <a

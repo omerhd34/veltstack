@@ -13,6 +13,9 @@ export const projectsHomeTr = {
   projectsSliderPrev: "Önceki proje",
   projectsSliderNext: "Sonraki proje",
   projectsSliderDot: "Proje",
+  projectsSliderRegion: "Projeler karuseli",
+  projectsSliderStatus: "{label}, {current} / {total}",
+  projectsSliderActivate: "{title} projesini göster",
   projectIqfinansTitle: "IQfinansAI | AI Finans Platformu",
   projectIqfinansDesc:
     "Yapay zekâ destekli finansal analiz platformu. Karanlık-aydınlık mod, Türkçe-İngilizce dil desteği ve karmaşık verileri anlaşılır panellere dönüştüren raporlama.",
