@@ -2,7 +2,7 @@ export const projectsHomeEn = {
   projectsTitle: "Featured Projects",
   projectsBadge: "Projects",
   projectsTitleLead: "Real business goals deserve",
-  projectsTitleAccent: "projects that serve them.",
+  projectsTitleAccent: "projects that serve them",
   projectsHeadline: "Projects for real business goals",
   projectsSubtitle:
     "From FinTech to e-commerce, we focus on measurable business outcomes in every project.",

@@ -2,7 +2,7 @@ export const projectsHomeTr = {
   projectsTitle: "Öne Çıkan Projeler",
   projectsBadge: "Projeler",
   projectsTitleLead: "Gerçek iş hedeflerine",
-  projectsTitleAccent: "hizmet eden projeler.",
+  projectsTitleAccent: "hizmet eden projeler",
   projectsHeadline: "İş hedeflerine hizmet eden projeler",
   projectsSubtitle:
     "Finansal Teknoloji'den e-ticarete, her projede ölçülebilir iş sonuçlarına odaklanıyoruz.",
