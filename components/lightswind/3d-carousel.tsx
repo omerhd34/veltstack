@@ -244,6 +244,8 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
   const pageNumberActiveClass = isLight
     ? "text-brand-accent"
     : "text-brand-accent";
+  const pageNumberClass =
+    "font-mono text-sm font-semibold tabular-nums transition-colors duration-300";
 
   const activeItem = items[active];
   const slideLabel = getSlideLabel?.(activeItem) ?? String(active + 1);
@@ -334,25 +336,19 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
           </div>
 
           {items.length > 1 ? (
-            <div className="absolute inset-x-0 bottom-2 z-30 flex items-center justify-center gap-3 sm:bottom-4 sm:gap-4">
-              {items.map((_, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  data-carousel-control
-                  className={cn(
-                    "font-mono text-sm font-semibold tabular-nums transition-colors duration-300",
-                    active === idx
-                      ? pageNumberActiveClass
-                      : pageNumberInactiveClass,
-                  )}
-                  onClick={() => selectSlide(idx)}
-                  aria-label={`${labels.dot} ${idx + 1}`}
-                  aria-current={active === idx ? "true" : undefined}
-                >
-                  {String(idx + 1).padStart(2, "0")}
-                </button>
-              ))}
+            <div className="absolute inset-x-0 bottom-2 z-30 flex items-center justify-center sm:bottom-4">
+              <p
+                className={pageNumberClass}
+                aria-label={`${labels.dot} ${active + 1} / ${items.length}`}
+              >
+                <span className={pageNumberActiveClass}>
+                  {String(active + 1).padStart(2, "0")}
+                </span>
+                <span className={pageNumberInactiveClass}>
+                  {" / "}
+                  {String(items.length).padStart(2, "0")}
+                </span>
+              </p>
             </div>
           ) : null}
         </div>
