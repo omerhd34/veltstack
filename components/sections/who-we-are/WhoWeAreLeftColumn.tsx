@@ -1,26 +1,34 @@
 "use client";
 
-import type { ReactNode } from "react";
 import { WhoWeAreStats, type WhoWeAreStat } from "./WhoWeAreStats";
 
 interface WhoWeAreLeftColumnProps {
   badge: string;
-  heading: ReactNode;
+  headline: string;
+  headlineAccent: string;
   stats: readonly WhoWeAreStat[];
 }
 
 export function WhoWeAreLeftColumn({
   badge,
-  heading,
+  headline,
+  headlineAccent,
   stats,
 }: WhoWeAreLeftColumnProps) {
   return (
     <div className="min-w-0">
-      <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
+      <span className="inline-flex items-center rounded-full border border-brand-accent/25 bg-white/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent shadow-[0_2px_12px_rgb(58_107_82/0.08)] backdrop-blur-sm">
         {badge}
       </span>
 
-      {heading}
+      <h2
+        id="who-we-are-title"
+        className="mt-8 font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight text-[#0A0A0F] md:text-5xl lg:text-[3.25rem]"
+      >
+        {headline}
+        <br />
+        <span className="text-brand-accent">{headlineAccent}</span>
+      </h2>
 
       <WhoWeAreStats stats={stats} />
     </div>

@@ -1,7 +1,4 @@
-import { LuCodeXml } from "react-icons/lu";
-import { TbBrandReactNative, TbMathFunction, TbTopologyRing2 } from "react-icons/tb";
 import { SiteContainer } from "@/components/layout/SiteContainer";
-import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 import { ProjectsIntro } from "./ProjectsIntro";
 import { ProjectsScrollShowcase } from "./ProjectsScrollShowcase";
 
@@ -34,29 +31,6 @@ export function ProjectsSection({ className }: ProjectsSectionProps) {
       <div
         aria-hidden
         className="pointer-events-none absolute -left-16 bottom-1/4 size-64 rounded-full bg-emerald-600/6 blur-3xl"
-      />
-
-      <SectionDecorIcon
-        icon={LuCodeXml}
-        tone="on-dark-muted"
-        className="left-2 top-[30%] -rotate-12 xl:left-8"
-      />
-      <SectionDecorIcon
-        icon={TbMathFunction}
-        tone="on-dark"
-        size="md"
-        className="right-0 bottom-[28%] rotate-6 xl:right-6"
-      />
-      <SectionDecorIcon
-        icon={TbBrandReactNative}
-        tone="on-dark-muted"
-        className="right-4 top-[14%] -rotate-6 xl:right-12"
-      />
-      <SectionDecorIcon
-        icon={TbTopologyRing2}
-        tone="on-dark"
-        size="sm"
-        className="bottom-[12%] left-6 rotate-12 xl:left-14"
       />
 
       <SiteContainer className="relative">

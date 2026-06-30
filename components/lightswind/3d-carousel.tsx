@@ -6,7 +6,7 @@ import {
   useState,
   useCallback,
   type ReactNode,
-  type TouchEvent,
+  type PointerEvent as ReactPointerEvent,
 } from "react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { cn } from "@/lib/utils";
@@ -73,10 +73,13 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
-  const [touchStart, setTouchStart] = useState<number | null>(null);
-  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
   const isMobile = useIsMobile();
   const minSwipeDistance = 50;
+  const dragStartX = useRef<number | null>(null);
+  const dragEndX = useRef<number | null>(null);
+  const dragIntentRef = useRef(false);
+  const suppressClickRef = useRef(false);
 
   const selectSlide = useCallback((index: number) => {
     setActive(index);
@@ -121,35 +124,112 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
     return () => observer.disconnect();
   }, []);
 
-  const onTouchStart = (e: TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX);
-    setTouchEnd(null);
+  const resetDrag = useCallback(() => {
+    dragStartX.current = null;
+    dragEndX.current = null;
+    dragIntentRef.current = false;
+    setIsDragging(false);
+  }, []);
+
+  const finishDrag = useCallback(
+    (clientX: number) => {
+      if (dragStartX.current == null) return;
+
+      const distance = dragStartX.current - clientX;
+      if (distance > minSwipeDistance) {
+        suppressClickRef.current = true;
+        goNext();
+      } else if (distance < -minSwipeDistance) {
+        suppressClickRef.current = true;
+        goPrev();
+      }
+
+      resetDrag();
+    },
+    [goNext, goPrev, resetDrag],
+  );
+
+  const onPointerDown = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (items.length <= 1 || e.button !== 0) return;
+    if ((e.target as HTMLElement).closest("[data-carousel-control]")) return;
+
+    dragStartX.current = e.clientX;
+    dragEndX.current = e.clientX;
+    dragIntentRef.current = false;
   };
 
-  const onTouchMove = (e: TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
+  const onPointerMove = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (dragStartX.current == null) return;
 
-  const onTouchEnd = () => {
-    if (touchStart == null || touchEnd == null) return;
-
-    const distance = touchStart - touchEnd;
-    if (distance > minSwipeDistance) {
-      goNext();
-    } else if (distance < -minSwipeDistance) {
-      goPrev();
+    dragEndX.current = e.clientX;
+    const delta = Math.abs(e.clientX - dragStartX.current);
+    if (!dragIntentRef.current && delta > 10) {
+      dragIntentRef.current = true;
+      setIsDragging(true);
+      e.currentTarget.setPointerCapture(e.pointerId);
     }
   };
+
+  const onPointerUp = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (dragStartX.current == null) return;
+
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
+
+    if (dragIntentRef.current) {
+      finishDrag(dragEndX.current ?? e.clientX);
+      return;
+    }
+
+    resetDrag();
+  };
+
+  const onPointerCancel = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (dragStartX.current == null) return;
+
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
+
+    resetDrag();
+  };
+
+  const onClickCapture = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!suppressClickRef.current) return;
+    e.preventDefault();
+    e.stopPropagation();
+    suppressClickRef.current = false;
+  };
+
+  const slideDragProps =
+    items.length > 1
+      ? {
+          onPointerDown,
+          onPointerMove,
+          onPointerUp,
+          onPointerCancel,
+          onClickCapture,
+        }
+      : {};
 
   const getCardAnimationClass = (index: number) => {
-    if (index === active) return "scale-100 opacity-100 z-20 -translate-y-1/2";
+    const base =
+      "absolute top-1/2 w-1/2 -translate-y-1/2 transition-all duration-500 ease-out";
+
+    if (index === active) {
+      return cn(base, "left-1/2 z-20 -translate-x-1/2 scale-100 opacity-100");
+    }
     if (index === (active + 1) % items.length) {
-      return "translate-x-[38%] -translate-y-1/2 scale-[0.92] z-10";
+      return cn(base, "right-0 z-10 origin-right scale-[0.94] opacity-100");
     }
     if (index === (active - 1 + items.length) % items.length) {
-      return "translate-x-[-38%] -translate-y-1/2 scale-[0.92] z-10";
+      return cn(base, "left-0 z-10 origin-left scale-[0.94] opacity-100");
     }
-    return "scale-90 opacity-0 pointer-events-none -translate-y-1/2";
+    return cn(
+      base,
+      "left-1/2 z-0 -translate-x-1/2 scale-90 opacity-0 pointer-events-none",
+    );
   };
 
   if (items.length === 0) return null;
@@ -158,9 +238,12 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
   const navButtonClass = isLight
     ? "border border-border bg-card text-foreground shadow-sm hover:border-brand-accent/50 hover:bg-card"
     : "border border-white/15 bg-white/10 text-white shadow-lg backdrop-blur-sm hover:bg-white/20";
-  const dotInactiveClass = isLight
-    ? "w-2 bg-border hover:bg-brand-accent/40"
-    : "w-2 bg-white/25 hover:bg-white/40";
+  const pageNumberInactiveClass = isLight
+    ? "text-muted-foreground/55 hover:text-brand-accent/80"
+    : "text-white/35 hover:text-white/70";
+  const pageNumberActiveClass = isLight
+    ? "text-brand-accent"
+    : "text-brand-accent";
 
   const activeItem = items[active];
   const slideLabel = getSlideLabel?.(activeItem) ?? String(active + 1);
@@ -180,89 +263,113 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
       </p>
       <div
         className={cn(
-          "relative h-[min(360px,58vh)] min-h-[300px] w-full overflow-hidden p-1 sm:h-[380px]",
-          viewportClassName,
+          "grid items-center",
+          !isMobile && items.length > 1
+            ? "grid-cols-[auto_minmax(0,1fr)_auto] gap-3 sm:gap-4 md:gap-5"
+            : "grid-cols-1",
         )}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
-        ref={carouselRef}
       >
-        <div className="absolute inset-0 flex items-center justify-center">
-          {items.map((item, index) => {
-            const isActive = index === active;
-            const isFullyHidden =
-              index !== active &&
-              index !== (active + 1) % items.length &&
-              index !== (active - 1 + items.length) % items.length;
-            const itemLabel = getSlideLabel?.(item) ?? String(index + 1);
-            const activateLabel =
-              formatActivateLabel?.(itemLabel) ?? `Show slide ${index + 1}`;
+        {!isMobile && items.length > 1 ? (
+          <button
+            type="button"
+            data-carousel-control
+            className={cn(
+              "flex size-10 shrink-0 items-center justify-center rounded-full transition-all hover:scale-110",
+              navButtonClass,
+            )}
+            onClick={goPrev}
+            aria-label={labels.prev}
+          >
+            <LuChevronLeft className="size-5" />
+          </button>
+        ) : null}
 
-            return (
-              <div
-                key={item.id}
-                className={cn(
-                  "absolute top-1/2 w-full max-w-lg -translate-y-1/2 px-4 transition-all duration-500 ease-out sm:max-w-xl",
-                  getCardAnimationClass(index),
-                )}
-                aria-hidden={isFullyHidden || undefined}
-              >
-                {renderItem(item, index, {
-                  isActive,
-                  onActivate: () => selectSlide(index),
-                  activateLabel,
-                })}
-              </div>
-            );
-          })}
+        <div
+          className={cn(
+            "relative h-[min(400px,62vh)] min-h-[340px] min-w-0 overflow-hidden sm:h-[440px]",
+            viewportClassName,
+          )}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          ref={carouselRef}
+        >
+          <div className="pointer-events-none absolute inset-0">
+            {items.map((item, index) => {
+              const isActive = index === active;
+              const isFullyHidden =
+                index !== active &&
+                index !== (active + 1) % items.length &&
+                index !== (active - 1 + items.length) % items.length;
+              const itemLabel = getSlideLabel?.(item) ?? String(index + 1);
+              const activateLabel =
+                formatActivateLabel?.(itemLabel) ?? `Show slide ${index + 1}`;
+
+              return (
+                <div
+                  key={item.id}
+                  className={cn(
+                    getCardAnimationClass(index),
+                    isFullyHidden
+                      ? "pointer-events-none"
+                      : cn(
+                          "pointer-events-auto",
+                          items.length > 1 &&
+                            cn(
+                              "touch-pan-y select-none",
+                              isDragging ? "cursor-grabbing" : "cursor-grab",
+                            ),
+                        ),
+                  )}
+                  aria-hidden={isFullyHidden || !isActive || undefined}
+                  {...(!isFullyHidden ? slideDragProps : {})}
+                >
+                  {renderItem(item, index, {
+                    isActive,
+                    onActivate: () => selectSlide(index),
+                    activateLabel,
+                  })}
+                </div>
+              );
+            })}
+          </div>
+
+          {items.length > 1 ? (
+            <div className="absolute inset-x-0 bottom-2 z-30 flex items-center justify-center gap-3 sm:bottom-4 sm:gap-4">
+              {items.map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  data-carousel-control
+                  className={cn(
+                    "font-mono text-sm font-semibold tabular-nums transition-colors duration-300",
+                    active === idx
+                      ? pageNumberActiveClass
+                      : pageNumberInactiveClass,
+                  )}
+                  onClick={() => selectSlide(idx)}
+                  aria-label={`${labels.dot} ${idx + 1}`}
+                  aria-current={active === idx ? "true" : undefined}
+                >
+                  {String(idx + 1).padStart(2, "0")}
+                </button>
+              ))}
+            </div>
+          ) : null}
         </div>
 
         {!isMobile && items.length > 1 ? (
-          <>
-            <button
-              type="button"
-              className={cn(
-                "absolute left-2 top-1/2 z-30 flex size-10 -translate-y-1/2 items-center justify-center rounded-full transition-all hover:scale-110 sm:left-4",
-                navButtonClass,
-              )}
-              onClick={goPrev}
-              aria-label={labels.prev}
-            >
-              <LuChevronLeft className="size-5" />
-            </button>
-            <button
-              type="button"
-              className={cn(
-                "absolute right-2 top-1/2 z-30 flex size-10 -translate-y-1/2 items-center justify-center rounded-full transition-all hover:scale-110 sm:right-4",
-                navButtonClass,
-              )}
-              onClick={goNext}
-              aria-label={labels.next}
-            >
-              <LuChevronRight className="size-5" />
-            </button>
-          </>
-        ) : null}
-
-        {items.length > 1 ? (
-          <div className="absolute inset-x-0 bottom-2 z-30 flex items-center justify-center gap-2 sm:bottom-4">
-            {items.map((_, idx) => (
-              <button
-                key={idx}
-                type="button"
-                className={cn(
-                  "h-2 rounded-full transition-all duration-300",
-                  active === idx ? "w-8 bg-brand-accent" : dotInactiveClass,
-                )}
-                onClick={() => selectSlide(idx)}
-                aria-label={`${labels.dot} ${idx + 1}`}
-                aria-current={active === idx ? "true" : undefined}
-              />
-            ))}
-          </div>
+          <button
+            type="button"
+            data-carousel-control
+            className={cn(
+              "flex size-10 shrink-0 items-center justify-center rounded-full transition-all hover:scale-110",
+              navButtonClass,
+            )}
+            onClick={goNext}
+            aria-label={labels.next}
+          >
+            <LuChevronRight className="size-5" />
+          </button>
         ) : null}
       </div>
     </section>

@@ -1,8 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { LuLayers, LuServerCog } from "react-icons/lu";
-import { TbBrandDocker, TbCodeDots } from "react-icons/tb";
 import { SiteContainer } from "@/components/layout/SiteContainer";
-import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 import { TechBeamCircle } from "./TechBeamCircle";
 import { techItemCount } from "./tech-items";
 
@@ -29,29 +26,6 @@ export async function TechMarqueeSection({ className }: TechMarqueeSectionProps)
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#00D4AA]/35 to-transparent"
-      />
-
-      <SectionDecorIcon
-        icon={TbCodeDots}
-        tone="on-dark-muted"
-        className="left-2 top-[22%] -rotate-12 xl:left-8"
-      />
-      <SectionDecorIcon
-        icon={LuLayers}
-        tone="on-dark"
-        size="md"
-        className="right-0 top-[18%] rotate-6 xl:right-8"
-      />
-      <SectionDecorIcon
-        icon={TbBrandDocker}
-        tone="on-dark-muted"
-        size="sm"
-        className="bottom-[18%] left-6 rotate-12 xl:left-14"
-      />
-      <SectionDecorIcon
-        icon={LuServerCog}
-        tone="on-dark"
-        className="bottom-[24%] right-4 -rotate-6 xl:right-12"
       />
 
       <SiteContainer>

@@ -1,7 +1,4 @@
-import { LuMessageCircleHeart } from "react-icons/lu";
-import { TbGauge, TbHeartHandshake, TbStars } from "react-icons/tb";
 import { SiteContainer } from "@/components/layout/SiteContainer";
-import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 import { TestimonialSlider } from "./TestimonialSlider";
 import { TestimonialsIntro } from "./TestimonialsIntro";
 
@@ -36,29 +33,6 @@ export async function TestimonialsSection({
       <div
         aria-hidden
         className="pointer-events-none absolute -right-16 bottom-1/4 size-72 rounded-full bg-brand-accent/6 blur-3xl"
-      />
-
-      <SectionDecorIcon
-        icon={TbGauge}
-        tone="accent-muted"
-        className="right-4 top-[16%] rotate-12 xl:right-14"
-      />
-      <SectionDecorIcon
-        icon={TbStars}
-        tone="accent"
-        size="md"
-        className="left-2 top-[20%] -rotate-12 xl:left-10"
-      />
-      <SectionDecorIcon
-        icon={LuMessageCircleHeart}
-        tone="accent-muted"
-        className="right-0 bottom-[22%] rotate-6 xl:right-8"
-      />
-      <SectionDecorIcon
-        icon={TbHeartHandshake}
-        tone="accent"
-        size="sm"
-        className="bottom-[14%] left-6 -rotate-6 xl:left-14"
       />
 
       <SiteContainer className="relative">

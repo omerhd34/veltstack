@@ -94,9 +94,6 @@ function ProjectScrollCard({ project }: { project: ProjectScrollItem }) {
           <h3 className="font-(family-name:--font-heading) text-2xl font-bold leading-snug tracking-tight text-white md:text-[1.65rem]">
             {project.title}
           </h3>
-          <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-white/70 md:text-[0.9375rem]">
-            {project.description}
-          </p>
         </div>
       </div>
     </Link>

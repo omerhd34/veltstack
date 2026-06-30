@@ -7,7 +7,6 @@ import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { ServiceCard } from "@/components/sections/services/ServiceCard";
 import { getNavBlogPosts } from "@/components/pages/blog/blog-data";
 import { getFooterBlogCategoryIcon } from "@/components/layout/footer/footer-config";
-import { getNavBlogDescKey } from "@/components/layout/navbar/nav-blog-items";
 import { useUiStore } from "@/store/uiSlice";
 import { NavbarMegaMenuIntroColumn } from "./NavbarMegaMenuIntroColumn";
 
@@ -24,7 +23,6 @@ export function NavbarBlogMegaMenuPanel() {
         <NavbarMegaMenuIntroColumn
           headline={tHome("blogHeadline")}
           intro={tNav("blogMegaMenuIntro")}
-          introLines={11}
         >
           <PrimaryCtaLink
             href="/blog"
@@ -43,7 +41,6 @@ export function NavbarBlogMegaMenuPanel() {
                 compact
                 href={`/blog/${post.slug}`}
                 title={post.title}
-                description={tNav(getNavBlogDescKey(post.slug)!)}
                 icon={getFooterBlogCategoryIcon(post.category)}
                 onNavigate={() => setBlogMenuOpen(false)}
               />

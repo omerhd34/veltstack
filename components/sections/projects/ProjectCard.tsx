@@ -268,14 +268,9 @@ export function ProjectCard({
 
   if (isSlide && !isActive) {
     return (
-      <button
-        type="button"
-        onClick={onActivate}
-        aria-label={activateLabel ?? title}
-        className={cn(cardClassName, "w-full cursor-pointer text-left")}
-      >
+      <div aria-hidden className={cn(cardClassName, "w-full")}>
         {cardContent}
-      </button>
+      </div>
     );
   }
 

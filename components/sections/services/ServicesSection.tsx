@@ -1,6 +1,4 @@
-import { TbDatabase, TbRouteSquare2, TbSeo, TbServer2 } from "react-icons/tb";
 import { SiteContainer } from "@/components/layout/SiteContainer";
-import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 import { ServicesSlider } from "./ServicesSlider";
 import { ServicesIntro } from "./ServicesIntro";
 
@@ -30,32 +28,12 @@ export function ServicesSection({ className }: ServicesSectionProps) {
         aria-hidden
         className="pointer-events-none absolute -right-32 top-1/4 size-[420px] rounded-full bg-brand-accent/8 blur-3xl"
       />
-      <SectionDecorIcon
-        icon={TbRouteSquare2}
-        tone="on-dark-muted"
-        className="right-4 top-24 rotate-6 xl:right-10"
-      />
-      <SectionDecorIcon
-        icon={TbServer2}
-        tone="on-dark"
-        className="left-2 top-[16%] -rotate-12 xl:left-8"
-      />
-      <SectionDecorIcon
-        icon={TbDatabase}
-        tone="on-dark-muted"
-        size="md"
-        className="right-0 bottom-[18%] rotate-12 xl:right-6"
-      />
-      <SectionDecorIcon
-        icon={TbSeo}
-        tone="on-dark"
-        size="sm"
-        className="bottom-28 left-4 -rotate-6 xl:left-10"
-      />
       <SiteContainer className="relative">
         <ServicesIntro />
-        <ServicesSlider className="mt-2 md:mt-4" />
       </SiteContainer>
+      <div className="mx-auto -mt-2 w-full max-w-350 px-4 md:-mt-6">
+        <ServicesSlider />
+      </div>
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-emerald-400/20 to-transparent"

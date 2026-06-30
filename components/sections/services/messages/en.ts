@@ -1,16 +1,13 @@
 export const servicesHomeEn = {
   servicesTitle: "Services",
-  servicesHeadline:
-    "Designed to turn your goals into measurable results through",
-  servicesHeadlineAccent: "end-to-end digital services",
+  servicesHeadline: "For your business goals,",
+  servicesHeadlineAccent: "measurable digital services",
   servicesIntro:
     "We handle your brand's digital needs — web, apps, SEO and maintenance — under one roof. We define scope upfront, manage every step transparently and focus on measurable business outcomes. From design to launch, we prioritize performance, accessibility and SEO at every stage.",
   servicesBullets: [
     "One point of contact, transparent process end to end",
     "Design, development and launch in one package",
     "Post-launch technical support included",
-    "Regular updates and a clear delivery timeline",
-    "Performance, accessibility and SEO built in",
   ],
   servicesCta: "Let's plan together",
   servicesSliderPrev: "Previous service",

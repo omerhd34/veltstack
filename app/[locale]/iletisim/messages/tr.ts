@@ -106,7 +106,7 @@ export const contactTr = {
       href: "mailto:demirome123@gmail.com",
     },
     {
-      label: "Portfolyo | Ömer Halis Demir",
+      label: "Ömer Halis Demir | Portfolyo",
       value: "omerhalisdemir.com.tr",
       href: "https://www.omerhalisdemir.com.tr/",
     },

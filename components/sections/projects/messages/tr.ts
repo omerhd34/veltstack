@@ -20,23 +20,23 @@ export const projectsHomeTr = {
   projectIqfinansDesc:
     "Yapay zekâ destekli finansal analiz platformu. Karanlık-aydınlık mod, Türkçe-İngilizce dil desteği ve karmaşık verileri anlaşılır panellere dönüştüren raporlama.",
   projectIqfinansTag: "Finansal Teknoloji - AI",
-  projectYaziciTitle: "Yazıcı Ticaret | Profilo & LG",
+  projectYaziciTitle: "Yazıcı Ticaret | E-Ticaret",
   projectYaziciDesc:
     "Beyaz eşya ve elektronik kategorilerinde uçtan uca e-ticaret deneyimi kurduk. Ürün keşfinden ödeme ve sipariş takibine kadar dönüşüm odaklı bir satış altyapısı tasarladık.",
   projectYaziciTag: "E-Ticaret - B2C",
-  projectFablessiTitle: "Fablessi | Bahçe & Balkon",
+  projectFablessiTitle: "Fablessi | Kurumsal Katalog",
   projectFablessiDesc:
     "Bahçe ve balkon mobilyaları için premium kurumsal katalog. Türkçe-İngilizce dil desteği, zengin görsel sunum ve net kategori yapısıyla marka algısını güçlendiren vitrin.",
   projectFablessiTag: "Kurumsal - Katalog",
-  projectUzmanPsikologTitle: "Uzman Klinik Psikolog",
+  projectUzmanPsikologTitle: "Klinik Psikolog | Kurumsal Web Sitesi",
   projectUzmanPsikologDesc:
     "Uzman Klinik Psikolog Nisa Demir için profesyonel web platformu. Karanlık-aydınlık mod, randevu talebi, blog ve SEO odaklı kurumsal deneyim.",
   projectUzmanPsikologTag: "Sağlık - Kurumsal",
-  projectPortfolioTitle: "Portfolyo | Ömer Halis Demir",
+  projectPortfolioTitle: "Ömer Halis Demir | Portfolyo",
   projectPortfolioDesc:
     "Full stack geliştirici portfolyo sitesi. Türkçe-İngilizce dil desteği, projeler, deneyimler ve hizmetler modern ve SEO uyumlu bir arayüzde sunuluyor.",
   projectPortfolioTag: "Portfolyo - Kişisel",
-  projectOnlinemuhasebeTitle: "Online Muhasebe | Mali Müşavirlik",
+  projectOnlinemuhasebeTitle: "Online Muhasebe | Kurumsal Web Sitesi",
   projectOnlinemuhasebeDesc:
     "Mali müşavirlik ve muhasebe hizmetleri için kurumsal portfolyo sitesi. Karanlık-aydınlık mod, pratik bilgiler, resmi platform kısayolları ve iletişim formu.",
   projectOnlinemuhasebeTag: "Mali Müşavirlik - Kurumsal",

@@ -17,7 +17,6 @@ export function NavbarProjectsMegaMenuPanel() {
   const cards = projectItems.map((project) => ({
     href: project.href,
     title: tHome(project.titleKey),
-    description: tNav(project.navDescKey),
     icon: project.icon,
   }))
 
@@ -27,7 +26,6 @@ export function NavbarProjectsMegaMenuPanel() {
         <NavbarMegaMenuIntroColumn
           headline={tHome("projectsHeadline")}
           intro={tNav("projectsMegaMenuIntro")}
-          introLines={12}
         >
           <PrimaryCtaLink
             href="/projeler"

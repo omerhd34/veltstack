@@ -18,7 +18,6 @@ export function NavbarServicesMegaMenuPanel() {
     slug: item.slug,
     href: item.href,
     title: tHome(item.titleKey),
-    description: tNav(item.navDescKey),
   }));
 
   return (
@@ -34,7 +33,6 @@ export function NavbarServicesMegaMenuPanel() {
             </>
           }
           intro={tNav("servicesMegaMenuIntro")}
-          introLines={9}
         >
           <PrimaryCtaLink
             href="/iletisim"

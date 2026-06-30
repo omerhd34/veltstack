@@ -1,7 +1,4 @@
-import { LuAtom } from "react-icons/lu";
-import { TbApiApp, TbHexagon3D, TbTopologyStar3 } from "react-icons/tb";
 import { SiteContainer } from "@/components/layout/SiteContainer";
-import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 import { WhyMeGrid } from "./WhyMeGrid";
 import { WhyMeIntro } from "./WhyMeIntro";
 
@@ -30,29 +27,6 @@ export function WhyMeSection({ className }: WhyMeSectionProps) {
       <div
         aria-hidden
         className="pointer-events-none absolute -left-20 top-1/3 size-80 rounded-full bg-brand-accent/6 blur-3xl"
-      />
-
-      <SectionDecorIcon
-        icon={TbApiApp}
-        tone="accent-muted"
-        className="right-6 top-28 rotate-12 xl:right-14"
-      />
-      <SectionDecorIcon
-        icon={LuAtom}
-        tone="accent"
-        size="md"
-        className="bottom-32 left-2 -rotate-6 xl:left-8"
-      />
-      <SectionDecorIcon
-        icon={TbTopologyStar3}
-        tone="accent-muted"
-        className="left-4 top-20 rotate-12 xl:left-12"
-      />
-      <SectionDecorIcon
-        icon={TbHexagon3D}
-        tone="accent"
-        size="sm"
-        className="right-2 bottom-[14%] -rotate-12 xl:right-10"
       />
 
       <SiteContainer className="relative">

@@ -26,7 +26,7 @@ export const projectDetailsTr = {
     metaDesc:
       "Gelir-gider, bütçe, borç-alacak ve AI analiz raporu sunan kişisel finans platformu. 16.000+ kullanıcı, Shopier abonelik altyapısı.",
     heroBadge: "Finansal Teknoloji / AI",
-    heroTitle: "IQfinansAI",
+    heroTitle: "IQfinansAI | AI Finans Platformu",
     heroSubtitle:
       "Kişisel finans asistanı: gelir-gider, bütçe, borç-alacak ve yatırım portföyünü tek panelde yönetin. Yapay zekâ destekli analizlerle harcamalarınızı netleştirin.",
     summary:
@@ -214,11 +214,11 @@ export const projectDetailsTr = {
     ],
   },
   fablessi: {
-    metaTitle: "Fablessi | Bahçe & Balkon Mobilya Kataloğu",
+    metaTitle: "Fablessi | Bahçe & Balkon Mobilyaları",
     metaDesc:
       "Bahçe ve balkon mobilyaları için premium kurumsal ürün vitrini. Hero carousel, WhatsApp entegrasyonu ve SEO uyumlu katalog.",
     heroBadge: "Kurumsal / Katalog",
-    heroTitle: "Fablessi",
+    heroTitle: "Fablessi | Bahçe & Balkon Mobilyaları",
     heroSubtitle:
       "Bahçe ve balkon mobilyaları için premium kurumsal katalog. Oturma gruplarından şezlonglara 6 kategori, hero carousel ve WhatsApp iletişimi.",
     summary: "Bahçe ve balkon mobilyaları için premium kurumsal ürün vitrini.",
@@ -322,11 +322,11 @@ export const projectDetailsTr = {
     ],
   },
   onlinemuhasebe: {
-    metaTitle: "Online Muhasebe | Şahin Demir Mali Müşavirlik",
+    metaTitle: "Online Muhasebe | Mali Müşavirlik",
     metaDesc:
       "Mali müşavirlik ve muhasebe hizmetleri için kurumsal portfolyo sitesi. Hizmetler, pratik bilgiler ve iletişim formu.",
     heroBadge: "Mali Müşavirlik / Kurumsal",
-    heroTitle: "Online Muhasebe",
+    heroTitle: "Online Muhasebe | Mali Müşavirlik",
     heroSubtitle:
       "Şahin Demir Mali Müşavirlik için kurumsal web sitesi. Muhasebe, vergi danışmanlığı, pratik bilgiler ve resmi platform kısayolları.",
     summary:

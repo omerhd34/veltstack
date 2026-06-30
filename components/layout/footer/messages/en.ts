@@ -13,12 +13,12 @@ export const footerEn = {
     serviceMaintenance: "Maintenance & Support",
   },
   projectLabels: {
-    projectIqfinans: "IQfinansAI",
-    projectYazici: "Yazici Trade",
-    projectFablessi: "Fablessi",
-    projectUzmanPsikolog: "Clinical Psychologist",
-    projectPortfolio: "Portfolio | Ömer Halis Demir",
-    projectOnlinemuhasebe: "Online Muhasebe | Mali Müşavirlik",
+    projectIqfinans: "IQfinansAI | SaaS Platform",
+    projectYazici: "Yazıcı Ticaret | E-Commerce",
+    projectFablessi: "Fablessi | Corporate Catalog",
+    projectUzmanPsikolog: "Clinical Psychologist | Corporate Website",
+    projectPortfolio: "Ömer Halis Demir | Portfolio",
+    projectOnlinemuhasebe: "Online Accounting | Corporate Website",
   },
   contactPhone: "+90 507 849 29 03",
   contactPhoneHref: "tel:+905078492903",
@@ -27,7 +27,7 @@ export const footerEn = {
   contactExtraLinks: [
     { label: "WhatsApp", href: "https://wa.me/905078492903" },
     {
-      label: "Portfolio | Ömer Halis Demir",
+      label: "Ömer Halis Demir | Portfolio",
       href: "https://www.omerhalisdemir.com.tr/",
     },
     {

@@ -22,11 +22,11 @@ export const projectDetailsEn = {
   breadcrumbHome: "Home",
   breadcrumbProjects: "Projects",
   iqfinansai: {
-    metaTitle: "IQfinansAI | AI Finance Platform",
+    metaTitle: "IQfinansAI | AI Finance Analytics Platform",
     metaDesc:
       "Personal finance platform for income-expense, budgets, debt tracking and AI analysis reports. 16,000+ users, Shopier subscription stack.",
     heroBadge: "FinTech / AI",
-    heroTitle: "IQfinansAI",
+    heroTitle: "IQfinansAI | AI Finance Analytics Platform",
     heroSubtitle:
       "Your personal finance assistant: manage income, expenses, budgets, debt and investment portfolio in one panel. Clarify spending with AI-powered insights.",
     summary:
@@ -102,11 +102,11 @@ export const projectDetailsEn = {
     ],
   },
   "yazici-ticaret": {
-    metaTitle: "Yazici Ticaret | E-Commerce Platform",
+    metaTitle: "Yazıcı Ticaret | E-Commerce Platform",
     metaDesc:
       "End-to-end e-commerce experience for white goods and electronics categories.",
     heroBadge: "E-Commerce / B2C",
-    heroTitle: "Yazici Ticaret",
+    heroTitle: "Yazıcı Ticaret",
     heroSubtitle:
       "End-to-end e-commerce for Profilo and LG white goods and electronics. Nationwide shipping & installation, installment options and secure iyzico checkout.",
     summary:
@@ -214,11 +214,11 @@ export const projectDetailsEn = {
     ],
   },
   fablessi: {
-    metaTitle: "Fablessi | Garden & Balcony Furniture Catalog",
+    metaTitle: "Fablessi | Garden & Balcony Furniture",
     metaDesc:
       "Premium corporate product showcase for garden and balcony furniture.",
     heroBadge: "Corporate / Catalog",
-    heroTitle: "Fablessi",
+    heroTitle: "Fablessi | Garden & Balcony Furniture",
     heroSubtitle:
       "Premium corporate catalog for garden and balcony furniture. 6 categories from seating groups to sunbeds, hero carousel and WhatsApp contact.",
     summary:
@@ -321,11 +321,11 @@ export const projectDetailsEn = {
     ],
   },
   onlinemuhasebe: {
-    metaTitle: "Online Muhasebe | Şahin Demir CPA",
+    metaTitle: "Online Accounting | Financial Consulting",
     metaDesc:
       "Corporate portfolio site for accounting and financial consultancy services. Services, practical resources and contact form.",
     heroBadge: "Accounting / Corporate",
-    heroTitle: "Online Muhasebe",
+    heroTitle: "Online Accounting | Financial Consulting",
     heroSubtitle:
       "Corporate website for Şahin Demir Financial Consultancy. Accounting, tax consultancy, practical resources and government platform shortcuts.",
     summary:

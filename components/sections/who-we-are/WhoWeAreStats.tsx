@@ -1,7 +1,7 @@
-/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
-import { useEffect, useState } from "react";
+import { CountUp } from "@/components/lightswind/count-up";
+import { cn } from "@/lib/utils";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export interface WhoWeAreStat {
@@ -14,68 +14,59 @@ interface WhoWeAreStatsProps {
   stats: readonly WhoWeAreStat[];
 }
 
-const DURATION_MS = 2200;
-
-function useCountUp(target: number, active: boolean) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!active) {
-      setCount(0);
-      return;
-    }
-
-    let start: number | null = null;
-    let frameId: number;
-
-    const step = (timestamp: number) => {
-      if (start === null) start = timestamp;
-      const progress = Math.min((timestamp - start) / DURATION_MS, 1);
-      const eased = 1 - (1 - progress) ** 3;
-      setCount(Math.round(eased * target));
-
-      if (progress < 1) {
-        frameId = requestAnimationFrame(step);
-      }
-    };
-
-    frameId = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(frameId);
-  }, [target, active]);
-
-  return count;
-}
-
-function AnimatedStat({
+function StatCard({
   target,
   suffix,
   label,
   active,
-}: WhoWeAreStat & { active: boolean }) {
-  const count = useCountUp(target, active);
-
+  index,
+}: WhoWeAreStat & { active: boolean; index: number }) {
   return (
-    <div>
-      <p className="font-(family-name:--font-heading) text-3xl font-bold text-[#0A0A0F] md:text-4xl">
-        {count}
-        {suffix}
+    <div
+      className={cn(
+        "group relative overflow-hidden rounded-2xl border border-brand-accent/12 bg-white/70 px-4 py-5 shadow-[0_4px_20px_rgb(58_107_82/0.06)] backdrop-blur-sm transition-all duration-500",
+        active ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0",
+      )}
+      style={{ transitionDelay: `${index * 120}ms` }}
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgb(58_107_82/0.08),transparent_65%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+      />
+      <CountUp
+        value={target}
+        suffix={suffix}
+        duration={2.2}
+        triggerOnView
+        animationStyle="gentle"
+        colorScheme="custom"
+        customColor="#0A0A0F"
+        className="relative justify-start text-3xl md:text-4xl"
+        numberClassName="font-(family-name:--font-heading) font-bold"
+      />
+      <p className="relative mt-2 text-xs font-medium text-muted-foreground">
+        {label}
       </p>
-      <p className="mt-1 text-xs font-medium text-muted-foreground">{label}</p>
     </div>
   );
 }
 
 export function WhoWeAreStats({ stats }: WhoWeAreStatsProps) {
-  const { ref, isVisible } = useScrollReveal({ threshold: 0.4, repeat: true });
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.35, repeat: true });
 
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement | null>}
-      className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-10"
+      className="mt-12 grid grid-cols-3 gap-3 border-t border-brand-accent/15 pt-10 sm:gap-4"
       aria-live="polite"
     >
-      {stats.map((stat) => (
-        <AnimatedStat key={stat.label} {...stat} active={isVisible} />
+      {stats.map((stat, index) => (
+        <StatCard
+          key={stat.label}
+          {...stat}
+          active={isVisible}
+          index={index}
+        />
       ))}
     </div>
   );

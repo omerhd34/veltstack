@@ -11,14 +11,25 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
 
   const bullets = t.raw("servicesBullets") as string[];
 
+  const cta = (
+    <PrimaryCtaLink
+      href="/iletisim"
+      variant="accent"
+      showArrow={false}
+      trailingIcon={<LuMessageCircle className="size-5" aria-hidden />}
+    >
+      {t("servicesCta")}
+    </PrimaryCtaLink>
+  );
+
   return (
     <div className={`w-full min-w-0 ${className ?? ""}`}>
       <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300/90">
         {t("servicesTitle")}
       </span>
 
-      <div className="relative mt-10 grid gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-16">
-        <div className="flex flex-col lg:h-full">
+      <div className="relative mt-8 grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-16">
+        <div className="flex flex-col">
           <h2
             id="services-section-title"
             className="font-(family-name:--font-heading) text-4xl font-bold leading-[1.04] tracking-tight text-white md:text-5xl lg:text-[3.25rem]"
@@ -29,20 +40,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
             </span>
           </h2>
 
-          <div className="mt-8 flex flex-col gap-8 lg:min-h-0 lg:flex-1 lg:gap-0">
-            <div
-              className="hidden min-h-0 flex-1 lg:block"
-              aria-hidden="true"
-            />
-            <PrimaryCtaLink
-              href="/iletisim"
-              variant="accent"
-              showArrow={false}
-              trailingIcon={<LuMessageCircle className="size-5" aria-hidden />}
-            >
-              {t("servicesCta")}
-            </PrimaryCtaLink>
-          </div>
+          <div className="mt-8 hidden lg:block">{cta}</div>
         </div>
 
         <div className="flex flex-col gap-6">
@@ -65,6 +63,8 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
               </li>
             ))}
           </ul>
+
+          <div className="mt-2 lg:hidden">{cta}</div>
         </div>
       </div>
     </div>

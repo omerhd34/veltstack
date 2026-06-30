@@ -1,9 +1,7 @@
 import { LuEye, LuMessageCircle } from "react-icons/lu";
-import { TbGitBranch, TbRocket, TbSparkles } from "react-icons/tb";
 import { getTranslations } from "next-intl/server";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { SiteContainer } from "@/components/layout/SiteContainer";
-import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 import { toLatinUppercase } from "@/lib/utils";
 import { CTAHighlights } from "./CTAHighlights";
 
@@ -38,24 +36,6 @@ export async function CTASection({ className }: CTASectionProps) {
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-accent/25 to-transparent"
-      />
-
-      <SectionDecorIcon
-        icon={TbGitBranch}
-        tone="accent-muted"
-        className="left-6 top-[18%] -rotate-12 xl:left-14"
-      />
-      <SectionDecorIcon
-        icon={TbRocket}
-        tone="accent"
-        size="md"
-        className="right-8 top-[22%] rotate-6 xl:right-16"
-      />
-      <SectionDecorIcon
-        icon={TbSparkles}
-        tone="accent-muted"
-        size="sm"
-        className="bottom-[18%] left-4 rotate-12 xl:left-12"
       />
 
       <SiteContainer className="relative">
