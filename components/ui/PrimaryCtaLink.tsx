@@ -7,7 +7,10 @@ import { BorderTrace } from "@/components/ui/BorderTrace";
 import { cn } from "@/lib/utils";
 
 const slowTransition =
-  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
+  "transition-[transform,background-color,box-shadow] duration-1000 ease-in-out motion-reduce:transition-none";
+
+const contentScaleTransition =
+  "transition-transform duration-1000 ease-in-out motion-reduce:transition-none group-hover:scale-[1.02] active:scale-[0.98] motion-reduce:group-hover:scale-100";
 
 type PrimaryCtaLinkSize = "sm" | "md" | "lg";
 type PrimaryCtaLinkVariant = "default" | "accent" | "outline";
@@ -25,10 +28,16 @@ interface PrimaryCtaLinkProps {
   onNavigate?: () => void;
 }
 
-const sizeClasses: Record<PrimaryCtaLinkSize, string> = {
-  sm: "h-9 gap-1.5 px-4 text-sm",
-  md: "h-11 gap-2 px-6 text-base",
-  lg: "h-12 gap-2 px-8 text-base",
+const linkSizeClasses: Record<PrimaryCtaLinkSize, string> = {
+  sm: "h-9 px-4 text-sm",
+  md: "h-11 px-6 text-base",
+  lg: "h-12 px-8 text-base",
+};
+
+const contentGapClasses: Record<PrimaryCtaLinkSize, string> = {
+  sm: "gap-1.5",
+  md: "gap-2",
+  lg: "gap-2",
 };
 
 const arrowSizeClasses: Record<PrimaryCtaLinkSize, string> = {
@@ -38,21 +47,21 @@ const arrowSizeClasses: Record<PrimaryCtaLinkSize, string> = {
 };
 
 const iconTransition =
-  "transition-[color,stroke-width] duration-1000 ease-in-out motion-reduce:transition-none";
+  "transition-colors duration-1000 ease-in-out motion-reduce:transition-none";
 
 const iconHoverClasses = cn(
   "text-white stroke-[2.25]",
   iconTransition,
-  "group-hover:text-(--border-trace-stroke) group-hover:stroke-[3.25]",
-  "motion-reduce:group-hover:text-white motion-reduce:group-hover:stroke-[2.25]",
+  "group-hover:text-(--border-trace-stroke)",
+  "motion-reduce:group-hover:text-white",
 );
 
 const iconSlotClasses = cn(
   "inline-flex shrink-0",
   "[&_svg]:text-white [&_svg]:stroke-[2.25]",
-  "[&_svg]:transition-[color,stroke-width] [&_svg]:duration-1000 [&_svg]:ease-in-out",
-  "group-hover:[&_svg]:text-(--border-trace-stroke) group-hover:[&_svg]:stroke-[3.25]",
-  "motion-reduce:[&_svg]:transition-none motion-reduce:group-hover:[&_svg]:text-white motion-reduce:group-hover:[&_svg]:stroke-[2.25]",
+  "[&_svg]:transition-colors [&_svg]:duration-1000 [&_svg]:ease-in-out",
+  "group-hover:[&_svg]:text-(--border-trace-stroke)",
+  "motion-reduce:[&_svg]:transition-none motion-reduce:group-hover:[&_svg]:text-white",
 );
 
 const variantClasses: Record<PrimaryCtaLinkVariant, string> = {
@@ -80,8 +89,6 @@ export function PrimaryCtaLink({
     <span
       className={cn(
         "group relative inline-flex overflow-visible",
-        slowTransition,
-        "hover:scale-105 active:scale-[0.98] motion-reduce:hover:scale-100",
         wrapperClassName,
       )}
     >
@@ -92,25 +99,34 @@ export function PrimaryCtaLink({
           "relative z-1 inline-flex items-center justify-center rounded-full",
           "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
           "whitespace-nowrap",
+          slowTransition,
           variantClasses[variant],
-          sizeClasses[size],
+          linkSizeClasses[size],
           className,
         )}
       >
         <BorderTrace durationSec={2.5} />
-        {leadingIcon ? (
-          <span className={iconSlotClasses}>{leadingIcon}</span>
-        ) : null}
-        {children}
-        {trailingIcon ? (
-          <span className={iconSlotClasses}>{trailingIcon}</span>
-        ) : null}
-        {showArrow ? (
-          <LuArrowUpRight
-            className={cn(arrowSizeClasses[size], iconHoverClasses)}
-            aria-hidden
-          />
-        ) : null}
+        <span
+          className={cn(
+            "inline-flex items-center justify-center",
+            contentGapClasses[size],
+            contentScaleTransition,
+          )}
+        >
+          {leadingIcon ? (
+            <span className={iconSlotClasses}>{leadingIcon}</span>
+          ) : null}
+          {children}
+          {trailingIcon ? (
+            <span className={iconSlotClasses}>{trailingIcon}</span>
+          ) : null}
+          {showArrow ? (
+            <LuArrowUpRight
+              className={cn(arrowSizeClasses[size], iconHoverClasses)}
+              aria-hidden
+            />
+          ) : null}
+        </span>
       </Link>
     </span>
   );
