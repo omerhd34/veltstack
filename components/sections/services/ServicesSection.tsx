@@ -54,7 +54,7 @@ export function ServicesSection({ className }: ServicesSectionProps) {
       />
       <SiteContainer className="relative">
         <ServicesIntro />
-        <ServicesSlider className="mt-8 md:mt-10" />
+        <ServicesSlider className="mt-2 md:mt-4" />
       </SiteContainer>
       <div
         aria-hidden

@@ -16,6 +16,9 @@ export const servicesHomeTr = {
   servicesSliderPrev: "Önceki hizmet",
   servicesSliderNext: "Sonraki hizmet",
   servicesSliderDot: "Hizmet",
+  servicesSliderRegion: "Hizmetler karuseli",
+  servicesSliderStatus: "{label}, {current} / {total}",
+  servicesSliderActivate: "{title} hizmetini göster",
   servicesWebTitle: "Web Sitesi Geliştirme",
   servicesWebDesc:
     "Kurumsal, e-ticaret ve portfolyo projelerinde tasarımdan yayına kadar hızlı ve SEO uyumlu web geliştirme sunuyoruz; performans, erişilebilirliği ve dönüşümü önceliklendirip mobil uyumlu bir altyapıyla yayına alıyoruz.",

@@ -16,6 +16,9 @@ export const servicesHomeEn = {
   servicesSliderPrev: "Previous service",
   servicesSliderNext: "Next service",
   servicesSliderDot: "Service",
+  servicesSliderRegion: "Services carousel",
+  servicesSliderStatus: "{label}, {current} / {total}",
+  servicesSliderActivate: "Show {title} service",
   servicesWebTitle: "Website Development",
   servicesWebDesc:
     "We deliver fast, SEO-ready web development for corporate, e-commerce and portfolio projects from design through launch; we prioritize performance, accessibility and conversion, then ship on a solid mobile-friendly foundation.",

@@ -29,6 +29,9 @@ interface ServiceCardProps {
   numbered?: boolean;
   index?: number;
   variant?: "default" | "slide";
+  isActive?: boolean;
+  onActivate?: () => void;
+  activateLabel?: string;
   onNavigate?: () => void;
 }
 
@@ -44,6 +47,9 @@ export function ServiceCard({
   numbered = false,
   index,
   variant = "default",
+  isActive = true,
+  onActivate,
+  activateLabel,
   onNavigate,
 }: ServiceCardProps) {
   const Icon = icon ?? (slug ? serviceIconBySlug[slug] : LuArrowUpRight);
@@ -55,7 +61,11 @@ export function ServiceCard({
     "group relative flex h-full flex-col rounded-2xl bg-card",
     slowTransition,
     isSlide
-      ? "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99] bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]"
+      ? cn(
+          "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99] bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
+          !isActive &&
+            "brightness-[0.72] saturate-[0.65] hover:brightness-[0.88] hover:saturate-[0.85] active:brightness-95",
+        )
       : cn(
           "border-trace-hover-fallback box-border border-[3px] border-solid border-border hover:shadow-lg",
           compact ? "p-4" : "p-6",
@@ -64,7 +74,17 @@ export function ServiceCard({
 
   const content = (
     <>
-      <BorderTrace durationSec={2.5} />
+      <BorderTrace
+        durationSec={2.5}
+        {...(isSlide
+          ? {
+              radius: 16,
+              loop: true,
+              trigger: "hover" as const,
+              stroke: "var(--brand-accent)",
+            }
+          : {})}
+      />
       {numbered && index != null ? (
         <CardIndexNumber
           index={index}
@@ -169,6 +189,19 @@ export function ServiceCard({
       ) : null}
     </>
   );
+
+  if (isSlide && !isActive) {
+    return (
+      <button
+        type="button"
+        onClick={onActivate}
+        aria-label={activateLabel ?? title}
+        className={cn(cardClassName, "w-full cursor-pointer text-left")}
+      >
+        {content}
+      </button>
+    );
+  }
 
   if (isExternalHref(href)) {
     return (
