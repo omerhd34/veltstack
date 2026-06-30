@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Veltstack
 
-## Getting Started
+Ömer Halis Demir'in full stack geliştirici markası için tasarlanmış, çok dilli hizmet sitesi ve içerik yönetim paneli.
 
-First, run the development server:
+Veltstack; kurumsal web siteleri, mobil uygulamalar, SEO çalışmaları ile bakım ve destek hizmetlerini tek çatı altında sunan solo bir geliştirici markasıdır. Dışarıdan ajans disiplini ve premium bir sunum dili taşır; ancak arkasında çok kişilik bir ekip değil, doğrudan geliştiriciyle çalışmayı hedefleyen net ve şeffaf bir yapı vardır.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Public tarafta ziyaretçiler hizmetleri inceleyebilir, tamamlanan projeleri keşfedebilir, blog içeriklerine ulaşabilir, hakkımda sayfasından markanın hikâyesini okuyabilir ve iletişim formu üzerinden proje talebi iletebilir. Tüm bu sayfalar Türkçe ve İngilizce olarak sunulur; varsayılan dil Türkçe'dir.
+
+Admin paneli ise site içeriğinin, projelerin, blog yazılarının ve gelen mesajların merkezi olarak yönetilmesini sağlar. Böylece Veltstack hem müşteriye dönük vitrin hem de günlük operasyonlar için tek bir dijital merkez işlevi görür.
+
+## Özellikler
+
+- **Çok dilli public site** — `tr` (varsayılan) ve `en`; `next-intl` ile locale routing
+- **Hizmetler, projeler, blog** — Dinamik içerik sayfaları ve detay görünümleri
+- **İletişim formu** — Rate limit (Upstash) ve e-posta bildirimi (Resend)
+- **Admin panel** — İçerik yönetimi, mesajlar ve site ayarları (`next-auth`)
+- **Premium UI** — Tailwind CSS 4, shadcn/ui, dark mode, glassmorphism detayları
+- **Veritabanı** — Prisma + MySQL; çok dilli alanlar `_tr` / `_en` suffix ile
+
+## Teknoloji Yığını
+
+| Katman | Teknoloji |
+|--------|-----------|
+| Framework | Next.js 16 (App Router), React 19 |
+| Dil | TypeScript |
+| Stil | Tailwind CSS 4, shadcn/ui, Lightswind |
+| Veritabanı | Prisma, MySQL |
+| i18n | next-intl |
+| Auth | next-auth |
+| Doğrulama | Zod |
+| State | Zustand |
+| E-posta | Resend |
+| Rate limit | Upstash Redis |
+
+## Proje Yapısı
+
+```
+app/
+├── [locale]/          # Public sayfalar (hizmetler, projeler, blog, hakkımda, iletişim)
+├── admin/             # Admin panel
+└── api/               # Route handlers
+
+components/
+├── sections/          # Ana sayfa bölümleri
+├── pages/             # Sayfa bileşenleri
+├── admin/             # Admin bileşenleri
+├── layout/            # Navbar, footer
+└── ui/shadcn/         # shadcn UI bileşenleri
+
+i18n/                  # Locale routing yapılandırması
+messages/              # Ana i18n mesaj birleştirmesi (tr.ts, en.ts)
+prisma/                # Şema ve seed
+lib/                   # Yardımcı modüller (prisma, utils, axios)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rotalar
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Public (`/app/[locale]/`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Rota | Sayfa |
+|------|-------|
+| `/` | Ana sayfa |
+| `/hizmetler` | Hizmet listesi |
+| `/hizmetler/[slug]` | Hizmet detayı |
+| `/projeler` | Proje listesi |
+| `/projeler/[slug]` | Proje detayı |
+| `/blog` | Blog listesi |
+| `/blog/[slug]` | Blog yazısı |
+| `/hakkimda` | Hakkımda |
+| `/iletisim` | İletişim |
 
-## Learn More
+Varsayılan dil `tr` olduğundan Türkçe rotalar prefix'siz çalışır (`localePrefix: "as-needed"`). İngilizce için `/en/...` kullanılır.
 
-To learn more about Next.js, take a look at the following resources:
+### Admin (`/app/admin/`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Rota | Sayfa |
+|------|-------|
+| `/admin/login` | Giriş |
+| `/admin` | Dashboard |
+| `/admin/projeler` | Proje yönetimi |
+| `/admin/blog` | Blog yönetimi |
+| `/admin/mesajlar` | Gelen mesajlar |
+| `/admin/ayarlar` | Site ayarları |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Lisans
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Bu proje özel (`private`) bir depodur.
