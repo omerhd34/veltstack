@@ -10,7 +10,7 @@ export const aboutEn = {
   scrollLabel: "Read more",
   stats: [
     {
-      value: "20+",
+      value: "40+",
       label: "Completed Projects",
       hint: "Projects delivered across industries, with a portfolio focused on corporate web, e-commerce and mobile apps.",
     },

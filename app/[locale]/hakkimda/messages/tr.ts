@@ -10,7 +10,7 @@ export const aboutTr = {
   scrollLabel: "Devamını oku",
   stats: [
     {
-      value: "20+",
+      value: "40+",
       label: "Tamamlanan Proje",
       hint: "Farklı sektörlerde teslim ettiğimiz proje sayısı. Kurumsal web, e-ticaret ve mobil uygulama ağırlıklı portföy.",
     },

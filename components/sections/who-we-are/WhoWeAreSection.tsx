@@ -13,7 +13,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
 
   const stats = [
     { target: 6, suffix: "+", label: t("whoWeAreStat1Label") },
-    { target: 20, suffix: "+", label: t("whoWeAreStat2Label") },
+    { target: 40, suffix: "+", label: t("whoWeAreStat2Label") },
     { target: 100, suffix: "%", label: t("whoWeAreStat3Label") },
   ];
 
