@@ -73,3 +73,23 @@
     transform: translateX(-50%) scaleX(1);
   }
 }
+
+@keyframes scroll-carousel-wave {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 40px;
+  }
+}
+
+.animated-water {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(58, 107, 82, 0.95) 0%,
+    rgba(58, 107, 82, 0.7) 25%,
+    rgba(58, 107, 82, 0.95) 50%
+  );
+  background-size: 40px 40px;
+  animation: scroll-carousel-wave 2s linear infinite;
+}
