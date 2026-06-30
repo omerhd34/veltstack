@@ -29,7 +29,9 @@ export function navItemClass(
 export function navItemLabelClass(active: boolean) {
   return cn(
     "relative inline-flex h-full items-center",
-    "after:absolute after:bottom-3 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-(--border-trace-stroke) after:transition-opacity after:duration-200",
-    active ? "after:opacity-100" : "after:opacity-0 group-hover:after:opacity-100",
+    "after:absolute after:bottom-2 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-(--border-trace-stroke) after:transition-opacity after:duration-200",
+    active
+      ? "after:opacity-100"
+      : "after:opacity-0 group-hover:after:opacity-100",
   );
 }
