@@ -57,7 +57,7 @@ export function WhyMeSection({ className }: WhyMeSectionProps) {
 
       <SiteContainer className="relative">
         <WhyMeIntro />
-        <WhyMeGrid className="mt-14 md:mt-16" />
+        <WhyMeGrid className="mt-10 md:mt-14" />
       </SiteContainer>
 
       <div
