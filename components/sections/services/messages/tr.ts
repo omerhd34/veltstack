@@ -30,19 +30,19 @@ export const servicesHomeTr = {
   servicesAppTag: "iOS - Android",
   servicesSeoTitle: "SEO Hizmetleri",
   servicesSeoDesc:
-    "Teknik altyapı, içerik stratejisi ve düzenli optimizasyonla sürdürülebilir organik büyüme sağlıyoruz; ölçülebilir hedeflerle ilerliyor, anahtar kelime çalışmalarını veriye dayalı bir plana dönüştürüyoruz.",
-  servicesSeoTag: "SEO - Organik",
+    "Teknik altyapı, içerik stratejisi ve düzenli optimizasyonla sürdürülebilir organik büyüme sağlıyoruz; ölçülebilir hedeflerle ilerliyor, anahtar kelime çalışmalarını veriye dayalı bir plana dönüştürüp düzenli raporluyoruz.",
+  servicesSeoTag: "SEO",
   servicesAuditTitle: "Teknik Denetim",
   servicesAuditDesc:
-    "Web sitesi, uygulama ve altyapınızı performans, güvenlik ve SEO açısından kapsamlı şekilde analiz ediyoruz; öncelikli iyileştirme planı ve uygulanabilir adım listesi çıkarıyor, bulguları iş etkisine göre sıralayarak net bir yol haritası sunuyoruz.",
+    "Web sitesi, uygulama ve altyapınızı performans, güvenlik ve SEO açısından kapsamlı analiz ediyoruz; öncelikli iyileştirme planı ve uygulanabilir adımlar çıkarıyor, bulguları iş etkisine göre sıralayıp net bir yol haritası sunuyoruz.",
   servicesAuditTag: "Performans - Güvenlik - SEO",
   servicesMaintenanceTitle: "Bakım & Destek",
   servicesMaintenanceDesc:
-    "Güncelleme, yedekleme ve teknik destekle web ve uygulama varlıklarınızı güvenli, güncel ve kesintisiz çalışır halde tutuyoruz; acil müdahale süreçlerini yönetiyor, izleme ve bakım ritmini kurarak olası riskleri yayına yansımadan önce ele alıyoruz.",
+    "Güncelleme, yedekleme ve teknik destekle web ve uygulama varlıklarınızı güvenli, güncel ve kesintisiz tutuyoruz; acil müdahale süreçlerini yönetiyor, izleme ve bakım ritmini kurarak riskleri yayına yansımadan önce ele alıyoruz.",
   servicesMaintenanceTag: "Güncelleme - Yedekleme - Destek",
   servicesStats: [
     { num: "6", label: "Hizmet Kategorisi" },
-    { num: "20+", label: "Tamamlanan Proje" },
+    { num: "40+", label: "Tamamlanan Proje" },
     { num: "6+", label: "Yıl Deneyim" },
     { num: "100%", label: "Müşteri Memnuniyeti" },
   ],

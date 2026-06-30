@@ -40,7 +40,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
             </span>
           </h2>
 
-          <div className="mt-8 hidden lg:block">{cta}</div>
+          <div className="relative z-10 mt-8 hidden lg:block">{cta}</div>
         </div>
 
         <div className="flex flex-col gap-6">
@@ -64,7 +64,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
             ))}
           </ul>
 
-          <div className="mt-2 lg:hidden">{cta}</div>
+          <div className="relative z-10 mt-2 lg:hidden">{cta}</div>
         </div>
       </div>
     </div>

@@ -26,23 +26,23 @@ export const servicesHomeEn = {
   servicesRefreshTag: "Web - Mobile - Infrastructure",
   servicesAppTitle: "App Development",
   servicesAppDesc:
-    "We build high-performance, user-friendly mobile apps for iOS and Android; we handle store launch, updates and maintenance end to end and shape integrations around your product goals.",
+    "We build high-performance, user-friendly mobile apps for iOS and Android; we handle store launch, updates and maintenance end to end, shape integrations around your product goals and plan each release carefully.",
   servicesAppTag: "iOS - Android",
   servicesSeoTitle: "SEO Services",
   servicesSeoDesc:
-    "We drive sustainable organic growth through technical SEO, content strategy and ongoing optimization; we set measurable targets and turn keyword insights into a focused, data-backed action plan.",
-  servicesSeoTag: "Technical - Content - Reporting",
+    "We drive sustainable organic growth through technical SEO, content strategy and ongoing optimization; we set measurable targets, turn keyword insights into a focused action plan and report progress clearly.",
+  servicesSeoTag: "SEO",
   servicesAuditTitle: "Technical Audit",
   servicesAuditDesc:
-    "We comprehensively audit your website, app and infrastructure for performance, security and SEO; we deliver a prioritized improvement plan with actionable next steps, ranking findings by business impact so you get a clear roadmap forward.",
+    "We audit your website, app and infrastructure for performance, security and SEO; we deliver a prioritized improvement plan with actionable steps, ranking findings by business impact for a clear roadmap forward.",
   servicesAuditTag: "Performance - Security - SEO",
   servicesMaintenanceTitle: "Maintenance & Support",
   servicesMaintenanceDesc:
-    "We keep your websites and apps secure and up to date with scheduled updates, backups and responsive support; we respond quickly to urgent issues and monitor systems so problems are caught early.",
+    "We keep your websites and apps secure and up to date with scheduled updates, backups and responsive support; we respond quickly to urgent issues, monitor systems closely and catch problems before they affect users.",
   servicesMaintenanceTag: "Updates - Backup - Support",
   servicesStats: [
     { num: "6", label: "Service Categories" },
-    { num: "20+", label: "Completed Projects" },
+    { num: "40+", label: "Completed Projects" },
     { num: "6+", label: "Years of Experience" },
     { num: "100%", label: "Client Satisfaction" },
   ],

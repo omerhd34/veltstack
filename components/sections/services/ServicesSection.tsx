@@ -28,7 +28,7 @@ export function ServicesSection({ className }: ServicesSectionProps) {
         aria-hidden
         className="pointer-events-none absolute -right-32 top-1/4 size-[420px] rounded-full bg-brand-accent/8 blur-3xl"
       />
-      <SiteContainer className="relative">
+      <SiteContainer className="relative z-10">
         <ServicesIntro />
       </SiteContainer>
       <div className="mx-auto -mt-2 w-full max-w-350 px-4 md:-mt-6">
