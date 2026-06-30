@@ -1,5 +1,5 @@
 import { LuCircleCheck, LuMessageCircle } from "react-icons/lu";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 
 interface ServicesIntroProps {
@@ -8,6 +8,7 @@ interface ServicesIntroProps {
 
 export async function ServicesIntro({ className }: ServicesIntroProps) {
   const t = await getTranslations("home");
+  const locale = await getLocale();
 
   const bullets = t.raw("servicesBullets") as string[];
 
@@ -34,7 +35,8 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
             id="services-section-title"
             className="font-(family-name:--font-heading) text-4xl font-bold leading-[1.04] tracking-tight text-white md:text-5xl lg:text-[3.25rem]"
           >
-            {t("servicesHeadline")}{" "}
+            {t("servicesHeadline")}
+            {locale === "tr" ? <br /> : " "}
             <span className="text-brand-accent">
               {t("servicesHeadlineAccent")}
             </span>
