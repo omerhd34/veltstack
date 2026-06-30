@@ -25,7 +25,7 @@ export function WhoWeAreQuoteCard({
   return (
     <article
       className={cn(
-        "group relative overflow-hidden rounded-3xl bg-white p-8 md:p-10",
+        "group relative flex h-full w-full flex-col overflow-hidden rounded-3xl bg-white p-8 md:p-10",
         "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
         "shadow-[0_4px_24px_rgb(58_107_82/0.08)] hover:shadow-[0_24px_56px_rgb(58_107_82/0.14)]",
         slowTransition,
@@ -52,25 +52,21 @@ export function WhoWeAreQuoteCard({
         className="absolute right-6 top-6 size-20 text-brand-accent/8 md:right-8 md:top-8 md:size-28"
       />
 
-      <blockquote className="relative pl-5 md:pl-6">
+      <blockquote className="relative px-5 md:px-6">
         <p className="text-lg leading-[1.9] text-foreground/80 md:text-xl md:leading-[1.88]">
           <span
             aria-hidden
             className="mr-1 font-(family-name:--font-heading) text-3xl leading-none text-brand-accent/35 md:text-4xl"
-          >
-            &ldquo;
-          </span>
+          ></span>
           {description}
           <span
             aria-hidden
             className="ml-0.5 font-(family-name:--font-heading) text-3xl leading-none text-brand-accent/35 md:text-4xl"
-          >
-            &rdquo;
-          </span>
+          ></span>
         </p>
       </blockquote>
 
-      <footer className="relative mt-8 rounded-2xl border border-brand-accent/10 bg-[#f3faf6] p-5 md:mt-10 md:p-6">
+      <footer className="relative mx-5 mt-8 shrink-0 rounded-2xl border border-brand-accent/10 bg-[#f3faf6] p-5 md:mx-6 md:mt-10 md:p-6">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <WhoWeAreSignature name={name} role={role} />
 

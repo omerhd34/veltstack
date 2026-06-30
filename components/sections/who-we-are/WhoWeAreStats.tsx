@@ -24,7 +24,7 @@ function StatCard({
   return (
     <div
       className={cn(
-        "group relative overflow-hidden rounded-2xl border border-brand-accent/12 bg-white/70 px-4 py-5 shadow-[0_4px_20px_rgb(58_107_82/0.06)] backdrop-blur-sm transition-all duration-500",
+        "group relative w-full overflow-hidden rounded-2xl border border-brand-accent/12 bg-white/70 px-5 py-5 shadow-[0_4px_20px_rgb(58_107_82/0.06)] backdrop-blur-sm transition-all duration-500 sm:px-6",
         active ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0",
       )}
       style={{ transitionDelay: `${index * 120}ms` }}
@@ -57,7 +57,7 @@ export function WhoWeAreStats({ stats }: WhoWeAreStatsProps) {
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement | null>}
-      className="mt-12 grid grid-cols-3 gap-3 border-t border-brand-accent/15 pt-10 sm:gap-4"
+      className="mt-12 grid w-full grid-cols-3 gap-6 border-t border-brand-accent/15 pt-10"
       aria-live="polite"
     >
       {stats.map((stat, index) => (

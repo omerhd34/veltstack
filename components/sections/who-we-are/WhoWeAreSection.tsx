@@ -19,7 +19,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
 
   return (
     <section
-      className={`relative overflow-hidden bg-[#EDF6F1] py-24 md:py-32 ${className ?? ""}`}
+      className={`relative flex min-h-[calc(100dvh-4rem)] items-center overflow-hidden bg-[#EDF6F1] py-16 md:py-20 ${className ?? ""}`}
       aria-labelledby="who-we-are-title"
     >
       <WhoWeAreAuroraLayer />
@@ -31,8 +31,8 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-accent/20 to-transparent"
       />
-      <SiteContainer>
-        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+      <SiteContainer className="relative z-10 w-full">
+        <div className="grid items-stretch gap-16 lg:grid-cols-2 lg:gap-20">
           <WhoWeAreLeftColumn
             badge={t("whoWeAreTitle")}
             headline={t("whoWeAreHeadline")}
@@ -40,7 +40,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
             stats={stats}
           />
 
-          <div className="min-w-0">
+          <div className="flex h-full min-w-0 self-stretch">
             <WhoWeAreQuoteCard
               description={t("whoWeAreDescription")}
               name={t("whoWeAreSignatureName")}
