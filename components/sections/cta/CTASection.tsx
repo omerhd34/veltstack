@@ -74,13 +74,11 @@ export async function CTASection({ className }: CTASectionProps) {
               </span>
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-emerald-50/60 md:text-lg">
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-emerald-50/75 md:text-lg">
               {t("ctaSubtitle")}
             </p>
 
-            <CTAHighlights
-              points={[t("ctaPoint1"), t("ctaPoint2"), t("ctaPoint3")]}
-            />
+            <CTAHighlights points={[t("ctaPoint1"), t("ctaPoint2")]} />
 
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <PrimaryCtaLink

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 const highlightIcons: IconType[] = [LuSparkles, LuClock, LuLayers];
 
 interface CTAHighlightsProps {
-  points: [string, string, string];
+  points: readonly [string, string] | readonly [string, string, string];
   className?: string;
 }
 
@@ -13,7 +13,10 @@ export function CTAHighlights({ points, className }: CTAHighlightsProps) {
   return (
     <ul
       className={cn(
-        "mt-10 grid gap-3 sm:grid-cols-3 sm:gap-4",
+        "mt-10 grid gap-3 sm:gap-4",
+        points.length === 2
+          ? "mx-auto max-w-xl sm:grid-cols-2"
+          : "sm:grid-cols-3",
         className,
       )}
     >
