@@ -63,7 +63,7 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
   return (
     <div>
       <div className="sticky top-16 z-30 bg-background/95 backdrop-blur-md border-b border-border/60 py-4">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-site">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="relative w-full sm:max-w-xs">
               <LuSearch
@@ -110,7 +110,7 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl py-16 md:py-20">
+      <div className="mx-auto max-w-site py-16 md:py-20">
         {filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-24 text-center">
             <div className="flex size-20 items-center justify-center rounded-full bg-muted/60">

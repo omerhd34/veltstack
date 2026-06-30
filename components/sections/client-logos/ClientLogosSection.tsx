@@ -14,7 +14,7 @@ export async function ClientLogosSection({
     <section
       className={`border-y border-border bg-muted/30 px-4 py-16 ${className ?? ""}`}
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-site">
         <p className="mb-8 text-center text-sm text-muted-foreground">
           {t("clientLogosLabel")}
         </p>

@@ -489,7 +489,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                   </button>
                 ) : null}
 
-                <div className={cn(navOutside && "mx-auto w-full max-w-7xl")}>
+                <div className={cn(navOutside && "mx-auto w-full max-w-site")}>
                   <div
                     className={cn(
                       !navOutside && "flex items-center gap-3 md:gap-4",

@@ -8,6 +8,6 @@ interface SiteContainerProps {
 
 export function SiteContainer({ className, children }: SiteContainerProps) {
   return (
-    <div className={cn("mx-auto w-full max-w-7xl", className)}>{children}</div>
+    <div className={cn("mx-auto w-full max-w-site", className)}>{children}</div>
   );
 }
