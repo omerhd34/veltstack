@@ -12,6 +12,7 @@ import { testimonialsHomeEn } from "@/components/sections/testimonials/messages/
 import { blogPreviewHomeEn } from "@/components/sections/blog-preview/messages/en";
 import { ctaHomeEn } from "@/components/sections/cta/messages/en";
 import { clientLogosHomeEn } from "@/components/sections/client-logos/messages/en";
+import { techMarqueeHomeEn } from "@/components/sections/tech-marquee/messages/en";
 import { projectDetailsEn } from "@/components/pages/project-detail/messages/en";
 import { serviceDetailsEn } from "@/components/pages/service-detail/messages/en";
 import { servicesPageEn } from "@/components/pages/services/messages/en";
@@ -35,6 +36,7 @@ const messages = {
     ...blogPreviewHomeEn,
     ...ctaHomeEn,
     ...clientLogosHomeEn,
+    ...techMarqueeHomeEn,
   },
   pages: pagesEn,
   projectDetails: projectDetailsEn,

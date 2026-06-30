@@ -11,6 +11,7 @@ import { testimonialsHomeTr } from "@/components/sections/testimonials/messages/
 import { blogPreviewHomeTr } from "@/components/sections/blog-preview/messages/tr";
 import { ctaHomeTr } from "@/components/sections/cta/messages/tr";
 import { clientLogosHomeTr } from "@/components/sections/client-logos/messages/tr";
+import { techMarqueeHomeTr } from "@/components/sections/tech-marquee/messages/tr";
 import { projectDetailsTr } from "@/components/pages/project-detail/messages/tr";
 import { serviceDetailsTr } from "@/components/pages/service-detail/messages/tr";
 import { servicesPageTr } from "@/components/pages/services/messages/tr";
@@ -35,6 +36,7 @@ const messages = {
     ...blogPreviewHomeTr,
     ...ctaHomeTr,
     ...clientLogosHomeTr,
+    ...techMarqueeHomeTr,
   },
   pages: pagesTr,
   projectDetails: projectDetailsTr,
