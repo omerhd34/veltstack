@@ -3,8 +3,9 @@ export const techMarqueeHomeTr = {
   techStackTitle: "Güncel araçlar, sağlam mimari,",
   techStackTitleAccent: "ölçeklenebilir altyapı.",
   techStackSubtitle:
-    "Web'den mobile'a, altyapıdan SEO'ya — kanıtlanmış teknolojilerle hızlı, performanslı ve üretime hazır dijital ürünler geliştiriyoruz.",
-  techStackCount: "Stack'imizde {count}+ teknoloji ve platform",
+    "Web sitesi ve mobil uygulama projelerinde — altyapıdan SEO'ya, bu araçlarla hızlı, performanslı ve üretime hazır çözümler sunuyoruz.",
+  techStackCount:
+    "<bold>{count}+</bold> kanıtlanmış araç ve teknolojiyle çalışıyoruz.",
   techCategoryFrontend: "Temel Web & Frontend",
   techCategoryBackend: "Backend & Veritabanı",
   techCategoryMobile: "Mobil Geliştirme",

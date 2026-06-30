@@ -45,8 +45,13 @@ export async function TechMarqueeSection({ className }: TechMarqueeSectionProps)
             <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-white/65 lg:mx-0 md:text-lg">
               {t("techStackSubtitle")}
             </p>
-            <p className="mt-6 font-(family-name:--font-heading) text-sm font-semibold tracking-wide text-white/45">
-              {t("techStackCount", { count: techItemCount })}
+            <p className="mt-6 font-(family-name:--font-heading) text-sm tracking-wide text-white/45">
+              {t.rich("techStackCount", {
+                count: techItemCount,
+                bold: (chunks) => (
+                  <span className="text-base font-extrabold text-white/70">{chunks}</span>
+                ),
+              })}
             </p>
           </div>
 
