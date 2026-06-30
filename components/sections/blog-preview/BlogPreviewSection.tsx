@@ -2,8 +2,8 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { blogPosts } from "@/components/pages/blog/blog-data";
 import { toLatinUppercase } from "@/lib/utils";
-import { BlogPreviewCard } from "./BlogPreviewCard";
 import { BlogPreviewMoreButton } from "./BlogPreviewMoreButton";
+import { BlogPreviewScrollCarousel } from "./BlogPreviewScrollCarousel";
 
 interface BlogPreviewSectionProps {
   className?: string;
@@ -22,12 +22,12 @@ export async function BlogPreviewSection({
     )
     .slice(0, 6)
     .map((post) => ({
+      slug: post.slug,
       title: locale === "tr" ? post.titleTr : post.titleEn,
       excerpt: locale === "tr" ? post.excerptTr : post.excerptEn,
       href: `/blog/${post.slug}`,
       image: post.imageUrl,
-      readingTime: post.readingTime,
-      featured: post.featured ?? false,
+      readingTimeLabel: t("readingTime", { minutes: post.readingTime }),
     }));
 
   return (
@@ -57,30 +57,19 @@ export async function BlogPreviewSection({
               id="blog-preview-section-title"
               className="mt-6 font-(family-name:--font-heading) text-4xl font-bold tracking-tight text-white md:text-5xl"
             >
-              {t("blogTitle")}
+              {t("blogHeadline")}
             </h2>
-            <p className="mt-4 text-lg text-white/55">
-              {t("blogSubtitle")}
-            </p>
+            <p className="mt-4 text-lg text-white/55">{t("blogSubtitle")}</p>
           </div>
           <div className="hidden md:block">
             <BlogPreviewMoreButton label={t("blogMoreButton")} />
           </div>
         </div>
+      </SiteContainer>
 
-        <div className="mt-12 grid auto-rows-fr gap-6 md:grid-cols-3">
-          {posts.map((post) => (
-            <BlogPreviewCard
-              key={post.href}
-              title={post.title}
-              excerpt={post.excerpt}
-              href={post.href}
-              image={post.image}
-              readingTimeLabel={t("readingTime", { minutes: post.readingTime })}
-            />
-          ))}
-        </div>
+      <BlogPreviewScrollCarousel className="mt-4 md:mt-8" posts={posts} />
 
+      <SiteContainer className="relative">
         <div className="mt-8 flex justify-center md:hidden">
           <BlogPreviewMoreButton label={t("blogMoreButton")} />
         </div>

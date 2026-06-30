@@ -7,5 +7,7 @@ export const blogPreviewHomeEn = {
   blogSubtitle:
     "Latest insights, practical tips and lessons distilled from real projects in the digital world.",
   blogMoreButton: "View All",
+  blogSliderPrev: "Previous article",
+  blogSliderNext: "Next article",
   readingTime: "{minutes} min read",
 } as const;

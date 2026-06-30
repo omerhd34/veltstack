@@ -7,5 +7,7 @@ export const blogPreviewHomeTr = {
   blogSubtitle:
     "Dijital dünyadan güncel içerikler, pratik ipuçları ve gerçek projelerden süzülen deneyimler.",
   blogMoreButton: "Diğerleri",
+  blogSliderPrev: "Önceki yazı",
+  blogSliderNext: "Sonraki yazı",
   readingTime: "{minutes} dk okuma",
 } as const;

@@ -1,4 +1,5 @@
 export { BlogPreviewSection } from "./BlogPreviewSection"
+export { BlogPreviewScrollCarousel } from "./BlogPreviewScrollCarousel"
 export { BlogPreviewCard } from "./BlogPreviewCard"
 export { BlogPreviewImage } from "./BlogPreviewImage"
 export { BlogPreviewMoreButton } from "./BlogPreviewMoreButton"
