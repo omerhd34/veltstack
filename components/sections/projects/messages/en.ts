@@ -3,7 +3,8 @@ export const projectsHomeEn = {
   projectsBadge: "Projects",
   projectsTitleLead: "Real business goals deserve",
   projectsTitleAccent: "projects that serve them",
-  projectsHeadline: "Projects for real business goals",
+  projectsHeadline: "Projects for",
+  projectsHeadlineAccent: "real business goals",
   projectsSubtitle:
     "From FinTech to e-commerce, we focus on measurable business outcomes in every project.",
   projectsIntro:

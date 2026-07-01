@@ -24,8 +24,16 @@ export function NavbarProjectsMegaMenuPanel() {
     <SiteContainer className="py-10">
       <div className="grid items-stretch gap-10 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-14 xl:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]">
         <NavbarMegaMenuIntroColumn
-          headline={tHome("projectsHeadline")}
+          headline={
+            <>
+              {tHome("projectsHeadline")}
+              <span className="text-brand-accent">{" "}
+                {tHome("projectsHeadlineAccent")}
+              </span>
+            </>
+          }
           intro={tNav("projectsMegaMenuIntro")}
+          introLines={5}
         >
           <PrimaryCtaLink
             href="/projeler"

@@ -2,7 +2,7 @@ export const navEn = {
   services: "Services",
   servicesAll: "All Services",
   servicesMegaMenuIntro:
-    "We cover web, apps, SEO and maintenance under one roof. Scope is defined upfront and we take you from design through launch.",
+    "We handle your web, app, SEO and maintenance needs under one roof. We define scope upfront, manage delivery transparently and focus on measurable outcomes. From design through launch we prioritize performance, accessibility and SEO.",
   serviceWeb: "Website",
   serviceRefresh: "Web & App Redesign",
   serviceApp: "App",
@@ -17,12 +17,12 @@ export const navEn = {
   projectPortfolio: "Ömer Halis Demir | Portfolio",
   projectOnlinemuhasebe: "Online Accounting | Corporate Website",
   projectsMegaMenuIntro:
-    "We build digital products for FinTech, e-commerce and corporate sectors. Design and development move as one process, focused on measurable outcomes.",
+    "We build digital products for FinTech, e-commerce and corporate sectors, keeping business goals at the center. Design and development move as one process, with performance and user experience as priorities. We turn cross-sector experience into measurable outcomes.",
   projects: "Projects",
   blog: "Blog",
   blogAll: "All Articles",
   blogMegaMenuIntro:
-    "Practical content on web development, SEO, hosting and digital transformation. We share what we learn from real projects in plain language.",
+    "Practical content on web development, mobile apps, SEO, hosting and digital transformation. We share lessons from real projects in plain language. Technical topics are presented in an accessible way. We answer common software and infrastructure questions clearly.",
   about: "About Us",
   contact: "Contact",
   cta: "Schedule a Call",

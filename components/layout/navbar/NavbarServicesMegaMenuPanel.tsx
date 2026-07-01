@@ -26,13 +26,14 @@ export function NavbarServicesMegaMenuPanel() {
         <NavbarMegaMenuIntroColumn
           headline={
             <>
-              {tHome("servicesHeadline")}{" "}
-              <span className="text-brand-accent">
+              {tHome("servicesHeadline")}
+              <span className="text-brand-accent">{" "}
                 {tHome("servicesHeadlineAccent")}
               </span>
             </>
           }
           intro={tNav("servicesMegaMenuIntro")}
+          introLines={5}
         >
           <PrimaryCtaLink
             href="/iletisim"

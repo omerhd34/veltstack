@@ -2,7 +2,7 @@ export const navTr = {
   services: "Hizmetler",
   servicesAll: "Tüm Hizmetler",
   servicesMegaMenuIntro:
-    "Web, uygulama, SEO ve bakım ihtiyaçlarını tek çatı altında yönetiyoruz. Kapsamı baştan netleştirir, tasarımdan yayına kadar uçtan uca ilerleriz.",
+    "Markanızın web, uygulama, SEO ve bakım ihtiyaçlarını tek çatı altında yönetiyoruz. Her projede kapsamı baştan netleştirir, süreci şeffaf yönetir ve ölçülebilir iş sonuçlarına odaklanırız. Tasarımdan yayına kadar performans, erişilebilirlik ve SEO uyumluluğunu önceliklendiririz.",
   serviceWeb: "Web Sitesi",
   serviceRefresh: "Web & Uygulama Yenileme",
   serviceApp: "Uygulama",
@@ -17,12 +17,12 @@ export const navTr = {
   projectPortfolio: "Ömer Halis Demir | Portfolyo",
   projectOnlinemuhasebe: "Online Muhasebe | Kurumsal Web Sitesi",
   projectsMegaMenuIntro:
-    "FinTech, e-ticaret ve kurumsal sektörlerde iş hedeflerine hizmet eden dijital ürünler geliştiriyoruz. Tasarım ve geliştirmeyi tek süreçte birleştirir, ölçülebilir sonuçlara odaklanırız.",
+    "FinTech, e-ticaret ve kurumsal sektörlerde iş hedeflerini merkeze alan dijital ürünler geliştiriyoruz. Tasarım ve geliştirmeyi tek süreçte birleştirir, performans ve kullanıcı deneyimini önceliklendiririz. Farklı sektörlerdeki deneyimimizi ölçülebilir iş sonuçlarına dönüştürüyoruz.",
   projects: "Projeler",
   blog: "Blog",
   blogAll: "Tüm Yazılar",
   blogMegaMenuIntro:
-    "Web geliştirme, SEO, hosting ve dijital dönüşüm üzerine pratik içerikler paylaşıyoruz. Gerçek projelerden öğrendiklerimizi sade bir dille aktarıyoruz.",
+    "Web geliştirme, mobil uygulama, SEO, hosting ve dijital dönüşüm üzerine pratik içerikler hazırlıyoruz. Gerçek projelerden öğrendiklerimizi sade bir dille paylaşıyoruz. Teknik konuları anlaşılır biçimde sunuyoruz. Yazılım ve altyapı sorularına net yanıtlar veriyoruz.",
   about: "Hakkımızda",
   contact: "İletişim",
   cta: "Görüşme Planla",

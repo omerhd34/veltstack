@@ -1,7 +1,7 @@
 export const servicesHomeTr = {
   servicesTitle: "Hizmetler",
-  servicesHeadline: "İş hedefleriniz için",
-  servicesHeadlineAccent: "ölçülebilir dijital hizmetler",
+  servicesHeadline: "Hedefleriniz için",
+  servicesHeadlineAccent: "ölçülebilir hizmetler",
   servicesIntro:
     "Markanızın dijital ihtiyaçlarını web, uygulama, SEO ve bakım gibi alanlarda tek çatı altında ele alıyoruz. Her projede kapsamı baştan netleştirir, süreci şeffaf yönetir ve ölçülebilir iş sonuçlarına odaklanırız. Tasarımdan yayına kadar her aşamada performans, erişilebilirlik ve SEO uyumluluğunu önceliklendiririz.",
   servicesBullets: [

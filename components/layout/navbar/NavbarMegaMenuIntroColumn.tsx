@@ -17,12 +17,14 @@ export function NavbarMegaMenuIntroColumn({
     introLines === 12
       ? " line-clamp-12 max-h-[calc(0.875rem*1.625*12)] md:max-h-[calc(1rem*1.625*12)]"
       : introLines === 11
-      ? " line-clamp-11 max-h-[calc(0.875rem*1.625*11)] md:max-h-[calc(1rem*1.625*11)]"
-      : introLines === 9
-        ? " line-clamp-9 max-h-[calc(0.875rem*1.625*9)] md:max-h-[calc(1rem*1.625*9)]"
-        : introLines === 7
-          ? " line-clamp-7 max-h-[calc(0.875rem*1.625*7)] md:max-h-[calc(1rem*1.625*7)]"
-          : "";
+        ? " line-clamp-11 max-h-[calc(0.875rem*1.625*11)] md:max-h-[calc(1rem*1.625*11)]"
+        : introLines === 9
+          ? " line-clamp-9 max-h-[calc(0.875rem*1.625*9)] md:max-h-[calc(1rem*1.625*9)]"
+          : introLines === 7
+            ? " line-clamp-7 max-h-[calc(0.875rem*1.625*7)] md:max-h-[calc(1rem*1.625*7)]"
+            : introLines === 5
+              ? " line-clamp-5 h-[calc(0.875rem*1.625*5)] md:h-[calc(1rem*1.625*5)]"
+              : "";
 
   return (
     <div className="flex h-full max-w-md flex-col">
