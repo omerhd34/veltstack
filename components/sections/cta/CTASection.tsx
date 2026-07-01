@@ -57,15 +57,9 @@ export async function CTASection({ className }: CTASectionProps) {
           <div className="relative mx-auto max-w-3xl text-center">
             <SectionBadge>{toLatinUppercase(t("ctaBadge"))}</SectionBadge>
 
-            <p className="mt-6 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300/55">
-              <span aria-hidden className="h-px w-8 bg-emerald-500/25" />
-              {t("ctaTagline")}
-              <span aria-hidden className="h-px w-8 bg-emerald-500/25" />
-            </p>
-
             <h2
               id="home-cta-title"
-              className="mt-5 font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-[3.25rem]"
+              className="mt-7 font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-[3.25rem]"
             >
               {t("ctaTitleLead")}{" "}
               <span className="bg-linear-to-r from-emerald-200 via-emerald-300 to-brand-accent bg-clip-text text-transparent">

@@ -1,8 +1,7 @@
 export const ctaHomeTr = {
-  ctaBadge: "Başlayalım",
-  ctaTagline: "Bir sonraki adımınız",
-  ctaTitleLead: "Projenizi",
-  ctaTitleAccent: "Hayata Geçirelim",
+  ctaBadge: "Hadi Konuşalım",
+  ctaTitleLead: "Fikrinizi",
+  ctaTitleAccent: "Birlikte Netleştirelim",
   ctaSubtitle:
     "Web sitesinden mobil uygulamaya, SEO'dan yayın süreçlerine kadar dijital ihtiyaçlarınızı tek çatı altında planlıyor ve hayata geçiriyoruz. İlk görüşmede hedefinizi netleştirir, size özel bir yol haritası çıkarırız.",
   ctaPoint1: "Ücretsiz keşif görüşmesi",
