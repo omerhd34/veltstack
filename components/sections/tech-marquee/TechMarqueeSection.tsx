@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import { TechBeamCircle } from "./TechBeamCircle";
 import { techItemCount } from "./tech-items";
 
@@ -7,7 +8,9 @@ interface TechMarqueeSectionProps {
   className?: string;
 }
 
-export async function TechMarqueeSection({ className }: TechMarqueeSectionProps) {
+export async function TechMarqueeSection({
+  className,
+}: TechMarqueeSectionProps) {
   const t = await getTranslations("home");
 
   return (
@@ -31,16 +34,16 @@ export async function TechMarqueeSection({ className }: TechMarqueeSectionProps)
       <SiteContainer>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="text-center lg:text-left">
-            <p className="font-(family-name:--font-heading) text-xs font-bold uppercase tracking-[0.2em] text-[#00D4AA]">
-              {t("techStackBadge")}
-            </p>
+            <SectionBadge>{t("techStackBadge")}</SectionBadge>
             <h2
               id="tech-stack-title"
               className="mt-4 font-(family-name:--font-heading) text-3xl font-bold leading-[1.1] tracking-tight md:text-4xl lg:text-[2.65rem]"
             >
               {t("techStackTitle")}
               <br />
-              <span className="text-[#00D4AA]">{t("techStackTitleAccent")}</span>
+              <span className="text-[#00D4AA]">
+                {t("techStackTitleAccent")}
+              </span>
             </h2>
             <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-white/65 lg:mx-0 md:text-lg">
               {t("techStackSubtitle")}
@@ -49,7 +52,9 @@ export async function TechMarqueeSection({ className }: TechMarqueeSectionProps)
               {t.rich("techStackCount", {
                 count: techItemCount,
                 bold: (chunks) => (
-                  <span className="text-base font-extrabold text-white/70">{chunks}</span>
+                  <span className="text-base font-extrabold text-white/70">
+                    {chunks}
+                  </span>
                 ),
               })}
             </p>
