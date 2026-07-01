@@ -10,7 +10,7 @@ export const testimonialsHomeEn = {
       clientName: "Halil İbrahim Yazıcı",
       companyName: "Yazıcı Ticaret",
       feedback:
-        "When we wanted to take our Profilo and LG products online, Veltstack was exactly the team we needed. The entire flow from product discovery to checkout works flawlessly; the mobile experience is especially strong. Delivery was on time, and communication throughout was clear and solution-focused.",
+        "We thank the Veltstack team. Communication and collaboration were excellent at every stage. From design through to delivery, everything met our expectations. The project was delivered on time and in full, and we completed the process smoothly.",
       rating: 5,
     },
     {
@@ -28,12 +28,12 @@ export const testimonialsHomeEn = {
       rating: 5,
     },
     {
-     clientName: "Halil Tunç",
-     companyName: "Online Accounting",
-     feedback:
-       "When we needed to bring our corporate website and online accounting services under one roof, Veltstack was exactly the team we were looking for. With a brand-aligned interface, reliable infrastructure and clear project management, everything was delivered on schedule without gaps.",
-     rating: 5,
-   }
+      clientName: "Halil Tunç",
+      companyName: "Online Accounting",
+      feedback:
+        "When we needed to bring our corporate website and online accounting services under one roof, Veltstack was exactly the team we were looking for. With a brand-aligned interface, reliable infrastructure and clear project management, everything was delivered on schedule without gaps.",
+      rating: 5,
+    },
   ],
   testimonialsPrev: "Previous testimonial",
   testimonialsNext: "Next testimonial",

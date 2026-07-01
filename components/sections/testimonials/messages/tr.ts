@@ -10,7 +10,7 @@ export const testimonialsHomeTr = {
       clientName: "Halil İbrahim Yazıcı",
       companyName: "Yazıcı Ticaret",
       feedback:
-        "Profilo ve LG ürünlerimizi online satışa taşımak istediğimizde Veltstack tam aradığımız ekipti. Ürün keşfinden ödemeye kadar tüm akış sorunsuz çalışıyor; mobil deneyim özellikle güçlü. Teslimat zamanında, süreç boyunca iletişimleri net ve çözüm odaklıydı.",
+        "Veltstack ekibine teşekkür ederiz. Süreç boyunca iletişim ve iş birliği her aşamada çok iyiydi. Tasarımdan teslimata kadar her şey beklentilerimizi karşıladı. Proje zamanında ve eksiksiz teslim edildi, süreci sorunsuz tamamladık.",
       rating: 5,
     },
     {
@@ -28,12 +28,12 @@ export const testimonialsHomeTr = {
       rating: 5,
     },
     {
-     clientName: "Halil Tunç",
-     companyName: "Online Muhasebe",
-     feedback:
-       "Kurumsal web sitemiz ve online muhasebe hizmetlerimizi aynı çatı altında toplamak istediğimizde Veltstack tam ihtiyacımız olan ekipti. Markaya uygun arayüz, güvenilir altyapı ve net süreç yönetimiyle proje planlanan tarihte eksiksiz teslim edildi.",
-     rating: 5,
-   },
+      clientName: "Halil Tunç",
+      companyName: "Online Muhasebe",
+      feedback:
+        "Kurumsal web sitemiz ve online muhasebe hizmetlerimizi aynı çatı altında toplamak istediğimizde Veltstack tam ihtiyacımız olan ekipti. Markaya uygun arayüz, güvenilir altyapı ve net süreç yönetimiyle proje planlanan tarihte eksiksiz teslim edildi.",
+      rating: 5,
+    },
   ],
   testimonialsPrev: "Önceki yorum",
   testimonialsNext: "Sonraki yorum",
