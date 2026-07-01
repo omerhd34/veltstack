@@ -1,5 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import { blogPosts } from "@/components/pages/blog/blog-data";
 import { toLatinUppercase } from "@/lib/utils";
 import { BlogPreviewMoreButton } from "./BlogPreviewMoreButton";
@@ -50,9 +51,9 @@ export async function BlogPreviewSection({
       <SiteContainer className="relative">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold tracking-[0.18em] text-emerald-300/90">
+            <SectionBadge variant="emerald-label">
               {toLatinUppercase("Blog")}
-            </span>
+            </SectionBadge>
             <h2
               id="blog-preview-section-title"
               className="mt-6 font-(family-name:--font-heading) text-4xl font-bold tracking-tight text-white md:text-5xl"

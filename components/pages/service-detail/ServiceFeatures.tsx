@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { LuCircleCheck } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import { cn, truncateToSentences } from "@/lib/utils";
 import { FeatureShowcase, ServiceFeatureCard } from "./ServiceFeatureCard";
 
@@ -50,10 +51,10 @@ export function ServiceFeatures({
 
       <SiteContainer className="relative">
         <header>
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand-accent/25 bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent shadow-[0_2px_12px_rgb(58_107_82/0.08)]">
+          <SectionBadge variant="accent-card">
             <LuCircleCheck className="size-3.5" aria-hidden />
             {badge}
-          </span>
+          </SectionBadge>
 
           <h2 className="mt-6 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl lg:text-[2.625rem] lg:leading-[1.12]">
             {title}

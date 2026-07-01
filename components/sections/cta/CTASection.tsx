@@ -1,6 +1,7 @@
 import { LuEye, LuMessageCircle } from "react-icons/lu";
 import { getTranslations } from "next-intl/server";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { toLatinUppercase } from "@/lib/utils";
 import { CTAHighlights } from "./CTAHighlights";
@@ -54,9 +55,7 @@ export async function CTASection({ className }: CTASectionProps) {
           />
 
           <div className="relative mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/8 px-4 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-emerald-300/90">
-              {toLatinUppercase(t("ctaBadge"))}
-            </span>
+            <SectionBadge>{toLatinUppercase(t("ctaBadge"))}</SectionBadge>
 
             <p className="mt-6 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300/55">
               <span aria-hidden className="h-px w-8 bg-emerald-500/25" />

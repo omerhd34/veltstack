@@ -1,6 +1,7 @@
 import { LuCircleCheck, LuMessageCircle } from "react-icons/lu";
 import { getLocale, getTranslations } from "next-intl/server";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 
 interface ServicesIntroProps {
   className?: string;
@@ -25,9 +26,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
 
   return (
     <div className={`w-full min-w-0 ${className ?? ""}`}>
-      <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300/90">
-        {t("servicesTitle")}
-      </span>
+      <SectionBadge variant="emerald-soft">{t("servicesTitle")}</SectionBadge>
 
       <div className="relative mt-8 grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-16">
         <div className="flex flex-col">

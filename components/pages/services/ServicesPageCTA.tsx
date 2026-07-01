@@ -1,6 +1,7 @@
 import { LuMessageCircle } from "react-icons/lu";
 import { TbGitBranch, TbRocket, TbSparkles } from "react-icons/tb";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 import { CTAHighlights } from "@/components/sections/cta/CTAHighlights";
@@ -94,9 +95,7 @@ export function ServicesPageCTA({
 
           <div className="relative mx-auto max-w-3xl text-center">
             {badge ? (
-              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/8 px-4 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-emerald-300/90">
-                {toLatinUppercase(badge)}
-              </span>
+              <SectionBadge>{toLatinUppercase(badge)}</SectionBadge>
             ) : null}
 
             {tagline ? (

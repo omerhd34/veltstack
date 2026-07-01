@@ -5,6 +5,7 @@ import {
   LuTarget,
 } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import { cn } from "@/lib/utils";
 
 interface ProjectContentProps {
@@ -32,10 +33,10 @@ export function ProjectContent({
     <section className={cn("bg-background py-24 md:py-32", className)}>
       <SiteContainer>
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
+          <SectionBadge variant="accent">
             <LuCircleCheck className="size-3.5" aria-hidden />
             {badge}
-          </span>
+          </SectionBadge>
         </div>
 
         <div className="mx-auto mt-14 flex max-w-5xl flex-col gap-6">

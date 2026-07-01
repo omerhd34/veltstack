@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 
 interface ProjectsIntroProps {
   className?: string;
@@ -9,9 +10,7 @@ export async function ProjectsIntro({ className }: ProjectsIntroProps) {
 
   return (
     <div className={`w-full max-w-5xl ${className ?? ""}`}>
-      <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300/90">
-        {t("projectsBadge")}
-      </span>
+      <SectionBadge variant="emerald-soft">{t("projectsBadge")}</SectionBadge>
 
       <h2
         id="projects-section-title"

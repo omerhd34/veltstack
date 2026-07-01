@@ -1,5 +1,6 @@
 import { LuChevronDown } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
 import { ServicesPageHeroImage } from "./ServicesPageHeroImage";
 
@@ -44,9 +45,7 @@ export function ServicesPageHero({
       <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col py-8 sm:py-10">
         <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
           <div className="min-w-0">
-            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/8 px-4 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-emerald-300/90">
-              {badge}
-            </span>
+            <SectionBadge>{badge}</SectionBadge>
 
             <h1 className="mt-6 font-(family-name:--font-heading) text-[1.875rem] font-bold leading-[1.08] tracking-tight sm:mt-8 sm:text-4xl lg:text-[2.875rem]">
               {title}
